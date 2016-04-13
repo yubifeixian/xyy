@@ -1,0 +1,388 @@
+{
+  "ID": "8cae6fe4-47ba-474b-8327-0a85ff9fe440",
+  "Version": "2.3.2.3",
+  "Name": "advIndexScnen",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 193,
+        "Children": [
+          {
+            "BackColorAlpha": 102,
+            "FileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/index.png",
+              "Plist": ""
+            },
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 316,
+            "Scale9OriginY": 211,
+            "Scale9Width": 328,
+            "Scale9Height": 218,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 480.0,
+              "Y": 320.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "Tag": 194,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/kz1mask.png",
+                  "Plist": ""
+                },
+                "Scale9Width": 640,
+                "Scale9Height": 360,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 480.0,
+                  "Y": 320.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.5
+                },
+                "PercentWidthEnable": true,
+                "PercentHeightEnable": true,
+                "PercentWidthEnabled": true,
+                "PercentHeightEnabled": true,
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 1.0
+                },
+                "HorizontalEdge": "BothEdge",
+                "VerticalEdge": "BothEdge",
+                "Tag": 522,
+                "ActionTag": -1299232226,
+                "Size": {
+                  "X": 960.0,
+                  "Y": 640.0
+                },
+                "Name": "mask",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/startButton.png",
+                  "Plist": ""
+                },
+                "Scale9Width": 537,
+                "Scale9Height": 153,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 480.0,
+                  "Y": 320.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.5
+                },
+                "PercentWidthEnable": true,
+                "PercentHeightEnable": true,
+                "PercentWidthEnabled": true,
+                "PercentHeightEnabled": true,
+                "PreSize": {
+                  "X": 0.5594,
+                  "Y": 0.2391
+                },
+                "HorizontalEdge": "BothEdge",
+                "VerticalEdge": "BothEdge",
+                "LeftMargin": 211.488,
+                "RightMargin": 211.488,
+                "TopMargin": 243.488,
+                "BottomMargin": 243.488,
+                "Tag": 165,
+                "ActionTag": -1392545972,
+                "Size": {
+                  "X": 537.024,
+                  "Y": 153.024
+                },
+                "VisibleForFrame": false,
+                "Name": "startButton",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FontSize": 36,
+                "LabelText": "版本：99999999999999999999999999999999999999",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/fangzhen.ttf",
+                  "Plist": ""
+                },
+                "OutlineSize": 0,
+                "OutlineColor": {
+                  "R": 0,
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 0.0,
+                "ShadowOffsetY": 0.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 385.8502,
+                  "Y": 612.9979
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 0,
+                  "G": 0,
+                  "B": 0
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.4019,
+                  "Y": 0.9578
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 8.8502,
+                "RightMargin": 197.1498,
+                "TopMargin": 7.5021,
+                "BottomMargin": 593.4979,
+                "Tag": 172,
+                "ActionTag": 612125636,
+                "Size": {
+                  "X": 754.0,
+                  "Y": 39.0
+                },
+                "Name": "versionText",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/restartButton.png",
+                  "Plist": ""
+                },
+                "Scale9Width": 914,
+                "Scale9Height": 212,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 147.84,
+                  "Y": 55.232
+                },
+                "Scale": {
+                  "ScaleX": 0.7985,
+                  "ScaleY": 0.7985
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.154,
+                  "Y": 0.0863
+                },
+                "PercentWidthEnable": true,
+                "PercentHeightEnable": true,
+                "PercentWidthEnabled": true,
+                "PercentHeightEnabled": true,
+                "PreSize": {
+                  "X": 0.35,
+                  "Y": 0.15
+                },
+                "HorizontalEdge": "BothEdge",
+                "VerticalEdge": "BothEdge",
+                "LeftMargin": -20.16,
+                "RightMargin": 644.16,
+                "TopMargin": 536.768,
+                "BottomMargin": 7.232,
+                "Tag": 503,
+                "ActionTag": -663479611,
+                "Size": {
+                  "X": 336.0,
+                  "Y": 96.0
+                },
+                "Name": "restartButton",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/wupin_fanhui3.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/wupin_fanhui2.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/wupin_fanhui.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 53,
+                "Scale9Height": 57,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 855.456,
+                  "Y": 581.824
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.8911,
+                  "Y": 0.9091
+                },
+                "PercentWidthEnable": true,
+                "PercentHeightEnable": true,
+                "PercentWidthEnabled": true,
+                "PercentHeightEnabled": true,
+                "PreSize": {
+                  "X": 0.0917,
+                  "Y": 0.1312
+                },
+                "HorizontalEdge": "BothEdge",
+                "VerticalEdge": "BothEdge",
+                "LeftMargin": 811.456,
+                "RightMargin": 60.544,
+                "TopMargin": 16.176,
+                "BottomMargin": 539.824,
+                "Tag": 181,
+                "ActionTag": -1744875132,
+                "Size": {
+                  "X": 88.032,
+                  "Y": 83.968
+                },
+                "Name": "closeButton",
+                "ctype": "ButtonObjectData"
+              }
+            ],
+            "ActionTag": 1397183753,
+            "Size": {
+              "X": 960.0,
+              "Y": 640.0
+            },
+            "Name": "bg",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Size": {
+          "X": 960.0,
+          "Y": 640.0
+        },
+        "Name": "Scene",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "drawable-hdpi/fangzhen.ttf",
+        "drawable-hdpi/index.png",
+        "drawable-hdpi/kz1mask.png",
+        "drawable-hdpi/restartButton.png",
+        "drawable-hdpi/startButton.png",
+        "drawable-hdpi/wupin_fanhui.png",
+        "drawable-hdpi/wupin_fanhui2.png",
+        "drawable-hdpi/wupin_fanhui3.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Scene"
+}

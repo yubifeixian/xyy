@@ -1,0 +1,394 @@
+{
+  "ID": "5a7d49ec-7bbb-4e0f-978c-ca0f4b56346c",
+  "Version": "2.3.2.3",
+  "Name": "selectPlayerDialog",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 168,
+        "Children": [
+          {
+            "BackColorAlpha": 0,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 480.0,
+              "Y": 320.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 240.0,
+            "RightMargin": 240.0,
+            "TopMargin": 160.0,
+            "BottomMargin": 160.0,
+            "Tag": 172,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/dialogCommon.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 30,
+                "Scale9OriginY": 34,
+                "Scale9Width": 144,
+                "Scale9Height": 138,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 240.0,
+                  "Y": 160.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.5
+                },
+                "PercentWidthEnable": true,
+                "PercentHeightEnable": true,
+                "PercentWidthEnabled": true,
+                "PercentHeightEnabled": true,
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 1.0
+                },
+                "HorizontalEdge": "BothEdge",
+                "VerticalEdge": "BothEdge",
+                "Tag": 173,
+                "ActionTag": 1592875112,
+                "Size": {
+                  "X": 480.0,
+                  "Y": 320.0
+                },
+                "Name": "dialogBg",
+                "ctype": "ImageViewObjectData"
+              }
+            ],
+            "ActionTag": 1424278017,
+            "Size": {
+              "X": 480.0,
+              "Y": 320.0
+            },
+            "Name": "Panel_2",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FontSize": 20,
+            "LabelText": "赵灵儿的回合，请选择支援者赵灵儿的回合，\n赵灵儿的回合，请选择支援者赵灵儿的回合，",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/fangzhen.ttf",
+              "Plist": ""
+            },
+            "HorizontalAlignmentType": "HT_Center",
+            "OutlineSize": 0,
+            "OutlineColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "ShadowOffsetX": 0.0,
+            "ShadowOffsetY": 0.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 487.4271,
+              "Y": 404.3922
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 173,
+              "G": 216,
+              "B": 230
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5077,
+              "Y": 0.6319
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 287.4271,
+            "RightMargin": 272.5729,
+            "TopMargin": 213.6078,
+            "BottomMargin": 382.3922,
+            "Tag": 174,
+            "ActionTag": 138985931,
+            "Size": {
+              "X": 400.0,
+              "Y": 44.0
+            },
+            "Name": "message",
+            "ctype": "TextObjectData"
+          },
+          {
+            "ItemMargin": 10,
+            "VerticalType": "Align_VerticalCenter",
+            "ScrollDirectionType": 0,
+            "ClipAble": true,
+            "BackColorAlpha": 81,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 53,
+              "G": 127,
+              "B": 131
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 150
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 480.768,
+              "Y": 304.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5008,
+              "Y": 0.475
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.4,
+              "Y": 0.18
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 288.768,
+            "RightMargin": 287.232,
+            "TopMargin": 278.4,
+            "BottomMargin": 246.4,
+            "Tag": 175,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/anu.png",
+                  "Plist": ""
+                },
+                "Scale9Width": 152,
+                "Scale9Height": 149,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 50.0,
+                  "Y": 57.6
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.2604,
+                  "Y": 0.7813
+                },
+                "RightMargin": 284.0,
+                "TopMargin": 14.0,
+                "BottomMargin": 14.0,
+                "Tag": 176,
+                "ActionTag": -1310903714,
+                "Size": {
+                  "X": 100.0,
+                  "Y": 100.0
+                },
+                "Name": "image",
+                "ctype": "ImageViewObjectData"
+              }
+            ],
+            "ActionTag": 191067400,
+            "Size": {
+              "X": 384.0,
+              "Y": 115.2
+            },
+            "Name": "ListView",
+            "ctype": "ListViewObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/cancelbutton3.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/cancelbutton2.png",
+              "Plist": ""
+            },
+            "NormalFileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/cancelbutton.png",
+              "Plist": ""
+            },
+            "Scale9Width": 171,
+            "Scale9Height": 78,
+            "OutlineSize": 0,
+            "OutlineColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "ShadowOffsetX": 0.0,
+            "ShadowOffsetY": 0.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 480.0,
+              "Y": 207.296
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.3239
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.14,
+              "Y": 0.1
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 412.8,
+            "RightMargin": 412.8,
+            "TopMargin": 400.712,
+            "BottomMargin": 175.288,
+            "Tag": 179,
+            "ActionTag": -435103795,
+            "Size": {
+              "X": 134.4,
+              "Y": 64.0
+            },
+            "Name": "cancelButton",
+            "ctype": "ButtonObjectData"
+          }
+        ],
+        "Size": {
+          "X": 960.0,
+          "Y": 640.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "drawable-hdpi/anu.png",
+        "drawable-hdpi/cancelbutton.png",
+        "drawable-hdpi/cancelbutton2.png",
+        "drawable-hdpi/cancelbutton3.png",
+        "drawable-hdpi/dialogCommon.png",
+        "drawable-hdpi/fangzhen.ttf"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Layer"
+}

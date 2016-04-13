@@ -1,0 +1,14 @@
+{
+	"packageUrl":"http://cocosxxy.sinaapp.com/1",
+	"remoteManifestUrl":"http://cocosxxy.sinaapp.com/project.manifest1",
+	"remoteVersionUrl":"http://cocosxxy.sinaapp.com/version.manifest1",
+	"version":"1.0.3",
+	"groupVersions" : {
+		"1" : "1.0.4"
+    },
+	"engineVersion":"3.3",
+	"assets" : {
+    },
+    "searchPaths":[
+    ]
+}

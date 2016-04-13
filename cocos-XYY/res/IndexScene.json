@@ -1,0 +1,569 @@
+{
+  "ID": "4f367c72-3829-4b3a-b128-54524d7e7e95",
+  "Version": "2.3.2.3",
+  "Name": "IndexScene",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 162,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/homeBg.png",
+              "Plist": ""
+            },
+            "Scale9Width": 1600,
+            "Scale9Height": 1000,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 480.0,
+              "Y": 320.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "Tag": 163,
+            "ActionTag": -1305414052,
+            "Size": {
+              "X": 960.0,
+              "Y": 640.0
+            },
+            "Name": "bg",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/startgame_clicked.png",
+              "Plist": ""
+            },
+            "NormalFileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/startgame_unclicked.png",
+              "Plist": ""
+            },
+            "Scale9Width": 251,
+            "Scale9Height": 718,
+            "OutlineSize": 0,
+            "OutlineColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "ShadowOffsetX": 0.0,
+            "ShadowOffsetY": 0.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 254.91,
+              "Y": 440.2172
+            },
+            "Scale": {
+              "ScaleX": 0.7636,
+              "ScaleY": 0.7636
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.2655,
+              "Y": 0.6878
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.15,
+              "Y": 0.65
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 182.91,
+            "RightMargin": 633.09,
+            "TopMargin": -8.2172,
+            "BottomMargin": 232.2172,
+            "Tag": 164,
+            "ActionTag": -1485556470,
+            "Size": {
+              "X": 144.0,
+              "Y": 416.0
+            },
+            "Name": "startButton",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "FontSize": 24,
+            "LabelText": "版本:9999999999999999999999",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/fangzhen.ttf",
+              "Plist": ""
+            },
+            "OutlineSize": 0,
+            "OutlineColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "ShadowOffsetX": 0.0,
+            "ShadowOffsetY": 0.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 172.4998,
+              "Y": 624.999
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.1797,
+              "Y": 0.9766
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 13.4998,
+            "RightMargin": 628.5002,
+            "TopMargin": 2.001,
+            "BottomMargin": 611.999,
+            "Tag": 192,
+            "ActionTag": 1858667711,
+            "Size": {
+              "X": 318.0,
+              "Y": 26.0
+            },
+            "Name": "versionLabel",
+            "ctype": "TextObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/adventuremode_clicked.png",
+              "Plist": ""
+            },
+            "NormalFileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/adventuremode_unclicked.png",
+              "Plist": ""
+            },
+            "Scale9Width": 256,
+            "Scale9Height": 631,
+            "OutlineSize": 0,
+            "OutlineColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "ShadowOffsetX": 0.0,
+            "ShadowOffsetY": 0.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 557.2609,
+              "Y": 457.23
+            },
+            "Scale": {
+              "ScaleX": 0.7636,
+              "ScaleY": 0.7636
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5805,
+              "Y": 0.7144
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.18,
+              "Y": 0.65
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 470.8609,
+            "RightMargin": 316.3391,
+            "TopMargin": -25.23,
+            "BottomMargin": 249.23,
+            "Tag": 346,
+            "ActionTag": -1971237540,
+            "Size": {
+              "X": 172.8,
+              "Y": 416.0
+            },
+            "Name": "adventureButton",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/achievement_clicked.png",
+              "Plist": ""
+            },
+            "NormalFileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/achievement_unclicked.png",
+              "Plist": ""
+            },
+            "Scale9Width": 309,
+            "Scale9Height": 649,
+            "OutlineSize": 0,
+            "OutlineColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "ShadowOffsetX": 0.0,
+            "ShadowOffsetY": 0.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 712.7529,
+              "Y": 211.9809
+            },
+            "Scale": {
+              "ScaleX": 0.7636,
+              "ScaleY": 0.7636
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.7425,
+              "Y": 0.3312
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.2,
+              "Y": 0.65
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 616.7529,
+            "RightMargin": 151.2471,
+            "TopMargin": 220.0192,
+            "BottomMargin": 3.9809,
+            "Tag": 431,
+            "ActionTag": 79434845,
+            "Size": {
+              "X": 192.0,
+              "Y": 416.0
+            },
+            "Name": "AchivementButton",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Default",
+              "Path": "Default/ImageFile.png",
+              "Plist": ""
+            },
+            "Scale9Width": 46,
+            "Scale9Height": 46,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 75.84,
+              "Y": 65.664
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.079,
+              "Y": 0.1026
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.1,
+              "Y": 0.15
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 27.84,
+            "RightMargin": 836.16,
+            "TopMargin": 526.336,
+            "BottomMargin": 17.664,
+            "Tag": 292,
+            "ActionTag": -835255688,
+            "Size": {
+              "X": 96.0,
+              "Y": 96.0
+            },
+            "Name": "spButton",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/musicButton_on.png",
+              "Plist": ""
+            },
+            "Scale9Width": 78,
+            "Scale9Height": 73,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 855.168,
+              "Y": 75.072
+            },
+            "Scale": {
+              "ScaleX": 0.6068,
+              "ScaleY": 0.6068
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.8908,
+              "Y": 0.1173
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.15,
+              "Y": 0.22
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 783.1678,
+            "RightMargin": 32.8322,
+            "TopMargin": 494.5576,
+            "BottomMargin": 4.6424,
+            "Tag": 408,
+            "ActionTag": -458467155,
+            "Size": {
+              "X": 144.0,
+              "Y": 140.8
+            },
+            "Name": "musicButton",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/accreditationmodel_clicked.png",
+              "Plist": ""
+            },
+            "NormalFileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/accreditationmodel_unclicked.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 226,
+            "Scale9Height": 453,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 381.3419,
+              "Y": 205.1686
+            },
+            "Scale": {
+              "ScaleX": 0.9645,
+              "ScaleY": 0.9645
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.3972,
+              "Y": 0.3206
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.2,
+              "Y": 0.55
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 285.3419,
+            "RightMargin": 482.6581,
+            "TopMargin": 258.8314,
+            "BottomMargin": 29.1686,
+            "Tag": 349,
+            "ActionTag": 96246619,
+            "Size": {
+              "X": 192.0,
+              "Y": 352.0
+            },
+            "Name": "fresSelectButton",
+            "ctype": "ButtonObjectData"
+          }
+        ],
+        "Size": {
+          "X": 960.0,
+          "Y": 640.0
+        },
+        "Name": "Scene",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "Default/Button_Disable.png",
+        "Default/ImageFile.png",
+        "drawable-hdpi/accreditationmodel_clicked.png",
+        "drawable-hdpi/accreditationmodel_unclicked.png",
+        "drawable-hdpi/achievement_clicked.png",
+        "drawable-hdpi/achievement_unclicked.png",
+        "drawable-hdpi/adventuremode_clicked.png",
+        "drawable-hdpi/adventuremode_unclicked.png",
+        "drawable-hdpi/fangzhen.ttf",
+        "drawable-hdpi/homeBg.png",
+        "drawable-hdpi/musicButton_on.png",
+        "drawable-hdpi/startgame_clicked.png",
+        "drawable-hdpi/startgame_unclicked.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Scene"
+}

@@ -1,0 +1,135 @@
+{
+  "ID": "955185a2-961e-42d8-9313-e25a87b952ab",
+  "Version": "2.3.2.3",
+  "Name": "addCardAnimationLayer",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 184,
+        "Children": [
+          {
+            "ItemMargin": -90,
+            "VerticalType": "Align_VerticalCenter",
+            "ScrollDirectionType": 0,
+            "BackColorAlpha": 102,
+            "SingleColor": {
+              "R": 150,
+              "G": 150
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 150
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 480.0,
+              "Y": 320.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.2083,
+              "Y": 0.25
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 380.0,
+            "RightMargin": 380.0,
+            "TopMargin": 240.0,
+            "BottomMargin": 240.0,
+            "Tag": 199,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/handCardBack.png",
+                  "Plist": ""
+                },
+                "Scale9Width": 110,
+                "Scale9Height": 151,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 55.0,
+                  "Y": 80.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.115,
+                  "Y": 0.885
+                },
+                "PreSize": {
+                  "X": 0.55,
+                  "Y": 0.755
+                },
+                "LeftMargin": -32.0,
+                "RightMargin": 122.0,
+                "TopMargin": -52.5,
+                "BottomMargin": 101.5,
+                "Tag": 202,
+                "ActionTag": 329722017,
+                "Size": {
+                  "X": 110.0,
+                  "Y": 151.0
+                },
+                "Name": "card",
+                "ctype": "ImageViewObjectData"
+              }
+            ],
+            "ActionTag": 314415625,
+            "Size": {
+              "X": 200.0,
+              "Y": 160.0
+            },
+            "Name": "cardList",
+            "ctype": "ListViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 960.0,
+          "Y": 640.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "drawable-hdpi/handCardBack.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Layer"
+}

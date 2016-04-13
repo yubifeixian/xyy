@@ -1,0 +1,80 @@
+{
+  "ID": "8192ed93-2c92-489b-9ad7-3a471a88fb05",
+  "Version": "2.3.2.3",
+  "Name": "eventLayer",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 197,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/baifangshichenxidong.png",
+              "Plist": ""
+            },
+            "Scale9Width": 709,
+            "Scale9Height": 425,
+            "AnchorPoint": {
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 0.0,
+              "Y": 320.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.5
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.7385,
+              "Y": 0.6641
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "RightMargin": 251.0,
+            "TopMargin": 107.5,
+            "BottomMargin": 107.5,
+            "Tag": 199,
+            "ActionTag": 883982936,
+            "Size": {
+              "X": 709.0,
+              "Y": 425.0
+            },
+            "Alpha": 0,
+            "Name": "eventImage",
+            "ctype": "ImageViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 960.0,
+          "Y": 640.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "drawable-hdpi/baifangshichenxidong.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Layer"
+}

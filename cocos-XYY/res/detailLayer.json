@@ -1,0 +1,984 @@
+{
+  "ID": "d2d49c2b-e1f0-4b46-9908-20eaa307ae79",
+  "Version": "2.3.2.3",
+  "Name": "detailLayer",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 396,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/wupin_dil.png",
+              "Plist": ""
+            },
+            "Scale9Width": 457,
+            "Scale9Height": 606,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 480.0,
+              "Y": 320.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.476,
+              "Y": 0.9469
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 251.5,
+            "RightMargin": 251.5,
+            "TopMargin": 17.0,
+            "BottomMargin": 17.0,
+            "Tag": 399,
+            "ActionTag": 224963898,
+            "Size": {
+              "X": 457.0,
+              "Y": 606.0
+            },
+            "Name": "bg",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/anu.png",
+              "Plist": ""
+            },
+            "Scale9Width": 152,
+            "Scale9Height": 149,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 343.8076,
+              "Y": 535.4897
+            },
+            "Scale": {
+              "ScaleX": 0.9766,
+              "ScaleY": 0.9766
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.3581,
+              "Y": 0.8367
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.1583,
+              "Y": 0.2328
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 267.8076,
+            "RightMargin": 540.1924,
+            "TopMargin": 30.0103,
+            "BottomMargin": 460.9897,
+            "Tag": 400,
+            "ActionTag": -746563169,
+            "Size": {
+              "X": 152.0,
+              "Y": 149.0
+            },
+            "Name": "head",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "BackColorAlpha": 102,
+            "FileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/mingchengdi.png",
+              "Plist": ""
+            },
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Enable": true,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 548.0251,
+              "Y": 532.2521
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5709,
+              "Y": 0.8316
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.25,
+              "Y": 0.1
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 428.0251,
+            "RightMargin": 291.9749,
+            "TopMargin": 75.7479,
+            "BottomMargin": 500.2521,
+            "Tag": 402,
+            "Children": [
+              {
+                "FontSize": 36,
+                "LabelText": "湮世穷兵超级",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/DFYuanW7-GBK.ttf",
+                  "Plist": ""
+                },
+                "HorizontalAlignmentType": "HT_Center",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 120.0,
+                  "Y": 32.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.3,
+                  "Y": 0.5625
+                },
+                "HorizontalEdge": "BothEdge",
+                "VerticalEdge": "BothEdge",
+                "LeftMargin": 84.0,
+                "RightMargin": 84.0,
+                "TopMargin": 14.0,
+                "BottomMargin": 14.0,
+                "Tag": 403,
+                "ActionTag": 1117822095,
+                "Size": {
+                  "X": 216.0,
+                  "Y": 36.0
+                },
+                "Name": "nameText",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": -775747795,
+            "Size": {
+              "X": 240.0,
+              "Y": 64.0
+            },
+            "Name": "namePanel",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/wupin_diR.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 65,
+            "Scale9OriginY": 84,
+            "Scale9Width": 435,
+            "Scale9Height": 450,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 480.0001,
+              "Y": 238.0902
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.372
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.4,
+              "Y": 0.4
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 288.0001,
+            "RightMargin": 287.9999,
+            "TopMargin": 273.9098,
+            "BottomMargin": 110.0902,
+            "Tag": 405,
+            "ActionTag": 238419969,
+            "Size": {
+              "X": 384.0,
+              "Y": 256.0
+            },
+            "Name": "shuomingBg",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "ItemMargin": 5,
+            "DirectionType": "Vertical",
+            "IsBounceEnabled": true,
+            "ScrollDirectionType": 0,
+            "ClipAble": true,
+            "BackColorAlpha": 102,
+            "SingleColor": {
+              "R": 150,
+              "G": 150
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 150
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 480.0001,
+              "Y": 237.4213
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.371
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.35,
+              "Y": 0.37
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 312.0001,
+            "RightMargin": 311.9999,
+            "TopMargin": 284.1787,
+            "BottomMargin": 119.0213,
+            "Tag": 406,
+            "Children": [
+              {
+                "FontSize": 24,
+                "LabelText": "Text Label",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/DFYuanW7-GBK.ttf",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 60.0,
+                  "Y": 224.8
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.1408,
+                  "Y": 0.9578
+                },
+                "PreSize": {
+                  "X": 0.2815,
+                  "Y": 0.0845
+                },
+                "RightMargin": 255.2,
+                "BottomMargin": 216.8,
+                "Tag": 407,
+                "ActionTag": -357003160,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 24.0
+                },
+                "Name": "skillText",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": 1048178720,
+            "Size": {
+              "X": 336.0,
+              "Y": 236.8
+            },
+            "Name": "ListView",
+            "ctype": "ListViewObjectData"
+          },
+          {
+            "BackColorAlpha": 102,
+            "FileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/dengjimo.png",
+              "Plist": ""
+            },
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Enable": true,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 405.5938,
+              "Y": 422.1486
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4225,
+              "Y": 0.6596
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.15,
+              "Y": 0.07
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 333.5938,
+            "RightMargin": 482.4062,
+            "TopMargin": 195.4514,
+            "BottomMargin": 399.7486,
+            "Tag": 412,
+            "Children": [
+              {
+                "FontSize": 36,
+                "LabelText": "11/11",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/DFYuanW7-GBK.ttf",
+                  "Plist": ""
+                },
+                "HorizontalAlignmentType": "HT_Center",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 72.0,
+                  "Y": 22.4
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "G": 165,
+                  "B": 0
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.6944,
+                  "Y": 0.4464
+                },
+                "HorizontalEdge": "BothEdge",
+                "VerticalEdge": "BothEdge",
+                "LeftMargin": 22.0,
+                "RightMargin": 22.0,
+                "TopMargin": 12.4,
+                "BottomMargin": 12.4,
+                "Tag": 413,
+                "ActionTag": -69908116,
+                "Size": {
+                  "X": 90.0,
+                  "Y": 36.0
+                },
+                "Name": "hpText",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": -1076334092,
+            "Size": {
+              "X": 144.0,
+              "Y": 44.8
+            },
+            "Name": "hpPanel",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "BackColorAlpha": 102,
+            "FileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/wupin_chushoudi.png",
+              "Plist": ""
+            },
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Enable": true,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 578.1666,
+              "Y": 423.0919
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.6023,
+              "Y": 0.6611
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.2,
+              "Y": 0.13
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 482.1666,
+            "RightMargin": 285.8334,
+            "TopMargin": 175.3081,
+            "BottomMargin": 381.4919,
+            "Tag": 415,
+            "Children": [
+              {
+                "FontSize": 30,
+                "LabelText": "战力",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/DFYuanW7-GBK.ttf",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 51.471,
+                  "Y": 61.2518
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 9,
+                  "G": 63,
+                  "B": 79
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2681,
+                  "Y": 0.7362
+                },
+                "PreSize": {
+                  "X": 0.0458,
+                  "Y": 0.0344
+                },
+                "HorizontalEdge": "BothEdge",
+                "VerticalEdge": "BothEdge",
+                "LeftMargin": 21.471,
+                "RightMargin": 110.5289,
+                "TopMargin": 6.9482,
+                "BottomMargin": 46.2518,
+                "Tag": 414,
+                "ActionTag": -956257475,
+                "Size": {
+                  "X": 60.0,
+                  "Y": 30.0
+                },
+                "Name": "Text_7",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 30,
+                "LabelText": "命中",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/DFYuanW7-GBK.ttf",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 51.4752,
+                  "Y": 25.2262
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 9,
+                  "G": 63,
+                  "B": 79
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2681,
+                  "Y": 0.3032
+                },
+                "PreSize": {
+                  "X": 0.0458,
+                  "Y": 0.0344
+                },
+                "HorizontalEdge": "BothEdge",
+                "VerticalEdge": "BothEdge",
+                "LeftMargin": 21.4752,
+                "RightMargin": 110.5248,
+                "TopMargin": 42.9738,
+                "BottomMargin": 10.2262,
+                "Tag": 416,
+                "ActionTag": -731664117,
+                "Size": {
+                  "X": 60.0,
+                  "Y": 30.0
+                },
+                "Name": "Text_7_0",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 30,
+                "LabelText": "15",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/DFYuanW7-GBK.ttf",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 153.6,
+                  "Y": 61.2525
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 128,
+                  "G": 0,
+                  "B": 128
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.8,
+                  "Y": 0.7362
+                },
+                "PreSize": {
+                  "X": 0.0521,
+                  "Y": 0.2404
+                },
+                "HorizontalEdge": "BothEdge",
+                "VerticalEdge": "BothEdge",
+                "LeftMargin": 138.6,
+                "RightMargin": 23.4,
+                "TopMargin": 6.9475,
+                "BottomMargin": 46.2525,
+                "Tag": 417,
+                "ActionTag": -251475454,
+                "Size": {
+                  "X": 30.0,
+                  "Y": 30.0
+                },
+                "Name": "combatText",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 30,
+                "LabelText": "15",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/DFYuanW7-GBK.ttf",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 153.6,
+                  "Y": 25.2281
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 128,
+                  "G": 0,
+                  "B": 128
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.8,
+                  "Y": 0.3032
+                },
+                "PreSize": {
+                  "X": 0.0521,
+                  "Y": 0.2404
+                },
+                "HorizontalEdge": "BothEdge",
+                "VerticalEdge": "BothEdge",
+                "LeftMargin": 138.6,
+                "RightMargin": 23.4,
+                "TopMargin": 42.9718,
+                "BottomMargin": 10.2281,
+                "Tag": 418,
+                "ActionTag": -1443250747,
+                "Size": {
+                  "X": 30.0,
+                  "Y": 30.0
+                },
+                "Name": "extentText",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": -321182745,
+            "Size": {
+              "X": 192.0,
+              "Y": 83.2
+            },
+            "Name": "Panel_4",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/hp.png",
+              "Plist": ""
+            },
+            "Scale9Width": 100,
+            "Scale9Height": 100,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 318.5249,
+              "Y": 427.7151
+            },
+            "Scale": {
+              "ScaleX": 0.7619,
+              "ScaleY": 0.7619
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.3318,
+              "Y": 0.6683
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.1042,
+              "Y": 0.1562
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 268.5249,
+            "RightMargin": 591.4751,
+            "TopMargin": 162.2849,
+            "BottomMargin": 377.7151,
+            "Tag": 420,
+            "ActionTag": -1690198602,
+            "Size": {
+              "X": 100.0,
+              "Y": 100.0
+            },
+            "Name": "hpImageView",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/confirmbutton3.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/confirmbutton2.png",
+              "Plist": ""
+            },
+            "NormalFileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/confirmbutton.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 141,
+            "Scale9Height": 56,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 480.0,
+              "Y": 69.9664
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.1093
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.14,
+              "Y": 0.1
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 412.8,
+            "RightMargin": 412.8,
+            "TopMargin": 538.0336,
+            "BottomMargin": 37.9664,
+            "Tag": 421,
+            "ActionTag": -139933981,
+            "Size": {
+              "X": 134.4,
+              "Y": 64.0
+            },
+            "Name": "confirmButton",
+            "ctype": "ButtonObjectData"
+          }
+        ],
+        "Size": {
+          "X": 960.0,
+          "Y": 640.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "drawable-hdpi/anu.png",
+        "drawable-hdpi/confirmbutton.png",
+        "drawable-hdpi/confirmbutton2.png",
+        "drawable-hdpi/confirmbutton3.png",
+        "drawable-hdpi/dengjimo.png",
+        "drawable-hdpi/DFYuanW7-GBK.ttf",
+        "drawable-hdpi/hp.png",
+        "drawable-hdpi/mingchengdi.png",
+        "drawable-hdpi/wupin_chushoudi.png",
+        "drawable-hdpi/wupin_dil.png",
+        "drawable-hdpi/wupin_diR.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Layer"
+}
