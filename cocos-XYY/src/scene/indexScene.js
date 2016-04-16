@@ -77,9 +77,6 @@ var IndexLayer=cc.Layer.extend({
 		var indexRoot=ccs.load(res.IndexScenc_josn);
 		this.osBackGroundImageView=ccui.helper.seekWidgetByName(indexRoot.node, "bg");
 		var versionLabel=ccui.helper.seekWidgetByName(indexRoot.node, "versionLabel");
-		// cc.log(versionLabel.getDescription());
-		// versionLabel.setString("版本:3.2.0");
-		versionLabel.setString("版本："+version);
 		this.startButton=ccui.helper.seekWidgetByName(indexRoot.node, "startButton");
 		this.startButton.addTouchEventListener(function(sender,type){
 			if(type==2){

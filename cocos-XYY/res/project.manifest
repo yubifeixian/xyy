@@ -1,12 +1,11 @@
 {
-	"packageUrl":"http://cocosxxy.sinaapp.com/1",
-	"remoteManifestUrl":"http://cocosxxy.sinaapp.com/project.manifest1",
-	"remoteVersionUrl":"http://cocosxxy.sinaapp.com/version.manifest1",
-	"version":"1.0.3",
+	"packageUrl":"http://120.76.139.33:8080/cocosXYY",
+	"remoteManifestUrl":"http://120.76.139.33:8080/cocosXYY/project.manifest",
+	"remoteVersionUrl":"http://120.76.139.33:8080/cocosXYY/version.manifest",
+	"version":"4.1.0",
 	"groupVersions" : {
-		"1" : "1.0.4"
     },
-	"engineVersion":"3.3",
+	"engineVersion":"3.6.1",
 	"assets" : {
     },
     "searchPaths":[

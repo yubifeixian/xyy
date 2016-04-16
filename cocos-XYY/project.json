@@ -13,6 +13,8 @@
   "jsList": [
   		"src/resource.js",
   		"src/common/utils/GameFrameCache.js",
-  		"src/common/utils/dialogManager.js"
+  		"src/common/utils/dialogManager.js",
+  		"src/scene/UpdateScene.js",
+  		"src/scene/LaunchScene.js"
   ]
 }
