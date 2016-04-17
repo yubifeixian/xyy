@@ -5,7 +5,7 @@ spSwitch=cc.sys.localStorage.getItem("spSwtich");
 audioEngine=cc.AudioEngine.getInstance();
 
 baseCharacterData=null;
-//当前是否已经按下返回键(防止重复add退出layer)
+// 当前是否已经按下返回键(防止重复add退出layer)
 onExit=false;
 
 var IndexLayer=cc.Layer.extend({
@@ -77,6 +77,7 @@ var IndexLayer=cc.Layer.extend({
 		var indexRoot=ccs.load(res.IndexScenc_josn);
 		this.osBackGroundImageView=ccui.helper.seekWidgetByName(indexRoot.node, "bg");
 		var versionLabel=ccui.helper.seekWidgetByName(indexRoot.node, "versionLabel");
+		versionLabel.setString("版本："+version);
 		this.startButton=ccui.helper.seekWidgetByName(indexRoot.node, "startButton");
 		this.startButton.addTouchEventListener(function(sender,type){
 			if(type==2){
@@ -174,9 +175,6 @@ var IndexLayer=cc.Layer.extend({
 
 
 var IndexScene=cc.Scene.extend({
-	ctor:function(){
-		this._super();
-	},
 	onEnter:function(){
 		this._super();
 		var indexLayer=new IndexLayer();
