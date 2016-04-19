@@ -47,14 +47,12 @@ cc.game.onStart = function(){
     cc.view.resizeWithBrowserSize(true);
     
     
-    new UpdateScene().run();
-    // var scene=new AssetsManagerLoaderScene();
-    // scene.run();
-    
+    var scene=new UpdateScene();
+    scene.run();
     // load resources
-   /*
-	 * cc.LoaderScene.preload(g_resources, function () {
-	 * cc.director.runScene(new IndexScene()); }, this);
-	 */
+	/*  cc.LoaderScene.preload(g_resources, function () {
+		  cc.director.runScene(new LoginScene()); 
+	  }, this);*/
+	 
 };
 cc.game.run();
