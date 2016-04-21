@@ -1,4 +1,5 @@
 var AdvGameScene=cc.Scene.extend({
+	layer:null,
 	ctor:function(){
 		this._super();
 		canUseCharacterList=new Array();
@@ -20,11 +21,12 @@ var AdvGameScene=cc.Scene.extend({
 		//nowGameModel=GAMESCENEMODEL.LEFT;
 		loadGameSave();
 		//nowStage=getStage1_2Instance();
-		var layer=new AdvGameSceneLayer(nowGameModel,nowStage);
-		this.addChild(layer);
+		this.layer=new AdvGameSceneLayer(nowGameModel,nowStage);
+		this.addChild(this.layer);
 	},
 	onExit:function(){
 		this._super();
+		this.layer.unscheduleAllCallbacks();
 		mainScene=null;
 		cc.textureCache.removeAllTextures();
 		try{

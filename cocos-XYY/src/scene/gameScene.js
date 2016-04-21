@@ -910,10 +910,11 @@ var GameLayer=cc.Layer.extend({
 });
 
 var GameScene = cc.Scene.extend({
+	layer:null,
 	onEnter:function () {
 		this._super();
-		var layer = new GameLayer();
-		this.addChild(layer);
+		this.layer = new GameLayer();
+		this.addChild(this.layer);
 		skillCharacters_XuanxiaoJiebai(round_Start);
 	},
 	onEnterTransitionDidFinish:function(){
@@ -924,6 +925,7 @@ var GameScene = cc.Scene.extend({
 	},
 	onExit:function(){
 		this._super();
+		this.layer.unscheduleAllCallbacks();
 		if(cc.sys.isObjectValid(myText)){
 			myText.release();
 		}
