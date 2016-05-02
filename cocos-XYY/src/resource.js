@@ -59,7 +59,9 @@ var res = {
     skillanimation_huihunxianmeng_plist:"res/skillAnimation/skillanimation_huihunxianmeng.plist",
     detailLayer_json:"res/detailLayer.json",
     eventLayer_json:"res/eventLayer.json",
-    addCardAnimationLayer:"res/addCardAnimationLayer.json"
+    addCardAnimationLayer:"res/addCardAnimationLayer.json",
+    ResultLayer:"res/ResultLayer.json",
+    NormalSkillAnimationLayer:"res/NormalSkillLayer.json"
     
 };
 

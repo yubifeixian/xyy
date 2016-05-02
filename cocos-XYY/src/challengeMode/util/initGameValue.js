@@ -222,9 +222,9 @@ function initGameValue(){
 	 //player1.hp=1;
 	 //player3.hp=1;
 	// player1.defenseExtent=2;
-	// player2.hp=1;
+	//player2.hp=0;
 	 //player3.hp=1;
-	// player4.hp=1;
+	 //player4.hp=0;
 	// isDeath(player3,[player3,player4], true,null,true);
 	// player2.handCard=new Array();
 	// player1.defense="踏云靴";

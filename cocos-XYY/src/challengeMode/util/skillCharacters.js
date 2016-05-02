@@ -3,15 +3,18 @@ function skillCharacters_LixiaoyaoXiagurouchang(nowplayer,callBack) {
 	if (nowplayer!=null&&nowplayer.hp > 0
 			&& nowplayer.skillNameList.containsObject(skillnameXiagurouchang)
 					&& fight_Trigger[0].sex == 1) {
-		mainScene.addChild(new skillAnimationLayer(nowplayer.animation));
-		myAudioPlayer(audioLixiaoyaoXiagurouchang);
-		textAreaAddMessage("李逍遥【侠骨柔肠】效果触发，自身命中+1", myText, listView,function(){
-			if(nowplayer._name==player1._name){
-				AchivementProgress.addAchivementProgress(nowplayer);
-			}
-			baseEffectAddTempExtent(nowplayer);
-			callBack();
-		});
+		mainScene.addChild(new NormalSkillAnimationLayer(skillnameXiagurouchang,nowplayer.hadImageView,function(){
+			mainScene.addChild(new skillAnimationLayer(nowplayer.animation));
+			myAudioPlayer(audioLixiaoyaoXiagurouchang);
+			textAreaAddMessage("李逍遥【侠骨柔肠】效果触发，自身命中+1", myText, listView,function(){
+				if(nowplayer._name==player1._name){
+					AchivementProgress.addAchivementProgress(nowplayer);
+				}
+				baseEffectAddTempExtent(nowplayer);
+				callBack();
+			});
+			
+		}));
 	}else{
 		callBack();
 	}
@@ -69,8 +72,10 @@ function skillCharacters_ZhaolingerShuangjian(player,callBack,callBack2){
 				addDialog(mainScene, new ChooseZoneLayer("“双剑”:替换第二把武器？(否则为第一把)",function(result){
 					updateArm=result?2:1;
 					if(result){
-						myAudioPlayer(audioZhaolingerShuangjian);
-						textAreaAddMessage(player._name+"发动“双剑”效果", myText, listView);
+						mainScene.addChild(new NormalSkillAnimationLayer(skillnameShuangjian,player.hadImageView,function(){
+							myAudioPlayer(audioZhaolingerShuangjian);
+							textAreaAddMessage(player._name+"发动“双剑”效果", myText, listView);
+						}));
 					}
 					callBack(player,updateArm,callBack2);
 				}));
@@ -79,7 +84,10 @@ function skillCharacters_ZhaolingerShuangjian(player,callBack,callBack2){
 				// AI决定是否发动【双剑】
 				updateArm=player.arms1==Text.nil?1:2;
 				if(updateArm==2){
-					textAreaAddMessage(player._name+"发动“双剑”效果", myText, listView);
+					mainScene.addChild(new NormalSkillAnimationLayer(skillnameShuangjian,player.hadImageView,function(){
+						myAudioPlayer(audioZhaolingerShuangjian);
+						textAreaAddMessage(player._name+"发动“双剑”效果", myText, listView);
+					}));
 				}
 				callBack(player,updateArm,callBack2);
 			}
@@ -283,11 +291,13 @@ function skillCharacters_LinyueruJieruchou(vector1,vector2,callBack) {
 // 林月如【林家剑法】
 function skillCharacter_LinyueruLinjiajianfa(temPlayer) {
 	if (temPlayer.skillNameList.containsObject(skillnameLinjiajianfa)) {
-		if (!skillXiejianxian_HasXiejianxian(temPlayer)) {
-			temPlayer.arms1Combat += 1;
-		}
-		myAudioPlayer(audioLinyueruLinjiajianfa);
-		textAreaAddMessage(temPlayer._name+"【林家剑法】效果触发，战力额外+1", myText, listView);
+		mainScene.addChild(new NormalSkillAnimationLayer(skillnameLinjiajianfa,temPlayer.hadImageView,function(){
+			if (!skillXiejianxian_HasXiejianxian(temPlayer)) {
+				temPlayer.arms1Combat += 1;
+			}
+			myAudioPlayer(audioLinyueruLinjiajianfa);
+			textAreaAddMessage(temPlayer._name+"【林家剑法】效果触发，战力额外+1", myText, listView);
+		}));
 	}
 }
 // 赵灵儿sp【林家剑法】回合结束恢复
@@ -311,28 +321,30 @@ function skillCharacters_AnuWangushitian(callBack) {
 		var addCardNumberList=new Array();
 		var tempHeartList=new Array();
 		var tempHeartNumberList=new Array();
-		myAudioPlayer(audioAnuWangushitian);
-		textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"触发【万蛊蚀天】效果，我方全体补1张牌后，除自己以外的所有角色HP-1", myText, listView,function(){
-			for(var i=0;i<nowPlayerTerm.length;i++){
-				if(player1IsPlayer2Friend(nowPlayerTerm[i], nowPlayerTerm[nowPlayerNumber])){
-					addCardPlayerList.push(nowPlayerTerm[i]);
-					addCardNumberList.push(1);
+		mainScene.addChild(new NormalSkillAnimationLayer(skillnameWangushitian,nowPlayerTerm[nowPlayerNumber].hadImageView,function(){
+			myAudioPlayer(audioAnuWangushitian);
+			textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"触发【万蛊蚀天】效果，我方全体补1张牌后，除自己以外的所有角色HP-1", myText, listView,function(){
+				for(var i=0;i<nowPlayerTerm.length;i++){
+					if(player1IsPlayer2Friend(nowPlayerTerm[i], nowPlayerTerm[nowPlayerNumber])){
+						addCardPlayerList.push(nowPlayerTerm[i]);
+						addCardNumberList.push(1);
+					}
+					if(nowPlayerTerm[i].hp>0&&nowPlayerTerm[i]._name!=nowPlayerTerm[nowPlayerNumber]._name){
+						tempHeartList.push(nowPlayerTerm[i]);
+						tempHeartNumberList.push(1);
+					}
 				}
-				if(nowPlayerTerm[i].hp>0&&nowPlayerTerm[i]._name!=nowPlayerTerm[nowPlayerNumber]._name){
-					tempHeartList.push(nowPlayerTerm[i]);
-					tempHeartNumberList.push(1);
-				}
-			}
-			addHandCard(addCardPlayerList,addCardPlayerList[0],addCardPlayerList[0],null,addCardNumberList,true,true,function(){
-				useYingu(tempHeartList,tempHeartList[0],tempHeartList[0],tempHeartNumberList,true,baseEffectReduceHPEffect,function(){
-					// 唐雪见【追打】技能
-					skillCharactersTangxuejianZhuida(function(){
-						heartList=new Array();
-						callBack();
+				addHandCard(addCardPlayerList,addCardPlayerList[0],addCardPlayerList[0],null,addCardNumberList,true,true,function(){
+					useYingu(tempHeartList,tempHeartList[0],tempHeartList[0],tempHeartNumberList,true,baseEffectReduceHPEffect,function(){
+						// 唐雪见【追打】技能
+						skillCharactersTangxuejianZhuida(function(){
+							heartList=new Array();
+							callBack();
+						});
 					});
 				});
 			});
-		});
+		}));
 	}else{
 		callBack();
 	}
@@ -425,7 +437,9 @@ function skillCharacters_JiujianxianYujianshu(temPlayer) {
 		if (!skillXiejianxian_HasXiejianxian(temPlayer)) {
 			temPlayer.arms1Extent += 1;
 		}
-		textAreaAddMessage(temPlayer._name+"【御剑术】效果触发，命中额外+1", myText, listView);
+		mainScene.addChild(new NormalSkillAnimationLayer(skillnameYujianshu,temPlayer.hadImageView,function(){
+			textAreaAddMessage(temPlayer._name+"【御剑术】效果触发，命中额外+1", myText, listView);
+		}));
 	}
 }
 
@@ -457,13 +471,15 @@ function skillCharacters_BaiyueZhaohuanshuimoshou(usePlayer) {
 						usePlayer.handCard.removeObject(result[i]);
 						result[i].removeFromParent();
 					}
-					textAreaAddMessage(usePlayer._name+"发动【召唤水魔兽】，本场战斗中我方战力+5", myText, listView, function(){
-						if(player1IsPlayer2Friend(player1, nowPlayerTerm[nowPlayerNumber])){
-							triggerCombat += 5;
-						}else{
-							monsterCombat += 5;
-						}
-					});
+					mainScene.addChild(new NormalSkillAnimationLayer(skillnameZhaohuanshuimoshou,usePlayer.hadImageView,function(){
+						textAreaAddMessage(usePlayer._name+"发动【召唤水魔兽】，本场战斗中我方战力+5", myText, listView, function(){
+							if(player1IsPlayer2Friend(player1, nowPlayerTerm[nowPlayerNumber])){
+								triggerCombat += 5;
+							}else{
+								monsterCombat += 5;
+							}
+						});
+					}));
 				}
 			}));
 		}else{
@@ -480,15 +496,16 @@ function shuimoshouhetiHandle(skillUser,endUser,userList,callBack){
 			break;
 		}
 	}
-	textAreaAddMessage(skillUser._name+"【水魔兽合体】效果触发，自身战力+2", myText, listView,function(){
-		baseEffectAddSkillCombat(skillUser, 2);
-		if(skillUser._name==endUser._name){
-			callBack();
-			return;
-		}
-		shuimoshouhetiHandle(userList[nextUserIndex],endUser,userList,callBack);
-	});
-	
+	mainScene.addChild(new NormalSkillAnimationLayer(skillnameShuimoshouheti,skillUser.hadImageView,function(){
+		textAreaAddMessage(skillUser._name+"【水魔兽合体】效果触发，自身战力+2", myText, listView,function(){
+			baseEffectAddSkillCombat(skillUser, 2);
+			if(skillUser._name==endUser._name){
+				callBack();
+				return;
+			}
+			shuimoshouhetiHandle(userList[nextUserIndex],endUser,userList,callBack);
+		});
+	}));
 }
 
 // 拜月【水魔兽合体】
@@ -519,28 +536,29 @@ function fahuibuwendingHandle(skillUser,endUser,userList,callBack){
 	}
 	
 	var faHuiBuWenDing = 0;
-	textAreaAddMessage(skillUser._name+"【发挥不稳定】效果，进行掷骰判定(1、6算0点)", myText, listView, function(){
-		faHuiBuWenDing=parseInt(Math.random()*6, 10)+1;
-		textAreaAddMessage("掷骰点数为："+faHuiBuWenDing, myText, listView, function(){
-			skillCharacters_WangxiaohuBuqubunao(skillUser, faHuiBuWenDing,function(result){
-				if(result==1||result==6){
-					result=0;
-				}
-				if(skillUser._name==nameWangxiaohu){
-					AchivementProgress.addAchivementProgress(skillUser);
-				}
-				textAreaAddMessage(Text.addCombat.format(skillUser._name,result), myText, listView, function(){
-					baseEffectAddSkillCombat(skillUser, result);
-					if(skillUser._name==endUser._name){
-						callBack();
-						return;
+	mainScene.addChild(new NormalSkillAnimationLayer(skillnameFahuibuwending,skillUser.hadImageView,function(){
+		textAreaAddMessage(skillUser._name+"【发挥不稳定】效果，进行掷骰判定(1、6算0点)", myText, listView, function(){
+			faHuiBuWenDing=parseInt(Math.random()*6, 10)+1;
+			textAreaAddMessage("掷骰点数为："+faHuiBuWenDing, myText, listView, function(){
+				skillCharacters_WangxiaohuBuqubunao(skillUser, faHuiBuWenDing,function(result){
+					if(result==1||result==6){
+						result=0;
 					}
-					fahuibuwendingHandle(userList[nextUserIndex],endUser,userList,callBack);
+					if(skillUser._name==nameWangxiaohu){
+						AchivementProgress.addAchivementProgress(skillUser);
+					}
+					textAreaAddMessage(Text.addCombat.format(skillUser._name,result), myText, listView, function(){
+						baseEffectAddSkillCombat(skillUser, result);
+						if(skillUser._name==endUser._name){
+							callBack();
+							return;
+						}
+						fahuibuwendingHandle(userList[nextUserIndex],endUser,userList,callBack);
+					});
 				});
 			});
 		});
-	});
-	
+	}));
 }
 
 
@@ -583,10 +601,12 @@ function skillCharacters_WangxiaohuBuqubunao(usePlayer,xiaohuNum,callBack) {
 					remove_Card_Into_DropDeck(card.name);
 					usePlayer.handCard.removeObject(card);
 					card.removeFromParent();
-					textAreaAddMessage("王小虎发动【不屈不挠】效果,丢1张牌后重新掷骰", myText, listView, function(){
-						xiaohuNum=parseInt(Math.random()*6, 10)+1;
-						textAreaAddMessage("王小虎掷骰点数为："+xiaohuNum, myText, listView, function(){
-							skillCharacters_WangxiaohuBuqubunao(usePlayer, xiaohuNum,callBack);
+					mainScene.addChild(skillnameBuqubunao,usePlayer.hadImageView,function(){
+						textAreaAddMessage("王小虎发动【不屈不挠】效果,丢1张牌后重新掷骰", myText, listView, function(){
+							xiaohuNum=parseInt(Math.random()*6, 10)+1;
+							textAreaAddMessage("王小虎掷骰点数为："+xiaohuNum, myText, listView, function(){
+								skillCharacters_WangxiaohuBuqubunao(usePlayer, xiaohuNum,callBack);
+							});
 						});
 					});
 				}));
@@ -619,24 +639,25 @@ function skillCharacters_SumeiJiaohua(nowplayer,callBack) {
 		useDongmingbaojing(nowplayer, function(){
 			addDialog(mainScene, new ChooseZoneLayer("【狡猾】:是否翻取下一张怪牌？",function(result){
 				if(result){
-					if(nowplayer._name==nameSumei){
-						nowplayer.everyRoundSkill_1 = true;
-					}else if(nowplayer._name==nameZhaolingerSp){
-						nowplayer.everyRoundSkill_3 = true;
-					}
-					myAudioPlayer(audioSumeiJiaohua);
-					if(game_MonsterDeck.length<=0){
-						judgeWinorLose();
-					}else{
-						textAreaAddMessage(nowplayer._name+"发动【狡猾】，重新翻取一张怪物牌", myText, listView, function(){
-							fight_FirstMonster=topMonsterCard(game_MonsterDeck[0]);
-							game_MonsterDeck.remove(0);
-							monsterLabel.loadTexture(fight_FirstMonster.monsterPicSrc);
-							tempMonster=fight_FirstMonster;
-							callBack();
-						});
-					}
-					
+					mainScene.addChild(skillnameJiaohua,nowplayer.hadImageView,function(){
+						if(nowplayer._name==nameSumei){
+							nowplayer.everyRoundSkill_1 = true;
+						}else if(nowplayer._name==nameZhaolingerSp){
+							nowplayer.everyRoundSkill_3 = true;
+						}
+						myAudioPlayer(audioSumeiJiaohua);
+						if(game_MonsterDeck.length<=0){
+							judgeWinorLose();
+						}else{
+							textAreaAddMessage(nowplayer._name+"发动【狡猾】，重新翻取一张怪物牌", myText, listView, function(){
+								fight_FirstMonster=topMonsterCard(game_MonsterDeck[0]);
+								game_MonsterDeck.remove(0);
+								monsterLabel.loadTexture(fight_FirstMonster.monsterPicSrc);
+								tempMonster=fight_FirstMonster;
+								callBack();
+							});
+						}
+					});
 				}else{
 					textAreaAddMessage(nowplayer._name+"不发动【狡猾】，继续打怪", myText, listView,callBack);
 				}
@@ -715,11 +736,13 @@ function skillCharacters_ShenqishuangXianxiawuqi(isWuren,zhenyin, targetObject) 
 				targetObject.combat += 3;
 				monsterCombat+= targetObject.combat;
 			}
-			myAudioPlayer(audioShenqishuangXianxiawuqi);
-			textAreaAddMessage(message2+message1+zhenyin.friendList[t]._name+"发动【仙霞五奇】效果,"+message2+"战力+3",myText,listView);
-			if(zhenyin.friendList[t]._name==nameShenqishuang){
-				AchivementProgress.addAchivementProgress(zhenyin.friendList[t]);
-			}
+			mainScene.addChild(skillnameXianxiawuqi,zhenyin.friendList[t].hadImageView,function(){
+				myAudioPlayer(audioShenqishuangXianxiawuqi);
+				textAreaAddMessage(message2+message1+zhenyin.friendList[t]._name+"发动【仙霞五奇】效果,"+message2+"战力+3",myText,listView);
+				if(zhenyin.friendList[t]._name==nameShenqishuang){
+					AchivementProgress.addAchivementProgress(zhenyin.friendList[t]);
+				}
+			});
 		}
 	}
 }
@@ -783,14 +806,16 @@ function skillCharacters_KonglinLashoucuihua() {
 					Plyer4 = false;
 			}
 			addDialog(mainScene,new selectPlayerDialogLayer(false, Plyer2, Plyer3, Plyer4,"请选择一名女性角色",false,false,function(selectPlayer){
-				laShouCuiHuaList.push(selectPlayer);
-				useYingu([player1,selectPlayer],player1,player1,[1,1],true,baseEffectReduceHPEffect,function(){
-					// 唐雪见【追打】技能
-					skillCharactersTangxuejianZhuida(function(){
-						heartList=new Array();
-						AchivementProgress.addAchivementProgress(player1);
+				mainScene.addChild(new NormalSkillAnimationLayer(skillnameLashoucuihua,player1.hadImageView,function(){
+					laShouCuiHuaList.push(selectPlayer);
+					useYingu([player1,selectPlayer],player1,player1,[1,1],true,baseEffectReduceHPEffect,function(){
+						// 唐雪见【追打】技能
+						skillCharactersTangxuejianZhuida(function(){
+							heartList=new Array();
+							AchivementProgress.addAchivementProgress(player1);
+						});
 					});
-				});
+				}));
 			}));
 		}
 	}
@@ -816,34 +841,37 @@ function skillCharacters_KonglinShengmingxianji(nowplayer) {
 			}
 		}
 	}
-	textAreaAddMessage(nameKonglin+"【生命献祭】技能触发，变身为“魔尊”",myText,listView);
-	// 将【孔璘】替换为【魔尊】
-	characterCardManager(nowplayer, 25);
-	nowplayer.hadImageView.loadTexture(nowplayer.playerPicSrc);
-	switch (who) {
-	case 1:
-		fight_Trigger[0]=nowplayer;
-		break;
-	case 2:
-		fight_Trigger[1]=nowplayer;
-		break;
-	case 3:
-		fight_Monster[0]=nowplayer;
-		cc.log(fight_Monster[0]._name);
-		break;
-	}
+	mainScene.addChild(new NormalSkillAnimationLayer(skillnameShengmingxianji,nowplayer.hadImageView,function(){
+		textAreaAddMessage(nameKonglin+"【生命献祭】技能触发，变身为“魔尊”",myText,listView);
+		// 将【孔璘】替换为【魔尊】
+		characterCardManager(nowplayer, 25);
+		nowplayer.hadImageView.loadTexture(nowplayer.playerPicSrc);
+		switch (who) {
+		case 1:
+			fight_Trigger[0]=nowplayer;
+			break;
+		case 2:
+			fight_Trigger[1]=nowplayer;
+			break;
+		case 3:
+			fight_Monster[0]=nowplayer;
+			break;
+		}
+	}));
 }
 
 // 魔尊【蓄势待发】技能
 function skillCharacters_MozunXushidaifa() {
 	if (nowPlayerTerm[nowPlayerNumber].skillNameList
 			.containsObject(skillnameXushidaifa)) {
-		textAreaAddMessage("魔尊【蓄势待发】技能触发，补充1张手牌",myText,listView,function(){
-			if(nowPlayerTerm[nowPlayerNumber]._name==player1._name){
-				AchivementProgress.addAchivementProgress(nowPlayerTerm[nowPlayerNumber]);
-			}
-			addHandCard([nowPlayerTerm[nowPlayerNumber]],nowPlayerTerm[nowPlayerNumber],nowPlayerTerm[nowPlayerNumber],null,[1],true,true);
-		});
+		mainScene.addChild(new NormalSkillAnimationLayer(skillnameXushidaifa,nowPlayerTerm[nowPlayerNumber].hadImageView,function(){
+			textAreaAddMessage("魔尊【蓄势待发】技能触发，补充1张手牌",myText,listView,function(){
+				if(nowPlayerTerm[nowPlayerNumber]._name==player1._name){
+					AchivementProgress.addAchivementProgress(nowPlayerTerm[nowPlayerNumber]);
+				}
+				addHandCard([nowPlayerTerm[nowPlayerNumber]],nowPlayerTerm[nowPlayerNumber],nowPlayerTerm[nowPlayerNumber],null,[1],true,true);
+			});
+		}));
 	}
 }
 
@@ -851,11 +879,13 @@ function skillCharacters_MozunXushidaifa() {
 function skillCharacters_MozunBenghuai() {
 	if (nowPlayerTerm[nowPlayerNumber].skillNameList.containsObject(skillnameBenghuai)
 			&& nowPlayerTerm[nowPlayerNumber].hp > 0) {
-		textAreaAddMessage("魔尊【崩坏】效果触发，HP-1",myText,listView);
-		useYingu([nowPlayerTerm[nowPlayerNumber]],nowPlayerTerm[nowPlayerNumber],nowPlayerTerm[nowPlayerNumber],[1],true,baseEffectReduceHPEffect,function(){
-			// 唐雪见【追打】技能
-			skillCharactersTangxuejianZhuida(function(){
-				heartList=new Array();
+		mainScene.addChild(skillnameBenghuai,nowPlayerTerm[nowPlayerNumber].hadImageView,function(){
+			textAreaAddMessage("魔尊【崩坏】效果触发，HP-1",myText,listView);
+			useYingu([nowPlayerTerm[nowPlayerNumber]],nowPlayerTerm[nowPlayerNumber],nowPlayerTerm[nowPlayerNumber],[1],true,baseEffectReduceHPEffect,function(){
+				// 唐雪见【追打】技能
+				skillCharactersTangxuejianZhuida(function(){
+					heartList=new Array();
+				});
 			});
 		});
 	}
@@ -873,28 +903,30 @@ function zhuidaHandle(skillUser,endUser,userList,cancelList,callBack){
 		addDialog(mainScene,new ChooseZoneLayer("是否发动“追打”？",function(result){
 			if(result){
 				addDialog(mainScene,new selectCardDialogLayer("请丢弃1张手牌",skillUser.handCard,1,1,false,function(selectCard){
-					if(skillUser._name==nameTangxuejian){
-						AchivementProgress.addAchivementProgress(skillUser);
-					}
-					var card=selectCard.pop();
-					remove_Card_Into_DropDeck(card.name);
-					skillUser.handCard.removeObject(card);
-					card.removeFromParent();
-					var tempHeartList=new Array();
-					var tempHeartNumberList=new Array();
-					for(var t=0;t<heartList.length;t++){
-						tempHeartList.push(heartList[t]);
-						tempHeartNumberList.push(1);
-					}
-					heartList=new Array();
-					useYingu(tempHeartList,tempHeartList[0],tempHeartList[0],tempHeartNumberList,true,baseEffectReduceHPEffect,function(){
-						if(skillUser._name==endUser._name){
-							// 唐雪见【追打】技能
-							skillCharactersTangxuejianZhuida(callBack,cancelList);
-							return;
+					mainScene.addChild(new NoramlSkillAnimationLayer(skillnameZhuida,skillUser.hadImageView,function(){
+						if(skillUser._name==nameTangxuejian){
+							AchivementProgress.addAchivementProgress(skillUser);
 						}
-						zhuidaHandle(userList[nextIndex],endUser,userList,cancelList,callBack);
-					});
+						var card=selectCard.pop();
+						remove_Card_Into_DropDeck(card.name);
+						skillUser.handCard.removeObject(card);
+						card.removeFromParent();
+						var tempHeartList=new Array();
+						var tempHeartNumberList=new Array();
+						for(var t=0;t<heartList.length;t++){
+							tempHeartList.push(heartList[t]);
+							tempHeartNumberList.push(1);
+						}
+						heartList=new Array();
+						useYingu(tempHeartList,tempHeartList[0],tempHeartList[0],tempHeartNumberList,true,baseEffectReduceHPEffect,function(){
+							if(skillUser._name==endUser._name){
+								// 唐雪见【追打】技能
+								skillCharactersTangxuejianZhuida(callBack,cancelList);
+								return;
+							}
+							zhuidaHandle(userList[nextIndex],endUser,userList,cancelList,callBack);
+						});
+					}));
 				}));
 			}else{
 				cancelList.pushUnique(skillUser);
@@ -917,26 +949,28 @@ function zhuidaHandle(skillUser,endUser,userList,cancelList,callBack){
 				}
 			}
 			if (canUseZhuida) {
-				var tempHandCard = skillUser.handCard[parseInt(Math.random()*skillUser.handCard.length, 10)];
-				skillUser.handCard.removeObject(tempHandCard);
-				remove_Card_Into_DropDeck(tempHandCard.name);
-				textAreaAddMessage(skillUser._name+"舍弃1张手牌"+tempHandCard.name+"发动“追打”，本次所有HP减少的玩家(可能包括唐雪见自己)HP额外-1", myText, listView, function(){
-					var tempHeartList=new Array();
-					var tempHeartNumberList=new Array();
-					for(var i=0;i<heartList.length;i++){
-						tempHeartList.push(heartList[i]);
-						tempHeartNumberList.push(1);
-					}
-					heartList=new Array();
-					useYingu(tempHeartList,tempHeartList[0],tempHeartList[0],tempHeartNumberList,true,baseEffectReduceHPEffect,function(){
-						if(skillUser._name==endUser._name){
-							// 唐雪见【追打】技能
-							skillCharactersTangxuejianZhuida(callBack,cancelList);
-							return;
+				mainScene.addChild(new NormalSkillAnimationLayer(skillnameZhuida,skillUser.hadImageView,function(){
+					var tempHandCard = skillUser.handCard[parseInt(Math.random()*skillUser.handCard.length, 10)];
+					skillUser.handCard.removeObject(tempHandCard);
+					remove_Card_Into_DropDeck(tempHandCard.name);
+					textAreaAddMessage(skillUser._name+"舍弃1张手牌"+tempHandCard.name+"发动“追打”，本次所有HP减少的玩家(可能包括唐雪见自己)HP额外-1", myText, listView, function(){
+						var tempHeartList=new Array();
+						var tempHeartNumberList=new Array();
+						for(var i=0;i<heartList.length;i++){
+							tempHeartList.push(heartList[i]);
+							tempHeartNumberList.push(1);
 						}
-						zhuidaHandle(userList[nextIndex],endUser,userList,cancelList,callBack);
+						heartList=new Array();
+						useYingu(tempHeartList,tempHeartList[0],tempHeartList[0],tempHeartNumberList,true,baseEffectReduceHPEffect,function(){
+							if(skillUser._name==endUser._name){
+								// 唐雪见【追打】技能
+								skillCharactersTangxuejianZhuida(callBack,cancelList);
+								return;
+							}
+							zhuidaHandle(userList[nextIndex],endUser,userList,cancelList,callBack);
+						});
 					});
-				});
+				}));
 			}else{
 				cancelList.pushUnique(skillUser);
 				if(skillUser._name==endUser._name){
@@ -1011,8 +1045,10 @@ function skillCharacters_TangxuejianLianji() {
 						monsterCombat += 2;
 					}
 				}
-				myAudioPlayer(audioTangxuejianLianji);
-				textAreaAddMessage(player1._name+"发动【连击】，增加自身战力",myText,listView);
+				mainScene.addChild(new NormalSkillAnimationLayer(skillnameLianji,player1.hadImageView,function(){
+					myAudioPlayer(audioTangxuejianLianji);
+					textAreaAddMessage(player1._name+"发动【连击】，增加自身战力",myText,listView);
+				}));
 			}
 		}));
 	}
@@ -1025,17 +1061,19 @@ function skillCharacters_TangxuejianHaosheng(){
 		addDialog(mainScene, new ChooseZoneLayer("是否发动“好胜”？",function(result){
 			if(result){
 				mainScene.addChild(new skillAnimationLayer(player1.animation,function(){
-					myAudioPlayer(audioTangxuejianHaosheng);
-					textAreaAddMessage(player1._name+"发动“好胜”效果，扣减自己2点Hp后补2张牌(本伤害隐蛊无效)",myText,listView,function(){
-						baseEffectReduceHPEffect(player1, [player1],2, true, function(){
-							skillCharactersTangxuejianZhuida(function(){
-								heartList=new Array();
-								textAreaAddMessage(player1._name+"补了2张牌", myText, listView);
-								player1.everyRoundSkill_3 = true;
-								addHandCard([player1],player1,player1,null,[2],true,true);
+					mainScene.addChild(new NormalSkillAnimationLayer(skillnameHaosheng,player1.hadImageView,function(){
+						myAudioPlayer(audioTangxuejianHaosheng);
+						textAreaAddMessage(player1._name+"发动“好胜”效果，扣减自己2点Hp后补2张牌(本伤害隐蛊无效)",myText,listView,function(){
+							baseEffectReduceHPEffect(player1, [player1],2, true, function(){
+								skillCharactersTangxuejianZhuida(function(){
+									heartList=new Array();
+									textAreaAddMessage(player1._name+"补了2张牌", myText, listView);
+									player1.everyRoundSkill_3 = true;
+									addHandCard([player1],player1,player1,null,[2],true,true);
+								});
 							});
 						});
-					});
+					}));
 				}));
 			}
 		}));
@@ -1081,17 +1119,19 @@ function guanaiHandle(skillUser,endUser,userList,callBack){
 					&& selectPlayer.friendList[1].handCard.length < selectPlayer.handCard.length) {
 				selectPlayer = selectPlayer.friendList[1];
 			}
-			myAudioPlayer(audioZixuanGuanai);
-			textAreaAddMessage(selectPlayer._name+"补了2张牌", myText, listView);
-			addHandCard([selectPlayer],selectPlayer,selectPlayer,null,[2],true,true,function(){
-				if(skillUser._name==endUser._name){
-					if(callBack!=null){
-						callBack();
+			mainScene.addChild(new NormalSkillAnimationLayer(skillnameGuanai,skillUser.hadImageView,function(){
+				myAudioPlayer(audioZixuanGuanai);
+				textAreaAddMessage(selectPlayer._name+"补了2张牌", myText, listView);
+				addHandCard([selectPlayer],selectPlayer,selectPlayer,null,[2],true,true,function(){
+					if(skillUser._name==endUser._name){
+						if(callBack!=null){
+							callBack();
+						}
+						return;
 					}
-					return;
-				}
-				guanaiHandle(userList[nextIndex],endUser,userList,callBack);
-			});
+					guanaiHandle(userList[nextIndex],endUser,userList,callBack);
+				});
+			}));
 		}
 	});
 }
@@ -1117,15 +1157,17 @@ function skillCharacters_ZixuanGuanai(tempPlayer,callBack) {
 // 紫萱【神圣】
 function skillCharacters_ZixuanShensheng(player,monsterModel,callBack) {
 	if (player.skillNameList.containsObject(skillnameShensheng)) {
-		myAudioPlayer(audioZixuanShensheng);
-		textAreaAddMessage("紫萱“神圣”效果触发，"+monsterModel.name+"战力+3", myText, listView);
-		monsterModel.combat += 3;
-		if (monsterModel.name==nameJinchanguimu) {
-			jinchanguimu.combat += 3;
-		}
-		if(callBack!=null){
-			callBack();
-		}
+		mainScene.addChild(skillnameShensheng,player.hadImageView,function(){
+			myAudioPlayer(audioZixuanShensheng);
+			textAreaAddMessage("紫萱“神圣”效果触发，"+monsterModel.name+"战力+3", myText, listView);
+			monsterModel.combat += 3;
+			if (monsterModel.name==nameJinchanguimu) {
+				jinchanguimu.combat += 3;
+			}
+			if(callBack!=null){
+				callBack();
+			}
+		});
 	}else if(callBack!=null){
 		callBack();
 	}
@@ -1280,10 +1322,12 @@ function juedouHandle(juedouList,index){
 function skillCharacters_ChonglouJianglin() {
 	if (fight_Monster.length > 0) {
 		if (fight_Monster[0].skillNameList.containsObject(skillnameJianglin)) {
-			textAreaAddMessage("重楼“降临”技能触发，命中额外+2", myText, listView);
-			for (var i = 0; i < 2; i++) {
-				baseEffectAddTempExtent(fight_Monster[0]);
-			}
+			mainScene.addChild(new NormalSkillAnimationLayer(skillnameJianglin,fight_Monster[0].hadImageView,function(){
+				textAreaAddMessage("重楼“降临”技能触发，命中额外+2", myText, listView);
+				for (var i = 0; i < 2; i++) {
+					baseEffectAddTempExtent(fight_Monster[0]);
+				}
+			}));
 		}
 	}
 }
@@ -1398,12 +1442,14 @@ function skillCharacters_NangonghuangShelingfazheng(pet_Shuxing,callBack) {
 						}
 						addDialog(mainScene, new selectPlayerDialogLayer(false,false, player3Shown, player4Shown,
 								"请选择目标", false, false,function(selectPlayer){
-							myAudioPlayer(audioNangonghuangShelingfazhen);
-							textAreaAddMessage(player1._name+"发动“摄灵法阵”消灭"+selectPlayer._name+"的"+pet_Shuxing+"属性宠物", myText, listView);
-							baseEfectPerishPet(pet_Shuxing,selectPlayer);
-							if(callBack!=null){
-								callBack();
-							}
+							mainScene.addChild(new NormalSkillAnimationLayer(skillnameShelingfazhen,player1.hadImageView,function(){
+								myAudioPlayer(audioNangonghuangShelingfazhen);
+								textAreaAddMessage(player1._name+"发动“摄灵法阵”消灭"+selectPlayer._name+"的"+pet_Shuxing+"属性宠物", myText, listView);
+								baseEfectPerishPet(pet_Shuxing,selectPlayer);
+								if(callBack!=null){
+									callBack();
+								}
+							}));
 						}));
 					}else if(callBack!=null){
 						callBack();
@@ -1431,8 +1477,10 @@ function skillCharacters_WenhuiZhenfa() {
 			AchivementProgress.addAchivementProgress(player1);
 		}
 		myAudioPlayer(audioWenhuiZhenfa);
-		textAreaAddMessage("我方支援命中，"+fight_Trigger[0]._name+"“阵法”效果触发，自身战力额外+3", myText, listView);
-		baseEffectAddSkillCombat(fight_Trigger[0], 3);
+		mainScene.addChild(new NoramlSkillAnimationLayer(skillnameZhenfa,fight_Trigger[0].hadImageView,function(){
+			textAreaAddMessage("我方支援命中，"+fight_Trigger[0]._name+"“阵法”效果触发，自身战力额外+3", myText, listView);
+			baseEffectAddSkillCombat(fight_Trigger[0], 3);
+		}));
 	}
 }
 

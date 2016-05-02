@@ -386,6 +386,7 @@ function afterDeathHanle(player,heartPlayerList,callBack,isNotLoverEffect){
 					nextStep=10;
 					buttonManager(order1Button, false, false);
 					buttonManager(order2Button, false, false);
+					addDialog(mainScene, new ResultLayer(1));
 				}else if(callBack!=null){
 					callBack();
 				}
@@ -405,6 +406,7 @@ function afterDeathHanle(player,heartPlayerList,callBack,isNotLoverEffect){
 				nextStep=10;
 				buttonManager(order1Button, false, false);
 				buttonManager(order2Button, false, false);
+				addDialog(mainScene, new ResultLayer(0));
 			}else if(callBack!=null){
 				callBack();
 			}
@@ -595,9 +597,12 @@ function judgeWinorLose() {
 				if(initAchivement.achivementXianquRumengdiao.progress!=initAchivement.achivementXianquRumengdiao.maxProgress&&(player1._name==nameJiangyunfan&&player1.hp==player1.maxHP)){
 					AchivementProgress.addAchivementProgress(initAchivement.achivementXianquRumengdiao);
 				}
+				addDialog(mainScene, new ResultLayer(0));
 			} else if (playerScore < npcScore){
+				addDialog(mainScene, new ResultLayer(1));
 				textAreaAddMessage("我方失败！", myText, listView);
 			}else if (playerScore == npcScore){
+				addDialog(mainScene, new ResultLayer(1));
 				textAreaAddMessage("平局！", myText, listView);
 			}
 			gameRunning = false;

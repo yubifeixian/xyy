@@ -2,6 +2,7 @@ var jsList=[
 // 通用模块
 "src/common/ai/cardEffectAI.js",
 "src/common/animation/addCardAnimation.js",
+"src/common/animation/NormalSkillAnimationLayer.js",
 "src/common/config/cardType.js",
 "src/common/config/strings.js",
 "src/common/config/version.js",
@@ -36,6 +37,7 @@ var jsList=[
 "src/common/view/yesOrNoDialog.js",
 "src/common/view/skillAnimationLayer.js",
 "src/common/view/ChooseZoneLayer.js",
+"src/common/view/ResultLayer.js",
 "src/scene/achivementScene.js",
 "src/scene/chooseScene.js",
 "src/scene/freeSelectScene.js",
