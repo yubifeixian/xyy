@@ -1,0 +1,132 @@
+{
+  "ID": "da61d7e6-5cfa-4be6-a4c5-8f964f8cf4ad",
+  "Version": "2.3.2.3",
+  "Name": "ResultLayer",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 185,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/leitailanqizi.png",
+              "Plist": ""
+            },
+            "Scale9Width": 158,
+            "Scale9Height": 204,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 467.5613,
+              "Y": 800.9145
+            },
+            "Scale": {
+              "ScaleX": 1.7937,
+              "ScaleY": 1.7937
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.487,
+              "Y": 1.2514
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.1646,
+              "Y": 0.3187
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 388.5613,
+            "RightMargin": 413.4387,
+            "TopMargin": -262.9145,
+            "BottomMargin": 698.9145,
+            "Tag": 188,
+            "ActionTag": -2144059045,
+            "Size": {
+              "X": 158.0,
+              "Y": 204.0
+            },
+            "Name": "bg",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/leitai_shengli.png",
+              "Plist": ""
+            },
+            "Scale9Width": 101,
+            "Scale9Height": 101,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 475.0,
+              "Y": 307.9997
+            },
+            "Scale": {
+              "ScaleX": 2.0823,
+              "ScaleY": 2.0823
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4948,
+              "Y": 0.4812
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.2,
+              "Y": 0.3
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 379.0,
+            "RightMargin": 389.0,
+            "TopMargin": 236.0003,
+            "BottomMargin": 211.9997,
+            "Tag": 189,
+            "ActionTag": 335723949,
+            "Size": {
+              "X": 192.0,
+              "Y": 192.0
+            },
+            "Alpha": 0,
+            "Name": "flag",
+            "ctype": "ImageViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 960.0,
+          "Y": 640.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "drawable-hdpi/leitai_shengli.png",
+        "drawable-hdpi/leitailanqizi.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Layer"
+}
