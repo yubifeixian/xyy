@@ -29,10 +29,12 @@
               "ScaleY": 1.0
             },
             "TouchEnable": true,
-            "AnchorPoint": {},
+            "AnchorPoint": {
+              "ScaleX": 1.0
+            },
             "Position": {
-              "X": 380.0,
-              "Y": 288.0
+              "X": 579.9368,
+              "Y": 288.0002
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -41,7 +43,7 @@
             "CColor": {},
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.3958,
+              "X": 0.6041,
               "Y": 0.45
             },
             "PercentWidthEnable": true,
@@ -49,15 +51,15 @@
             "PercentWidthEnabled": true,
             "PercentHeightEnabled": true,
             "PreSize": {
-              "X": 0.2083,
-              "Y": 0.1
+              "X": 0.15,
+              "Y": 0.12
             },
             "HorizontalEdge": "BothEdge",
             "VerticalEdge": "BothEdge",
-            "LeftMargin": 380.0,
-            "RightMargin": 380.0,
-            "TopMargin": 288.0,
-            "BottomMargin": 288.0,
+            "LeftMargin": 435.9368,
+            "RightMargin": 380.0632,
+            "TopMargin": 275.1998,
+            "BottomMargin": 288.0002,
             "Tag": 192,
             "Children": [
               {
@@ -73,8 +75,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 100.0,
-                  "Y": 32.0
+                  "X": 72.0,
+                  "Y": 38.4
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -99,14 +101,14 @@
                 "Tag": 193,
                 "ActionTag": -732358582,
                 "Size": {
-                  "X": 200.0,
-                  "Y": 64.0
+                  "X": 144.0,
+                  "Y": 76.8
                 },
                 "Name": "bg",
                 "ctype": "ImageViewObjectData"
               },
               {
-                "FontSize": 36,
+                "FontSize": 24,
                 "LabelText": "狂龙迅影斩",
                 "FontResource": {
                   "Type": "Normal",
@@ -125,8 +127,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 100.0,
-                  "Y": 32.0
+                  "X": 72.0,
+                  "Y": 38.4
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -155,8 +157,8 @@
                 "Tag": 194,
                 "ActionTag": 692143341,
                 "Size": {
-                  "X": 180.0,
-                  "Y": 36.0
+                  "X": 120.0,
+                  "Y": 24.0
                 },
                 "Name": "skillName",
                 "ctype": "TextObjectData"
@@ -164,8 +166,8 @@
             ],
             "ActionTag": -1099316774,
             "Size": {
-              "X": 200.0,
-              "Y": 64.0
+              "X": 144.0,
+              "Y": 76.8
             },
             "Name": "Panel",
             "ctype": "PanelObjectData"

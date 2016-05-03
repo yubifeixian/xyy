@@ -1297,19 +1297,17 @@ function useYingu(heartList,firstPlayer,usePlayer,heartNumberList,canUseLonghunz
 					// AI使用隐蛊
 					useYingu=true;
 					if(useYingu){
-						remove_Card_Into_DropDeck(cardYingu.name);
-						usePlayer.handCard.removeObject(cardYingu);
-						textAreaAddMessage(usePlayer._name+"打出了【隐蛊】", myText, listView,function(){
-							mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
-								textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,string_handCardNameYingu), myText, listView,function(){
-									playCardAnimation("res/drawable-hdpi/yingu.png",function(){
-										useBingxingjue(usePlayer, usePlayer, function(){
-											yinguHandle(heartList,firstPlayer,usePlayer, useYingu, heartNumberList,canUseLonghunzhankai,callBack,callBack2);
-										},callBack2);
-									});
+					remove_Card_Into_DropDeck(cardYingu.name);
+					usePlayer.handCard.removeObject(cardYingu);
+						mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
+							textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,string_handCardNameYingu), myText, listView,function(){
+								playCardAnimation("res/drawable-hdpi/yingu.png",function(){
+									useBingxingjue(usePlayer, usePlayer, function(){
+										yinguHandle(heartList,firstPlayer,usePlayer, useYingu, heartNumberList,canUseLonghunzhankai,callBack,callBack2);
+									},callBack2);
 								});
-							}));
-						});
+							});
+						}));
 					}
 				}else{
 					yinguHandle(heartList, firstPlayer, usePlayer, false, heartNumberList,canUseLonghunzhankai,callBack,callBack2);
