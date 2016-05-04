@@ -2567,7 +2567,7 @@ function skillCharacters_JiangyunfanShanzei(player,handCardList,callBack) {
 						card.removeFromParent();
 						card.release();
 					}
-					mainScene.addChild(new NormalSkillAniamtionLayer(skillnameShanzei,player.hadImageView,function(){
+					mainScene.addChild(new NormalSkillAnimationLayer(skillnameShanzei,player.hadImageView,function(){
 						textAreaAddMessage(player._name+"发动“山贼”效果，交给队友一张牌", myText, listView,function(){
 							tempPlayer.handCard.push(card);
 							if(callBack!=null){
@@ -3129,14 +3129,16 @@ function skillCharacters_YanshiqiongbingHuitianmiedi(player) {
 
 // 具体处理龙葵变身为龙葵鬼的效果
 function longkuiBianshenHandle(longkui,callBack){
-	textAreaAddMessage("龙葵发动“变身”效果，变身为龙葵鬼", myText, listView);
-	var tempHp=longkui.hp;
-	cc.spriteFrameCache.removeSpriteFramesFromFile(longkui.skillUrl);
-	characterCardManager(longkui,34);
-	loadCharacterSkillAnimation(longkui);
-	longkui.hadImageView.loadTexture(longkui.playerPicSrc);
-	longkui.hp=tempHp;
-	callBack();
+	mainScene.addChild(new NormalSkillAnimationLayer(skillnameBianshen,longkui.hadImageView,function(){
+		textAreaAddMessage("龙葵发动“变身”效果，变身为龙葵鬼", myText, listView);
+		var tempHp=longkui.hp;
+		cc.spriteFrameCache.removeSpriteFramesFromFile(longkui.skillUrl);
+		characterCardManager(longkui,34);
+		loadCharacterSkillAnimation(longkui);
+		longkui.hadImageView.loadTexture(longkui.playerPicSrc);
+		longkui.hp=tempHp;
+		callBack();
+	}));
 }
 
 
@@ -3165,15 +3167,17 @@ function longkui_Bianshen(callBack) {
 		if (player1._name==longkui._name) {
 			addDialog(mainScene, new ChooseZoneLayer("是否变身为龙葵？",function(result){
 				if(result){
-					// 变身为龙葵的操作
-					textAreaAddMessage("龙葵鬼发动“变身”效果，变身为龙葵", myText, listView);
-					cc.spriteFrameCache.removeSpriteFramesFromFile(longkui.skillUrl);
-					var tempHp=longkui.hp;
-					characterCardManager(longkui,33);
-					loadCharacterSkillAnimation(longkui);
-					longkui.hadImageView.loadTexture(longkui.playerPicSrc);
-					longkui.hp=tempHp;
-					callBack();
+					mainScene.addChild(new NormalSkillAnimationLayer(skillnameBianshen,longkui.hadImageView,function(){
+						// 变身为龙葵的操作
+						textAreaAddMessage("龙葵鬼发动“变身”效果，变身为龙葵", myText, listView);
+						cc.spriteFrameCache.removeSpriteFramesFromFile(longkui.skillUrl);
+						var tempHp=longkui.hp;
+						characterCardManager(longkui,33);
+						loadCharacterSkillAnimation(longkui);
+						longkui.hadImageView.loadTexture(longkui.playerPicSrc);
+						longkui.hp=tempHp;
+						callBack();
+					}));
 				}else{
 					callBack();
 				}

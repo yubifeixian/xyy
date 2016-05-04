@@ -20,17 +20,19 @@ function aiSkillBaiyuejiaozhu_Zhaohuanshuimoshou(callBack) {
 					baiyuejiaozhuPlayer.handCard.removeObject(tempHandCard);
 					remove_Card_Into_DropDeck(tempHandCard.name);
 				}
-				textAreaAddMessage("拜月教主舍弃2张手牌发动“召唤水魔兽”效果", myText, listView);
-				textAreaAddMessage("本场战斗中，我方战力+5", myText, listView);
-				baiyuejiaozhuPlayer.usedAttackCard = true;
-				if (player1IsPlayer2Friend(baiyuejiaozhuPlayer,nowPlayerTerm[nowPlayerNumber])) {
-					triggerCombat += 5;
-				} else {
-					monsterCombat += 5;
-				}
-				if(callBack!=null){
-					callBack();
-				}
+				mainScene.addChild(new NormalSkillAnimationLayer(skillnameZhaohuanshuimoshou,baiyuejiaozhuPlayer.hadImageView,function(){
+					textAreaAddMessage("拜月教主舍弃2张手牌发动“召唤水魔兽”效果", myText, listView);
+					textAreaAddMessage("本场战斗中，我方战力+5", myText, listView);
+					baiyuejiaozhuPlayer.usedAttackCard = true;
+					if (player1IsPlayer2Friend(baiyuejiaozhuPlayer,nowPlayerTerm[nowPlayerNumber])) {
+						triggerCombat += 5;
+					} else {
+						monsterCombat += 5;
+					}
+					if(callBack!=null){
+						callBack();
+					}
+				}));
 			}else if(callBack!=null){
 				callBack();
 			}
@@ -92,15 +94,17 @@ function aiSkillKonglin_Lashoucuihua(callBack) {
 		}
 	}
 	if(effected){
-		textAreaAddMessage(nameKonglin+"发动“辣手摧花”效果", myText, listView);
-		tempHeartList.push(mubiaoPlayer);
-		tempHeartList.push(konglinPlayer);
-		useYingu(tempHeartList, tempHeartList[0], tempHeartList[0], [1,1], true, baseEffectReduceHPEffect, function(){
-			skillCharactersTangxuejianZhuida(function(){
-				heartList=new Array();
-				callBack();
+		mainScene.addChild(new NormalSkillAnimationLayer(skillnameLashoucuihua,konglinPlayer.hadImageView,function(){
+			textAreaAddMessage(nameKonglin+"发动“辣手摧花”效果", myText, listView);
+			tempHeartList.push(mubiaoPlayer);
+			tempHeartList.push(konglinPlayer);
+			useYingu(tempHeartList, tempHeartList[0], tempHeartList[0], [1,1], true, baseEffectReduceHPEffect, function(){
+				skillCharactersTangxuejianZhuida(function(){
+					heartList=new Array();
+					callBack();
+				});
 			});
-		});
+		}));
 	}else{
 		callBack();
 	}
@@ -123,28 +127,30 @@ function aiSkillTangxuejian_Lianji(callBack) {
 				&& attactIsMiss(tangxuejianPlayer,fight_FirstMonster)
 				&& tangxuejianPlayer.handCard.length
 						- baseEffectHaveHowManyCardOfType(tangxuejianPlayer,CARDTYPE.FIGHTCARD) > 0) {
-			textAreaAddMessage("唐雪见发动“连击”效果", myText, listView);
-			var tempHandCard = baseEffectGetCardExpectOfType(tangxuejianPlayer, CARDTYPE.FIGHTCARD);
-			textAreaAddMessage("唐雪见弃置【"+tempHandCard.name+"】", myText, listView);
-			remove_Card_Into_DropDeck(tempHandCard.name);
-			tangxuejianPlayer.handCard.removeObject(tempHandCard);
-			baseEffectAddTempCombat(tangxuejianPlayer,2);
-			for (var i = 0; i < fight_Trigger.length; i++) {
-				if (fight_Trigger[i].skillNameList
-						.containsObject(skillnameLianji)) {
-					triggerCombat += 2;
-					break;
-				}
-			}
-			if (fight_Monster.length > 0
-					&& fight_Monster[0].skillNameList
+			mainScene.addChild(new NormalSkillAnimationLayer(skillnameLianji,tangxuejianPlayer.hadImageView,function(){
+				textAreaAddMessage("唐雪见发动“连击”效果", myText, listView);
+				var tempHandCard = baseEffectGetCardExpectOfType(tangxuejianPlayer, CARDTYPE.FIGHTCARD);
+				textAreaAddMessage("唐雪见弃置【"+tempHandCard.name+"】", myText, listView);
+				remove_Card_Into_DropDeck(tempHandCard.name);
+				tangxuejianPlayer.handCard.removeObject(tempHandCard);
+				baseEffectAddTempCombat(tangxuejianPlayer,2);
+				for (var i = 0; i < fight_Trigger.length; i++) {
+					if (fight_Trigger[i].skillNameList
 							.containsObject(skillnameLianji)) {
-				monsterCombat += 2;
-			}
-			textAreaAddMessage("唐雪见本场战斗战力+2", myText, listView);
-			if(callBack!=null){
-				callBack();
-			}
+						triggerCombat += 2;
+						break;
+					}
+				}
+				if (fight_Monster.length > 0
+						&& fight_Monster[0].skillNameList
+						.containsObject(skillnameLianji)) {
+					monsterCombat += 2;
+				}
+				textAreaAddMessage("唐雪见本场战斗战力+2", myText, listView);
+				if(callBack!=null){
+					callBack();
+				}
+			}));
 		}else if(callBack!=null){
 			callBack();
 		}
@@ -196,7 +202,9 @@ function aiSkillXingxuan_Pengren(callBack) {
 			remove_Card_Into_DropDeck(tempHandCard.name);
 			textAreaAddMessage("星璇丢弃"+tempHandCard.name, myText, listView);
 		}
-		handCardLinghuxiandan.effect(nowPlayerTerm[nowPlayerNumber], nowPlayerTerm[nowPlayerNumber], false, false,callBack);
+		mainScene.addChild(new NormalSkillAnimationLayer(skillnamePengren,nowPlayerTerm[nowPlayerNumber].hadImageView,function(){
+			handCardLinghuxiandan.effect(nowPlayerTerm[nowPlayerNumber], nowPlayerTerm[nowPlayerNumber], false, false,callBack);
+		}));
 	}else{
 		callBack();
 	}
@@ -245,7 +253,9 @@ function aiSkillWangpengxu_Hehcengshiping() {
 		wangpengxuPlayer.handCard.removeObject(tempHandCard);
 		wangpengxuPlayer.skillTempList.push(tempHandCard);
 		wangpengxuPlayer.maxCombat++;
-		textAreaAddMessage("王蓬絮发动“合成饰品”，自身战力+1", myText, listView);
+		mainScene.addChild(new NormalSkillAnimationLayer(skillnameHechengshipin,wangpengxuPlayer.hadImageView,function(){
+			textAreaAddMessage("王蓬絮发动“合成饰品”，自身战力+1", myText, listView);
+		}));
 		// 若此时已经处于打怪阶段，则双方战力要重新计算
 		if (fight_Trigger.length > 0) {
 			for (var i=0;i<fight_Trigger.length;i++) {
@@ -280,13 +290,10 @@ function aiSkillHanlingsha_Jiefujipin(callBack) {
 		}
 	}
 	if(effected){
-		textAreaAddMessage("韩菱纱发动“劫富济贫”，补了1张手牌", myText, listView);
-		addHandCard([nowPlayerTerm[i]],nowPlayerTerm[i],nowPlayerTerm[i],null,[1],true,true,callBack);
-		/*
-		 * newHandCard(randHandCardNumber( game_HandCard_Start,
-		 * game_DropHandCard), nowPlayerTerm[i], 1, true); if(callBack!=null){
-		 * callBack(); }
-		 */
+		mainScene.addChild(new NormalSkillAnimationLayer(skillnameJiefujipin,nowPlayerTerm[i].hadImageView,function(){
+			textAreaAddMessage("韩菱纱发动“劫富济贫”，补了1张手牌", myText, listView);
+			addHandCard([nowPlayerTerm[i]],nowPlayerTerm[i],nowPlayerTerm[i],null,[1],true,true,callBack);
+		}));
 	}else if(callBack!=null){
 		callBack();
 	}

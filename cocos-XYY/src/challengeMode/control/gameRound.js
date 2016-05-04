@@ -251,8 +251,7 @@ function attackMonsterHandle(){
 	if(game_MonsterDeck.length==0){
 		judgeWinorLose();
 	}else{
-		fight_FirstMonster=topMonsterCard(game_MonsterDeck[0]);
-		game_MonsterDeck.remove(0);
+		fight_FirstMonster=topMonsterCard(game_MonsterDeck.shift());
 		monsterLabel.loadTexture(fight_FirstMonster.monsterPicSrc);
 		tempMonster=fight_FirstMonster;
 		textAreaAddMessage("翻取怪物牌:"+fight_FirstMonster.name, myText, listView, function(){
@@ -293,10 +292,9 @@ function takeOverCardIsNPC(){
 				} else {
 					// 展示怪物牌
 					textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"翻取下一张怪牌", myText, listView);
-					fight_FirstMonster = topMonsterCard(game_MonsterDeck[0]);
+					fight_FirstMonster = topMonsterCard(game_MonsterDeck.shift());
 					tempMonster = fight_FirstMonster;
 					monsterLabel.loadTexture(fight_FirstMonster.monsterPicSrc);
-					game_MonsterDeck.remove(0);
 					textAreaAddMessage("翻取怪物牌:"+fight_FirstMonster.name, myText, listView, function(){
 						// calculate_Attack(context);
 						// skillCharacters_ChonglouSpBaqi(fight_Monster,takeOverCardIsNPC);
@@ -391,8 +389,7 @@ function hunzhanHandle(result){
 	if(result){
 		attack_1 = true;
 		textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"发动混战", myText, listView);
-		fight_SecondMonster =topMonsterCard(game_MonsterDeck[0]);
-		game_MonsterDeck.remove(0);
+		fight_SecondMonster =topMonsterCard(game_MonsterDeck.shift());
 		textAreaAddMessage("翻取怪物牌:"+fight_SecondMonster.name, myText, listView);
 		// 显示怪物牌
 		monsterLabel.loadTexture(fight_SecondMonster.monsterPicSrc);
@@ -568,8 +565,6 @@ function roundAttackEnd(){
 					handleBaofaEqumentsAndPets(nowPlayerTerm[i]);
 				}
 				dropCarding = false;
-				// ButtonControl.setButtonEnabled(InitGameActivity.order2,
-				// true);
 				// 云天河【后羿射日弓】效果判定
 				skillCharacters_YuntianheHouyisheriongEnd();
 				// 龙幽sp【妖枪】效果结束
@@ -599,10 +594,6 @@ function roundAddHandCard(){
 				textAreaAddMessage(nowPlayer._name+"有"+nowPlayer.handCard.length+"张牌，需要从牌堆中补1张牌", myText, listView);
 			}
 			addCardNumber=2-i;
-			/*
-			 * newHandCard(randHandCardNumber( game_HandCard_Start,
-			 * game_DropHandCard), nowPlayer, 2 - i, true);
-			 */
 			if (nowPlayerTerm[nowPlayerNumber].pet_Lei==nameChiguiwang) {
 				addCardNumber++;
 				textAreaAddMessage("由于赤鬼王宠物效果"+nowPlayer._name+"多补1张牌", myText, listView);
@@ -614,11 +605,6 @@ function roundAddHandCard(){
 				textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"由于【醉仙望月步】效果，多补1张牌", myText, listView);
 			}
 			addHandCard([nowPlayerTerm[nowPlayerNumber]],nowPlayerTerm[nowPlayerNumber],nowPlayerTerm[nowPlayerNumber],null,[addCardNumber],true,true);
-			/*
-			 * newHandCard(randHandCardNumber( game_HandCard_Start,
-			 * game_DropHandCard), nowPlayerTerm[nowPlayerNumber],
-			 * addCardNumber, true);
-			 */
 			buttonManager(order2Button, true, true);
 		});
 	}
@@ -634,6 +620,7 @@ function roundDropCard(){
 				if (nowPlayerTerm[nowPlayerNumber].skillNameList
 						.containsObject(skillnameJianxia)
 						&& nowPlayerTerm[nowPlayerNumber].handCard.length > 5) {
+					mainScene.addChild(new NormalSkillAnimationLayer(skillnameJianxia,nowPlayerTerm[nowPlayerNumber].hadImageView));
 					dropCard = true;
 					maxCard = 5;
 				}else if (!nowPlayerTerm[nowPlayerNumber].skillNameList
@@ -656,7 +643,6 @@ function roundDropCard(){
 							remove_Card_Into_DropDeck(nowPlayerTerm[nowPlayerNumber].handCard[temp].name);
 							textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"弃置了手牌:"+nowPlayerTerm[nowPlayerNumber].handCard[temp].name, myText, listView);
 							var tempCard=nowPlayerTerm[nowPlayerNumber].handCard[temp];
-							// nowPlayerTerm[nowPlayerNumber].handCard.removeObject(nowPlayerTerm[nowPlayerNumber].handCard[temp]);
 							nowPlayerTerm[nowPlayerNumber].handCard.removeObject(tempCard);
 							tempCard.release();
 						}
@@ -739,38 +725,17 @@ function _createMsg(messageType,messageContent){
 function sendRoundMessageManager(){
 	var event=new cc.EventCustom("dialogEvent");
 	if(nextStep==0){
-		/*
-		 * var messageData=_createMsg(MessageType.ROUND_START,
-		 * nowPlayerTerm[nowPlayerNumber]); event.setUserData(messageData);
-		 * cc.eventManager.dispatchEvent(event);
-		 */
 		round_Start();
 	}
 	else if(nextStep==1){
-		/*
-		 * cc.log("接到了消息"+nextStep); var
-		 * messageData=_createMsg(MessageType.ROUND_EVENT,
-		 * nowPlayerTerm[nowPlayerNumber]); event.setUserData(messageData);
-		 * cc.eventManager.dispatchEvent(event);
-		 */
 		round_Event();
 	}else if(nextStep==2){
-		/*
-		 * var messageData=_createMsg(MessageType.ROUND_SKILLCARD,
-		 * nowPlayerTerm[nowPlayerNumber]); event.setUserData(messageData);
-		 * cc.eventManager.dispatchEvent(event);
-		 */
 		roundSkillCard();
 	}else if(nextStep==3){
 		for(var i=0;i<player1.handCard.length;i++){
 			player1.handCard[i].clicked=false;
 			player1.handCard[i].setOpacity(180);
 		}
-		/*
-		 * var messageData=_createMsg(MessageType.ROUND_ATTACK_1,
-		 * nowPlayerTerm[nowPlayerNumber]); event.setUserData(messageData);
-		 * cc.eventManager.dispatchEvent(event);
-		 */
 		skillCharacters_XiaomanWufawutian(function(){
 			if(nowPlayerTerm[nowPlayerNumber].hp>0){
 				useDongmingbaojing(null,roundAttack1);
@@ -780,27 +745,12 @@ function sendRoundMessageManager(){
 			}
 		});
 	}else if(nextStep==4){
-		/*
-		 * var messageData=_createMsg(MessageType.ROUND_ATTACK_2,
-		 * nowPlayerTerm[nowPlayerNumber]); event.setUserData(messageData);
-		 * cc.eventManager.dispatchEvent(event);
-		 */
 		useNpcZhuzhanCard(function(){
 			useDongmingbaojing(null, roundAttack2);
 		});
 	}else if(nextStep==5){
-		/*
-		 * var messageData=_createMsg(MessageType.ROUND_ATTACK_3,
-		 * nowPlayerTerm[nowPlayerNumber]); event.setUserData(messageData);
-		 * cc.eventManager.dispatchEvent(event);
-		 */
 		useNpcZhuzhanCard(roundAttack3);
 	}else if(nextStep==6){
-		/*
-		 * var messageData=_createMsg(MessageType.ROUND_ATTACK_4,
-		 * nowPlayerTerm[nowPlayerNumber]); event.setUserData(messageData);
-		 * cc.eventManager.dispatchEvent(event);
-		 */
 		roundAttackEnd()
 	}else if(nextStep==7){
 		textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"的补牌阶段", myText, listView);
@@ -830,8 +780,6 @@ function remove_Card_Into_DropDeck(cardName) {
 	if(cardName=="无"){
 		return;
 	}
-	cc.log("弃牌堆1:"+game_DropHandCard.length);
-	cc.log("丢入了:"+cardName);
 	if (cardName==string_handCardNameTianxuanwuyin)
 			game_DropHandCard.push(1);
 	else if (cardName==string_handCardNameJincanwang)
@@ -885,6 +833,4 @@ function remove_Card_Into_DropDeck(cardName) {
 			game_DropHandCard.push(55);
 	else if (cardName==string_handCardNameLonghunzhankai)
 			game_DropHandCard.push(56);
-	
-	cc.log("弃牌堆2:"+game_DropHandCard.length);
 }

@@ -28,7 +28,11 @@ var NormalSkillAnimationLayer=cc.Layer.extend({
 		var _actionFadeOut=cc.fadeOut(0.1);
 		var temp=this;
 		
-		this.panel.runAction(cc.sequence(_actionFadeIn,_actionMoveTo,cc.callFunc(temp.callBack),_actionDelay,_actionMoveTo2,_actionFadeOut,cc.callFunc(function(){
+		this.panel.runAction(cc.sequence(_actionFadeIn,_actionMoveTo,cc.callFunc(function(){
+			if(temp.callBack!=null){
+				temp.callBack();
+			}
+		}),_actionDelay,_actionMoveTo2,_actionFadeOut,cc.callFunc(function(){
 			temp.removeFromParent();
 		})));
 		
