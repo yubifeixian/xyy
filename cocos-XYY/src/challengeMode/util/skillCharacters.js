@@ -34,19 +34,18 @@ function skillCharacters_LixiaoyaoFeilongtanyunshou(callBack) {
 				textAreaAddMessage("妨碍者无手牌", myText, listView);
 				break;
 			}else{
-				mainScene.addChild(new NormalSkillAnimationLayer(skillnameFeilongtanyunshou,fight_Trigger[i].hadImageView,function(){
-					var tempNumber=parseInt(Math.random()*fight_Monster[0].handCard.length, 10);
-					var card=fight_Monster[0].handCard[tempNumber];
-					fight_Trigger[i].handCard.push(card);
-					if(fight_Trigger[i]._name==player1._name){
-						handCardZone.pushBackCustomItem(card);
-					}
-					fight_Monster[0].handCard.removeObject(card);
-					if(fight_Monster[0]._name==player1._name){
-						card.removeFromParent();
-					}
-					textAreaAddMessage(fight_Trigger[i]._name+"获得"+fight_Monster[0]._name+"1张手牌", myText, listView);
-				}));
+				var tempNumber=parseInt(Math.random()*fight_Monster[0].handCard.length, 10);
+				var card=fight_Monster[0].handCard[tempNumber];
+				fight_Trigger[i].handCard.push(card);
+				if(fight_Trigger[i]._name==player1._name){
+					handCardZone.pushBackCustomItem(card);
+				}
+				fight_Monster[0].handCard.removeObject(card);
+				if(fight_Monster[0]._name==player1._name){
+					card.removeFromParent();
+				}
+				textAreaAddMessage(fight_Trigger[i]._name+"获得"+fight_Monster[0]._name+"1张手牌", myText, listView);
+				mainScene.addChild(new NormalSkillAnimationLayer(skillnameFeilongtanyunshou,fight_Trigger[i].hadImageView));
 			}
 		}
 	}
@@ -713,7 +712,7 @@ function skillCharacters_ShenqishuangXianxiawuqi(isWuren,zhenyin, targetObject) 
 	var message2 = null;
 	
 	for (var t=0;t<zhenyin.friendList.length;t++) {
-		if (zhenyin.friendList[t].skillNameList.containsObject(skillnameXianxiawuqi)) {
+		if (zhenyin.friendList[t].hp>0&&zhenyin.friendList[t].skillNameList.containsObject(skillnameXianxiawuqi)) {
 			if (targetObject instanceof Player) {
 				if (isWuren) {
 					message1 = "无人支援,";
@@ -735,13 +734,12 @@ function skillCharacters_ShenqishuangXianxiawuqi(isWuren,zhenyin, targetObject) 
 				targetObject.combat += 3;
 				monsterCombat+= targetObject.combat;
 			}
-			mainScene.addChild(new NormalSkillAnimationLayer(skillnameXianxiawuqi,zhenyin.friendList[t].hadImageView,function(){
-				myAudioPlayer(audioShenqishuangXianxiawuqi);
-				textAreaAddMessage(message2+message1+zhenyin.friendList[t]._name+"发动【仙霞五奇】效果,"+message2+"战力+3",myText,listView);
-				if(zhenyin.friendList[t]._name==nameShenqishuang){
-					AchivementProgress.addAchivementProgress(zhenyin.friendList[t]);
-				}
-			}));
+			mainScene.addChild(new NormalSkillAnimationLayer(skillnameXianxiawuqi,zhenyin.friendList[t].hadImageView));
+			myAudioPlayer(audioShenqishuangXianxiawuqi);
+			textAreaAddMessage(message2+message1+zhenyin.friendList[t]._name+"发动【仙霞五奇】效果,"+message2+"战力+3",myText,listView);
+			if(zhenyin.friendList[t]._name==nameShenqishuang){
+				AchivementProgress.addAchivementProgress(zhenyin.friendList[t]);
+			}
 			break;
 		}
 	}
@@ -2025,9 +2023,8 @@ function skillCharacters_HanlinshaDaomu(player,callBack,callBack2) {
 				}
 				player.handCard=[];
 				myAudioPlayer(audioHanlingshaDaomu);
-				mainScene.addChild(new NormalSkillAnimationLayer(skillnameDaomu,player.hadImageView,function(){
-					textAreaAddMessage("韩菱纱“盗墓”效果触发，韩菱纱得到"+player._name+"所有手牌、装备并任意分配", myText, listView);
-				}));
+				mainScene.addChild(new NormalSkillAnimationLayer(skillnameDaomu,player.hadImageView));
+				textAreaAddMessage("韩菱纱“盗墓”效果触发，韩菱纱得到"+player._name+"所有手牌、装备并任意分配", myText, listView);
 				if (nowPlayerTerm[i]._name==player1._name) {
 					daomuHandle(nowPlayerTerm[i],tempCardList,function(){
 						callBack();
@@ -2226,7 +2223,7 @@ function skillcharacters_LiumengliYaowang(player,isAdd) {
 			}
 			if(player1IsPlayer2Friend(player, nowPlayerTerm[i])){
 				if(isAdd){
-					mainScene.addChild(new NormalSkillAnimationLayer(skillnameYaowang,player.hadImageView,function(){
+					mainScene.addChild(new NormalSkillAnimationLayer(skillnameYaowang,nowPlayerTerm[i].hadImageView,function(){
 						textAreaAddMessage("柳梦璃【妖王】效果触发，我方宠物额外获得“主人战力+1”效果", myText, listView);
 						player.petsCombat += 1;
 					}));
@@ -2516,14 +2513,13 @@ function skillCharacters_XiaomanLianyao(callBack){
 					addDialog(mainScene, new selectPlayerDialogLayer(true,player2Shown, player3Shown, player4Shown,
 							"请选择补牌目标", false, false,function(selectPlayer){
 						myAudioPlayer(audioXiaomanLianyao);
-						mainScene.addChild(new NormalSkillAnimationLayer(skillnameLianyao,nowPlayerTerm[t].hadImageView,function(){
-							textAreaAddMessage("小蛮指定"+selectPlayer._name+"补了1张手牌", myText, listView);
-							addHandCard([selectPlayer],selectPlayer,selectPlayer,null,[1],true,true,function(){
-								if(callBack!=null){
-									skillCharacters_XiaomanLianyao(callBack);
-								}
-							});
-						}));
+						mainScene.addChild(new NormalSkillAnimationLayer(skillnameLianyao,nowPlayerTerm[t].hadImageView));
+						textAreaAddMessage("小蛮指定"+selectPlayer._name+"补了1张手牌", myText, listView);
+						addHandCard([selectPlayer],selectPlayer,selectPlayer,null,[1],true,true,function(){
+							if(callBack!=null){
+								skillCharacters_XiaomanLianyao(callBack);
+							}
+						});
 					}));
 				}else if(callBack!=null){
 					callBack();
@@ -2567,7 +2563,7 @@ function skillCharacters_JiangyunfanShanzei(player,handCardList,callBack) {
 						card.removeFromParent();
 						card.release();
 					}
-					mainScene.addChild(new NormalSkillAnimationLayer(skillnameShanzei,player.hadImageView,function(){
+					mainScene.addChild(new NormalSkillAnimationLayer(skillnameShanzei,tempPlayer.hadImageView,function(){
 						textAreaAddMessage(player._name+"发动“山贼”效果，交给队友一张牌", myText, listView,function(){
 							tempPlayer.handCard.push(card);
 							if(callBack!=null){
@@ -2590,7 +2586,7 @@ function skillCharacters_JiangyunfanShanzei(player,handCardList,callBack) {
 				if (tempPlayer._name==player1._name) {
 					handCardZone.pushBackCustomItem(tempHandCard);
 				}
-				mainScene.addChild(new NormalSkillAnimationLayer(skillnameShanzei,player.hadImageView,function(){
+				mainScene.addChild(new NormalSkillAnimationLayer(skillnameShanzei,tempPlayer.hadImageView,function(){
 					textAreaAddMessage(player._name+"发动“山贼”效果，交给队友一张牌", myText, listView,callBack);
 				}));
 			}else if(callBack!=null){
@@ -2763,8 +2759,7 @@ function skillCharacters_JiangshiliMojun(callBack) {
 			if (fight_Trigger[1].hp > 0
 					&& fight_Trigger[1].skillNameList
 					.containsObject(skillnameMojun)) {
-				addCombat = fight_Trigger[1].maxHP
-				- fight_Trigger[1].hp;
+				addCombat = fight_Trigger[1].maxHP- fight_Trigger[1].hp;
 				triggerCombat += addCombat;
 				mainScene.addChild(new NormalSkillAnimationLayer(skillnameMojun,fight_Trigger[1].hadImageView,function(){
 					textAreaAddMessage("姜世离“魔君”效果触发，触发方战力+"+addCombat, myText, listView,callBack);
@@ -2996,12 +2991,11 @@ function skillCharacters_MoyiSuohun(deathPlayer){
 		if (nowPlayerTerm[i].hp > 0
 				&& nowPlayerTerm[i].skillNameList.containsObject(skillnameSuohun)) {
 			nowPlayerTerm[i].skillTempList.push(deathPlayer);
-			mainScene.addChild(new NormalSkillAnimationLayer(skillnameSuohun,nowPlayerTerm[i].hadImageView,function(){
-				if(nowPlayerTerm[i]._name==player1._name){
-					AchivementProgress.addAchivementProgress(player1);
-				}
-				textAreaAddMessage("魔翳“锁魂”效果发动，将"+deathPlayer._name+"收为傀儡", myText, listView);
-			}));
+			if(nowPlayerTerm[i]._name==player1._name){
+				AchivementProgress.addAchivementProgress(player1);
+			}
+			textAreaAddMessage("魔翳“锁魂”效果发动，将"+deathPlayer._name+"收为傀儡", myText, listView);
+			mainScene.addChild(new NormalSkillAnimationLayer(skillnameSuohun,nowPlayerTerm[i].hadImageView));
 			break;
 		}
 	}

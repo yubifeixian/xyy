@@ -23,7 +23,7 @@ ChooseLayer=cc.Layer.extend({
 		characterCardManager(player2,characterList[0]);
 		//characterCardManager(player2,27);
 		characterCardManager(player3,characterList[11]);
-		//characterCardManager(player3,28);
+		//characterCardManager(player3,1);
 		characterCardManager(player4,characterList[21]);
 		// characterCardManager(player4,36);
 		
