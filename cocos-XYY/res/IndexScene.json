@@ -103,8 +103,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 254.91,
-              "Y": 440.2172
+              "X": 254.88,
+              "Y": 440.192
             },
             "Scale": {
               "ScaleX": 0.7636,
@@ -147,6 +147,7 @@
               "Path": "drawable-hdpi/fangzhen.ttf",
               "Plist": ""
             },
+            "HorizontalAlignmentType": "HT_Right",
             "OutlineSize": 0,
             "OutlineColor": {
               "R": 0,
@@ -165,8 +166,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 172.4998,
-              "Y": 624.999
+              "X": 784.8386,
+              "Y": 20.6172
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -179,17 +180,17 @@
             },
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.1797,
-              "Y": 0.9766
+              "X": 0.8175,
+              "Y": 0.0322
             },
             "PreSize": {
               "X": 0.0,
               "Y": 0.0
             },
-            "LeftMargin": 13.4998,
-            "RightMargin": 628.5002,
-            "TopMargin": 2.001,
-            "BottomMargin": 611.999,
+            "LeftMargin": 625.8386,
+            "RightMargin": 16.1614,
+            "TopMargin": 606.3828,
+            "BottomMargin": 7.6172,
             "Tag": 192,
             "ActionTag": 1858667711,
             "Size": {
@@ -243,8 +244,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 557.2609,
-              "Y": 457.23
+              "X": 557.28,
+              "Y": 457.216
             },
             "Scale": {
               "ScaleX": 0.7636,
@@ -323,8 +324,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 712.7529,
-              "Y": 211.9809
+              "X": 712.8,
+              "Y": 211.968
             },
             "Scale": {
               "ScaleX": 0.7636,
@@ -423,8 +424,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 855.168,
-              "Y": 75.072
+              "X": 63.902,
+              "Y": 584.0353
             },
             "Scale": {
               "ScaleX": 0.6068,
@@ -433,8 +434,8 @@
             "CColor": {},
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.8908,
-              "Y": 0.1173
+              "X": 0.0666,
+              "Y": 0.9126
             },
             "PercentWidthEnable": true,
             "PercentHeightEnable": true,
@@ -446,10 +447,10 @@
             },
             "HorizontalEdge": "BothEdge",
             "VerticalEdge": "BothEdge",
-            "LeftMargin": 783.1678,
-            "RightMargin": 32.8322,
-            "TopMargin": 494.5576,
-            "BottomMargin": 4.6424,
+            "LeftMargin": -8.098,
+            "RightMargin": 824.098,
+            "TopMargin": -14.4354,
+            "BottomMargin": 513.6353,
             "Tag": 408,
             "ActionTag": -458467155,
             "Size": {
@@ -503,8 +504,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 381.3419,
-              "Y": 205.1686
+              "X": 381.312,
+              "Y": 205.184
             },
             "Scale": {
               "ScaleX": 0.9645,
