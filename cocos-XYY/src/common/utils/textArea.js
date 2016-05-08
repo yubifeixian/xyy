@@ -5,15 +5,15 @@ function textAreaAddMessage(message,myText,listView,callBack){
 	var i=0;
 	var myTextClone=myText.clone();
 	//myTextClone.setString(message.handle(message,14));
-	myTextClone.setString(message);
 	myTextClone.ignoreContentAdaptWithSize(false);
+	myTextClone.setString(message);
 	myTextClone.retain();
 	//cc.log(message);
 	//cc.log(message.length);
 	var height=parseInt(message.length%14)==0?parseInt(message.length/14):parseInt(message.length/14)+1;
 	//cc.log("height"+height);
-	myTextClone.setTextAreaSize(cc.size(295,height*25));
-	cc.log("TEXT: "+message);
+	myTextClone.setTextAreaSize(cc.size(290,height*25));
+	//cc.log("TEXT: "+message);
 	listView.insertCustomItem(myTextClone,0);
 	listView.jumpToTop();
 	//listView.pushBackCustomItem(myTextClone);
