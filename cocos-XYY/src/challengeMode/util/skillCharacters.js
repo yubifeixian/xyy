@@ -2312,10 +2312,10 @@ function skillCharacters_XuanxiaoJiebaiHandle(){
 		if (nowPlayerTerm[i].hp > 0
 				&& nowPlayerTerm[i]._name==nameXuanxiao) {
 			if (nowPlayerTerm[nowPlayerNumber]._name==xuanxiao_JieBai) {
-				mainScene.addChild(skillnameJiebai,nowPlayerTerm[nowPlayerNumber].hadImageView,function(){
+				mainScene.addChild(new NormalSkillAnimationLayer(skillnameJiebai,nowPlayerTerm[i].hadImageView,function(){
 					textAreaAddMessage("玄霄“结拜”效果触发，自身命中+1", myText, listView);
 					baseEffectAddTempExtent(nowPlayerTerm[i]);
-				});
+				}));
 			}
 			break;
 		}

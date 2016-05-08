@@ -56,7 +56,7 @@ var fight_SecondMonster = null;
 var ai_AttackMonster = false; // 判断AI是否选择打怪，如果不打则无需计算打怪结果
 var game_Bingxingjue=false;
 var jiangshili_xisheng=false;// 姜世离是否发动“牺牲”
-//var suoHunList=null;//魔翳“锁魂”列表
+// var suoHunList=null;//魔翳“锁魂”列表
 var longkuiRongzhuCardName=null;// 龙葵熔铸的技牌名称
 var linyueruSpBiwuzhaoqinMaleList=null;// 林月如sp【比武招亲】男性角色列表
 var linyueruSpBiwuzhaoqinFemaleList=null;// 林月如sp【比武招亲】女性角色列表
@@ -184,27 +184,27 @@ function initGameValue(){
 	// 洗怪物牌堆
 	game_MonsterDeck = new Array();
 	game_MonsterDeck = initMonsterDeck(game_MonsterDeck, randMonster());
-	//game_MonsterDeck[0]= 0;
+// game_MonsterDeck[0]= 23;
 
 	/*
 	 * game_MonsterDeck.push(game_MonsterDeck[0]);
 	 * game_MonsterDeck.removeObject(16); game_MonsterDeck[0]=0;
 	 */
 
-	 //game_MonsterDeck[0]=24;
-	 //game_MonsterDeck[1]=23;
-	 //game_MonsterDeck[2]=12;
+	 // game_MonsterDeck[0]=24;
+	 // game_MonsterDeck[1]=23;
+	 // game_MonsterDeck[2]=12;
 
 	// 初始化事件牌
 	game_EventCardDeck = new Array();
 	game_EventCardDeck = initEventCardDeck();
-	//game_EventCardDeck=[20];
+	// game_EventCardDeck=[20];
 
 	// 发初始手牌
 	addHandCard(nowPlayerTerm,nowPlayerTerm[0],nowPlayerTerm[0],null,[3,3,3,3],true,false);
-	//addHandCard(nowPlayerTerm,nowPlayerTerm[0],nowPlayerTerm[0],null,[25,0,2,0],true,false);
-	 //addHandCard([player1],player1,player1,34,[1],false,false);//天雷破
-	 //addHandCard([player4],player4,player4,25,[1],false,false);//灵葫仙丹
+	// addHandCard(nowPlayerTerm,nowPlayerTerm[0],nowPlayerTerm[0],null,[25,0,2,0],true,false);
+	 // addHandCard([player1],player1,player1,34,[1],false,false);//天雷破
+	 // addHandCard([player4],player4,player4,25,[1],false,false);//灵葫仙丹
 	// addHandCard([player1],player1,player1,43,[1],false,false);//偷盗
 	// addHandCard([player1],player1,player1,22,[1],false,false);//鼠儿果
 	// addHandCard([player3],player3,player3,32,[1],false,false);//铜钱镖
@@ -219,12 +219,12 @@ function initGameValue(){
 	 * player1.skillTempList.push(leiling); player1.maxExtent +=
 	 * parseInt(player1.skillTempList.length / 2); }
 	 */
-	 //player1.hp=1;
-	 //player3.hp=1;
+	 // player1.hp=1;
+	 // player3.hp=1;
 	// player1.defenseExtent=2;
-	//player2.hp=0;
-	 //player3.hp=1;
-	 //player4.hp=0;
+	// player2.hp=0;
+	 // player3.hp=1;
+	 // player4.hp=0;
 	// isDeath(player3,[player3,player4], true,null,true);
 	// player2.handCard=new Array();
 	// player1.defense="踏云靴";
@@ -244,9 +244,8 @@ function initGameValue(){
 	/*
 	 * player3.pet_FengMonster=new MonsterModel("句芒");
 	 * player3.pet_Feng=player3.pet_FengMonster.name;
-	 * player3.pet_Lei=player3.pet_LeiMonster.name;
-	 * player3.pet_HuoMonster=new MonsterModel("肥肥");
-	 * player3.pet_Huo=player3.pet_HuoMonster.name;
+	 * player3.pet_Lei=player3.pet_LeiMonster.name; player3.pet_HuoMonster=new
+	 * MonsterModel("肥肥"); player3.pet_Huo=player3.pet_HuoMonster.name;
 	 */
 	// player1.pet_FengMonster=new MonsterModel("句芒");
 	// player1.pet_Feng=player1.pet_FengMonster.name;
