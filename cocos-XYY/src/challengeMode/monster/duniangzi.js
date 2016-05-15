@@ -36,6 +36,8 @@ var DuniangziMonster=BaseMonster.extend({
 					nowPlayer.arms1Combat = 0;
 					nowPlayer.arms1Extent = 0;
 					nowPlayer.arms1 = "无";
+					nowPlayer.tempZhuangbeiSkillCombat=0;
+					nowPlayer.tempZhuangbeiSkillExtent=0;
 					if(playerList[nextNumber]._name!=startPlayer._name){
 						temp.haveMostEqumentPlayerDropEqumentHelper(playerList,startPlayer,playerList[nextNumber],callBack);
 					}else if(callBack!=null){
@@ -152,6 +154,8 @@ var DuniangziMonster=BaseMonster.extend({
 						nowPlayerTerm[nowPlayerNumber].arms1Combat = 0;
 						nowPlayerTerm[nowPlayerNumber].arms1Extent = 0;
 						nowPlayerTerm[nowPlayerNumber].arms1 = "无";
+						nowPlayerTerm[nowPlayerNumber].tempZhuangbeiSkillCombat=0;
+						nowPlayerTerm[nowPlayerNumber].tempZhuangbeiSkillExtent=0;
 					}else if(result==SelectCardType.ARMS2){
 						textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"弃置武器："+nowPlayerTerm[nowPlayerNumber].arms2, myText, listView);
 						remove_Card_Into_DropDeck(nowPlayerTerm[nowPlayerNumber].arms2);

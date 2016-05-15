@@ -49,6 +49,8 @@ var ShuimoshouMonster=BaseMonster.extend({
 										fight_Monster[0].arms1Combat = 0;
 										fight_Monster[0].arms1Extent = 0;
 										fight_Monster[0].arms1="无";
+										fight_Monster[0].tempZhuangbeiSkillCombat=0;
+										fight_Monster[0].tempZhuangbeiSkillExtent=0;
 										if(callBack!=null){
 											callBack();
 										}
@@ -99,6 +101,8 @@ var ShuimoshouMonster=BaseMonster.extend({
 									fight_Monster[0].arms1Combat = 0;
 									fight_Monster[0].arms1Extent = 0;
 									fight_Monster[0].arms1 = "无";
+									fight_Monster[0].tempZhuangbeiSkillCombat=0;
+									fight_Monster[0].tempZhuangbeiSkillExtent=0;
 								} else if(fight_Monster[0].arms2!="无"){
 									textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"抽取妨碍者一件武器:"+fight_Monster[0].arms2, myText, listView);
 									player1GetPlayer2Equment(nowPlayerTerm[nowPlayerNumber], fight_Monster[0].arms2);
@@ -172,6 +176,8 @@ var ShuimoshouMonster=BaseMonster.extend({
 								nowPlayerTerm[nowPlayerNumber].arms1Combat = 0;
 								nowPlayerTerm[nowPlayerNumber].arms1Extent = 0;
 								nowPlayerTerm[nowPlayerNumber].arms1="无";
+								nowPlayerTerm[nowPlayerNumber].tempZhuangbeiSkillCombat=0;
+								nowPlayerTerm[nowPlayerNumber].tempZhuangbeiSkillExtent=0;
 								if(callBack!=null){
 									callBack();
 								}
@@ -220,6 +226,8 @@ var ShuimoshouMonster=BaseMonster.extend({
 							nowPlayerTerm[nowPlayerNumber].arms1Combat = 0;
 							nowPlayerTerm[nowPlayerNumber].arms1Extent = 0;
 							nowPlayerTerm[nowPlayerNumber].arms1 = "无";
+							nowPlayerTerm[nowPlayerNumber].tempZhuangbeiSkillCombat=0;
+							nowPlayerTerm[nowPlayerNumber].tempZhuangbeiSkillExtent=0;
 							if(callBack!=null){
 								callBack();
 							}

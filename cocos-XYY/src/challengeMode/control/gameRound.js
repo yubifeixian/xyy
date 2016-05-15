@@ -723,7 +723,6 @@ function _createMsg(messageType,messageContent){
 }
 
 function sendRoundMessageManager(){
-	var event=new cc.EventCustom("dialogEvent");
 	if(nextStep==0){
 		round_Start();
 	}

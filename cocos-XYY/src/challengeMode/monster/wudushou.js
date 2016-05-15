@@ -108,6 +108,8 @@ var WudushouMonster=BaseMonster.extend({
 							nowPlayerTerm[nowPlayerNumber].arms1Combat = 0;
 							nowPlayerTerm[nowPlayerNumber].arms1Extent = 0;
 							nowPlayerTerm[nowPlayerNumber].arms1 = "无";
+							nowPlayerTerm[nowPlayerNumber].tempZhuangbeiSkillCombat=0;
+							nowPlayerTerm[nowPlayerNumber].tempZhuangbeiSkillExtent=0;
 							if(callBack!=null){
 								callBack();
 							}

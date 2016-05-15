@@ -776,6 +776,8 @@ function tongqianbiaoEffect(usePlayer,callBack){
 								effectPlayer.arms1 = "无";
 								effectPlayer.arms1Combat = 0;
 								effectPlayer.arms1Extent = 0;
+								effectPlayer.tempZhuangbeiSkillCombat=0;
+								effectPlayer.tempZhuangbeiSkillExtent=0;
 								break;
 							case SelectCardType.ARMS2:
 								textAreaAddMessage(usePlayer._name+"弃掉"+effectPlayer._name+"的武器【"+effectPlayer.arms2+"】", myText, listView, null);
@@ -864,6 +866,8 @@ function tongqianbiaoEffect(usePlayer,callBack){
 								selectPlayer.arms1 = "无";
 								selectPlayer.arms1Combat = 0;
 								selectPlayer.arms1Extent = 0;
+								selectPlayer.tempZhuangbeiSkillCombat=0;
+								selectPlayer.tempZhuangbeiSkillExtent=0;
 							}));
 							if (taojiahuanjiaCard!=null&&taojiahuanjiaCard.getCardType() != 0) {
 								switch(taojiahuanjiaCard.getCardType()){
@@ -1155,6 +1159,8 @@ function mojianDiandangEffectInEqumentZone(callBack){
 					player1.arms1 = "无";
 					player1.arms1Combat = 0;
 					player1.arms1Extent = 0;
+					player1.tempZhuangbeiSkillCombat=0;
+					player1.tempZhuangbeiSkillExtent=0;
 				} else if (player1.arms2==string_handCardNameMojian) {
 					player1.arms2 = "无";
 					player1.arms2Combat = 0;

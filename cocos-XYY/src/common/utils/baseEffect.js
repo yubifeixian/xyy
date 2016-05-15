@@ -299,8 +299,6 @@ function baseEffectZhuangbeiArms(player,select, combat, extent,name,callBack) {
 			remove_Card_Into_DropDeck(player.arms1);
 			player.tempZhuangbeiSkillCombat=0;
 			player.tempZhuangbeiSkillExtent=0;
-			// cc.log("剔除装备后的技能战力 = "+player.tempZhuangbeiSkillCombat);
-			// cc.log("剔除装备后的技能命中 = "+player.tempZhuangbeiSkillExtent);
 		}
 		player.arms1 = name;
 		player.arms1Combat = combat;
@@ -699,22 +697,21 @@ function getRandomResult() {
 function handleBaofaEqumentsAndPets(player){
 	if(player.arms1.endsWith(Text.baofa)){
 		remove_Card_Into_DropDeck(player.arms1);
-		// remove_Card_Into_DropDeck(player.arms1.replaceAll("\\(爆发\\)"));
 		player.arms1 = Text.nil;
 		player.arms1Combat = 0;
 		player.arms1Extent = 0;
+		player.tempZhuangbeiSkillCombat=0;
+		player.tempZhuangbeiSkillExtent=0;
 	}
 	if(player.arms2.endsWith(Text.baofa)){
 		cc.log(player.arms2);
 		remove_Card_Into_DropDeck(player.arms2);
-		// remove_Card_Into_DropDeck(player.arms2.replaceAll("\\(爆发\\)"));
 		player.arms2 = Text.nil;
 		player.arms2Combat = 0;
 		player.arms2Extent = 0;
 	}
 	if(player.defense.endsWith(Text.baofa)){
 		remove_Card_Into_DropDeck(player.defense);
-		// remove_Card_Into_DropDeck(player.defense.replaceAll("\\(爆发\\)"));
 		player.defense = Text.nil;
 		player.defenseCombat = 0;
 		player.defenseExtent = 0;
@@ -736,22 +733,20 @@ function handleBaofaEqumentsAndPets(player){
 function advHandleBaofaEqumentsAndPets(player){
 	if(player.arms1.endsWith(Text.baofa)){
 		remove_Card_Into_DropDeck(player.arms1);
-		// remove_Card_Into_DropDeck(player.arms1.replaceAll("\\(爆发\\)"));
 		player.arms1 = Text.nil;
 		player.arms1Combat = 0;
 		player.arms1Extent = 0;
+		player.tempZhuangbeiSkillCombat=0;
+		player.tempZhuangbeiSkillExtent=0;
 	}
 	if(player.arms2.endsWith(Text.baofa)){
-		cc.log(player.arms2);
 		remove_Card_Into_DropDeck(player.arms2);
-		// remove_Card_Into_DropDeck(player.arms2.replaceAll("\\(爆发\\)"));
 		player.arms2 = Text.nil;
 		player.arms2Combat = 0;
 		player.arms2Extent = 0;
 	}
 	if(player.defense.endsWith(Text.baofa)){
 		remove_Card_Into_DropDeck(player.defense);
-		// remove_Card_Into_DropDeck(player.defense.replaceAll("\\(爆发\\)"));
 		player.defense = Text.nil;
 		player.defenseCombat = 0;
 		player.defenseExtent = 0;

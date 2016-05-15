@@ -2077,6 +2077,8 @@ function zengjian_Arm1(selectPlayer){
 	player1.arms1Combat = 0;
 	player1.arms1Extent = 0;
 	player1.arms1 = Text.nil;
+	player1.tempZhuangbeiSkillCombat=0;
+	player1.tempZhuangbeiSkillExtent=0;
 	textAreaAddMessage("慕容紫英补2张牌", myText, listView);
 	addHandCard([nowPlayerTerm[nowPlayerNumber]],nowPlayerTerm[nowPlayerNumber],nowPlayerTerm[nowPlayerNumber],null,[2],true,true);
 }
@@ -3043,6 +3045,8 @@ function skillCharacters_MoyiDipai(deathPlayer){
 		moyi.arms1 = Text.nil;
 		moyi.arms1Combat = 0;
 		moyi.arms1Combat = 0;
+		moyi.tempZhuangbeiSkillCombat=0;
+		moyi.tempZhuangbeiSkillExtent=0;
 		moyi.arms2 = Text.nil;
 		moyi.arms2Combat = 0;
 		moyi.arms2Extent = 0;
@@ -3259,6 +3263,8 @@ function skillCharacters_LongkuiguiKongjian(longkuigui) {
 							longkuigui.friendList[1].arms1Combat = 0;
 							longkuigui.friendList[1].arms1Extent = 0;
 							longkuigui.friendList[1].arms1=Text.nil;
+							longkuigui.friendList[1].tempZhuangbeiSkillCombat=0;
+							longkuigui.friendList[1].tempZhuangbeiSkillExtent=0;
 							break;
 						case SelectCardType.ARMS2:
 							player1GetPlayer2Equment(longkuigui, longkuigui.friendList[1].arms2);

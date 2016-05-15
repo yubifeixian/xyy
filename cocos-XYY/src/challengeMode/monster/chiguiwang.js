@@ -74,6 +74,8 @@ var ChiguiwangMonster=BaseMonster.extend({
 							nowPlayerTerm[nowPlayerNumber].arms1Combat = 0;
 							nowPlayerTerm[nowPlayerNumber].arms1Extent = 0;
 							nowPlayerTerm[nowPlayerNumber].arms1 = "无";
+							nowPlayerTerm[nowPlayerNumber].tempZhuangbeiSkillCombat=0;
+							nowPlayerTerm[nowPlayerNumber].tempZhuangbeiSkillExtent=0;
 						}
 						if (nowPlayerTerm[nowPlayerNumber].arms2!="无") {
 							remove_Card_Into_DropDeck(nowPlayerTerm[nowPlayerNumber].arms2);

@@ -2,12 +2,53 @@
 	"packageUrl":"http://120.76.139.33:8080/cocosXYY",
 	"remoteManifestUrl":"http://120.76.139.33:8080/cocosXYY/project.manifest",
 	"remoteVersionUrl":"http://120.76.139.33:8080/cocosXYY/version.manifest",
-	"version":"4.1.0",
+	"version":"4.2.3",
 	"groupVersions" : {
+		"1":"4.1.1",
+		"2":"4.2.0",
+		"3":"4.2.2",
+		"4":"4.2.3"
     },
 	"engineVersion":"3.6.1",
 	"assets" : {
+		"update1":{
+			"path":"src/app.zip",
+			"md5":"19C36C6453954CF649A3FC426218F295",
+			"compressed":true,
+			"group":"1"
+		},
+		"update2":{
+			"path":"res/res_4.2.0.zip",
+			"md5":"34E92F9486554CA345EB4A57BC8D07B4",
+			"compressed":true,
+			"group":"2"
+		},
+		"update3":{
+			"path":"src/src_4.2.0.zip",
+			"md5":"1644222E9C5284A1BE80C15314A8E524",
+			"compressed":true,
+			"group":"2"
+		},
+		"update4":{
+			"path":"src/src_4.2.2.zip",
+			"md5":"852DF32DB4A4A1BAEECEC6AA8CC1ADA6",
+			"compressed":true,
+			"group":"3"
+		},
+		"update5":{
+			"path":"res/res_4.2.2.zip",
+			"md5":"3F24BAC58E51F0FE6A73B300DBBAE6DC",
+			"compressed":true,
+			"group":"3"
+		},
+		"update6":{
+			"path":"src/src_4.2.3.zip",
+			"md5":"EAC0F49EC714661DFD12A1A6909EDA86",
+			"compressed":true,
+			"group":"4"
+		}
     },
     "searchPaths":[
+    "res/","src/"
     ]
 }

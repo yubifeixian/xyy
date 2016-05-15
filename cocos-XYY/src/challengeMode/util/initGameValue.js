@@ -207,7 +207,7 @@ function initGameValue(){
 	 // addHandCard([player4],player4,player4,25,[1],false,false);//灵葫仙丹
 	// addHandCard([player1],player1,player1,43,[1],false,false);//偷盗
 	// addHandCard([player1],player1,player1,22,[1],false,false);//鼠儿果
-	// addHandCard([player3],player3,player3,32,[1],false,false);//铜钱镖
+	// addHandCard([player2],player2,player2,32,[1],false,false);//铜钱镖
 	// addHandCard([player3],player3,player3,28,[1],false,false);//冰心
 	// addHandCard([player4],player4,player4,18,[1],false,false);//隐蛊
 	// addHandCard([player3],player3,player3,47,[1],false,false);//无尘剑
@@ -236,7 +236,7 @@ function initGameValue(){
 	// isDeath(player3, true);
 	// player4.hp=0;
 	// isDeath(player4, true);
-	// player1.pet_LeiMonster=new XiejianxianMonster();
+	//player1.pet_LeiMonster=new XiejianxianMonster();
 	/*
 	 * newHandCard(randHandCardNumber( game_HandCard_Start, game_DropHandCard),
 	 * nowPlayerTerm[0], 40, true);
@@ -254,7 +254,7 @@ function initGameValue(){
 	// player2.pet_ShuiMonster=new MonsterModel("水魔兽");
 	// player2.pet_Shui=player2.pet_ShuiMonster.name;
 	// player1.pet_TuMonster=new MonsterModel("天鬼皇");
-	// calculate_Pets(player1, new XiejianxianMonster());
+	//calculate_Pets(player1, new XiejianxianMonster());
 	// calculate_Pets(player1, new JinchanguimuMonster());
 	// calculate_Pets(player2, pet_TuMonster);
 	// calculate_Pets(player3, pet_TuMonster);
@@ -267,5 +267,5 @@ function initGameValue(){
 	 * player1.maxCombat=1; player2.maxCombat=1; player3.maxCombat=1;
 	 * player4.maxCombat=1;
 	 */
-
+	//handCardTianshezhang.effect(player3, player3, false, false);
 }
