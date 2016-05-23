@@ -902,7 +902,7 @@ var GameLayer=cc.Layer.extend({
 			var now=Date.now();
 			var delta=now-then;
 			if(delta>interval){
-				athen=now-(delta%interval);
+				then=now-(delta%interval);
 				callBack.call(this);
 			}
 		}.bind(this), 0);
