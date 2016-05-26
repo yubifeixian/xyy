@@ -46,7 +46,6 @@ cc.game.onStart = function(){
     cc.view.setDesignResolutionSize(960, 640, cc.ResolutionPolicy.SHOW_ALL);
     cc.view.resizeWithBrowserSize(true);
     
-    
     var scene=new UpdateScene();
     scene.run();
     // load resources

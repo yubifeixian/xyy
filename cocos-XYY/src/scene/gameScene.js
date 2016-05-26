@@ -596,7 +596,6 @@ var GameLayer=cc.Layer.extend({
 				}
 			}
 		}, this);
-		// order2Button=ccui.helper.seekWidgetByName(mainScene, "order2");
 		order2Button.addClickEventListener(function(){
 			playButtonClickedAudio();
 			selectHandCard=null;
@@ -608,8 +607,6 @@ var GameLayer=cc.Layer.extend({
 			nextStep++;
 			sendRoundMessageManager();
 		});
-		// player1DeathImageView=ccui.helper.seekWidgetByName(mainScene,
-		// "player1DeathImageView");
 		player1.deathImageView=player1DeathImageView;
 		player1.deathImageView.setVisible(false);
 		player1.deathImageView.retain();
@@ -619,8 +616,6 @@ var GameLayer=cc.Layer.extend({
 		player1.hadImageView.setOpacity(150);
 		player1.hadImageView.retain();
 		
-		// player2DeathImageView=ccui.helper.seekWidgetByName(mainScene,
-		// "player2DeathImageView");
 		player2.deathImageView=player2DeathImageView;
 		player2.deathImageView.setVisible(false);
 		player2.deathImageView.retain();
@@ -630,8 +625,6 @@ var GameLayer=cc.Layer.extend({
 		player2.hadImageView.setOpacity(150);
 		player2.hadImageView.retain();
 		
-		// player3DeathImageView=ccui.helper.seekWidgetByName(mainScene,
-		// "player3DeathImageView");
 		player3.deathImageView=player3DeathImageView;
 		player3.deathImageView.setVisible(false);
 		player3.deathImageView.retain();
@@ -641,8 +634,6 @@ var GameLayer=cc.Layer.extend({
 		player3.hadImageView.setOpacity(150);
 		player3.hadImageView.retain();
 		
-		// player4DeathImageView=ccui.helper.seekWidgetByName(mainScene,
-		// "player4DeathImageView");
 		player4.deathImageView=player4DeathImageView;
 		player4.deathImageView.setVisible(false);
 		player4.deathImageView.retain();
@@ -659,10 +650,6 @@ var GameLayer=cc.Layer.extend({
 		this.addChild(mainScene);
 	},
 	updateUI:function(){
-		// listView.scrollToTop(0.5,true);
-		// listView.scrollToBottom(0.5,false);
-		// cc.log(player2.extent);
-		// calcultCardNumber();
 		handCardDeckNumber.setString("牌堆："+game_HandCard_Start.length);
 		monsterCardDeckNumber.setString(game_MonsterDeck.length);
 		eventCardDeckNumber.setString(game_EventCardDeck.length);
