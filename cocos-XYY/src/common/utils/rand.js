@@ -1,44 +1,20 @@
-//1、选出20张怪物牌 2、从26张NPC牌中随机选出10张NPC 3、将20张怪物牌跟10张NPC牌混合在一起
-function randMonster() {
-	var monsterDeck=new Array(), npcDeck=new Array();
-	var i = 0, m = 0;
-	var tempnpcDeck = new Array();
-	for (var npcNumber = 20; npcNumber < 46; npcNumber++) {
-		tempnpcDeck.push(npcNumber);
+// 初始化30张怪物牌
+function initMonsterDeck() {
+	var _monsterDeck=[];
+	var _npcDeck=[];
+	for(var i=20;i<43;i++){
+		_npcDeck.push(i);
 	}
-	for (m = 0; m < 10; m++) {
-		var tempNum = tempnpcDeck.length;
-		npcDeck.push(tempnpcDeck[parseInt(Math.random()*tempNum, 10)]);
-		tempnpcDeck.removeObject(npcDeck[m]);
-	}
-	m = 0;
-	for (i = 0; i < 30; i++) {
-		if (i < 20) {
-			monsterDeck.push(i);
-			monsterDeck.sort(function(){ return 0.5 - Math.random() }) ;
-		} else {
-			monsterDeck.push(npcDeck[m]);
-			monsterDeck.sort(function(){ return 0.5 - Math.random() }) ;
-			m++;
+	_npcDeck.sort(function(){ return 0.5 - Math.random() }) ;
+	for(var i=0;i<30;i++){
+		if(i<20){
+			_monsterDeck.push(i);
+		}else{
+			_monsterDeck.push(_npcDeck.shift());
 		}
-
 	}
-	return monsterDeck;
-}
-
-// 初始化怪物牌(将上述方法中得到的30张牌放入Vector中)
-function initMonsterDeck(firstArray, secondArray) {
-	var B = new Array();
-	for (var i = 0; i < secondArray.length; i++) {
-		firstArray.push(secondArray[i]);
-	}
-	while(firstArray.length>0){
-		var temp = parseInt(Math.random()*firstArray.length, 10);
-		B.push(firstArray[temp]);
-		firstArray.removeObject(firstArray[temp]);
-	}
-	B.sort(function(){ return 0.5 - Math.random() }) ;
-	return B;
+	_monsterDeck.sort(function(){ return 0.5 - Math.random() }) ;
+	return _monsterDeck;
 }
 
 function addHandCard(playerList,startPlayer,nowPlayer,cardNumber,countList,isRandom,canUseShanzei,callBack){

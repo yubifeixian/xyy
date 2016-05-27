@@ -170,9 +170,7 @@ function advAttackMonsterHandle(){
 		advJudgeWinorLose();
 	}else{
 		fight_FirstMonster=advTopMonsterCard(game_MonsterDeck[0]);
-		if(fight_FirstMonster==null){
-			cc.error("fight_firstMonster number = "+game_MonsterDeck[0]);
-		}
+		game_MonsterDropDeck.push(game_MonsterDeck[0]);
 		game_MonsterDeck.remove(0);
 		monsterLabel.loadTexture(fight_FirstMonster.monsterPicSrc);
 		tempMonster=fight_FirstMonster;

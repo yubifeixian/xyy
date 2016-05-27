@@ -183,7 +183,7 @@ function initGameValue(){
 	game_HandCard_Start = initHandCardDeck(game_HandCard_Start);
 	// 洗怪物牌堆
 	game_MonsterDeck = new Array();
-	game_MonsterDeck = initMonsterDeck(game_MonsterDeck, randMonster());
+	game_MonsterDeck = initMonsterDeck();
 // game_MonsterDeck[0]= 23;
 
 	/*

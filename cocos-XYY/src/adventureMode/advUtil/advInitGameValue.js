@@ -103,7 +103,7 @@ function initAdvGameValue(){
 	game_HandCard_Start = initAdvHandCardDeck(game_HandCard_Start);
 	// 洗怪物牌堆
 	game_MonsterDeck = new Array();
-	game_MonsterDeck = initMonsterDeck(game_MonsterDeck, randMonster());
+	game_MonsterDeck = initMonsterDeck();
 	game_MonsterDeck=addCrisisCard(game_MonsterDeck,nowStage.stageCrisisCards);
 	//game_MonsterDeck[0]=4;
 	//cc.log("monterDeck = "+game_MonsterDeck);
