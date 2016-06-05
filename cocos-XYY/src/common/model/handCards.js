@@ -238,8 +238,8 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 				if(!skillCharacters_JiangyunfanKuanglongxunyingzhan(usePlayer)){
 					usePlayer.usedAttackCard=true;
 				}
-				useBingxingjue(usePlayer, usePlayer, function(){
-					playCardAnimation("res/drawable-hdpi/jinchantuoqiao.png", function(){
+				playCardAnimation("res/drawable-hdpi/jinchantuoqiao.png", function(){
+					useBingxingjue(usePlayer, usePlayer, function(){
 						jinchantuoqiaoEffect(usePlayer,callBack);
 					});
 				});

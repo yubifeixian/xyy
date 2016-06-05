@@ -29,7 +29,7 @@ var RongyanshouwangMonster=BaseMonster.extend({
 			}
 		}
 		for(var i=0;i<tempHeartList.length;i++){
-			mainScene.addChild(new AttackTargetLayer(monsterLabel,tempHeartList[i].hadImageView));
+			mainScene.addChild(new FireParticleLayer(monsterLabel,tempHeartList[i].hadImageView));
 		}
 		useYingu(tempHeartList,tempHeartList[0],tempHeartList[0],tempHeartNumberList,true, baseEffectReduceHPEffect,function(){
 			skillCharactersTangxuejianZhuida(function(){

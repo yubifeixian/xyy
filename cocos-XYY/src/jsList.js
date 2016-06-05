@@ -1,6 +1,7 @@
 var jsList=[
 // 通用模块
 "src/common/ai/cardEffectAI.js",
+"src/common/animation/FireParticleLayer.js",
 "src/common/animation/addCardAnimation.js",
 "src/common/animation/NormalSkillAnimationLayer.js",
 "src/common/animation/attackTarget.js",
