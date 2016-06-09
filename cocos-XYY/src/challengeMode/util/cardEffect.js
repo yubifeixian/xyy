@@ -329,7 +329,7 @@ function tianleipoEffect(usePlayer,callBack){
 			var player4Shown=(player4._name!=nameChonglouSp)?true:false;
 			addDialog(mainScene, new selectPlayerDialogLayer(player1Shown,player2Shown, player3Shown, player4Shown,
 					"请选择【天雷破】的目标", false, false,function(effectPlayer){
-				mainScene.addChild(new AttackTargetLayer(cardAnimationLabel,effectPlayer.hadImageView,function(){
+				mainScene.addChild(new MagicLayer(effectPlayer.hadImageView,new MagicNodeLei(),function(){
 					var array=new Array();
 					array.push(effectPlayer);
 					if(effectPlayer.defense==string_handCardNameQiankundaopao){
@@ -360,7 +360,7 @@ function tianleipoEffect(usePlayer,callBack){
 			}else {
 				selectPlayer =cardEfectAITianleipo(player1,player2);
 			}
-			mainScene.addChild(new AttackTargetLayer(cardAnimationLabel,selectPlayer.hadImageView,function(){
+			mainScene.addChild(new MagicLayer(selectPlayer.hadImageView,new MagicNodeLei(),function(){
 				if(selectPlayer.defense==string_handCardNameQiankundaopao){
 					textAreaAddMessage(selectPlayer._name+"由于【乾坤道袍】效果，免疫技牌导致的伤害", myText, listView,function(){
 						if(callBack!=null){

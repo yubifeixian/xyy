@@ -19,10 +19,8 @@ var XuanguiMonster=BaseMonster.extend({
 	},
 	winEffect:function(callBack){
 		this._super();
-		var tempHeartList=new Array();
-		var tempHeartNumberList=new Array();
-		tempHeartList.push(nowPlayerTerm[nowPlayerNumber]);
-		tempHeartNumberList.push(3);
+		var tempHeartList=[nowPlayerTerm[nowPlayerNumber]];
+		var tempHeartNumberList=[3];
 		if (fight_Trigger.length > 1) {
 			if (!isJinchanguimu(fight_Trigger[1],"璇龟效果对金蟾鬼母无效")) {
 				if (fight_Trigger[1].hp > 0) {
@@ -34,6 +32,9 @@ var XuanguiMonster=BaseMonster.extend({
 			}else if(callBack!=null){
 				callBack();
 			}
+		}
+		for(var i=0;i<tempHeartList.length;i++){
+			mainScene.addChild(new MagicLayer(tempHeartList[i].hadImageView,new MagicNodeTu()));
 		}
 		useYingu(tempHeartList, tempHeartList[0], tempHeartList[0], tempHeartNumberList, true, baseEffectReduceHPEffect,function(){
 			skillCharactersTangxuejianZhuida(function(){
@@ -51,14 +52,16 @@ var XuanguiMonster=BaseMonster.extend({
 		}else{
 			if (!isJinchanguimu(fight_Monster[0],"璇龟失败结算对金蟾鬼母无效")) {
 				if (fight_Monster[0].hp > 0) {
-					useYingu([fight_Monster[0]], fight_Monster[0], fight_Monster[0], [3], true, baseEffectReduceHPEffect, function(){});
-					// 唐雪见【追打】效果
-					skillCharactersTangxuejianZhuida(function(){
-						heartList=new Array();
-						if(callBack!=null){
-							callBack();
-						}						
-					});
+					mainScene.addChild(new MagicLayer(fight_Monster[0].hadImageView,new MagicNodeTu(),function(){
+						useYingu([fight_Monster[0]], fight_Monster[0], fight_Monster[0], [3], true, baseEffectReduceHPEffect, function(){});
+						// 唐雪见【追打】效果
+						skillCharactersTangxuejianZhuida(function(){
+							heartList=new Array();
+							if(callBack!=null){
+								callBack();
+							}						
+						});
+					}));
 				}else if(callBack!=null){
 					callBack();
 				}

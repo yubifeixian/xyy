@@ -23,14 +23,16 @@ var YanyueMonster=BaseMonster.extend({
 			if (!isJinchanguimu(fight_Monster[0],"赝月效果对金蟾鬼母无效")) {
 				if (fight_Monster[0].hp > 0) {
 					if(!skillCharacters_XuanxiaoNingbingfenyan(fight_Monster[0])){
-						useYingu([fight_Monster[0]], fight_Monster[0], fight_Monster[0], [2], true, baseEffectReduceHPEffect,function(){
-							skillCharactersTangxuejianZhuida(function(){
-								heartList=new Array();
-								if(callBack!=null){
-									callBack();
-								}
+						mainScene.addChild(new MagicLayer(fight_Monster[0].hadImageView,new MagicNodeHuo(),function(){
+							useYingu([fight_Monster[0]], fight_Monster[0], fight_Monster[0], [2], true, baseEffectReduceHPEffect,function(){
+								skillCharactersTangxuejianZhuida(function(){
+									heartList=[];
+									if(callBack!=null){
+										callBack();
+									}
+								});
 							});
-						});
+						}));
 					}else if(callBack!=null){
 						callBack();
 					}
@@ -47,15 +49,17 @@ var YanyueMonster=BaseMonster.extend({
 	loseEffect:function(callBack){
 		this._super();
 		if(!skillCharacters_XuanxiaoNingbingfenyan(nowPlayerTerm[nowPlayerNumber])){
-			useYingu([nowPlayerTerm[nowPlayerNumber]], nowPlayerTerm[nowPlayerNumber], nowPlayerTerm[nowPlayerNumber], [3], true, baseEffectReduceHPEffect, function(){
-				// 唐雪见【追打】效果
-				skillCharactersTangxuejianZhuida(function(){
-					heartList=new Array();
-					if(callBack!=null){
-						callBack();
-					}
+			mainScene.addChild(new MagicLayer(nowPlayerTerm[nowPlayerNumber].hadImageView,new MagicNodeHuo(),function(){
+				useYingu([nowPlayerTerm[nowPlayerNumber]], nowPlayerTerm[nowPlayerNumber], nowPlayerTerm[nowPlayerNumber], [3], true, baseEffectReduceHPEffect, function(){
+					// 唐雪见【追打】效果
+					skillCharactersTangxuejianZhuida(function(){
+						heartList=[];
+						if(callBack!=null){
+							callBack();
+						}
+					});
 				});
-			});
+			}));
 		}else if(callBack!=null){
 			callBack();
 		}

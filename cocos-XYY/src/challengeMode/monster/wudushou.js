@@ -28,6 +28,7 @@ var WudushouMonster=BaseMonster.extend({
 				if(!skillCharacters_XuanxiaoNingbingfenyan(nowPlayerTerm[i])){
 					reduceHpList.push(nowPlayerTerm[i]);
 					heartNumberList.push(1);
+					mainScene.addChild(new MagicLayer(nowPlayerTerm[i].hadImageView,new MagicNodeShui()));
 				}
 			}
 		}
@@ -40,14 +41,16 @@ var WudushouMonster=BaseMonster.extend({
 					addDialog(mainScene, new selectPlayerDialogLayer(true,true, true, true,
 							"请选择一人HP额外-2", false, false,function(result){
 						if(!skillCharacters_XuanxiaoNingbingfenyan(result)){
-							useYingu([result],result,result,[2],true, baseEffectReduceHPEffect,function(){
-								skillCharactersTangxuejianZhuida(function(){
-									heartList=new Array();
-									if(callBack!=null){
-										callBack();
-									}
+							mainScene.addChild(new MagicLayer(result.hadImageView,new MagicNodeShui(),function(){
+								useYingu([result],result,result,[2],true, baseEffectReduceHPEffect,function(){
+									skillCharactersTangxuejianZhuida(function(){
+										heartList=new Array();
+										if(callBack!=null){
+											callBack();
+										}
+									});
 								});
-							});
+							}));
 						}else if(callBack!=null){
 							callBack();
 						}
@@ -76,15 +79,17 @@ var WudushouMonster=BaseMonster.extend({
 						}
 					}
 					if (!skillCharacters_XuanxiaoNingbingfenyan(selectPlayer)) {
-						useYingu([selectPlayer],selectPlayer,selectPlayer,[2],true, baseEffectReduceHPEffect,function(){
-							// 唐雪见【追打】效果
-							skillCharactersTangxuejianZhuida(function(){
-								heartList=new Array();
-								if(callBack!=null){
-									callBack();
-								}
+						mainScene.addChild(new MagicLayer(selectPlayer.hadImageView,new MagicNodeShui(),function(){
+							useYingu([selectPlayer],selectPlayer,selectPlayer,[2],true, baseEffectReduceHPEffect,function(){
+								// 唐雪见【追打】效果
+								skillCharactersTangxuejianZhuida(function(){
+									heartList=new Array();
+									if(callBack!=null){
+										callBack();
+									}
+								});
 							});
-						});
+						}));
 					}else if(callBack!=null){
 						callBack();
 					}
@@ -159,13 +164,15 @@ var WudushouMonster=BaseMonster.extend({
 		this._super();
 		var that=this;
 		if(!skillCharacters_XuanxiaoNingbingfenyan(nowPlayerTerm[nowPlayerNumber])){
-			useYingu([nowPlayerTerm[nowPlayerNumber]], nowPlayerTerm[nowPlayerNumber], nowPlayerTerm[nowPlayerNumber], [2], true, baseEffectReduceHPEffect,function(){
-				// 唐雪见【追打】技能
-				skillCharactersTangxuejianZhuida(function(){
-					heartList=new Array();
-					that.dropEqument(callBack);
+			mainScene.addChild(new MagicLayer(nowPlayerTerm[nowPlayerNumber].hadImageView,new MagicNodeShui(),function(){
+				useYingu([nowPlayerTerm[nowPlayerNumber]], nowPlayerTerm[nowPlayerNumber], nowPlayerTerm[nowPlayerNumber], [2], true, baseEffectReduceHPEffect,function(){
+					// 唐雪见【追打】技能
+					skillCharactersTangxuejianZhuida(function(){
+						heartList=new Array();
+						that.dropEqument(callBack);
+					});
 				});
-			});
+			}));
 		}else if(callBack!=null){
 			that.dropEqument(callBack);
 		}

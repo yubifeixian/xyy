@@ -23,14 +23,16 @@ var YelingMonster=BaseMonster.extend({
 	},
 	loseEffect:function(callBack){
 		this._super();
-		useYingu([nowPlayerTerm[nowPlayerNumber]], nowPlayerTerm[nowPlayerNumber], nowPlayerTerm[nowPlayerNumber], [2], true, baseEffectReduceHPEffect,function(){
-			// 唐雪见【追打】效果
-			skillCharactersTangxuejianZhuida(function(){
-				heartList=new Array();
-				if(callBack!=null){
-					callBack();
-				}
+		mainScene.addChild(new MagicLayer(nowPlayerTerm[nowPlayerNumber].hadImageView,new MagicNodeFeng(),function(){
+			useYingu([nowPlayerTerm[nowPlayerNumber]], nowPlayerTerm[nowPlayerNumber], nowPlayerTerm[nowPlayerNumber], [2], true, baseEffectReduceHPEffect,function(){
+				// 唐雪见【追打】效果
+				skillCharactersTangxuejianZhuida(function(){
+					heartList=new Array();
+					if(callBack!=null){
+						callBack();
+					}
+				});
 			});
-		});
+		}));
 	}
 })

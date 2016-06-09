@@ -50,14 +50,16 @@ var JiliangyinzheMonster=BaseMonster.extend({
 	},
 	loseEffect:function(callBack){
 		this._super();
-		useYingu([nowPlayerTerm[nowPlayerNumber]], nowPlayerTerm[nowPlayerNumber], nowPlayerTerm[nowPlayerNumber], [3], true, baseEffectReduceHPEffect,function(){
-			// 唐雪见【追打技能】
-			skillCharactersTangxuejianZhuida(function(){
-				heartList=new Array();
-				if(callBack!=null){
-					callBack();
-				}
+		mainScene.addChild(new MagicLayer(nowPlayerTerm[nowPlayerNumber].hadImageView,new MagicNodeLei(),function(){
+			useYingu([nowPlayerTerm[nowPlayerNumber]], nowPlayerTerm[nowPlayerNumber], nowPlayerTerm[nowPlayerNumber], [3], true, baseEffectReduceHPEffect,function(){
+				// 唐雪见【追打技能】
+				skillCharactersTangxuejianZhuida(function(){
+					heartList=new Array();
+					if(callBack!=null){
+						callBack();
+					}
+				});
 			});
-		});
+		}));
 	}
 })

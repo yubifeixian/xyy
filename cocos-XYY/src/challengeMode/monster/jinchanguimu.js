@@ -34,6 +34,7 @@ var JinchanguimuMonster=BaseMonster.extend({
 							nowPlayerTerm[nowPlayerNumber])) {
 				tempHeartList.push(nowPlayerTerm[i]);
 				tempHeartNumberList.push(1);
+				mainScene.addChild(new MagicLayer(nowPlayerTerm[i].hadImageView,new MagicNodeTu()));
 			}
 		}
 		useYingu(tempHeartList, tempHeartList[0], tempHeartList[0], tempHeartNumberList, true, baseEffectReduceHPEffect,function(){
@@ -54,6 +55,7 @@ var JinchanguimuMonster=BaseMonster.extend({
 			if (nowPlayerTerm[nowPlayerNumber].friendList[i].hp > 0) {
 				tempHeartList.push(nowPlayerTerm[nowPlayerNumber].friendList[i]);
 				tempHeartNumberList.push(2);
+				mainScene.addChild(new MagicLayer(nowPlayerTerm[nowPlayerNumber].friendList[i].hadImageView,new MagicNodeTu()));
 			}
 		}
 		useYingu(tempHeartList, tempHeartList[0], tempHeartList[0], tempHeartNumberList, true, baseEffectReduceHPEffect, function(){

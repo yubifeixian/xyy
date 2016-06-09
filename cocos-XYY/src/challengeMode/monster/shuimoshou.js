@@ -29,6 +29,7 @@ var ShuimoshouMonster=BaseMonster.extend({
 				if(!skillCharacters_XuanxiaoNingbingfenyan(nowPlayerTerm[i])){
 					tempHeartList.push(nowPlayerTerm[i]);
 					tempHeartNumberList.push(1);
+					mainScene.addChild(new MagicLayer(nowPlayerTerm[i].hadImageView,new MagicNodeShui()));
 				}
 			}
 		}
@@ -151,11 +152,12 @@ var ShuimoshouMonster=BaseMonster.extend({
 	},
 	loseEffect:function(callBack){
 		this._super();
-		var tempHeartList=new Array();
-		var tempHeartNumber=new Array();
+		var tempHeartList=[];
+		var tempHeartNumber=[];
 		if(!skillCharacters_XuanxiaoNingbingfenyan(nowPlayerTerm[nowPlayerNumber])){
 			tempHeartList.push(nowPlayerTerm[nowPlayerNumber]);
 			tempHeartNumber.push(2);
+			mainScene.addChild(new MagicLayer(nowPlayerTerm[nowPlayerNumber].hadImageView,new MagicNodeShui()));
 		}
 		useYingu(tempHeartList, tempHeartList[0], tempHeartList[0], tempHeartNumber, true, baseEffectReduceHPEffect,function(){
 			// 唐雪见【追打】技能

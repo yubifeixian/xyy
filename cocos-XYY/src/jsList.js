@@ -7,6 +7,8 @@ var jsList=[
 "src/common/animation/attackTarget.js",
 "src/common/animation/cardAnimation.js",
 "src/common/animation/liaoyuTarget.js",
+"src/common/animation/MagicLayer.js",
+"src/common/animation/magicNodes.js",
 "src/common/config/cardType.js",
 "src/common/config/strings.js",
 "src/common/config/version.js",

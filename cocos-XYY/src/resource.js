@@ -444,7 +444,20 @@ var resPng={
 		npc_xuanxiao_png:"res/drawable-hdpi/npc_xuanxiao.png",
 		npc_longyou_png:"res/drawable-hdpi/npc_longyou.png",
 		npc_xiaoman_png:"res/drawable-hdpi/npc_xiaoman.png",
-		monsterCardBack:"res/drawable-hdpi/monsterBack.png"
+		monsterCardBack:"res/drawable-hdpi/monsterBack.png",
+		lei_png:"res/drawable-hdpi/lei.png",
+		huo_png:"res/drawable-hdpi/huo.png",
+		feng_png:"res/drawable-hdpi/feng.png",
+		tu_png:"res/drawable-hdpi/tu.png",
+		shui_png:"res/drawable-hdpi/shui.png",
+}
+
+var magicPlist={
+		Lei_plist:"res/drawable-hdpi/lei.plist",
+		Huo_plist:"res/drawable-hdpi/huo.plist",
+		Feng_plist:"res/drawable-hdpi/feng.plist",
+		Tu_plist:"res/drawable-hdpi/tu.plist",
+		Shui_plist:"res/drawable-hdpi/shui.plist"
 }
 
 var g_json=[]

@@ -61,6 +61,9 @@ var GoumangMonster=BaseMonster.extend({
 			}
 		}
 		addHandCard(addCardPlayerList,addCardPlayerList[0],addCardPlayerList[0],null,addCardNumberList,true,true,function(){
+			for(var i=0;i<tempHeartList.length;i++){
+				mainScene.addChild(new MagicLayer(tempHeartList[i].hadImageView,new MagicNodeFeng()));
+			}
 			useYingu(tempHeartList, tempHeartList[0], tempHeartList[0], tempHeartNumberList, true, baseEffectReduceHPEffect,function(){
 				// 唐雪见【追打】技能
 				skillCharactersTangxuejianZhuida(function(){

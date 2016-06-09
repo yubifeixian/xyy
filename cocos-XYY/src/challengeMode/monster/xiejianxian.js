@@ -33,12 +33,13 @@ var XiejianxianMonster=BaseMonster.extend({
 	},
 	loseEffect:function(callBack){
 		this._super();
-		var tempHeartList=new Array();
-		var tempHeartNumberList=new Array();
+		var tempHeartList=[];
+		var tempHeartNumberList=[];
 		for (var i=0;i<nowPlayerTerm[nowPlayerNumber].friendList.length;i++) {
 			if (nowPlayerTerm[nowPlayerNumber].friendList[i].hp > 0) {
 				tempHeartList.push(nowPlayerTerm[nowPlayerNumber].friendList[i]);
 				tempHeartNumberList.push(2);
+				mainScene.addChild(new MagicLayer(nowPlayerTerm[nowPlayerNumber].friendList[i].hadImageView,new MagicNodeLei()));
 			}
 		}
 		useYingu(tempHeartList, tempHeartList[0], tempHeartList[0], tempHeartNumberList, true, baseEffectReduceHPEffect,function(){

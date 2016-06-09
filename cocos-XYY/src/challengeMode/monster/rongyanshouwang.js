@@ -29,7 +29,9 @@ var RongyanshouwangMonster=BaseMonster.extend({
 			}
 		}
 		for(var i=0;i<tempHeartList.length;i++){
-			mainScene.addChild(new FireParticleLayer(monsterLabel,tempHeartList[i].hadImageView));
+			var _targetPlayer=tempHeartList[i];
+			mainScene.addChild(new FireParticleLayer(monsterLabel,_targetPlayer.hadImageView));
+			mainScene.addChild(new MagicLayer(_targetPlayer.hadImageView,new MagicNodeHuo()));
 		}
 		useYingu(tempHeartList,tempHeartList[0],tempHeartList[0],tempHeartNumberList,true, baseEffectReduceHPEffect,function(){
 			skillCharactersTangxuejianZhuida(function(){
@@ -49,6 +51,7 @@ var RongyanshouwangMonster=BaseMonster.extend({
 				if(!skillCharacters_XuanxiaoNingbingfenyan(nowPlayerTerm[i])){
 					tempHeartList.push(nowPlayerTerm[i]);
 					tempHeartNumberList.push(2);
+					mainScene.addChild(new MagicLayer(nowPlayerTerm[i].hadImageView,new MagicNodeHuo()));
 				}
 			}
 		}
@@ -81,6 +84,9 @@ var RongyanshouwangMonster=BaseMonster.extend({
 					}
 				}
 			}
+		}
+		for(var i=0;i<tempHeartList.length;i++){
+			mainScene.addChild(new MagicLayer(tempHeartList[i].hadImageView,new MagicNodeHuo()));
 		}
 		useYingu(tempHeartList, tempHeartList[0], tempHeartList[0], tempHeartNumberList, true, baseEffectReduceHPEffect, function(){
 			// 唐雪见【追打】效果

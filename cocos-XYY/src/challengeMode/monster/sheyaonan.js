@@ -22,15 +22,17 @@ var SheyaonanMonster=BaseMonster.extend({
 		if (fight_Monster.length > 0) {
 			if(!isJinchanguimu(fight_Monster[0],"蛇妖男胜利结算对金蟾鬼母无效")){
 				if(!skillCharacters_XuanxiaoNingbingfenyan(fight_Monster[0])){
-					useYingu([fight_Monster[0]], fight_Monster[0], fight_Monster[0], [4], true, baseEffectReduceHPEffect,function(){
-						// 唐雪见【追打】
-						skillCharactersTangxuejianZhuida(function(){
-							heartList=new Array();
-							if(callBack!=null){
-								callBack();
-							}
+					mainScene.addChild(new MagicLayer(fight_Monster[0].hadImageView,new MagicNodeShui(),function(){
+						useYingu([fight_Monster[0]], fight_Monster[0], fight_Monster[0], [4], true, baseEffectReduceHPEffect,function(){
+							// 唐雪见【追打】
+							skillCharactersTangxuejianZhuida(function(){
+								heartList=new Array();
+								if(callBack!=null){
+									callBack();
+								}
+							});
 						});
-					});
+					}));
 				}else if(callBack!=null){
 					callBack();
 				}
@@ -39,23 +41,22 @@ var SheyaonanMonster=BaseMonster.extend({
 			}
 		} else {
 			textAreaAddMessage("无妨碍者，蛇妖男胜利结算无效", myText, listView,callBack);
-			/*if(callBack!=null){
-				callBack();
-			}*/
 		}
 	},
 	loseEffect:function(callBack){
 		this._super();
 		if(!skillCharacters_XuanxiaoNingbingfenyan(nowPlayerTerm[nowPlayerNumber])){
-			useYingu([nowPlayerTerm[nowPlayerNumber]], nowPlayerTerm[nowPlayerNumber], nowPlayerTerm[nowPlayerNumber], [4], true, baseEffectReduceHPEffect,function(){
-				// 唐雪见【追打】技能
-				skillCharactersTangxuejianZhuida(function(){
-					heartList=new Array();
-					if(callBack!=null){
-						callBack();
-					}
+			mainScene.addChild(new MagicLayer(nowPlayerTerm[nowPlayerNumber].hadImageView,new MagicNodeShui(),function(){
+				useYingu([nowPlayerTerm[nowPlayerNumber]], nowPlayerTerm[nowPlayerNumber], nowPlayerTerm[nowPlayerNumber], [4], true, baseEffectReduceHPEffect,function(){
+					// 唐雪见【追打】技能
+					skillCharactersTangxuejianZhuida(function(){
+						heartList=new Array();
+						if(callBack!=null){
+							callBack();
+						}
+					});
 				});
-			});
+			}));
 		}else if(callBack!=null){
 			callBack();
 		}

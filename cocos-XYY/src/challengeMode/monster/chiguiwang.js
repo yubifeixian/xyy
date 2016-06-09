@@ -57,56 +57,55 @@ var ChiguiwangMonster=BaseMonster.extend({
 	},
 	loseEffect:function(callBack){
 		this._super();
-		useYingu([nowPlayerTerm[nowPlayerNumber]], nowPlayerTerm[nowPlayerNumber], nowPlayerTerm[nowPlayerNumber], [2], true, baseEffectReduceHPEffect,function(){
-			// 唐雪见【追打】技能
-			skillCharactersTangxuejianZhuida(function(){
-				heartList=new Array();
-				if (nowPlayerTerm[nowPlayerNumber].hp > 0) {
-					var number =baseEffectCountequment(nowPlayerTerm[nowPlayerNumber]);
-					if (number == 0) {
-						textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"无装备可弃", myText, listView);
-						if(callBack!=null){
-							callBack();
-						}
-					} else {
-						if (nowPlayerTerm[nowPlayerNumber].arms1!="无") {
-							remove_Card_Into_DropDeck(nowPlayerTerm[nowPlayerNumber].arms1);
-							nowPlayerTerm[nowPlayerNumber].arms1Combat = 0;
-							nowPlayerTerm[nowPlayerNumber].arms1Extent = 0;
-							nowPlayerTerm[nowPlayerNumber].arms1 = "无";
-							nowPlayerTerm[nowPlayerNumber].tempZhuangbeiSkillCombat=0;
-							nowPlayerTerm[nowPlayerNumber].tempZhuangbeiSkillExtent=0;
-						}
-						if (nowPlayerTerm[nowPlayerNumber].arms2!="无") {
-							remove_Card_Into_DropDeck(nowPlayerTerm[nowPlayerNumber].arms2);
-							nowPlayerTerm[nowPlayerNumber].arms2Combat = 0;
-							nowPlayerTerm[nowPlayerNumber].arms2Extent = 0;
-							nowPlayerTerm[nowPlayerNumber].arms2 = "无";
-						}
-						if (nowPlayerTerm[nowPlayerNumber].defense!="无") {
-							remove_Card_Into_DropDeck(nowPlayerTerm[nowPlayerNumber].defense);
-							nowPlayerTerm[nowPlayerNumber].defenseCombat = 0;
-							nowPlayerTerm[nowPlayerNumber].defenseExtent = 0;
-							nowPlayerTerm[nowPlayerNumber].defense = "无";
-						}
-						if (nowPlayerTerm[nowPlayerNumber]._name==nameWangpengxu
-								&& nowPlayerTerm[nowPlayerNumber].skillTempList.length > 0) {
-							nowPlayerTerm[nowPlayerNumber].maxCombat -= nowPlayerTerm[nowPlayerNumber].skillTempList.length;
-							for (var i=0;i< nowPlayerTerm[nowPlayerNumber].skillTempList.length;i++) {
-								remove_Card_Into_DropDeck(nowPlayerTerm[nowPlayerNumber].skillTempList[i].name);
+		mainScene.addChild(new MagicLayer(nowPlayerTerm[nowPlayerNumber].hadImageView,new MagicNodeLei(),function(){
+			useYingu([nowPlayerTerm[nowPlayerNumber]], nowPlayerTerm[nowPlayerNumber], nowPlayerTerm[nowPlayerNumber], [2], true, baseEffectReduceHPEffect,function(){
+				// 唐雪见【追打】技能
+				skillCharactersTangxuejianZhuida(function(){
+					heartList=new Array();
+					if (nowPlayerTerm[nowPlayerNumber].hp > 0) {
+						var number =baseEffectCountequment(nowPlayerTerm[nowPlayerNumber]);
+						if (number == 0) {
+							textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"无装备可弃", myText, listView);
+							if(callBack!=null){
+								callBack();
 							}
-							nowPlayerTerm[nowPlayerNumber].skillTempList=new Array();
+						} else {
+							if (nowPlayerTerm[nowPlayerNumber].arms1!="无") {
+								remove_Card_Into_DropDeck(nowPlayerTerm[nowPlayerNumber].arms1);
+								nowPlayerTerm[nowPlayerNumber].arms1Combat = 0;
+								nowPlayerTerm[nowPlayerNumber].arms1Extent = 0;
+								nowPlayerTerm[nowPlayerNumber].arms1 = "无";
+								nowPlayerTerm[nowPlayerNumber].tempZhuangbeiSkillCombat=0;
+								nowPlayerTerm[nowPlayerNumber].tempZhuangbeiSkillExtent=0;
+							}
+							if (nowPlayerTerm[nowPlayerNumber].arms2!="无") {
+								remove_Card_Into_DropDeck(nowPlayerTerm[nowPlayerNumber].arms2);
+								nowPlayerTerm[nowPlayerNumber].arms2Combat = 0;
+								nowPlayerTerm[nowPlayerNumber].arms2Extent = 0;
+								nowPlayerTerm[nowPlayerNumber].arms2 = "无";
+							}
+							if (nowPlayerTerm[nowPlayerNumber].defense!="无") {
+								remove_Card_Into_DropDeck(nowPlayerTerm[nowPlayerNumber].defense);
+								nowPlayerTerm[nowPlayerNumber].defenseCombat = 0;
+								nowPlayerTerm[nowPlayerNumber].defenseExtent = 0;
+								nowPlayerTerm[nowPlayerNumber].defense = "无";
+							}
+							if (nowPlayerTerm[nowPlayerNumber]._name==nameWangpengxu
+									&& nowPlayerTerm[nowPlayerNumber].skillTempList.length > 0) {
+								nowPlayerTerm[nowPlayerNumber].maxCombat -= nowPlayerTerm[nowPlayerNumber].skillTempList.length;
+								for (var i=0;i< nowPlayerTerm[nowPlayerNumber].skillTempList.length;i++) {
+									remove_Card_Into_DropDeck(nowPlayerTerm[nowPlayerNumber].skillTempList[i].name);
+								}
+								nowPlayerTerm[nowPlayerNumber].skillTempList=new Array();
+							}
+							textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"失去了全部共"+number+"件装备，并补充了"+number+"张手牌", myText, listView);
+							addHandCard([nowPlayerTerm[nowPlayerNumber]],nowPlayerTerm[nowPlayerNumber],nowPlayerTerm[nowPlayerNumber],null,[number],true,true,callBack);
 						}
-						textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"失去了全部共"+number+"件装备，并补充了"+number+"张手牌", myText, listView);
-						addHandCard([nowPlayerTerm[nowPlayerNumber]],nowPlayerTerm[nowPlayerNumber],nowPlayerTerm[nowPlayerNumber],null,[number],true,true,callBack);
-						/*if(callBack!=null){
-							callBack();
-						}*/
+					}else if(callBack!=null){
+						callBack();
 					}
-				}else if(callBack!=null){
-					callBack();
-				}
+				});
 			});
-		});
+		}));
 	}
 })

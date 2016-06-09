@@ -249,13 +249,15 @@ function baseEventEffect_Xianlingdaodexianhou(callBack){
 										if(result.defense!=string_handCardNameQiankundaopao){
 											useBingxingjue(nowPlayerTerm[nowPlayerNumber], nowPlayerTerm[nowPlayerNumber], function(){
 												if(!game_Bingxingjue){
-													useYingu([result], result, result, [2], true, baseEffectReduceHPEffect,function(){
-														// 唐雪见【追打】效果
-														skillCharactersTangxuejianZhuida(function(){
-															heartList=new Array();
-															callBack();
+													mainScene.addChild(new MagicLayer(result.hadImageView,new MagicNodeLei(),function(){
+														useYingu([result], result, result, [2], true, baseEffectReduceHPEffect,function(){
+															// 唐雪见【追打】效果
+															skillCharactersTangxuejianZhuida(function(){
+																heartList=new Array();
+																callBack();
+															});
 														});
-													});
+													}));
 												}else{
 													game_Bingxingjue=false;
 													textAreaAddMessage("【天雷破】效果无效", myText, listView,callBack);
@@ -284,13 +286,15 @@ function baseEventEffect_Xianlingdaodexianhou(callBack){
 									if(selectPlayer.defense!=string_handCardNameQiankundaopao){
 										useBingxingjue(nowPlayerTerm[nowPlayerNumber], nowPlayerTerm[nowPlayerNumber], function(){
 											if(!game_Bingxingjue){
-												useYingu([selectPlayer], selectPlayer, selectPlayer, [2], true, baseEffectReduceHPEffect,function(){
-													// 唐雪见【追打】效果
-													skillCharactersTangxuejianZhuida(function(){
-														heartList=new Array();
-														callBack();
+												mainScene.addChild(new MagicLayer(selectPlayer.hadImageView,new MagicNodeLei(),function(){
+													useYingu([selectPlayer], selectPlayer, selectPlayer, [2], true, baseEffectReduceHPEffect,function(){
+														// 唐雪见【追打】效果
+														skillCharactersTangxuejianZhuida(function(){
+															heartList=new Array();
+															callBack();
+														});
 													});
-												});
+												}));
 											}else{
 												game_Bingxingjue=false;
 												textAreaAddMessage("【天雷破】效果无效", myText, listView,callBack);

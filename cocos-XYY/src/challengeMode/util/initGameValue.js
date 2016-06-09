@@ -184,7 +184,7 @@ function initGameValue(){
 	// 洗怪物牌堆
 	game_MonsterDeck = new Array();
 	game_MonsterDeck = initMonsterDeck();
-	//game_MonsterDeck[0]= 15;
+	//game_MonsterDeck[0]= 5;
 
 	/*
 	 * game_MonsterDeck.push(game_MonsterDeck[0]);
@@ -198,12 +198,12 @@ function initGameValue(){
 	// 初始化事件牌
 	game_EventCardDeck = new Array();
 	game_EventCardDeck = initEventCardDeck();
-	// game_EventCardDeck=[20];
+	//game_EventCardDeck=[7];
 
 	// 发初始手牌
 	addHandCard(nowPlayerTerm,nowPlayerTerm[0],nowPlayerTerm[0],null,[3,3,3,3],true,false);
 	// addHandCard(nowPlayerTerm,nowPlayerTerm[0],nowPlayerTerm[0],null,[25,0,2,0],true,false);
-	 // addHandCard([player1],player1,player1,34,[1],false,false);//天雷破
+	 //addHandCard([player1],player1,player1,34,[1],false,false);//天雷破
 	 // addHandCard([player4],player4,player4,25,[1],false,false);//灵葫仙丹
 	// addHandCard([player1],player1,player1,43,[1],false,false);//偷盗
 	// addHandCard([player1],player1,player1,22,[1],false,false);//鼠儿果
