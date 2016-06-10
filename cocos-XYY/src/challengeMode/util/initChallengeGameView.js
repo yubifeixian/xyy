@@ -175,6 +175,9 @@ function initGameView(){
 	player2DeathImageView=ccui.helper.seekWidgetByName(mainScene, "player2DeathImageView");
 	player3DeathImageView=ccui.helper.seekWidgetByName(mainScene, "player3DeathImageView");
 	player4DeathImageView=ccui.helper.seekWidgetByName(mainScene, "player4DeathImageView");
+	
+	turnMonsterCardLayer=null;
+	
 	mainScene.retain();
 }
 

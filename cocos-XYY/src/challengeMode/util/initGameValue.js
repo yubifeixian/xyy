@@ -220,7 +220,7 @@ function initGameValue(){
 	 * player1.skillTempList.push(leiling); player1.maxExtent +=
 	 * parseInt(player1.skillTempList.length / 2); }
 	 */
-	player1.takeOver=true;
+	//player1.takeOver=true;
 	 // player1.hp=1;
 	 // player3.hp=1;
 	// player1.defenseExtent=2;
