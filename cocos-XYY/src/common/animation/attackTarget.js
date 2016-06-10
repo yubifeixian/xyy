@@ -23,17 +23,20 @@ var AttackTargetLayer=cc.Layer.extend({
 		this.addChild(this.drawNode);
 		this.offsetX=(this.endPoint.x-this.startPoint.x)/this.time;
 		this.offsetY=(this.endPoint.y-this.startPoint.y)/this.time;
-		this.schedule(this.drawing,this.delay);
+		//this.scheduleUpdate();
+		this.mySchedule(this.drawing,this.delay);
 	},
 	drawing:function(){
 		this.drawNode.clear();
 		this.targetPoint=cc.p(this.targetPoint.x+this.offsetX,this.targetPoint.y+this.offsetY);
 		this.drawNode.drawSegment(this.startPoint, this.targetPoint, 3, cc.color(255,255,68,150));
-		var action=cc.delayTime(this.delay);
+		//var action=cc.delayTime(this.delay);
+		var action=cc.fadeOut(this.delay);
 		this.runAction(cc.sequence(action,cc.callFunc(function(){
 			if(Math.abs(this.targetPoint.x-this.startPoint.x)>=Math.abs(this.endPoint.x-this.startPoint.x)&&
 				Math.abs(this.targetPoint.y-this.startPoint.y)>=Math.abs(this.endPoint.y-this.startPoint.y)){
-				this.unschedule(this.drawing);
+				this.unscheduleAllCallbacks();
+				//this.unschedule(this.drawing);
 				this.runAction(cc.sequence(action,cc.callFunc(function(){
 					this.drawNode.clear();
 					this.removeFromParent();
@@ -47,8 +50,17 @@ var AttackTargetLayer=cc.Layer.extend({
 		
 
 	},
-	update:function(dt){
-		this.drawing();
+	mySchedule:function(callBack,interval){
+		var then=Date.now();
+		interval*=1000;
+		this.schedule(function(){
+			var now=Date.now();
+			var delta=now-then;
+			if(delta>interval){
+				then=now-(delta%interval);
+				callBack.call(this);
+			}
+		}.bind(this), 0);
 	}
 });
 

@@ -8,7 +8,6 @@ function round_Start() {
 		
 	}else{
 		buttonManager(order1Button, false, false);
-		// nowPlayerTerm.get(nowPlayerNumber).hadImageView.setAlpha(1.0f);
 		textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"的回合开始", myText, listView);
 		// 魔尊【蓄势待发】技能
 		skillCharacters_MozunXushidaifa();
@@ -23,7 +22,6 @@ function round_Event(){
 	textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"的事件阶段", myText, listView,function(){
 		if(nowPlayerTerm[nowPlayerNumber]._name==player1._name){
 			addDialog(mainScene, new ChooseZoneLayer("是否翻取事件？",roundEventHandle));
-			//addDialog(mainScene, new yesOrNoDialogLayer("是否翻取事件？",roundEventHandle));
 		}else{
 			// AI判断是否翻取事件
 			roundEventHandle(baseAIEventCard());
@@ -82,7 +80,8 @@ function roundSkillCard(){
 function roundAttack1(){
 	textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"的战斗阶段", myText, listView,function(){
 		if(nowPlayerTerm[nowPlayerNumber]._name==player1._name){
-			//addDialog(mainScene, new yesOrNoDialogLayer("是否打怪？",roundAttactk1Handle));
+			// addDialog(mainScene, new
+			// yesOrNoDialogLayer("是否打怪？",roundAttactk1Handle));
 			addDialog(mainScene, new ChooseZoneLayer("是否打怪？",roundAttactk1Handle));
 		}else{
 			// AI判断是否打怪
@@ -119,10 +118,12 @@ function roundAttactk1Handle(result){
 			if(game_MonsterDeck.length==0){
 				judgeWinorLose();
 			}else{
+				tempMonster=topMonsterCard(game_MonsterDeck[0]);
+				game_MonsterDeck.removeObject(game_MonsterDeck[0]);
+				//monsterLabel.loadTexture(fight_FirstMonster.monsterPicSrc);
+				turnMonsterCardLayer=new TurnMonsterCardLayer(fight_FirstMonster);
+				mainScene.addChild(turnMonsterCardLayer);
 				textAreaAddMessage("翻取怪物牌【"+fight_FirstMonster.name+"】弃置", myText, listView,function(){
-					tempMonster=topMonsterCard(game_MonsterDeck[0]);
-					game_MonsterDeck.removeObject(game_MonsterDeck[0]);
-					monsterLabel.loadTexture(fight_FirstMonster.monsterPicSrc);
 					nextStep=6;
 					textAreaAddMessage("请点击下一阶段", myText, listView);
 					buttonManager(order2Button, true, true);
@@ -143,7 +144,8 @@ function judgeJinchanguimuEffect(message){
 	}
 	if(master!=null){
 		if(master._name==player1._name||master._name==player2._name){
-			//addDialog(mainScene, new yesOrNoDialogLayer("是否使用金蟾鬼母进行"+message+"？",handleJinchanguimuEffect));
+			// addDialog(mainScene, new
+			// yesOrNoDialogLayer("是否使用金蟾鬼母进行"+message+"？",handleJinchanguimuEffect));
 			addDialog(mainScene, new ChooseZoneLayer("是否使用金蟾鬼母进行"+message+"？",handleJinchanguimuEffect));
 		}else{
 			var result=false;
@@ -252,7 +254,12 @@ function attackMonsterHandle(){
 		judgeWinorLose();
 	}else{
 		fight_FirstMonster=topMonsterCard(game_MonsterDeck.shift());
-		monsterLabel.loadTexture(fight_FirstMonster.monsterPicSrc);
+		if(turnMonsterCardLayer!=null){
+			turnMonsterCardLayer.instead();
+		}
+		turnMonsterCardLayer=new TurnMonsterCardLayer(fight_FirstMonster);
+		mainScene.addChild(turnMonsterCardLayer);
+		//monsterLabel.loadTexture(fight_FirstMonster.monsterPicSrc);
 		tempMonster=fight_FirstMonster;
 		textAreaAddMessage("翻取怪物牌:"+fight_FirstMonster.name, myText, listView, function(){
 			skillCharacters_SumeiJiaohua(nowPlayerTerm[nowPlayerNumber],function(){
@@ -294,10 +301,11 @@ function takeOverCardIsNPC(){
 					textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"翻取下一张怪牌", myText, listView);
 					fight_FirstMonster = topMonsterCard(game_MonsterDeck.shift());
 					tempMonster = fight_FirstMonster;
-					monsterLabel.loadTexture(fight_FirstMonster.monsterPicSrc);
+					turnMonsterCardLayer.instead();
+					turnMonsterCardLayer=new TurnMonsterCardLayer(fight_FirstMonster);
+					mainScene.addChild(turnMonsterCardLayer);
+					//monsterLabel.loadTexture(fight_FirstMonster.monsterPicSrc);
 					textAreaAddMessage("翻取怪物牌:"+fight_FirstMonster.name, myText, listView, function(){
-						// calculate_Attack(context);
-						// skillCharacters_ChonglouSpBaqi(fight_Monster,takeOverCardIsNPC);
 						takeOverCardIsNPC();
 					});
 				}
@@ -392,7 +400,10 @@ function hunzhanHandle(result){
 		fight_SecondMonster =topMonsterCard(game_MonsterDeck.shift());
 		textAreaAddMessage("翻取怪物牌:"+fight_SecondMonster.name, myText, listView);
 		// 显示怪物牌
-		monsterLabel.loadTexture(fight_SecondMonster.monsterPicSrc);
+		turnMonsterCardLayer.instead();
+		turnMonsterCardLayer=new TurnMonsterCardLayer(fight_SecondMonster);
+		mainScene.addChild(turnMonsterCardLayer);
+		//monsterLabel.loadTexture(fight_SecondMonster.monsterPicSrc);
 		tempMonster = fight_SecondMonster;
 		if (fight_SecondMonster.dodge == 0) {
 			for (var i=0;i<nowPlayerTerm[nowPlayerNumber].friendList.length;i++) {
@@ -667,7 +678,9 @@ function roundEnding(){
 	// 赵灵儿sp【回魂仙梦】结束
 	skillCharacters_ZhaolingerHuihunxianmengEnd();
 	// 关闭怪物牌展示窗口
-	monsterLabel.loadTexture(resPng.monsterCardBack);
+	turnMonsterCardLayer.instead();
+	turnMonsterCardLayer=null;
+	//monsterLabel.loadTexture(resPng.monsterCardBack);
 	monsterCombat = 0;
 	triggerCombat = 0;
 	game_Bingxingjue=false;

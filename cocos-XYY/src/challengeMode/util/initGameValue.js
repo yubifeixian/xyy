@@ -16,6 +16,7 @@ var game_EventCardDeck=new Array(); // 事件牌堆
 var game_MonsterDeck=new Array(); // 怪物牌堆
 var selectHandCard = null;
 var monsterLabel = null;
+var turnMonsterCardLayer=null;
 var threadGameRound = null;
 var threadMengshe = null;
 var textArea = null;

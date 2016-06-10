@@ -99,6 +99,7 @@ var jsList=[
 "src/challengeMode/util/skillCharacters.js",
 "src/challengeMode/view/selectPlayerDialog.js",
 "src/challengeMode/view/evnetLayer.js",
+"src/challengeMode/view/turnMonsterCardLayer.js",
 
 // 冒险模式
 "src/adventureMode/advAi/advBaseAI.js",
