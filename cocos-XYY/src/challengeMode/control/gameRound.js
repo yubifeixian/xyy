@@ -678,9 +678,10 @@ function roundEnding(){
 	// 赵灵儿sp【回魂仙梦】结束
 	skillCharacters_ZhaolingerHuihunxianmengEnd();
 	// 关闭怪物牌展示窗口
-	turnMonsterCardLayer.instead();
-	turnMonsterCardLayer=null;
-	//monsterLabel.loadTexture(resPng.monsterCardBack);
+	if(turnMonsterCardLayer!=null){
+		turnMonsterCardLayer.instead();
+		turnMonsterCardLayer=null;
+	}
 	monsterCombat = 0;
 	triggerCombat = 0;
 	game_Bingxingjue=false;
