@@ -67,11 +67,13 @@ function baseEffectReduceHP(player,heartPlayerList, number,CanUseLonghunzhankai,
 			number--;
 			number=number<0?0:number;
 		}
+		mainScene.addChild(new HurtNumberLayer(player.hadImageView,"-"+number));
 		if (number > 0) {
 			for (var i = 0; i < number; i++) {
 				player.hp--;
 				if (player.hp <= 0) {
 					player.hp = 0;
+					break;
 				}
 			}
 			if (player.hp>0&&player.hp < tempHP){

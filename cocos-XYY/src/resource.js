@@ -450,6 +450,7 @@ var resPng={
 		feng_png:"res/drawable-hdpi/feng.png",
 		tu_png:"res/drawable-hdpi/tu.png",
 		shui_png:"res/drawable-hdpi/shui.png",
+		hurtBg:"res/drawable-hdpi/mfc_boom.png"
 }
 
 var magicPlist={

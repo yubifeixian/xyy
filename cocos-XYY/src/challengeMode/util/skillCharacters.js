@@ -2332,7 +2332,7 @@ var skillCharacters_XuanxiaoNingbingfenyan=function(player){
 		if(player._name==player1._name&&player._name==nameXuanxiao){
 			AchivementProgress.addAchivementProgress(player);
 		}
-		mainScene.addChild(new skillAnimationLayer(player.animation));
+		mainScene.addChild(new NormalSkillAnimationLayer(skillnameNingbingfenyan,player.hadImageView));
 		myAudioPlayer(audioXuanxiaoNingbingfenyan);
 		textAreaAddMessage(player._name+"“凝冰焚炎”效果被触发，水、火属性伤害对其无效", myText, listView);
 		return true;
@@ -2541,7 +2541,7 @@ function skillCharacters_JiangyunfanKuanglongxunyingzhan(player){
 			.containsObject(skillnameKuanglongxunyingzhan)){
 		result=true;
 		player.usedAttackCard=false;
-		mainScene.addChild(new skillAnimationLayer(player.animation));
+		mainScene.addChild(new NormalSkillAnimationLayer(skillnameKuanglongxunyingzhan,player.hadImageView));
 		if(player._name==player1._name&&player._name==nameJiangyunfan){
 			AchivementProgress.addAchivementProgress(player);
 		}
