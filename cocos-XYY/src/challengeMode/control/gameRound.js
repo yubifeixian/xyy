@@ -259,7 +259,6 @@ function attackMonsterHandle(){
 		}
 		turnMonsterCardLayer=new TurnMonsterCardLayer(fight_FirstMonster);
 		mainScene.addChild(turnMonsterCardLayer);
-		//monsterLabel.loadTexture(fight_FirstMonster.monsterPicSrc);
 		tempMonster=fight_FirstMonster;
 		textAreaAddMessage("翻取怪物牌:"+fight_FirstMonster.name, myText, listView, function(){
 			skillCharacters_SumeiJiaohua(nowPlayerTerm[nowPlayerNumber],function(){

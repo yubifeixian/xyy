@@ -648,9 +648,10 @@ function skillCharacters_SumeiJiaohua(nowplayer,callBack) {
 							judgeWinorLose();
 						}else{
 							textAreaAddMessage(nowplayer._name+"发动【狡猾】，重新翻取一张怪物牌", myText, listView, function(){
-								fight_FirstMonster=topMonsterCard(game_MonsterDeck[0]);
-								game_MonsterDeck.remove(0);
-								monsterLabel.loadTexture(fight_FirstMonster.monsterPicSrc);
+								fight_FirstMonster=topMonsterCard(game_MonsterDeck.shift());
+								turnMonsterCardLayer.instead();
+								turnMonsterCardLayer=new TurnMonsterCardLayer(fight_FirstMonster);
+								mainScene.addChild(turnMonsterCardLayer);
 								tempMonster=fight_FirstMonster;
 								callBack();
 							});
