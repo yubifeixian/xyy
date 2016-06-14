@@ -464,7 +464,7 @@ function advSkillCharacters_SumeiJiaohua(nowplayer,callBack) {
 						textAreaAddMessage("苏媚发动【狡猾】，重新翻取一张怪物牌", myText, listView, function(){
 							fight_FirstMonster=advTopMonsterCard(game_MonsterDeck[0]);
 							game_MonsterDropDeck.push(game_MonsterDeck[0]);
-							game_MonsterDeck.remove(0);
+							game_MonsterDeck.shift();
 							monsterLabel.loadTexture(fight_FirstMonster.monsterPicSrc);
 							tempMonster=fight_FirstMonster;
 							callBack();

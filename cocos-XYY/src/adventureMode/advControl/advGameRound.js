@@ -76,6 +76,9 @@ function advRoundAttactk1Handle(result){
 	jincantuoqiao = false;
 	fight_SecondMonster = null;
 	fight_FirstMonster = advTopMonsterCard(game_MonsterDeck[0]);
+	if(fight_FirstMonster==null){
+		cc.log("fightMonster==null,monsterdeck = "+game_MonsterDeck);
+	}
 	if(result){
 		attakedMoster=true;
 		var message="";
@@ -92,7 +95,7 @@ function advRoundAttactk1Handle(result){
 				textAreaAddMessage(Text.takeOverAndDropMonster.format(fight_FirstMonster.name), myText, listView,function(){
 					tempMonster=advTopMonsterCard(game_MonsterDeck[0]);
 					game_MonsterDropDeck.push(game_MonsterDeck[0]);
-					game_MonsterDeck.removeObject(game_MonsterDeck[0]);
+					game_MonsterDeck.shift();
 					monsterLabel.loadTexture(fight_FirstMonster.monsterPicSrc);
 					monsterLabel.setVisible(true);
 					nextStep=5;
@@ -170,8 +173,11 @@ function advAttackMonsterHandle(){
 		advJudgeWinorLose();
 	}else{
 		fight_FirstMonster=advTopMonsterCard(game_MonsterDeck[0]);
+		if(fight_Monster==null){
+			cc.log("fightMonster=null,array= "+game_MonsterDeck);
+		}
 		game_MonsterDropDeck.push(game_MonsterDeck[0]);
-		game_MonsterDeck.remove(0);
+		game_MonsterDeck.shift();
 		monsterLabel.loadTexture(fight_FirstMonster.monsterPicSrc);
 		tempMonster=fight_FirstMonster;
 		monsterLabel.setVisible(true);
@@ -215,7 +221,7 @@ function avdTakeOverCardIsNPC(){
 						tempMonster = fight_FirstMonster;
 						monsterLabel.loadTexture(fight_FirstMonster.monsterPicSrc);
 						game_MonsterDropDeck.push(game_MonsterDeck[0]);
-						game_MonsterDeck.remove(0);
+						game_MonsterDeck.shift();
 						textAreaAddMessage(Text.takeOverMonster.format(fight_FirstMonster.name), myText, listView, function(){
 							avdTakeOverCardIsNPC();
 						});
@@ -224,7 +230,7 @@ function avdTakeOverCardIsNPC(){
 			}
 		});
 	}else if(fight_FirstMonster.level==Text.crisis){
-		fight_FirstMonster.openEffect(attackMonsterHandle);
+		fight_FirstMonster.openEffect(advAttackMonsterHandle);
 	}else{
 		// 战斗开始阶段
 		// 一大堆人物技能
@@ -308,7 +314,7 @@ function advHunzhanHandle(result){
 				fight_SecondMonster=new Tantadeqiongding(48);
 			}else{
 				fight_SecondMonster =advTopMonsterCard(game_MonsterDeck[0]);
-				game_MonsterDeck.remove(0);
+				game_MonsterDeck.shift();
 			}
 			textAreaAddMessage(Text.takeOverMonster.format(fight_SecondMonster.name), myText, listView,function(){
 				// 显示怪物牌

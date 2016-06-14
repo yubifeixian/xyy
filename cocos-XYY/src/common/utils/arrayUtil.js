@@ -17,9 +17,6 @@ Array.prototype.removeObject=function(obj){
 	for(var i=0;i<this.length;i++){
 		if(this[i]==obj){
 			this.splice(i, 1);
-			if(this[i] instanceof createHandCardImageView){
-				this[i].release();
-			}
 			break;
 		}
 	}
