@@ -50,7 +50,7 @@ cc.game.onStart = function(){
     scene.run();
     // load resources
 	  /*cc.LoaderScene.preload(g_resources, function () {
-		  cc.director.runScene(new HelloScene()); 
+		  cc.director.runScene(new TestScene()); 
 	  }, this);*/
 	 
 };

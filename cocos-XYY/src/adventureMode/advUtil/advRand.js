@@ -15,7 +15,6 @@ function initAdvHandCardDeck(array) {
 
 //加入危机牌
 function addCrisisCard(monsterDeck,crisisCardNumberList){
-	cc.log(crisisCardNumberList);
 	for(var i=0;i<crisisCardNumberList.length;i++){
 		monsterDeck.push(crisisCardNumberList[i]);
 	}

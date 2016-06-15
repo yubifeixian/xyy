@@ -57,7 +57,8 @@ function advRoundAttack1(){
 			});
 		}else{
 			if(nowPlayerTerm[nowPlayerNumber]._name==myControlPlayer._name){
-				addDialog(mainScene, new ChooseZoneLayer(Text.chooseIsFighting,advRoundAttactk1Handle));
+				//cc.log("my name is "+myControlPlayer._name);
+				addDialog(mainScene, new ChooseZoneLayer(nowPlayerTerm[nowPlayerNumber]._name+"的回合:"+Text.chooseIsFighting,advRoundAttactk1Handle));
 			}else{
 				// AI判断是否打怪
 				var opinion=false;
@@ -77,7 +78,7 @@ function advRoundAttactk1Handle(result){
 	fight_SecondMonster = null;
 	fight_FirstMonster = advTopMonsterCard(game_MonsterDeck[0]);
 	if(fight_FirstMonster==null){
-		cc.log("fightMonster==null,monsterdeck = "+game_MonsterDeck);
+		addDialog(mainScene, new messageDialogLayer("fightMonster=null,array= "+game_MonsterDeck));
 	}
 	if(result){
 		attakedMoster=true;
@@ -173,8 +174,8 @@ function advAttackMonsterHandle(){
 		advJudgeWinorLose();
 	}else{
 		fight_FirstMonster=advTopMonsterCard(game_MonsterDeck[0]);
-		if(fight_Monster==null){
-			cc.log("fightMonster=null,array= "+game_MonsterDeck);
+		if(fight_FirstMonster==null){
+			addDialog(mainScene, new messageDialogLayer("fightMonster=null,array= "+game_MonsterDeck));
 		}
 		game_MonsterDropDeck.push(game_MonsterDeck[0]);
 		game_MonsterDeck.shift();
@@ -394,9 +395,7 @@ function advRoundAttack3(){
 				fight_FirstMonster.winEffect(function(){
 					// 判断触发者是否因为结算而阵亡
 					// 没有阵亡，则继续：
-					cc.log("callBack");
 					if(nowPlayerTerm[nowPlayerNumber].hp>0){
-						cc.log("callBack1");
 						// 1、混战且没翻到npc且混战怪物不是危机牌，则执行第二只怪物的胜利结算
 						if(fight_SecondMonster!=null&&fight_SecondMonster.dodge>0&&fight_SecondMonster.level!="危机"){
 							// monster_WinEffect(fight_SecondMonster,function(){

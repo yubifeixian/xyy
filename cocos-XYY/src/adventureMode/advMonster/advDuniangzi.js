@@ -15,7 +15,7 @@ var AdvDuniangziMonster=AdvBaseMonster.extend({
 		this.lover2 = Text.nil;
 		this.lover3 = Text.nil;
 		this.lover4 = Text.nil;
-		this.monsterPicSrc = res.monster_duniangzi;
+		this.monsterPicSrc = resPng.monster_duniangzi;
 		this.level = Text.petLevelBoss;
 	},
 	haveMostEqumentPlayerDropEqumentHelper:function(playerList,startPlayer,nowPlayer,callBack){

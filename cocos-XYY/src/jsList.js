@@ -1,4 +1,6 @@
 var jsList=[
+//测试模块
+"src/test/TestScene.js",
 // 通用模块
 "src/common/ai/cardEffectAI.js",
 "src/common/animation/FireParticleLayer.js",

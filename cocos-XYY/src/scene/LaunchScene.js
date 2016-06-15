@@ -17,6 +17,7 @@ var LaunchScene=cc.Scene.extend({
 		cc.loader.loadJs(["src/jsList.js"], function(){
 			cc.loader.loadJs(jsList, function(){
 				cc.director.runScene(new IndexScene());
+				//cc.director.runScene(new TestScene());
 			});
 		});
 	},
