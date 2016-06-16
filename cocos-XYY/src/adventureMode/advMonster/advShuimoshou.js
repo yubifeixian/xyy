@@ -89,6 +89,7 @@ var AdvShuimoshouMonster=AdvBaseMonster.extend({
 		});
 	},
 	realLoseEffect:function(callBack){
+		var temp=this;
 		var tempHeartList=new Array();
 		var tempHeartNumber=new Array();
 		if(!advSkillCharacters_XuanxiaoNingbingfenyan(nowPlayerTerm[nowPlayerNumber])){
@@ -100,7 +101,6 @@ var AdvShuimoshouMonster=AdvBaseMonster.extend({
 			}
 		}
 		advUseYingu(tempHeartList, tempHeartList[0], tempHeartList[0], tempHeartNumber, true, advBaseEffectReduceHPEffect,function(){
-			var temp=this;
 			// 唐雪见【追打】技能
 			advSkillCharactersTangxuejianZhuida(function(){
 				heartList=new Array();

@@ -105,7 +105,7 @@ function initAdvGameValue(){
 	game_MonsterDeck = new Array();
 	game_MonsterDeck = initMonsterDeck();
 	game_MonsterDeck=addCrisisCard(game_MonsterDeck,nowStage.stageCrisisCards);
-	//game_MonsterDeck[0]=4;
+	//game_MonsterDeck[0]=11;
 	//cc.log("monterDeck = "+game_MonsterDeck);
 	//boss.bingxingjueList.push(1);
 	initGropCard(function(){
