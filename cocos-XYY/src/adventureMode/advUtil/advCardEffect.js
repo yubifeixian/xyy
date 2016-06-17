@@ -1074,20 +1074,18 @@ function jimushuiEffect(usePlayer,callBack){
 		var tempList=[];
 		for(var i=0;i<3;i++){
 			if(game_MonsterDeck.length>0){
-				tempList.push(game_MonsterDeck[0]);
-				game_MonsterDeck.remove(0);
+				tempList.push(game_MonsterDeck.shift());
 			}
 		}
 		if(usePlayer._name==myControlPlayer._name){
 			addDialog(mainScene, new ChooseOrDropMonsterDialogLayer("请按先后顺序选择返回牌堆的怪牌(未选择的牌会被弃置)",tempList,function(resultList){
-				for(var i=resultList.length-1;i>=0;i--){
+				for(var i=0;i<resultList.length;i++){
 					game_MonsterDeck.unshift(resultList[i].uid);
 					tempList.removeObject(resultList[i].uid);
 				}
 				for(var i=0;i<tempList.length;i++){
-					game_MonsterDropDeck.push(tempList[i]);;
+					game_MonsterDropDeck.removeObject(tempList[i]);;
 				}
-				// cc.log("number="+game_MonsterDropDeck);
 			}));
 		}else{
 			// AI决定极目水的效果

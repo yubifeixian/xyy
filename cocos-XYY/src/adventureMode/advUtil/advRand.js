@@ -599,7 +599,7 @@ function advPlayer1GetPlayer2Equment(nowPlayer,equmentName){
 function advTopMonsterCard(number) {
 	var monster = null;
 	if (number == 0) {
-		monster = new YelingMonster(number);
+		monster = new AdvYelingMonster(number);
 	} else if (number == 1) {
 		monster=new AdvAnxiangMonster(number);
 	} else if (number == 2) {
@@ -639,57 +639,57 @@ function advTopMonsterCard(number) {
 	} else if (number == 19) {
 		monster=new AdvTianguihuangMonster(number);
 	} else if (number == 20) {
-		monster=new Npc(nameLixiaoyao,1,4,"助战","加入",nameZhaolinger,nameLinyueru,nameAnu,nameZhaolingerMengshe,resPng.npc_xiaoyao_png,number);
+		monster=new AdvNpc(nameLixiaoyao,1,4,"助战","加入",nameZhaolinger,nameLinyueru,nameAnu,nameZhaolingerMengshe,resPng.npc_xiaoyao_png,number);
 	} else if (number == 21) {
-		monster=new Npc(nameZhaolinger,2,3,"助战","加入",nameLixiaoyao,"无", "无", "无",resPng.npc_zhaolinger_png,number);
+		monster=new AdvNpc(nameZhaolinger,2,3,"助战","加入",nameLixiaoyao,"无", "无", "无",resPng.npc_zhaolinger_png,number);
 	} else if (number == 22) {
-		monster=new Npc(nameZhaolingerMengshe,25,4,"助战","驯化",nameLixiaoyao,"无", "无", "无",resPng.npc_mengshe_png,number);
+		monster=new AdvNpc(nameZhaolingerMengshe,25,4,"助战","驯化",nameLixiaoyao,"无", "无", "无",resPng.npc_mengshe_png,number);
 	} else if (number == 23) {
-		monster=new Npc(nameLinyueru,3,2,"交易","加入",nameLixiaoyao,"无", "无", "无",resPng.npc_yueru_png,number);
+		monster=new AdvNpc(nameLinyueru,3,2,"交易","加入",nameLixiaoyao,"无", "无", "无",resPng.npc_yueru_png,number);
 	} else if (number == 24) {
-		monster=new Npc(nameAnu,4,4,"助战","加入","无","无", "无", "无",resPng.npc_anu_png,number);
+		monster=new AdvNpc(nameAnu,4,4,"助战","加入","无","无", "无", "无",resPng.npc_anu_png,number);
 	} else if (number == 25) {
-		monster=new Npc(nameJiujianxian,5,5,"传功","加入","无","无", "无", "无",resPng.npc_jiujianxian_png,number);
+		monster=new AdvNpc(nameJiujianxian,5,5,"传功","加入","无","无", "无", "无",resPng.npc_jiujianxian_png,number);
 	} else if (number == 26) {
-		monster=new Npc(nameBaiyuejiaozhu,6,3,"驯化","加入","无","无", "无", "无",resPng.npc_baiyue_png,number);
+		monster=new AdvNpc(nameBaiyuejiaozhu,6,3,"驯化","加入","无","无", "无", "无",resPng.npc_baiyue_png,number);
 	} else if (number == 27) {
-		monster=new Npc(nameWangxiaohu,7,2,"修炼","加入",nameSumei,nameShenqishuang, "无", "无",resPng.npc_wangxiaohu_png,number);
+		monster=new AdvNpc(nameWangxiaohu,7,2,"修炼","加入",nameSumei,nameShenqishuang, "无", "无",resPng.npc_wangxiaohu_png,number);
 	} else if (number == 28) {
-		monster=new Npc(nameSumei,8,3,"袭击","加入",nameWangxiaohu,"无", "无", "无",resPng.npc_sumei_png,number);
+		monster=new AdvNpc(nameSumei,8,3,"袭击","加入",nameWangxiaohu,"无", "无", "无",resPng.npc_sumei_png,number);
 	} else if (number == 29) {
-		monster=new Npc(nameShenqishuang,9,3,"治疗","加入",nameWangxiaohu,"无", "无", "无",resPng.npc_shengqishuang_png,number);
+		monster=new AdvNpc(nameShenqishuang,9,3,"治疗","加入",nameWangxiaohu,"无", "无", "无",resPng.npc_shengqishuang_png,number);
 	} else if (number == 30) {
-		monster=new Npc(nameKonglin,10,4,"袭击","加入","无","无", "无", "无",resPng.npc_konglin_png,number);
+		monster=new AdvNpc(nameKonglin,10,4,"袭击","加入","无","无", "无", "无",resPng.npc_konglin_png,number);
 	} else if (number == 31) {
-		monster=new Npc(nameMozun,26,8,"袭击","传功","无","无", "无", "无",resPng.npc_mozun_png,number);
+		monster=new AdvNpc(nameMozun,26,8,"袭击","传功","无","无", "无", "无",resPng.npc_mozun_png,number);
 	} else if (number == 32) {
-		monster=new Npc(nameTangxuejian,11,2,"交易","加入","景天","无", "无", "无",resPng.npc_xuejian_png,number);
+		monster=new AdvNpc(nameTangxuejian,11,2,"交易","加入","景天","无", "无", "无",resPng.npc_xuejian_png,number);
 	} else if (number == 33) {
-		monster=new Npc(nameZixuan,12,3,"治疗","加入",nameChonglou,"徐长卿", "无", "无",resPng.npc_zixuan_png,number);
+		monster=new AdvNpc(nameZixuan,12,3,"治疗","加入",nameChonglou,"徐长卿", "无", "无",resPng.npc_zixuan_png,number);
 	} else if (number == 34) {
-		monster=new Npc(nameChonglou,13,5,"助战","加入","无","无", "无", "无",resPng.npc_chonglou_png,number);
+		monster=new AdvNpc(nameChonglou,13,5,"助战","加入","无","无", "无", "无",resPng.npc_chonglou_png,number);
 	} else if (number == 35) {
-		monster=new Npc(nameNangonghuang,14,4,"驯化","加入",nameWenhui,nameWangpengxu, "无", "无",resPng.npc_nangonghuang_png,number);
+		monster=new AdvNpc(nameNangonghuang,14,4,"驯化","加入",nameWenhui,nameWangpengxu, "无", "无",resPng.npc_nangonghuang_png,number);
 	} else if (number == 36) {
-		monster=new Npc(nameWenhui,15,2,"助战","加入",nameNangonghuang,"雷元戈", "无", "无",resPng.npc_wenhui_png,number);
+		monster=new AdvNpc(nameWenhui,15,2,"助战","加入",nameNangonghuang,"雷元戈", "无", "无",resPng.npc_wenhui_png,number);
 	} else if (number == 37) {
-		monster=new Npc(nameXingxuan,16,2,"治疗","加入",nameWangpengxu,"无", "无", "无",resPng.npc_xingxuan_png,number);
+		monster=new AdvNpc(nameXingxuan,16,2,"治疗","加入",nameWangpengxu,"无", "无", "无",resPng.npc_xingxuan_png,number);
 	} else if (number == 38) {
-		monster=new Npc(nameWangpengxu,17,1,"治疗","加入",nameXingxuan,"无", "无", "无",resPng.npc_wangpengxu_png,number);
+		monster=new AdvNpc(nameWangpengxu,17,1,"治疗","加入",nameXingxuan,"无", "无", "无",resPng.npc_wangpengxu_png,number);
 	} else if (number == 39) {
-		monster=new Npc(nameYuntianhe,18,2,"助战","加入",nameHanlingsha,nameLiumengli, "无", "无",resPng.npc_tianhe_png,number);
+		monster=new AdvNpc(nameYuntianhe,18,2,"助战","加入",nameHanlingsha,nameLiumengli, "无", "无",resPng.npc_tianhe_png,number);
 	} else if (number == 40) {
-		monster=new Npc(nameHanlingsha,19,2,"盗窃","加入",nameYuntianhe,"无", "无", "无",resPng.npc_lingsha_png,number);
+		monster=new AdvNpc(nameHanlingsha,19,2,"盗窃","加入",nameYuntianhe,"无", "无", "无",resPng.npc_lingsha_png,number);
 	} else if (number == 41) {
-		monster=new Npc(nameLiumengli,20,3,"驯化","加入",nameYuntianhe,"无", "无", "无",resPng.npc_mengli_png,number);
+		monster=new AdvNpc(nameLiumengli,20,3,"驯化","加入",nameYuntianhe,"无", "无", "无",resPng.npc_mengli_png,number);
 	} else if (number == 42) {
-		monster=new Npc(nameMurongziying,21,4,"修炼","加入","无","无", "无", "无",resPng.npc_ziying_png,number);
+		monster=new AdvNpc(nameMurongziying,21,4,"修炼","加入","无","无", "无", "无",resPng.npc_ziying_png,number);
 	} else if (number == 43) {
-		monster=new Npc(nameXuanxiao,22,5,"传功","加入","夙玉","无", "无", "无",resPng.npc_xuanxiao_png,number);
+		monster=new AdvNpc(nameXuanxiao,22,5,"传功","加入","夙玉","无", "无", "无",resPng.npc_xuanxiao_png,number);
 	} else if (number == 44) {
-		monster=new Npc(nameLongyou,23,2,"助战","加入",nameXiaoman,"无", "无", "无",resPng.npc_longyou_png,number);
+		monster=new AdvNpc(nameLongyou,23,2,"助战","加入",nameXiaoman,"无", "无", "无",resPng.npc_longyou_png,number);
 	} else if (number == 45) {
-		monster=new Npc(nameXiaoman,24,1,"盗窃","加入","无","无", "无", "无",resPng.npc_xiaoman_png,number);
+		monster=new AdvNpc(nameXiaoman,24,1,"盗窃","加入","无","无", "无", "无",resPng.npc_xiaoman_png,number);
 	}else if(number==46){
 		monster=new AdvLingquan(number);
 	}else if(number==47){

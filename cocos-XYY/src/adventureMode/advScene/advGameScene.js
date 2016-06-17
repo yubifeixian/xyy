@@ -18,7 +18,7 @@ var AdvGameScene=cc.Scene.extend({
 			nowGameModel=ADVGAMESCENEMODEL.RIGHT;
 			break;
 		}
-		//nowGameModel=ADVGAMESCENEMODEL.RIGHT;
+		//nowGameModel=ADVGAMESCENEMODEL.LEFT;
 		loadGameSave();
 		//nowStage=getStage1_2Instance();
 		this.layer=new AdvGameSceneLayer(nowGameModel,nowStage);

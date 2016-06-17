@@ -170,5 +170,6 @@ var jsList=[
 "src/adventureMode/advUtil/InitAdvGameView.js",
 "src/adventureMode/advView/advChooseCharacterDialog.js",
 "src/adventureMode/advView/advChooseOrDropMonsterDialog.js",
-"src/adventureMode/advView/advSelectPlayerDialog.js"
+"src/adventureMode/advView/advSelectPlayerDialog.js",
+"src/adventureMode/advView/advSelectNpcEffectDialog.js"
 ];

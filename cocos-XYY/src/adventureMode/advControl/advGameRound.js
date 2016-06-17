@@ -78,7 +78,8 @@ function advRoundAttactk1Handle(result){
 	fight_SecondMonster = null;
 	fight_FirstMonster = advTopMonsterCard(game_MonsterDeck[0]);
 	if(fight_FirstMonster==null){
-		addDialog(mainScene, new messageDialogLayer("fightMonster=null,array= "+game_MonsterDeck));
+		//cc.log("fightMonster=null,array= "+game_MonsterDeck+"\n size = "+game_MonsterDeck.length);
+		mainScene.addChild(new messageDialogLayer("fightMonster=null,array= "+game_MonsterDeck));
 	}
 	if(result){
 		attakedMoster=true;
@@ -174,9 +175,6 @@ function advAttackMonsterHandle(){
 		advJudgeWinorLose();
 	}else{
 		fight_FirstMonster=advTopMonsterCard(game_MonsterDeck[0]);
-		if(fight_FirstMonster==null){
-			addDialog(mainScene, new messageDialogLayer("fightMonster=null,array= "+game_MonsterDeck));
-		}
 		game_MonsterDropDeck.push(game_MonsterDeck[0]);
 		game_MonsterDeck.shift();
 		monsterLabel.loadTexture(fight_FirstMonster.monsterPicSrc);
@@ -198,7 +196,7 @@ function avdTakeOverCardIsNPC(){
 		advUseDongmingbaojing(null, function(){
 			// 玩家一处理NPC效果
 			if (nowPlayerTerm[nowPlayerNumber]._name==myControlPlayer._name) {
-				addDialog(mainScene, new selectNpcEffectDialogLayer(Text.chooseNpcEffect,fight_FirstMonster,function(result){
+				addDialog(mainScene, new selectAdvNpcEffectDialogLayer(Text.chooseNpcEffect,fight_FirstMonster,function(result){
 					if(result==null){
 						game_MonsterDropDeck.push(fight_FirstMonster.uid);
 						advAttackMonsterHandle();
