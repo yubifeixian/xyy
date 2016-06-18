@@ -23,7 +23,7 @@ function advIsDeath(player,canHelp,callBack){
 	}
 }
 
-function advadvAskWucaixiayi(player,callBack){
+function advAskWucaixiayi(player,callBack){
 	if(player._name==myControlPlayer._name){
 		addDialog(mainScene, new ChooseZoneLayer("是否爆发【五彩霞衣】复活？",function(result){
 			if(result){

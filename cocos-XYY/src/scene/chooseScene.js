@@ -21,7 +21,7 @@ ChooseLayer=cc.Layer.extend({
 		
 		var characterList=getCharacterList();
 		characterCardManager(player2,characterList[0]);
-		//characterCardManager(player2,27);
+		//characterCardManager(player2,3);
 		characterCardManager(player3,characterList[11]);
 		//characterCardManager(player3,5);
 		characterCardManager(player4,characterList[21]);
@@ -29,7 +29,7 @@ ChooseLayer=cc.Layer.extend({
 		
 		var tempPlayer1=new Player();
 		characterCardManager(tempPlayer1,characterList[3]);
-		//characterCardManager(tempPlayer1,35);
+		//characterCardManager(tempPlayer1,44);
 		var tempPlayer2=new Player();
 		characterCardManager(tempPlayer2,characterList[9]);
 		//characterCardManager(tempPlayer2,4);

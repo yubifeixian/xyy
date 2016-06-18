@@ -48,7 +48,7 @@ function bossTianleipoEffect(callBack){
 		});
 	}else{
 		game_Bingxingjue=false;
-		textAreaAddMessage(ext.cardNotEffect.format(string_handCardNameTianleipo), myText, listView,callBack);
+		textAreaAddMessage(Text.cardNotEffect.format(string_handCardNameTianleipo), myText, listView,callBack);
 	}
 }
 

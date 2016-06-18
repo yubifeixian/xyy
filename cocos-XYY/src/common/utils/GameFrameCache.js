@@ -24,12 +24,12 @@ GameFrameCache.setAllCache = function (obj,objcallback) {
 	var reslist = resPng;
 	var allnum = 0;
 	for (var key = 0 in reslist) {
-		cc.log("reslist key"+key+"value:"+reslist[key]);
+		//cc.log("reslist key"+key+"value:"+reslist[key]);
 		allnum++;
 	}
 
 	LOADINGBARPROALLNUM = allnum;
-	cc.log("LOADINGBARPROALLNUM>>",LOADINGBARPROALLNUM);
+	//cc.log("LOADINGBARPROALLNUM>>",LOADINGBARPROALLNUM);
 
 	var readnum = 0;
 	for (var key = 0 in reslist) {
@@ -52,10 +52,10 @@ GameFrameCache.setCache = function (plist) {
 
 // 获取Frame
 GameFrameCache.getCache = function (name) {
-	cc.log("get a Frame");
+	//cc.log("get a Frame");
 	var frame;
 	frame = cc.SpriteFrameCache.getInstance().getSpriteFrame(name);
-	cc.log("Frame ="+frame);
+	//cc.log("Frame ="+frame);
 	return frame;
 };
 
