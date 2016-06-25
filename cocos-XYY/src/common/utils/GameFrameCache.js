@@ -13,9 +13,9 @@ var LOADINGBARPROALLNUM=0;
 // 异步加载
 GameFrameCache.setAllCache = function (obj,objcallback) {
 	// 加载特效plist
-	var _effectPlist=magicPlist;
-	for(var key=0 in _effectPlist){
-		this.setCache(_effectPlist[key]);
+	var _magicSrc=magicSrc;
+	for(var i=0;i<_magicSrc.length;i+=2 ){
+		this.setCache(_magicSrc[i],_magicSrc[i+1]);
 	}
 	
 	// 异步加载所有游戏资源
@@ -24,12 +24,12 @@ GameFrameCache.setAllCache = function (obj,objcallback) {
 	var reslist = resPng;
 	var allnum = 0;
 	for (var key = 0 in reslist) {
-		//cc.log("reslist key"+key+"value:"+reslist[key]);
+		// cc.log("reslist key"+key+"value:"+reslist[key]);
 		allnum++;
 	}
 
 	LOADINGBARPROALLNUM = allnum;
-	//cc.log("LOADINGBARPROALLNUM>>",LOADINGBARPROALLNUM);
+	// cc.log("LOADINGBARPROALLNUM>>",LOADINGBARPROALLNUM);
 
 	var readnum = 0;
 	for (var key = 0 in reslist) {
@@ -40,9 +40,10 @@ GameFrameCache.setAllCache = function (obj,objcallback) {
 };
 
 // 资源加载
-GameFrameCache.setCache = function (plist) {
+GameFrameCache.setCache = function (plist,png) {
 	if (jsb.fileUtils.isFileExist(plist) == true) {
-		cc.SpriteFrameCache.getInstance().addSpriteFrames(plist);
+		cc.log("setCache");
+		cc.spriteFrameCache.addSpriteFrames(plist,png);
 	}
 	else
 	{
@@ -52,16 +53,19 @@ GameFrameCache.setCache = function (plist) {
 
 // 获取Frame
 GameFrameCache.getCache = function (name) {
-	//cc.log("get a Frame");
+	// cc.log("get a Frame");
 	var frame;
-	frame = cc.SpriteFrameCache.getInstance().getSpriteFrame(name);
-	//cc.log("Frame ="+frame);
+	frame = cc.spriteFrameCache.getSpriteFrame(name);
+	if(frame==null){
+		mainScene.addChild(new messageDialogLayer(name+" can not load from cache"));
+	}
+	// cc.log("Frame ="+frame);
 	return frame;
 };
 
 // 移除Plist
 GameFrameCache.removeCache = function(plist){
 	if (jsb.fileUtils.isFileExist(plist) == true) {
-		cc.SpriteFrameCache.getInstance().removeSpriteFramesFromFile(plist);
+		cc.spriteFrameCache.removeSpriteFramesFromFile(plist);
 	}
 }

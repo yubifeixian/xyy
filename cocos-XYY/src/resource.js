@@ -445,22 +445,33 @@ var resPng={
 		npc_longyou_png:"res/drawable-hdpi/npc_longyou.png",
 		npc_xiaoman_png:"res/drawable-hdpi/npc_xiaoman.png",
 		monsterCardBack:"res/drawable-hdpi/monsterBack.png",
-		lei_png:"res/drawable-hdpi/lei.png",
-		huo_png:"res/drawable-hdpi/huo.png",
-		feng_png:"res/drawable-hdpi/feng.png",
-		tu_png:"res/drawable-hdpi/tu.png",
-		shui_png:"res/drawable-hdpi/shui.png",
 		hurtBg:"res/drawable-hdpi/mfc_boom.png"
 }
 
-var magicPlist={
+var magicSrc=["res/drawable-hdpi/lei.plist",
+              "res/drawable-hdpi/lei.png",
+              "res/drawable-hdpi/huo.plist",
+              "res/drawable-hdpi/huo.png",
+              "res/drawable-hdpi/feng.plist",
+              "res/drawable-hdpi/feng.png",
+              "res/drawable-hdpi/tu.plist",
+              "res/drawable-hdpi/tu.png",
+              "res/drawable-hdpi/shui.plist",
+              "res/drawable-hdpi/shui.png"
+              ]
+/*var magicSrc={
 		Lei_plist:"res/drawable-hdpi/lei.plist",
+		lei_png:"res/drawable-hdpi/lei.png",
 		Huo_plist:"res/drawable-hdpi/huo.plist",
+		huo_png:"res/drawable-hdpi/huo.png",
 		Feng_plist:"res/drawable-hdpi/feng.plist",
+		feng_png:"res/drawable-hdpi/feng.png",
 		Tu_plist:"res/drawable-hdpi/tu.plist",
-		Shui_plist:"res/drawable-hdpi/shui.plist"
+		tu_png:"res/drawable-hdpi/tu.png",
+		Shui_plist:"res/drawable-hdpi/shui.plist",
+		shui_png:"res/drawable-hdpi/shui.png"
 }
-
+*/
 var g_json=[]
 for (var i in res) {
 	g_json.push(res[i]);
