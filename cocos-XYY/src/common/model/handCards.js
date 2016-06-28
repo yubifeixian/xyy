@@ -9,7 +9,7 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 		remove_Card_Into_DropDeck(this.name);
 	}
 	if(this.name==string_handCardNameLinghuxiandan){
-		AchivementProgress.addAchivementProgress(initAchivement.achivementLinghuxiandan);
+		AchivementProgress.addAchivementProgress(initCardAchivement.achivementLinghuxiandan);
 		mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
 			textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,temp.name), myText, listView,function(){
 				playCardAnimation("res/drawable-hdpi/linghuxiandan.png",function(){
@@ -22,7 +22,7 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 		}));
 
 	}else if(this.name==string_handCardNameTianleipo){
-		AchivementProgress.addAchivementProgress(initAchivement.achivementTianleipo);
+		AchivementProgress.addAchivementProgress(initCardAchivement.achivementTianleipo);
 		mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
 			textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,temp.name), myText, listView,function(){
 				playCardAnimation("res/drawable-hdpi/tianleipo.png", function(){
@@ -33,7 +33,7 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 			});
 		}));
 	}else if(this.name==string_handCardNameShuerguo){
-		AchivementProgress.addAchivementProgress(initAchivement.achivementShuerguo);
+		AchivementProgress.addAchivementProgress(initCardAchivement.achivementShuerguo);
 		mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
 			textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,temp.name), myText, listView,function(){
 				playCardAnimation("res/drawable-hdpi/shuerguo.png", function(){
@@ -44,7 +44,7 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 			});
 		}));
 	}else if(this.name==string_handCardNameKuicetianji){
-		AchivementProgress.addAchivementProgress(initAchivement.achivementKuicetianji);
+		AchivementProgress.addAchivementProgress(initCardAchivement.achivementKuicetianji);
 		mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
 			textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,temp.name), myText, listView,function(){
 				playCardAnimation("res/drawable-hdpi/kuicetianji.png", function(){
@@ -55,7 +55,7 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 			});
 		}));
 	}else if(this.name==string_handCardNameToudao){
-		AchivementProgress.addAchivementProgress(initAchivement.achivementToudao);
+		AchivementProgress.addAchivementProgress(initCardAchivement.achivementToudao);
 		mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
 			textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,temp.name), myText, listView,function(){
 				playCardAnimation("res/drawable-hdpi/toudao.png", function(){
@@ -68,7 +68,7 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 			});
 		}));
 	}else if(this.name==string_handCardNameTongqianbiao){
-		AchivementProgress.addAchivementProgress(initAchivement.achivementTongqianbiao);
+		AchivementProgress.addAchivementProgress(initCardAchivement.achivementTongqianbiao);
 		mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
 			textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,temp.name), myText, listView,function(){
 				playCardAnimation("res/drawable-hdpi/tongqianbiao.png", function(){
@@ -81,7 +81,7 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 			});
 		}));
 	}else if(this.name==string_handCardNameWuqichaoyuan){
-		AchivementProgress.addAchivementProgress(initAchivement.achivementWuqichaoyuan);
+		AchivementProgress.addAchivementProgress(initCardAchivement.achivementWuqichaoyuan);
 		mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
 			textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,temp.name), myText, listView,function(){
 				playCardAnimation("res/drawable-hdpi/wuqichaoyuan.png", function(){
@@ -265,7 +265,7 @@ Card.prototype.advEffect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,
 			},callBack);
 		});
 	}else if(this.name==string_handCardNameTianleipo){
-		// AchivementProgress.addAchivementProgress(initAchivement.achivementTianleipo);
+		// AchivementProgress.addAchivementProgress(initCardAchivement.achivementTianleipo);
 		textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,this.name), myText, listView,function(){
 			dropCardXueshouDuying(usePlayer, function(){
 				playCardAnimation(resPng.tianleipo_png, function(){
@@ -276,7 +276,7 @@ Card.prototype.advEffect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,
 			}, callBack);
 		});
 	}else if(this.name==string_handCardNameShuerguo){
-		// AchivementProgress.addAchivementProgress(initAchivement.achivementShuerguo);
+		// AchivementProgress.addAchivementProgress(initCardAchivement.achivementShuerguo);
 		textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,this.name), myText, listView,function(){
 			dropCardXueshouDuying(usePlayer,function(){
 				playCardAnimation(resPng.shuerguo_png, function(){
@@ -287,7 +287,7 @@ Card.prototype.advEffect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,
 			},callBack);
 		});
 	}else if(this.name==string_handCardNameKuicetianji){
-		// AchivementProgress.addAchivementProgress(initAchivement.achivementKuicetianji);
+		// AchivementProgress.addAchivementProgress(initCardAchivement.achivementKuicetianji);
 		textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,this.name), myText, listView,function(){
 			dropCardXueshouDuying(usePlayer,function(){
 				playCardAnimation(resPng.kuicetianji_png, function(){

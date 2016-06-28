@@ -15,11 +15,11 @@ function getCharacterList() {
 	if(spSwitch=="true"){
 		//cc.log("已开启sp角色，替换原版角色");
 		//处理【景天sp】
-		if(initAchivement.achivementLunhui.progress==initAchivement.achivementLunhui.maxProgress){
+		if(initSpecialAchivement.achivementLunhui.progress==initSpecialAchivement.achivementLunhui.maxProgress){
 			characterList.push(35);
 		}
 		//处理【唐雨柔sp】
-		if(initAchivement.achivementXianquRumengdiao.progress==initAchivement.achivementXianquRumengdiao.maxProgress){
+		if(initSpecialAchivement.achivementXianquRumengdiao.progress==initSpecialAchivement.achivementXianquRumengdiao.maxProgress){
 			characterList.removeObject(28);
 			characterList.push(36);
 			cc.log(characterList);

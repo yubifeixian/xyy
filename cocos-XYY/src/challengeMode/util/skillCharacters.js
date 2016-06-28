@@ -3914,7 +3914,7 @@ function skillCharacters_LinyueruSpBiwuzhaoqinHandle(maleCharacter,maleNumber,fe
 	}else{
 		textAreaAddMessage("平局，双方均不受伤", myText, listView);
 	}
-	AchivementProgress.addAchivementProgress(initAchivement.achivementHuiyiZhaoqin);
+	AchivementProgress.addAchivementProgress(initSpecialAchivement.achivementHuiyiZhaoqin);
 }
 
 // 赵灵儿sp【回魂仙梦】

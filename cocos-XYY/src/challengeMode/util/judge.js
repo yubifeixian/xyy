@@ -396,12 +396,12 @@ function afterDeathHanle(player,heartPlayerList,callBack,isNotLoverEffect){
 			if(isNotLoverEffect){
 				textAreaAddMessage("敌方全体阵亡，我方获胜", myText, listView);
 				// 成就【轮回】
-				if((initAchivement.achivementLunhui.progress!=initAchivement.achivementLunhui.maxProgress)&&parseInt(Math.random()*100, 10)<=1){
-					AchivementProgress.addAchivementProgress(initAchivement.achivementLunhui);
+				if((initSpecialAchivement.achivementLunhui.progress!=initSpecialAchivement.achivementLunhui.maxProgress)&&parseInt(Math.random()*100, 10)<=1){
+					AchivementProgress.addAchivementProgress(initSpecialAchivement.achivementLunhui);
 				}
 				// 成就【仙曲·入梦调】
-				if(initAchivement.achivementXianquRumengdiao.progress!=initAchivement.achivementXianquRumengdiao.maxProgress&&(player1._name==nameJiangyunfan&&player1.hp==player1.maxHP)){
-					AchivementProgress.addAchivementProgress(initAchivement.achivementXianquRumengdiao);
+				if(initSpecialAchivement.achivementXianquRumengdiao.progress!=initSpecialAchivement.achivementXianquRumengdiao.maxProgress&&(player1._name==nameJiangyunfan&&player1.hp==player1.maxHP)){
+					AchivementProgress.addAchivementProgress(initSpecialAchivement.achivementXianquRumengdiao);
 				}
 				nextStep=10;
 				buttonManager(order1Button, false, false);
@@ -590,12 +590,12 @@ function judgeWinorLose() {
 			if (playerScore > npcScore) {
 				textAreaAddMessage("我方获胜！", myText, listView);
 				// 成就【轮回】
-				if((initAchivement.achivementLunhui.progress!=initAchivement.achivementLunhui.maxProgress)&&parseInt(Math.random()*100, 10)<=1){
-					AchivementProgress.addAchivementProgress(initAchivement.achivementLunhui);
+				if((initSpecialAchivement.achivementLunhui.progress!=initSpecialAchivement.achivementLunhui.maxProgress)&&parseInt(Math.random()*100, 10)<=1){
+					AchivementProgress.addAchivementProgress(initSpecialAchivement.achivementLunhui);
 				}
 				// 成就【仙曲·入梦调】
-				if(initAchivement.achivementXianquRumengdiao.progress!=initAchivement.achivementXianquRumengdiao.maxProgress&&(player1._name==nameJiangyunfan&&player1.hp==player1.maxHP)){
-					AchivementProgress.addAchivementProgress(initAchivement.achivementXianquRumengdiao);
+				if(initSpecialAchivement.achivementXianquRumengdiao.progress!=initSpecialAchivement.achivementXianquRumengdiao.maxProgress&&(player1._name==nameJiangyunfan&&player1.hp==player1.maxHP)){
+					AchivementProgress.addAchivementProgress(initSpecialAchivement.achivementXianquRumengdiao);
 				}
 				addDialog(mainScene, new ResultLayer(0));
 			} else if (playerScore < npcScore){

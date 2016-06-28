@@ -218,7 +218,6 @@ function advUseBingxingjue(startPlayer,nextPlayer,callBack){
 		if(showDialog){
 			addDialog(mainScene, new ChooseZoneLayer("是否使用冰心诀？",function(result){
 				if(result){
-					// AchivementProgress.addAchivementProgress(initAchivement.achivementBingxinjue);
 					advRemove_Card_Into_DropDeck(cardBingxingjue.name);
 					myControlPlayer.handCard.removeObject(cardBingxingjue);
 					cardBingxingjue.removeFromParent();
@@ -794,7 +793,6 @@ function advUseYingu(heartList,firstPlayer,usePlayer,heartNumberList,canUseLongh
 					}else{
 						addDialog(mainScene, new ChooseZoneLayer("是否使用隐蛊？",function(result){
 							if(result){
-								// AchivementProgress.addAchivementProgress(initAchivement.achivementYingu);
 								advRemove_Card_Into_DropDeck(cardYingu.name);
 								usePlayer.handCard.removeObject(cardYingu);
 								cardYingu.removeFromParent();

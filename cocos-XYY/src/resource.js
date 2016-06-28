@@ -445,7 +445,8 @@ var resPng={
 		npc_longyou_png:"res/drawable-hdpi/npc_longyou.png",
 		npc_xiaoman_png:"res/drawable-hdpi/npc_xiaoman.png",
 		monsterCardBack:"res/drawable-hdpi/monsterBack.png",
-		hurtBg:"res/drawable-hdpi/mfc_boom.png"
+		hurtBg:"res/drawable-hdpi/mfc_boom.png",
+		streak:"res/drawable-hdpi/streak.png"
 }
 
 var magicSrc=["res/drawable-hdpi/lei.plist",

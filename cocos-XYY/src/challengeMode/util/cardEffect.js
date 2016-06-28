@@ -28,7 +28,7 @@ function useDongmingbaojing(usePlayer,callBack){
 					if(tempPlayer._name==player1._name){
 						addDialog(mainScene, new ChooseZoneLayer("是否使用洞冥宝镜？",function(result){
 							if(result){
-								AchivementProgress.addAchivementProgress(initAchivement.achivementDongmingbaojing);
+								AchivementProgress.addAchivementProgress(initCardAchivement.achivementDongmingbaojing);
 								mainScene.addChild(new AttackTargetLayer(tempPlayer.hadImageView,cardAnimationLabel,function(){
 									textAreaAddMessage(player1._name+"打出了【洞冥宝镜】", myText, listView,function(){
 										remove_Card_Into_DropDeck(cardDongmingbaojing.name);
@@ -195,7 +195,7 @@ function useBingxingjue(startPlayer,nextPlayer,callBack){
 		if(showDialog){
 			addDialog(mainScene, new ChooseZoneLayer("是否使用冰心诀？",function(result){
 				if(result){
-					AchivementProgress.addAchivementProgress(initAchivement.achivementBingxinjue);
+					AchivementProgress.addAchivementProgress(initCardAchivement.achivementBingxinjue);
 					remove_Card_Into_DropDeck(cardBingxingjue.name);
 					player1.handCard.removeObject(cardBingxingjue);
 					cardBingxingjue.removeFromParent();
@@ -1280,7 +1280,7 @@ function useYingu(heartList,firstPlayer,usePlayer,heartNumberList,canUseLonghunz
 				}else{
 					addDialog(mainScene, new ChooseZoneLayer("是否使用隐蛊？",function(result){
 						if(result){
-							AchivementProgress.addAchivementProgress(initAchivement.achivementYingu);
+							AchivementProgress.addAchivementProgress(initCardAchivement.achivementYingu);
 							remove_Card_Into_DropDeck(cardYingu.name);
 							usePlayer.handCard.removeObject(cardYingu);
 							cardYingu.removeFromParent();

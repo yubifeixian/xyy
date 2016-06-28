@@ -62,7 +62,7 @@ var longkuiRongzhuCardName=null;// 龙葵熔铸的技牌名称
 var linyueruSpBiwuzhaoqinMaleList=null;// 林月如sp【比武招亲】男性角色列表
 var linyueruSpBiwuzhaoqinFemaleList=null;// 林月如sp【比武招亲】女性角色列表
 
-var initAchivement={
+var initCharaceterAchivement={
 		// 人物成就
 		achivementLixiaoyao:new Achivement("lixiaoyao",resPng.AchivementLixiaoyao,"使用【李逍遥】并触发“侠骨柔肠”累积达到100次",100),
 		achivementZhaolinger:new Achivement("zhaolinger",resPng.AchivementZhaolinger,"触发【赵灵儿】“梦蛇”效果累积达到100次",100),
@@ -99,6 +99,9 @@ var initAchivement={
 		achivementLongkui:new Achivement("longkui",resPng.AchivementLongkui,"使用【龙葵】并发动“剑灵”效果累积达到100次",100),
 		achivementLongkuigui:new Achivement("longkuigui",resPng.AchivementLongkuigui,"使用【龙葵鬼】并发动“剑魂”效果累积达到100次",100),
 		achivementJingtianSp:new Achivement("jingtiansp",resPng.AchivementJingtianSp,"使用【景天sp】并发动“鉴宝”效果累积达到1000次",1000),
+};
+
+var initCardAchivement={
 		// 卡牌成就
 		achivementBingxinjue:new Achivement("bingxinjue",resPng.AchivementBingxinjue,"使用卡牌【冰心诀】累积达到100次",100),
 		achivementDongmingbaojing:new Achivement("dongmingbaojing",resPng.AchivementDongmingbaojing,"使用卡牌【洞冥宝镜】累积达到100次",100),
@@ -110,17 +113,20 @@ var initAchivement={
 		achivementTongqianbiao:new Achivement("tongqianbiao",resPng.AchivementTongqianbiao,"使用卡牌【铜钱镖】累积达到100次",100),
 		achivementTianleipo:new Achivement("tianleipo",resPng.AchivementTianleipo,"使用卡牌【天雷破】累积达到100次",100),
 		achivementWuqichaoyuan:new Achivement("wuqichaoyuan",resPng.AchivementWuqichaoyuan,"使用卡牌【五气朝元】累积达到100次",100),
+};
 
+var initSpecialAchivement={
 		// 特殊成就
 		achivementLunhui:new Achivement("lunhui",resPng.AchivementLunhui,"获得单局游戏胜利时，有概率完成本成就\n（完成本成就可开启角色卡【景天sp】）",1),
 		achivementXianquRumengdiao:new Achivement("xianququmengdiao",resPng.AchivementXianquRumengdiao,"选择凤鸣玉誓角色【姜云凡】获得游戏胜利且胜利时【姜云凡】的生命值为最大值\n（完成本成就可开启角色卡【唐雨柔sp】）",1),
-		achivementHuiyiZhaoqin:new Achivement("huiyizhaoqin",resPng.AchivementHuiyizhaoqin,"选择角色【林月如sp】并发动技能“比武招亲”效果累计达到100次",100)
-};
+		achivementHuiyiZhaoqin:new Achivement("huiyizhaoqin",resPng.AchivementHuiyizhaoqin,"选择角色【林月如sp】并发动技能“比武招亲”效果累计达到100次",100)	
+}
 
 var characterAchiveList=[];
-for(var i in initAchivement){
-	characterAchiveList.push(initAchivement[i]);
+for(var i in initCharaceterAchivement){
+	characterAchiveList.push(initCharaceterAchivement[i]);
 }
+
 
 function initPlayer(){
 	nowPlayerTerm = new Array();
@@ -185,7 +191,7 @@ function initGameValue(){
 	// 洗怪物牌堆
 	game_MonsterDeck = new Array();
 	game_MonsterDeck = initMonsterDeck();
-	//game_MonsterDeck[0]= 15;
+	// game_MonsterDeck[0]= 15;
 
 	/*
 	 * game_MonsterDeck.push(game_MonsterDeck[0]);
@@ -199,12 +205,12 @@ function initGameValue(){
 	// 初始化事件牌
 	game_EventCardDeck = new Array();
 	game_EventCardDeck = initEventCardDeck();
-	//game_EventCardDeck=[7];
+	// game_EventCardDeck=[7];
 
 	// 发初始手牌
 	addHandCard(nowPlayerTerm,nowPlayerTerm[0],nowPlayerTerm[0],null,[3,3,3,3],true,false);
 	// addHandCard(nowPlayerTerm,nowPlayerTerm[0],nowPlayerTerm[0],null,[25,0,2,0],true,false);
-	 //addHandCard([player1],player1,player1,34,[1],false,false);//天雷破
+	 // addHandCard([player1],player1,player1,34,[1],false,false);//天雷破
 	 // addHandCard([player4],player4,player4,25,[1],false,false);//灵葫仙丹
 	// addHandCard([player1],player1,player1,43,[1],false,false);//偷盗
 	// addHandCard([player1],player1,player1,22,[1],false,false);//鼠儿果
@@ -220,7 +226,7 @@ function initGameValue(){
 	 * player1.skillTempList.push(leiling); player1.maxExtent +=
 	 * parseInt(player1.skillTempList.length / 2); }
 	 */
-	//player1.takeOver=true;
+	// player1.takeOver=true;
 	 // player1.hp=1;
 	 // player3.hp=1;
 	// player1.defenseExtent=2;
@@ -238,7 +244,7 @@ function initGameValue(){
 	// isDeath(player3, true);
 	// player4.hp=0;
 	// isDeath(player4, true);
-	//player1.pet_LeiMonster=new XiejianxianMonster();
+	// player1.pet_LeiMonster=new XiejianxianMonster();
 	/*
 	 * newHandCard(randHandCardNumber( game_HandCard_Start, game_DropHandCard),
 	 * nowPlayerTerm[0], 40, true);
@@ -256,7 +262,7 @@ function initGameValue(){
 	// player2.pet_ShuiMonster=new MonsterModel("水魔兽");
 	// player2.pet_Shui=player2.pet_ShuiMonster.name;
 	// player1.pet_TuMonster=new MonsterModel("天鬼皇");
-	//calculate_Pets(player1, new XiejianxianMonster());
+	// calculate_Pets(player1, new XiejianxianMonster());
 	// calculate_Pets(player1, new JinchanguimuMonster());
 	// calculate_Pets(player2, pet_TuMonster);
 	// calculate_Pets(player3, pet_TuMonster);
@@ -269,5 +275,5 @@ function initGameValue(){
 	 * player1.maxCombat=1; player2.maxCombat=1; player3.maxCombat=1;
 	 * player4.maxCombat=1;
 	 */
-	//handCardTianshezhang.effect(player3, player3, false, false);
+	// handCardTianshezhang.effect(player3, player3, false, false);
 }
