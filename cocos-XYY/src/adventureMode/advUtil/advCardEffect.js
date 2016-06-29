@@ -1089,7 +1089,7 @@ function jimushuiEffect(usePlayer,callBack){
 			// AI决定极目水的效果
 			textAreaAddMessage("等待队友查看并排列怪物牌的顺序", myText, listView, function(){
 				for(var i=tempList.length-1;i>=0;i--){
-					game_MonsterDeck.unshift(tempList[i].uid);
+					game_MonsterDeck.unshift(tempList[i]);
 				}
 				if(callBack!=null){
 					callBack();

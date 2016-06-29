@@ -435,7 +435,7 @@ function advSkillCharacters_WangxiaohuBuqubunao(usePlayer,xiaohuNum,callBack) {
 					textAreaAddMessage("王小虎发动【不屈不挠】效果,丢1张牌后重新掷骰", myText, listView, function(){
 						xiaohuNum=parseInt(Math.random()*6, 10)+1;
 						textAreaAddMessage("王小虎掷骰点数为："+xiaohuNum, myText, listView, function(){
-							advSkillCharacters_WangxiaohuBuqubunaonao(usePlayer, xiaohuNum,callBack);
+							advSkillCharacters_WangxiaohuBuqubunao(usePlayer, xiaohuNum,callBack);
 						});
 					});
 				}));
