@@ -793,3 +793,34 @@ function judgeMonsterLevelNotBoss(player) {
 	return count>0?true:false;
 }
 
+/**
+ * 火麒麟宠物效果：我方灵力池+3
+ * 
+ */
+function huoqilingPetEffect(callBack){
+	var _huoqilingOwner=null;
+	for(var i=0;i<nowPlayerTerm.length;i++){
+		if(nowPlayerTerm[i].hp>0&&nowPlayerTerm[i].pet_HuoMonster!=null&&nowPlayerTerm[i].pet_HuoMonster.name===nameHuoqilin){
+			_huoqilingOwner=nowPlayerTerm[i];
+			break;
+		}
+	}
+	if(_huoqilingOwner==null){
+		callBack();
+		return;
+	}
+	var _trigger=false;
+	for(var i=0;i<nowPlayerTerm[nowPlayerNumber].friendList.length;i++){
+		if(nowPlayerTerm[nowPlayerNumber].friendList[i]._name==_huoqilingOwner._name){
+			_trigger=true;
+			break;
+		}
+	}
+	if(_trigger){
+		triggerCombat+=3;
+		textAreaAddMessage("火麒麟宠物效果，触发方战力+3", myText, listView,callBack);
+	}else{
+		monsterCombat+=3;
+		textAreaAddMessage("火麒麟宠物效果，妨碍方战力+3", myText, listView,callBack);
+	}
+}

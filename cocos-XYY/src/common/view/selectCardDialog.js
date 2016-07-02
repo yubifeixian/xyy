@@ -1,7 +1,7 @@
 /**
  * 选择牌（例：闯荡试练窟）
  */
-var selectCardDialogLayer=cc.LayerColor.extend({
+var selectCardDialogLayer=BaseDialogLayer.extend({
 	message:null,
 	cardList:null,
 	cardButtonList:null,
@@ -13,7 +13,7 @@ var selectCardDialogLayer=cc.LayerColor.extend({
 	callBack:null,
 	canCancel:false,
 	ctor:function(message,cardList,minNumber,maxNumber,canCancel,callBack){
-		this._super(cc.color(0, 0, 0, 200));
+		this._super();
 		this.message=message;
 		this.cardList=cardList;
 		this.minNumber=minNumber;

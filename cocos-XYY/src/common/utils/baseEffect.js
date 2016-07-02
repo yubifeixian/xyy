@@ -799,9 +799,10 @@ function perishPet(pet_Shuxing,selectPlayer) {
 }
 
 // 保存新获得的角色id到本地存档文件中
-function saveNewCharacterIdToLocalStorage(player){
-	characterIdListSave+=","+player._ID.toString();
-	cc.sys.localStorage.setItem("characterIdList",characterIdListSave);
+function saveNewCharacterIdToLocalStorage(){
+	cc.log(canUseCharacterList);
+	cc.log("json = "+JSON.stringify(canUseCharacterList));
+	cc.sys.localStorage.setItem("characterIdList",JSON.stringify(canUseCharacterList));
 }
 
 // 保存当前可直接进入的关卡id
@@ -815,22 +816,21 @@ function saveXianbaoCardToStorage(xianbaoName){
 
 // 读取关卡信息
 function loadGameSave(){
-	stageIdSave=cc.sys.localStorage.getItem("stageId")||"1_2";
-	// stageIdSave="2_1";
+	stageIdSave=cc.sys.localStorage.getItem("stageId")||"1_1";
+	//stageIdSave="1_3";
 	haveTiangangdouyi=cc.sys.localStorage.getItem("tiangangdouyi")||"false";
 	haveShiziyaoshuo=cc.sys.localStorage.getItem("shiziyaoshuo")||"false";
 	if(stageIdSave=="1_1"){
-		characterIdListSave="1,2,3,4";
-		cc.sys.localStorage.setItem("characterIdList",characterIdListSave);
+		canUseCharacterList=[1,2,3,4];
+		saveNewCharacterIdToLocalStorage();
+		//cc.sys.localStorage.setItem("characterIdList",characterIdListSave);
 	}else if(stageIdSave=="2_1"){
-		characterIdListSave="27,28,23,24";
-		cc.sys.localStorage.setItem("characterIdList",characterIdListSave);
+		canUseCharacterList=[27,28,23,24];
+		saveNewCharacterIdToLocalStorage();
+		//cc.sys.localStorage.setItem("characterIdList",characterIdListSave);
 	}else{
-		characterIdListSave=cc.sys.localStorage.getItem("characterIdList")||"1,2,3,4";
-	}
-	var tempList=characterIdListSave.split(",");
-	for(var i=0;i<tempList.length;i++){
-		canUseCharacterList.push(parseInt(tempList[i]));
+		canUseCharacterList=JSON.parse(cc.sys.localStorage.getItem("characterIdList"))||[1,2,3,4];
+		saveNewCharacterIdToLocalStorage();
 	}
 	nowStage=stageManager(stageIdSave);
 }

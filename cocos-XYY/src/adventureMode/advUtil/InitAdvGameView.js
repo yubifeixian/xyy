@@ -32,7 +32,8 @@ bossPetText=null; //boss当前获得的怪物数量
 
 
 function initAdvGameView(root){
-	mainScene =root;
+	mainScene=root;
+	mainScene.retain();
 	// 设置手牌
 	player1HandCardText=null;
 	player2HandCardText=null;

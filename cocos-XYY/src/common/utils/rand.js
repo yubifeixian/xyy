@@ -12,6 +12,11 @@ function initMonsterDeck() {
 		}else{
 			_monsterDeck.push(_npcDeck.shift());
 		}
+		_monsterDeck.sort(function(){ return 0.5 - Math.random() }) ;
+	}
+	// sp开关开启，加入【火麒麟】
+	if(spSwitch){
+		_monsterDeck.push(-1);
 	}
 	_monsterDeck.sort(function(){ return 0.5 - Math.random() }) ;
 	return _monsterDeck;

@@ -30,12 +30,12 @@ var StageModel=cc.Class.extend({
 				characterList.push(tempPlayer);
 			}
 			addDialog(mainScene, new ChooseCharacterDialog(characterList,Text.chooseAwardCharacter.format(1), function(selectPlayer1){
-				canUseCharacterList.push(selectPlayer1);
-				saveNewCharacterIdToLocalStorage(selectPlayer1);
+				canUseCharacterList.pushUnique(selectPlayer1._ID);
+				saveNewCharacterIdToLocalStorage();
 				characterList.removeObject(selectPlayer1);
 				addDialog(mainScene, new ChooseCharacterDialog(characterList,Text.chooseAwardCharacter.format(2), function(selectPlayer2){
-					canUseCharacterList.push(selectPlayer2);
-					saveNewCharacterIdToLocalStorage(selectPlayer2);
+					canUseCharacterList.pushUnique(selectPlayer2._ID);
+					saveNewCharacterIdToLocalStorage();
 					characterList.removeObject(selectPlayer2);
 					if(callBack!=null){
 						callBack();

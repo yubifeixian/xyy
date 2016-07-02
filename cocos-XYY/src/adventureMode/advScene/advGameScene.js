@@ -20,11 +20,11 @@ var AdvGameScene=cc.Scene.extend({
 		}
 		//nowGameModel=ADVGAMESCENEMODEL.LEFT;
 		loadGameSave();
-		//nowStage=getStage1_2Instance();
+		//nowStage=getStage1_3Instance();
 		this.layer=new AdvGameSceneLayer(nowGameModel,nowStage);
 		this.addChild(this.layer);
 	},
-	onExit:function(){
+	onExitTransitionDidStart:function(){
 		this._super();
 		this.layer.unscheduleAllCallbacks();
 		mainScene=null;

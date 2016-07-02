@@ -463,7 +463,9 @@ function player1GetPlayer2Equment(nowPlayer,equmentName){
 
 function topMonsterCard(number) {
 	var monster = null;
-	if (number == 0) {
+	if(number == -1){
+		monster = new HuoqilinMonster();
+	}else if (number == 0) {
 		monster = new YelingMonster();
 	} else if (number == 1) {
 		monster=new AnxiangMonster();

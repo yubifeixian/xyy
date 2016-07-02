@@ -47,10 +47,12 @@ var AdvGameSceneLayer=cc.Layer.extend({
 				}));
 			}));
 		}));
-		/*player1PicLabel.loadTexture(player1.playerPicSrc,ccui.Widget.LOCAL_TEXTURE);
-		player2PicLabel.loadTexture(player2.playerPicSrc,ccui.Widget.LOCAL_TEXTURE);
-		player3PicLabel.loadTexture(player3.playerPicSrc,ccui.Widget.LOCAL_TEXTURE);
-		this.schedule(this.updateUI, 0.1);*/
+		/*
+		 * player1PicLabel.loadTexture(player1.playerPicSrc,ccui.Widget.LOCAL_TEXTURE);
+		 * player2PicLabel.loadTexture(player2.playerPicSrc,ccui.Widget.LOCAL_TEXTURE);
+		 * player3PicLabel.loadTexture(player3.playerPicSrc,ccui.Widget.LOCAL_TEXTURE);
+		 * this.schedule(this.updateUI, 0.1);
+		 */
 	},
 	loadJsonFile:function(type){
 		var root;
@@ -65,7 +67,6 @@ var AdvGameSceneLayer=cc.Layer.extend({
 			root=ccs.load(res.gameSceneRight_Json).node;
 			break;
 		}
-
 		boss=this.stage.stageBoss;
 		initAdvGameView(root);
 		boss.dongmingbaojingList=[];
@@ -192,7 +193,7 @@ var AdvGameSceneLayer=cc.Layer.extend({
 				}
 			}
 		}, this);
-		//order2Button=ccui.helper.seekWidgetByName(mainscene.node, "order2");
+		// order2Button=ccui.helper.seekWidgetByName(mainscene.node, "order2");
 		order2Button.addClickEventListener(function(){
 			selectHandCard=null;
 			for(var i=0;i<myControlPlayer.handCard.length;i++){
@@ -240,7 +241,7 @@ var AdvGameSceneLayer=cc.Layer.extend({
 		player3.playerPet3Text=player3Pet3Text;
 		player3.playerPet4Text=player3Pet4Text;
 		player3.playerPet5Text=player3Pet5Text;
-		//玩家1技能1的长按说明
+		// 玩家1技能1的长按说明
 		var longClikcFunction_player1Skill1=function(){
 			isLongClick=true;
 			mainScene.addChild(new messageDialogLayer(myControlPlayer.skill_1+"\n"+myControlPlayer.skill1Effect,function(){
@@ -273,7 +274,7 @@ var AdvGameSceneLayer=cc.Layer.extend({
 			}
 		}, myControlPlayer.skill1Button);
 
-		//玩家1技能2的长按说明
+		// 玩家1技能2的长按说明
 		var longClikcFunction_player1Skill2=function(){
 			isLongClick=true;
 			mainScene.addChild(new messageDialogLayer(myControlPlayer.skill_2+"\n"+myControlPlayer.skill2Effect,function(){
@@ -315,7 +316,7 @@ var AdvGameSceneLayer=cc.Layer.extend({
 			}
 		}, myControlPlayer.skill2Button);
 
-		//玩家1技能3的长按说明
+		// 玩家1技能3的长按说明
 		var longClikcFunction_player1Skill3=function(){
 			isLongClick=true;
 			mainScene.addChild(new messageDialogLayer(myControlPlayer.skill_3+"\n"+myControlPlayer.skill3Effect,function(){
@@ -343,14 +344,15 @@ var AdvGameSceneLayer=cc.Layer.extend({
 		}, myControlPlayer.skill3Button);
 
 
-		//玩家2技能1的长按说明
+		// 玩家2技能1的长按说明
 		var longClikcFunction_player2Skill1=function(){
 			isLongClick=true;
 			mainScene.addChild(new messageDialogLayer(otherControlPlayer1.skill_1+"\n"+otherControlPlayer1.skill1Effect,function(){
 				isLongClick=false;
 			}));
 		}
-		//player2SkillButton1=ccui.helper.seekWidgetByName(mainscene.node, "player2Skill1Button");
+		// player2SkillButton1=ccui.helper.seekWidgetByName(mainscene.node,
+		// "player2Skill1Button");
 		otherControlPlayer1.skill1Button.addTouchEventListener(function(sender,type){
 			if(type==0){
 				this.scheduleOnce(longClikcFunction_player2Skill1, 1);
@@ -362,7 +364,7 @@ var AdvGameSceneLayer=cc.Layer.extend({
 			}
 		}, otherControlPlayer1.skill1Button);
 
-		//玩家2技能2的长按说明
+		// 玩家2技能2的长按说明
 		var longClikcFunction_player2Skill2=function(){
 			isLongClick=true;
 			mainScene.addChild(new messageDialogLayer(otherControlPlayer1.skill_2+"\n"+otherControlPlayer1.skill2Effect,function(){
@@ -380,7 +382,7 @@ var AdvGameSceneLayer=cc.Layer.extend({
 			}
 		}, otherControlPlayer1.skill2Button);
 
-		//玩家2技能3的长按说明
+		// 玩家2技能3的长按说明
 		var longClikcFunction_player2Skill3=function(){
 			isLongClick=true;
 			mainScene.addChild(new messageDialogLayer(otherControlPlayer1.skill_3+"\n"+otherControlPlayer1.skill3Effect,function(){
@@ -398,7 +400,7 @@ var AdvGameSceneLayer=cc.Layer.extend({
 			}
 		}, otherControlPlayer1.skill3Button);
 
-		//玩家3技能1的长按说明
+		// 玩家3技能1的长按说明
 		var longClikcFunction_player3Skill1=function(){
 			isLongClick=true;
 			mainScene.addChild(new messageDialogLayer(otherControlPlayer2.skill_1+"\n"+otherControlPlayer2.skill1Effect,function(){
@@ -416,14 +418,15 @@ var AdvGameSceneLayer=cc.Layer.extend({
 			}
 		}, otherControlPlayer2.skill1Button);
 
-		//玩家3技能2的长按说明
+		// 玩家3技能2的长按说明
 		var longClikcFunction_player3Skill2=function(){
 			isLongClick=true;
 			mainScene.addChild(new messageDialogLayer(otherControlPlayer2.skill_2+"\n"+otherControlPlayer2.skill2Effect,function(){
 				isLongClick=false;
 			}));
 		}
-		//player3SkillButton2=ccui.helper.seekWidgetByName(mainscene.node, "player3Skill2Button");
+		// player3SkillButton2=ccui.helper.seekWidgetByName(mainscene.node,
+		// "player3Skill2Button");
 		otherControlPlayer2.skill2Button.addTouchEventListener(function(sender,type){
 			if(type==0){
 				this.scheduleOnce(longClikcFunction_player3Skill2, 1);
@@ -436,7 +439,7 @@ var AdvGameSceneLayer=cc.Layer.extend({
 
 		}, otherControlPlayer2.skill2Button);
 
-		//玩家3技能3的长按说明
+		// 玩家3技能3的长按说明
 		var longClikcFunction_player3Skill3=function(){
 			isLongClick=true;
 			mainScene.addChild(new messageDialogLayer(otherControlPlayer2.skill_3+"\n"+otherControlPlayer2.skill3Effect,function(){
@@ -483,7 +486,8 @@ var AdvGameSceneLayer=cc.Layer.extend({
 		}, myControlPlayer.playerArmText);
 
 		// 设置防具
-		//player1DefenseText=ccui.helper.seekWidgetByName(mainscene.node, "player1DefenseText");
+		// player1DefenseText=ccui.helper.seekWidgetByName(mainscene.node,
+		// "player1DefenseText");
 		myControlPlayer.playerDefenseText.addTouchEventListener(function(sender,type){
 			if(type==2){
 				if(myControlPlayer.defense!=Text.nil){
@@ -588,16 +592,16 @@ var AdvGameSceneLayer=cc.Layer.extend({
 			bossDongmingbaojingText.setString(boss.dongmingbaojingList.length);
 		}
 		if(boss.bingxingjueList!=undefined){
-			bossBingxinjueText.setString(boss.bingxingjueList.length);	//boss当前冰心诀数量
+			bossBingxinjueText.setString(boss.bingxingjueList.length);	// boss当前冰心诀数量
 		}
 		if(boss.yinguList!=undefined){
-			bossYinguText.setString(boss.yinguList.length);	//boss当前隐蛊数量
+			bossYinguText.setString(boss.yinguList.length);	// boss当前隐蛊数量
 		}
 		if(boss.lingquanList!=undefined){
-			bossLingquanText.setString(boss.lingquanList.length); //boss当前灵泉数量
+			bossLingquanText.setString(boss.lingquanList.length); // boss当前灵泉数量
 		}
 		if(boss.monsterList!=undefined){
-			bossPetText.setString(boss.monsterList.length);; //boss当前获得的怪物数量
+			bossPetText.setString(boss.monsterList.length);; // boss当前获得的怪物数量
 		}
 		player1hpText.setString(player1.hp+"/"+player1.maxHP);
 		player2hpText.setString(player2.hp+"/"+player2.maxHP);
@@ -622,42 +626,37 @@ var AdvGameSceneLayer=cc.Layer.extend({
 		
 		myControlPlayer.skill1Button.loadTextures(myControlPlayer.skillButton1,myControlPlayer.skillButton1,myControlPlayer.skillButton1,ccui.Widget.LOCAL_TEXTURE);
 		myControlPlayer.skill2Button.loadTextures(myControlPlayer.skillButton2,myControlPlayer.skillButton2,myControlPlayer.skillButton2,ccui.Widget.LOCAL_TEXTURE);
-		//player1SkillButton1.loadTextures(player1.skillButton1,player1.skillButton1,player1.skillButton1,ccui.Widget.LOCAL_TEXTURE);
-		//player1SkillButton2.loadTextures(player1.skillButton2,player1.skillButton2,player1.skillButton2,ccui.Widget.LOCAL_TEXTURE);
+		// player1SkillButton1.loadTextures(player1.skillButton1,player1.skillButton1,player1.skillButton1,ccui.Widget.LOCAL_TEXTURE);
+		// player1SkillButton2.loadTextures(player1.skillButton2,player1.skillButton2,player1.skillButton2,ccui.Widget.LOCAL_TEXTURE);
 		if(myControlPlayer.skill_3==Text.nil||myControlPlayer.skill_3==""){
 			myControlPlayer.skill3Button.setVisible(false);
 		}else{
 			myControlPlayer.skill3Button.setVisible(true);
 			myControlPlayer.skill3Button.loadTextures(myControlPlayer.skillButton3,myControlPlayer.skillButton3,myControlPlayer.skillButton3,ccui.Widget.LOCAL_TEXTURE);
 		}
-		/*if(player1.skill_3==Text.nil||player1.skill_3==""){
-			player1SkillButton3.setVisible(false);
-		}else{
-			player1SkillButton3.setVisible(true);
-			player1SkillButton3.loadTextures(player1.skillButton3,player1.skillButton3,player1.skillButton3,ccui.Widget.LOCAL_TEXTURE);
-		}
-		player2SkillButton1.loadTextures(player2.skillButton1,player2.skillButton1,player2.skillButton1,ccui.Widget.LOCAL_TEXTURE);
-		player2SkillButton2.loadTextures(player2.skillButton2,player2.skillButton2,player2.skillButton2,ccui.Widget.LOCAL_TEXTURE);
-		if(player2.skill_3==Text.nil||player2.skill_3==""){
-			player2SkillButton3.setVisible(false);
-		}else{
-			player2SkillButton3.setVisible(true);
-			player2SkillButton3.loadTextures(player2.skillButton3,player2.skillButton3,player2.skillButton3,ccui.Widget.LOCAL_TEXTURE);
-		}
-		player3SkillButton1.loadTextures(player3.skillButton1,player3.skillButton1,player3.skillButton1,ccui.Widget.LOCAL_TEXTURE);
-		player3SkillButton2.loadTextures(player3.skillButton2,player3.skillButton2,player3.skillButton2,ccui.Widget.LOCAL_TEXTURE);
-		if(player3.skill_3==Text.nil||player3.skill_3==Text.nil){
-			player3SkillButton3.setVisible(false);
-		}else{
-			player3SkillButton3.setVisible(true);
-			player3SkillButton3.loadTextures(player3.skillButton3,player3.skillButton3,player3.skillButton3,ccui.Widget.LOCAL_TEXTURE);
-		}*/
-		/*if(boss.skill_1==Text.nil){
-			bossSkillButton.setVisible(false);
-		}else{
-			bossSkillButton.setVisible(true);
-			bossSkillButton.loadTextures(boss.skillButton1,boss.skillButton1,boss.skillButton1,ccui.Widget.LOCAL_TEXTURE);
-		}*/
+		/*
+		 * if(player1.skill_3==Text.nil||player1.skill_3==""){
+		 * player1SkillButton3.setVisible(false); }else{
+		 * player1SkillButton3.setVisible(true);
+		 * player1SkillButton3.loadTextures(player1.skillButton3,player1.skillButton3,player1.skillButton3,ccui.Widget.LOCAL_TEXTURE); }
+		 * player2SkillButton1.loadTextures(player2.skillButton1,player2.skillButton1,player2.skillButton1,ccui.Widget.LOCAL_TEXTURE);
+		 * player2SkillButton2.loadTextures(player2.skillButton2,player2.skillButton2,player2.skillButton2,ccui.Widget.LOCAL_TEXTURE);
+		 * if(player2.skill_3==Text.nil||player2.skill_3==""){
+		 * player2SkillButton3.setVisible(false); }else{
+		 * player2SkillButton3.setVisible(true);
+		 * player2SkillButton3.loadTextures(player2.skillButton3,player2.skillButton3,player2.skillButton3,ccui.Widget.LOCAL_TEXTURE); }
+		 * player3SkillButton1.loadTextures(player3.skillButton1,player3.skillButton1,player3.skillButton1,ccui.Widget.LOCAL_TEXTURE);
+		 * player3SkillButton2.loadTextures(player3.skillButton2,player3.skillButton2,player3.skillButton2,ccui.Widget.LOCAL_TEXTURE);
+		 * if(player3.skill_3==Text.nil||player3.skill_3==Text.nil){
+		 * player3SkillButton3.setVisible(false); }else{
+		 * player3SkillButton3.setVisible(true);
+		 * player3SkillButton3.loadTextures(player3.skillButton3,player3.skillButton3,player3.skillButton3,ccui.Widget.LOCAL_TEXTURE); }
+		 */
+		/*
+		 * if(boss.skill_1==Text.nil){ bossSkillButton.setVisible(false); }else{
+		 * bossSkillButton.setVisible(true);
+		 * bossSkillButton.loadTextures(boss.skillButton1,boss.skillButton1,boss.skillButton1,ccui.Widget.LOCAL_TEXTURE); }
+		 */
 
 		player1.combat = player1.maxCombat+player1.arms1Combat+player1.arms2Combat+player1.defenseCombat+player1.petsCombat+player1.skillAddCombat+player1.tempAddCombat+player1.tempZhuangbeiSkillCombat;
 		if(player1.combat<0){

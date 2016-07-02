@@ -54,9 +54,7 @@ var ChooseCharacterDialog=cc.LayerColor.extend({
 		this.addChild(dialog.node);
 	},
 	sendResult:function(){
-		var temp=this;
 		this.removeFromParent(true);
-		cc.eventManager.resumeTarget(mainScene, true);
 		this.callBack(this.result);
 	}
 })

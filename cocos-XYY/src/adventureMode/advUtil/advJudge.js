@@ -561,7 +561,9 @@ function advWin(){
 						nowStage=stageManager(nextStageId);
 						addDialog(mainScene, new yesOrNoDialogLayer("是否挑战下一关卡？",function(result){
 							if(result){
-								cc.director.runScene(new cc.TransitionFade(1.0,new GameScene()));
+								mainScene.release();
+								mainScene=null;
+								cc.director.runScene(new cc.TransitionFade(1.0,new AdvGameScene()));
 							}
 						}));
 					}else{

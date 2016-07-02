@@ -52,13 +52,15 @@ function calculate_Attack(callBack) {
 									if (isNotMiss) {
 										monsterCombat += fight_Monster[0].combat;
 										textAreaAddMessage(fight_Monster[0]._name+"妨碍成功,怪物方战力增加,当前战力为："+monsterCombat, myText, listView,function(){
-											callBack();
+											//callBack();
+											huoqilingPetEffect(callBack);
 										});
 									} else {
 										textAreaAddMessage(fight_Monster[0]._name+"妨碍失败", myText, listView,function(){
 											// 沈欺霜【仙霞五奇】技能
 											skillCharacters_ShenqishuangXianxiawuqi(false, fight_Monster[0], fight_FirstMonster);
-											callBack();
+											//callBack();
+											huoqilingPetEffect(callBack);
 										});
 									}
 								}else{
@@ -71,7 +73,8 @@ function calculate_Attack(callBack) {
 											temPlayer = player3;
 										}
 										skillCharacters_ShenqishuangXianxiawuqi(true, temPlayer, fight_FirstMonster);
-										callBack();
+										//callBack();
+										huoqilingPetEffect(callBack);
 									});
 								}
 							} else {
@@ -83,7 +86,8 @@ function calculate_Attack(callBack) {
 									temPlayer = player3;
 								}
 								skillCharacters_ShenqishuangXianxiawuqi(true, temPlayer, fight_FirstMonster);
-								callBack();
+								//callBack();
+								huoqilingPetEffect(callBack);
 							}
 						});
 					});
@@ -309,6 +313,11 @@ function calculate_Pets(winner, monster,callBack) {
 		}
 	} else if (monster.nature=="火") {
 		if (winner.pet_HuoMonster == null) {
+			//火麒麟胜利效果
+			if(monster.name==nameHuoqilin){
+				textAreaAddMessage(winner._name+"无火属性宠物，无法获得"+monster.name+"为宠物", myText, listView,callBack);
+				return;
+			}
 			textAreaAddMessage(winner._name+"获得"+monster.name+"为宠物", myText, listView);
 			winner.pet_Huo = monster.name;
 			pet_Effect(monster, winner);

@@ -1,6 +1,6 @@
 stageIdSave=null;
-characterIdListSave=null;
-canUseCharacterList=null;	// 当前关卡可以选择使用的角色列表
+characterIdListSave=[];
+canUseCharacterList=[];	// 当前关卡可以选择使用的角色列表
 haveTiangangdouyi="false";	// 记录当前是否拥有仙宝【天罡斗衣】
 haveShiziyaoshuo="false";	// 记录当前是否拥有仙宝【十字妖槊】
 nowStage=null;
