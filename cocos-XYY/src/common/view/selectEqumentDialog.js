@@ -1,4 +1,4 @@
-var selectEqumentDialogLayer=cc.LayerColor.extend({
+var selectEqumentDialogLayer=BaseDialogLayer.extend({
 	arms1Button:null,
 	arms2Button:null,
 	defenseButton:null,
@@ -8,7 +8,7 @@ var selectEqumentDialogLayer=cc.LayerColor.extend({
 	callBack:null,
 	message:null,
 	ctor:function(message,player,callBack){
-		this._super(cc.color(0, 0, 0, 200));
+		this._super();
 		this.player=player;
 		this.result=null,
 		this.message=message;

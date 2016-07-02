@@ -2024,7 +2024,7 @@ function skillCharacters_HanlinshaDaomu(player,callBack,callBack2) {
 				}
 				player.handCard=[];
 				myAudioPlayer(audioHanlingshaDaomu);
-				mainScene.addChild(new NormalSkillAnimationLayer(skillnameDaomu,player.hadImageView));
+				mainScene.addChild(new NormalSkillAnimationLayer(skillnameDaomu,nowPlayerTerm[i].hadImageView));
 				textAreaAddMessage("韩菱纱“盗墓”效果触发，韩菱纱得到"+player._name+"所有手牌、装备并任意分配", myText, listView);
 				if (nowPlayerTerm[i]._name==player1._name) {
 					daomuHandle(nowPlayerTerm[i],tempCardList,function(){

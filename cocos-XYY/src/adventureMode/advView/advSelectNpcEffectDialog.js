@@ -1,4 +1,4 @@
-var selectAdvNpcEffectDialogLayer=cc.Layer.extend({
+var selectAdvNpcEffectDialogLayer=BaseDialogLayer.extend({
 	message:null,
 	npcMonster:null,
 	npcEffect1:null,

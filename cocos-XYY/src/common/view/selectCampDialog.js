@@ -3,7 +3,7 @@ var CAMP={
 		GUAIWUFANG:1
 }
 
-var selectCampDialogLayer=cc.LayerColor.extend({
+var selectCampDialogLayer=BaseDialogLayer.extend({
 	message:null,
 	checkBox1:null,
 	checkBox2:null,
@@ -12,7 +12,7 @@ var selectCampDialogLayer=cc.LayerColor.extend({
 	confirmButton:null,
 	callBack:null,
 	ctor:function(message,callBack){
-		this._super(cc.color(0, 0, 0, 200));
+		this._super();
 		this.message=message;
 		this.callBack=callBack;
 		this.checkBoxList=new Array();

@@ -1,4 +1,4 @@
-var yesOrNoDialogLayer=cc.LayerColor.extend({
+var yesOrNoDialogLayer=BaseDialogLayer.extend({
 	message:null,
 	confirmButton:null,
 	cancelButton:null,
@@ -6,7 +6,7 @@ var yesOrNoDialogLayer=cc.LayerColor.extend({
 	result:false,
 	node:null,
 	ctor:function(message,callBack,node){
-		this._super(cc.color(0, 0, 0, 200));
+		this._super();
 		this.message=message;
 		this.callBack=callBack;
 		this.node=node;

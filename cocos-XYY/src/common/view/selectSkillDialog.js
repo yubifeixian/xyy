@@ -1,4 +1,4 @@
-var SelectSkillDialogLayer=cc.LayerColor.extend({
+var SelectSkillDialogLayer=BaseDialogLayer.extend({
 	skillButton1:null,
 	skillButton2:null,
 	skillButton3:null,
@@ -7,7 +7,7 @@ var SelectSkillDialogLayer=cc.LayerColor.extend({
 	callBack:null,
 	result:null,
 	ctor:function(targetPlayer,callBack){
-		this._super(cc.color(0, 0, 0, 200));
+		this._super();
 		this.targetPlayer=targetPlayer;
 		this.init();
 		this.callBack=callBack;

@@ -1,11 +1,10 @@
-var skillAnimationLayer=cc.LayerColor.extend({
+var skillAnimationLayer=BaseDialogLayer.extend({
 	_animation:null,
 	_sprite:null,
 	_callBack:null,
 	ctor:function(skillAnimation,callBack){
 		// this._super();
-		cc.eventManager.pauseTarget(mainScene, true);
-		this._super(cc.color(0, 0, 0, 200));
+		this._super();
 		this._animation=skillAnimation;
 		this._sprite=new cc.Sprite();
 		this._callBack=callBack;

@@ -1,4 +1,4 @@
-var selectNumberDialogLayer=cc.LayerColor.extend({
+var selectNumberDialogLayer=BaseDialogLayer.extend({
 	message:null,
 	maxNumber:0,
 	result:0,
@@ -16,7 +16,7 @@ var selectNumberDialogLayer=cc.LayerColor.extend({
 	confrimButton:null,
 	callBack:null,
 	ctor:function(message,maxNumber,callBack){
-		this._super(cc.color(0, 0, 0, 200));
+		this._super();
 		this.message=message;
 		this.maxNumber=maxNumber;
 		this.result=this.maxNumber;

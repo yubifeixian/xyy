@@ -1,4 +1,4 @@
-var selectPetsDialogLayer=cc.LayerColor.extend({
+var selectPetsDialogLayer=BaseDialogLayer.extend({
 	message:null,
 	pet1Button:null,
 	pet2Button:null,
@@ -9,7 +9,7 @@ var selectPetsDialogLayer=cc.LayerColor.extend({
 	result:null,
 	callBack:null,
 	ctor:function(message,player,callBack){
-		this._super(cc.color(0, 0, 0, 200));
+		this._super();
 		this.message=message;
 		this.player=player;
 		this.callBack=callBack;

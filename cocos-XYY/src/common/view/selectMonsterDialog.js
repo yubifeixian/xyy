@@ -1,4 +1,4 @@
-var selectMonsterDialogLayer=cc.LayerColor.extend({
+var selectMonsterDialogLayer=BaseDialogLayer.extend({
 	message:null,
 	monsterArray:null,
 	cardButtonList:null,
@@ -6,7 +6,7 @@ var selectMonsterDialogLayer=cc.LayerColor.extend({
 	result:null,
 	callBack:null,
 	ctor:function(message,monsterArray,callBack){
-		this._super(cc.color(0, 0, 0, 200));
+		this._super();
 		this.message=message;
 		this.monsterArray=monsterArray;
 		this.cardButtonList=new Array();

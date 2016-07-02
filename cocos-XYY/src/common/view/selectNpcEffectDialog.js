@@ -47,7 +47,7 @@ var npcEffectMapping=function(effectName){
 	return result;
 }
 
-var selectNpcEffectDialogLayer=cc.LayerColor.extend({
+var selectNpcEffectDialogLayer=BaseDialogLayer.extend({
 	message:null,
 	npcMonster:null,
 	npcEffect1:null,
@@ -58,7 +58,7 @@ var selectNpcEffectDialogLayer=cc.LayerColor.extend({
 	callBack:null,
 	result:null,
 	ctor:function(message,npcMonster,callBack){
-		this._super(cc.color(0, 0, 0, 200));
+		this._super();
 		this.message=message;
 		this.npcMonster=npcMonster;
 		this.callBack=callBack;

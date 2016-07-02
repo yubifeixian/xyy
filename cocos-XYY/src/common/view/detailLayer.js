@@ -1,8 +1,8 @@
-var detailDialogLayer=cc.LayerColor.extend({
+var detailDialogLayer=BaseDialogLayer.extend({
 	player:null,
 	callBack:null,
 	ctor:function(player,callBack){
-		this._super(cc.color(0, 0, 0, 200));
+		this._super();
 		this.player=player;
 		this.callBack=callBack;
 		this.init();

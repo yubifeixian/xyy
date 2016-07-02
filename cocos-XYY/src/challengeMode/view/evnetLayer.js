@@ -1,8 +1,8 @@
-var eventLayer=cc.LayerColor.extend({
+var eventLayer=BaseDialogLayer.extend({
 	imageSrc:null,
 	callBack:null,
 	ctor:function(imageSrc,callBack){
-		this._super(cc.color(0, 0, 0, 200));
+		this._super();
 		this.imageSrc=imageSrc;
 		this.callBack=callBack;
 		this.init();

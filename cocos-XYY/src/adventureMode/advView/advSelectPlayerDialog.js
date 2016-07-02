@@ -2,7 +2,7 @@
  * 冒险模式下，怪物、危机牌需要重命名调用
  * selectPlayerDialogLayer
  */
-var selectAdvPlayerDialogLayer=cc.LayerColor.extend({
+var selectAdvPlayerDialogLayer=BaseDialogLayer.extend({
 	player1shown:false,
 	player2shown:false,
 	player3shown:false,
@@ -18,7 +18,7 @@ var selectAdvPlayerDialogLayer=cc.LayerColor.extend({
 	isNPCJoin:null,
 	ctor:function(player1shown,player2shown, player3shown, bossShown,
 			message, isButtonCancleEnabled, canUseMengkuilei,callBack,isNPCJoin){
-		this._super(cc.color(0, 0, 0, 200));
+		this._super();
 		this.player1shown=player1shown;
 		this.player2shown=player2shown;
 		this.player3shown=player3shown;

@@ -1,4 +1,4 @@
-var ChooseCharacterDialog=cc.LayerColor.extend({
+var ChooseCharacterDialog=BaseDialogLayer.extend({
 	characterList:null,
 	playerButtons:null,
 	message:null,
@@ -7,7 +7,7 @@ var ChooseCharacterDialog=cc.LayerColor.extend({
 	playersList:null,
 	callBack:null,
 	ctor:function(characterList,message, callBack){
-		this._super(cc.color(0, 0, 0, 200));
+		this._super();
 		this.playersList=characterList;
 		this.message=message;
 		this.playerButtons=new Array();

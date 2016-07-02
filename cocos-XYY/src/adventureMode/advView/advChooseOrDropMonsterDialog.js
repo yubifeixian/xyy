@@ -1,5 +1,5 @@
 //选择或弃掉怪牌的对话框（如：极目水效果）
-var ChooseOrDropMonsterDialogLayer=cc.LayerColor.extend({
+var ChooseOrDropMonsterDialogLayer=BaseDialogLayer.extend({
 	message:null,
 	monsterArray:null,
 	cardButtonList:null,
@@ -7,7 +7,7 @@ var ChooseOrDropMonsterDialogLayer=cc.LayerColor.extend({
 	result:null,
 	callBack:null,
 	ctor:function(message,monsterArray,callBack){
-		this._super(cc.color(0, 0, 0, 200));
+		this._super();
 		this.result=new Array();
 		this.message=message;
 		this.monsterArray=monsterArray;

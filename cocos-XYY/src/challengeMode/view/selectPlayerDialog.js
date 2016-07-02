@@ -1,4 +1,4 @@
-var selectPlayerDialogLayer=cc.LayerColor.extend({
+var selectPlayerDialogLayer=BaseDialogLayer.extend({
 	player1shown:false,
 	player2shown:false,
 	player3shown:false,
@@ -14,7 +14,7 @@ var selectPlayerDialogLayer=cc.LayerColor.extend({
 	isNPCJoin:null,
 	ctor:function(player1shown,player2shown, player3shown, player4shown,
 			message, isButtonCancleEnabled, canUseMengkuilei,callBack,isNPCJoin){
-		this._super(cc.color(0, 0, 0, 200));
+		this._super();
 		this.player1shown=player1shown;
 		this.player2shown=player2shown;
 		this.player3shown=player3shown;

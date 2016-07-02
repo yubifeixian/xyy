@@ -6,7 +6,7 @@ var SelectCardType={
 		ORNAMENT:5	//王蓬絮“饰品”
 }
 
-var selectCardTypeDialogLayer=cc.LayerColor.extend({
+var selectCardTypeDialogLayer=BaseDialogLayer.extend({
 	message:null,
 	player:null,
 	selectButton1:null,
@@ -16,7 +16,7 @@ var selectCardTypeDialogLayer=cc.LayerColor.extend({
 	result:null,
 	callBack:null,
 	ctor:function(message,player,callBack){
-		this._super(cc.color(0, 0, 0, 200));
+		this._super();
 		this.message=message;
 		this.player=player;
 		this.callBack=callBack;
