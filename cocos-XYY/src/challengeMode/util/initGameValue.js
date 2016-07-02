@@ -191,7 +191,6 @@ function initGameValue(){
 	// 洗怪物牌堆
 	game_MonsterDeck = new Array();
 	game_MonsterDeck = initMonsterDeck();
-	cc.log(game_MonsterDeck);
 	// game_MonsterDeck[0]= 13;
 	// game_MonsterDeck[1]= -1;
 
