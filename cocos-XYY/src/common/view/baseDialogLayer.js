@@ -8,5 +8,7 @@ var BaseDialogLayer=cc.LayerColor.extend({
 				return true;
 			}
 		}, this);
+		this.setScale(0, 0);
+		this.runAction(cc.scaleTo(0.1, 1));
 	}
 })
