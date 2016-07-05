@@ -296,6 +296,7 @@ function getMaxCombatPet(player,callBack){
 
 // 装备武器
 function baseEffectZhuangbeiArms(player,select, combat, extent,name,callBack) {
+	mainScene.addChild(new ArmNode(player.playerArmText));
 	if (select == 1) {
 		if (player.arms1!=Text.nil) {
 			remove_Card_Into_DropDeck(player.arms1);
@@ -362,6 +363,7 @@ function advBaseEffectZhuangbeiArms(player,select, combat, extent,name,callBack)
 
 // 装备防具
 function baseEffectZhuangbeiDefenses(player,combat,extent, name,callBack) {
+	mainScene.addChild(new DefenseNode(player.playerDefenseText));
 	if (player.defense!=Text.nil) {
 		advRemove_Card_Into_DropDeck(player.defense);
 	}
@@ -817,17 +819,17 @@ function saveXianbaoCardToStorage(xianbaoName){
 // 读取关卡信息
 function loadGameSave(){
 	stageIdSave=cc.sys.localStorage.getItem("stageId")||"1_1";
-	//stageIdSave="1_3";
+	// stageIdSave="1_3";
 	haveTiangangdouyi=cc.sys.localStorage.getItem("tiangangdouyi")||"false";
 	haveShiziyaoshuo=cc.sys.localStorage.getItem("shiziyaoshuo")||"false";
 	if(stageIdSave=="1_1"){
 		canUseCharacterList=[1,2,3,4];
 		saveNewCharacterIdToLocalStorage();
-		//cc.sys.localStorage.setItem("characterIdList",characterIdListSave);
+		// cc.sys.localStorage.setItem("characterIdList",characterIdListSave);
 	}else if(stageIdSave=="2_1"){
 		canUseCharacterList=[27,28,23,24];
 		saveNewCharacterIdToLocalStorage();
-		//cc.sys.localStorage.setItem("characterIdList",characterIdListSave);
+		// cc.sys.localStorage.setItem("characterIdList",characterIdListSave);
 	}else{
 		canUseCharacterList=JSON.parse(cc.sys.localStorage.getItem("characterIdList"))||[1,2,3,4];
 		saveNewCharacterIdToLocalStorage();

@@ -1405,3 +1405,49 @@ function huanmeihuazhouEffect(usePlayer,callBack){
 		textAreaAddMessage("【幻魅画轴】效果无效", myText, listView,callBack);
 	}
 }
+
+//armNumber是装备为第几把武器，默认为第一把，双剑技能可设置为第二把
+function advCaihuanEffect(player,armNumber,callBack){
+	var tempArmNumber=armNumber!=null?armNumber:1;
+	advBaseEffectZhuangbeiArms(player,tempArmNumber, 0, 2, string_handCardNameCaihuan,callBack);
+}
+
+function advTianshezhangEffect(player,armNumber,callBack){
+	var tempArmNumber=armNumber!=null?armNumber:1;
+	advBaseEffectZhuangbeiArms(player,tempArmNumber, 1, 0, string_handCardNameTianshezhang,callBack);
+}
+
+function advWuchenjianEffect(player,armNumber,callBack){
+	var tempArmNumber=armNumber!=null?armNumber:1;
+	advBaseEffectZhuangbeiArms(player,tempArmNumber, 1, 1, string_handCardNameWuchenjian,callBack);
+}
+
+function advModaotianzhaEffect(player,armNumber,callBack){
+	var tempArmNumber=armNumber!=null?armNumber:1;
+	advBaseEffectZhuangbeiArms(player,tempArmNumber, 2, 0, string_handCardNameModaotianzha,callBack);
+}
+
+function advMojianEffect(player,armNumber,callBack){
+	var tempArmNumber=armNumber!=null?armNumber:1;
+	advBaseEffectZhuangbeiArms(player,tempArmNumber, 0, 1, string_handCardNameMojian,callBack);
+}
+
+function advQiankundaopaoEffect(player,callBack){
+	baseEffectZhuangbeiDefenses(player,1, 0, string_handCardNameQiankundaopao,callBack);
+}
+
+function advLonghunzhankaiEffect(player,callBack){
+	baseEffectZhuangbeiDefenses(player,0, 0, string_handCardNameLonghunzhankai,callBack);
+}
+
+function advTiandijifuEffect(player,callBack){
+	baseEffectZhuangbeiDefenses(player,0, 0, string_handCardNameTiandijifu,callBack);
+}
+
+function advTayunxueEffect(player,callBack){
+	baseEffectZhuangbeiDefenses(player,0, 1, string_handCardNameTayunxue,callBack);
+}
+
+function advWucaixiayiEffect(player,callBack){
+	baseEffectZhuangbeiDefenses(player,1, 0, string_handCardNameWucaixiayi,callBack);
+}

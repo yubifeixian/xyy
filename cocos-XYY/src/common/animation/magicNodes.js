@@ -71,3 +71,60 @@ var MagicNodeShui=MagicNodeLei.extend({
 		this.animation.setRestoreOriginalFrame(true);
 	}
 })
+
+
+var ArmNode=cc.Node.extend({
+	arm:null,
+	targetView:null,
+	count:0,
+	ctor:function(targetView){
+		this._super();
+		this.setRotation(-90);
+		this.targetView=targetView;
+		this.arm=new ccui.ImageView(resPng.arm_png);
+		this.setPosition(this.targetView.getParent().getPosition());
+		this.addChild(this.arm);
+		this.play();
+	},
+	play:function(){
+		var _arm=this.arm.clone();
+		this.addChild(_arm);
+		_arm.setOpacity(150);
+		_arm.runAction(cc.sequence(cc.scaleBy(0.2, 2),cc.moveBy(0.2, 20, 0),cc.fadeOut(0.2),cc.callFunc(function(){
+			_arm.removeFromParent();
+			this.count++;
+			if(this.count>3){
+				this.removeFromParent();
+				return;
+			}
+			this.play();
+		},this)));
+	}
+})
+
+var DefenseNode=cc.Node.extend({
+	defense:null,
+	targetView:null,
+	count:0,
+	ctor:function(targetView){
+		this._super();
+		this.defense=new ccui.ImageView(resPng.defense_png);
+		this.targetView=targetView;
+		this.setPosition(this.targetView.getParent().getPosition());
+		this.addChild(this.defense);
+		this.play();
+	},
+	play:function(){
+		var _defense=this.defense.clone();
+		this.addChild(_defense);
+		_defense.runAction(cc.sequence(cc.spawn(cc.scaleBy(0.2,2),cc.fadeOut(0.2)),cc.callFunc(function(){
+			_defense.removeFromParent();
+			this.count++;
+			if(this.count>3){
+				this.removeFromParent();
+				return;
+			}
+			this.play();
+		}, this)));
+	}
+})

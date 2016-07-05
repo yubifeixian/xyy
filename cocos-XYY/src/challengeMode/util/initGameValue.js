@@ -218,7 +218,8 @@ function initGameValue(){
 	// addHandCard([player2],player2,player2,32,[1],false,false);//铜钱镖
 	// addHandCard([player3],player3,player3,28,[1],false,false);//冰心
 	// addHandCard([player4],player4,player4,18,[1],false,false);//隐蛊
-	// addHandCard([player3],player3,player3,47,[1],false,false);//无尘剑
+	 //addHandCard([player1],player1,player1,47,[1],false,false);//无尘剑
+	 //addHandCard([player1],player1,player1,52,[1],false,false);//无尘剑
 	// addHandCard([player3],player3,player3,50,[1],false,false);//天蛇杖
 
 	/*

@@ -615,6 +615,8 @@ var GameLayer=cc.Layer.extend({
 		player1.hadImageView=player1PicLabel;
 		player1.hadImageView.setOpacity(150);
 		player1.hadImageView.retain();
+		player1.playerArmText=player1ArmText;
+		player1.playerDefenseText=player1DefenseText;
 		
 		player2.deathImageView=player2DeathImageView;
 		player2.deathImageView.setVisible(false);
@@ -624,6 +626,8 @@ var GameLayer=cc.Layer.extend({
 		player2.hadImageView=player2PicLabel;
 		player2.hadImageView.setOpacity(150);
 		player2.hadImageView.retain();
+		player2.playerArmText=player2ArmText;
+		player2.playerDefenseText=player2DefenseText;
 		
 		player3.deathImageView=player3DeathImageView;
 		player3.deathImageView.setVisible(false);
@@ -633,6 +637,8 @@ var GameLayer=cc.Layer.extend({
 		player3.hadImageView=player3PicLabel;
 		player3.hadImageView.setOpacity(150);
 		player3.hadImageView.retain();
+		player3.playerArmText=player3ArmText;
+		player3.playerDefenseText=player3DefenseText;
 		
 		player4.deathImageView=player4DeathImageView;
 		player4.deathImageView.setVisible(false);
@@ -642,6 +648,8 @@ var GameLayer=cc.Layer.extend({
 		player4.hadImageView=player4PicLabel;
 		player4.hadImageView.setOpacity(150);
 		player4.hadImageView.retain();
+		player4.playerArmText=player4ArmText;
+		player4.playerDefenseText=player4DefenseText;
 		
 		textAreaAddMessage("玩家1(您)选择了"+player1._name,myText,listView);
 		textAreaAddMessage("玩家2(队友)选择了"+player2._name,myText,listView);

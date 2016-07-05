@@ -447,7 +447,9 @@ var resPng={
 		monsterCardBack:"res/drawable-hdpi/monsterBack.png",
 		hurtBg:"res/drawable-hdpi/mfc_boom.png",
 		streak:"res/drawable-hdpi/streak.png",
-		monster_huoqilin_png:"res/drawable-hdpi/monster_huoqilin.png"
+		monster_huoqilin_png:"res/drawable-hdpi/monster_huoqilin.png",
+		arm_png:"res/drawable-hdpi/EXMT_T_xiaojian.png",
+		defense_png:"res/drawable-hdpi/EXMT_T_dun.png"
 }
 
 var magicSrc=["res/drawable-hdpi/lei.plist",

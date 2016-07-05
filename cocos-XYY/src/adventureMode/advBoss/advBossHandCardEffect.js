@@ -242,24 +242,24 @@ function bossJinchantuoqiaoEffect(callBack1,callBack2){
 }
 
 function bossMojianEffect(callBack){
-	baseEffectZhuangbeiArms(boss,1, 0, 1, string_handCardNameMojian,callBack);
+	advBaseEffectZhuangbeiArms(boss,1, 0, 1, string_handCardNameMojian,callBack);
 }
 
 function bossModaotianzhaEffect(callBack){
-	baseEffectZhuangbeiArms(boss,1, 2, 0, string_handCardNameModaotianzha,callBack);
+	advBaseEffectZhuangbeiArms(boss,1, 2, 0, string_handCardNameModaotianzha,callBack);
 	monsterCombat+=2;
 }
 
 function bossWuchenjianEffect(callBack){
-	baseEffectZhuangbeiArms(boss,1, 1, 1, string_handCardNameWuchenjian,callBack);
+	advBaseEffectZhuangbeiArms(boss,1, 1, 1, string_handCardNameWuchenjian,callBack);
 	monsterCombat+=1;
 }
 
 function bossTianshezhangEffect(callBack){
-	baseEffectZhuangbeiArms(boss,1, 1, 0, string_handCardNameTianshezhang,callBack);
+	advBaseEffectZhuangbeiArms(boss,1, 1, 0, string_handCardNameTianshezhang,callBack);
 	monsterCombat+=1;
 }
 
 function bossCaihuanEffect(callBack){
-	baseEffectZhuangbeiArms(boss,1, 0, 2, string_handCardNameCaihuan,callBack);
+	advBaseEffectZhuangbeiArms(boss,1, 0, 2, string_handCardNameCaihuan,callBack);
 }

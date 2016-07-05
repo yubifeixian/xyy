@@ -332,25 +332,25 @@ Card.prototype.advEffect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,
 	}else if(this.name==string_handCardNameCaihuan){
 		textAreaAddMessage(Text.playerEquipCard.format(usePlayer._name,this.name), myText, listView,function(){
 			playCardAnimation(resPng.caihuan_png, function(){
-				advSkillCharacters_ZhaolingerShuangjian(usePlayer, caihuanEffect,callBack);
+				advSkillCharacters_ZhaolingerShuangjian(usePlayer, advCaihuanEffect,callBack);
 			});
 		});
 	}else if(this.name==string_handCardNameTianshezhang){
 		textAreaAddMessage(Text.playerEquipCard.format(usePlayer._name,this.name), myText, listView,function(){
 			playCardAnimation(resPng.tianshezhang_png, function(){
-				advSkillCharacters_ZhaolingerShuangjian(usePlayer, tianshezhangEffect,callBack);
+				advSkillCharacters_ZhaolingerShuangjian(usePlayer, advTianshezhangEffect,callBack);
 			});
 		});
 	}else if(this.name==string_handCardNameWuchenjian){
 		textAreaAddMessage(Text.playerEquipCard.format(usePlayer._name,this.name), myText, listView,function(){
 			playCardAnimation(resPng.wuchenjian_png, function(){
-				advSkillCharacters_ZhaolingerShuangjian(usePlayer, wuchenjianEffect,callBack);
+				advSkillCharacters_ZhaolingerShuangjian(usePlayer, advWuchenjianEffect,callBack);
 			});
 		});
 	}else if(this.name==string_handCardNameModaotianzha){
 		textAreaAddMessage(Text.playerEquipCard.format(usePlayer._name,this.name), myText, listView,function(){
 			playCardAnimation(resPng.tianzha_png, function(){
-				advSkillCharacters_ZhaolingerShuangjian(usePlayer, modaotianzhaEffect,callBack);
+				advSkillCharacters_ZhaolingerShuangjian(usePlayer, advModaotianzhaEffect,callBack);
 			});
 		});
 	}else if(this.name==string_handCardNameMojian){
@@ -364,7 +364,7 @@ Card.prototype.advEffect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,
 				}else{
 					textAreaAddMessage(Text.playerEquipCard.format(usePlayer._name,temp.name), myText, listView,function(){
 						playCardAnimation(resPng.mojian_png, function(){
-							advSkillCharacters_ZhaolingerShuangjian(usePlayer, mojianEffect,callBack);
+							advSkillCharacters_ZhaolingerShuangjian(usePlayer, advMojianEffect,callBack);
 						});
 					});
 				}
@@ -387,31 +387,31 @@ Card.prototype.advEffect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,
 	}else if(this.name==string_handCardNameQiankundaopao){
 		textAreaAddMessage(Text.playerEquipCard.format(usePlayer._name,this.name), myText, listView,function(){
 			playCardAnimation(resPng.qiankundaopao_png, function(){
-				qiankundaopaoEffect(usePlayer,callBack);
+				advQiankundaopaoEffect(usePlayer,callBack);
 			});
 		});
 	}else if(this.name==string_handCardNameTayunxue){
 		textAreaAddMessage(Text.playerEquipCard.format(usePlayer._name,this.name), myText, listView,function(){
 			playCardAnimation(resPng.tayunxue_png, function(){
-				tayunxueEffect(usePlayer,callBack);
+				advTayunxueEffect(usePlayer,callBack);
 			});
 		});
 	}else if(this.name==string_handCardNameLonghunzhankai){
 		textAreaAddMessage(Text.playerEquipCard.format(usePlayer._name,this.name), myText, listView,function(){
 			playCardAnimation(resPng.longhunzhankai_png, function(){
-				longhunzhankaiEffect(usePlayer,callBack);
+				advLonghunzhankaiEffect(usePlayer,callBack);
 			});
 		});
 	}else if(this.name==string_handCardNameTiandijifu){
 		textAreaAddMessage(Text.playerEquipCard.format(usePlayer._name,this.name), myText, listView,function(){
 			playCardAnimation(resPng.tiandijifu_png, function(){
-				tiandijifuEffect(usePlayer,callBack);
+				advTiandijifuEffect(usePlayer,callBack);
 			});
 		});
 	}else if(this.name==string_handCardNameWucaixiayi){
 		textAreaAddMessage(Text.playerEquipCard.format(usePlayer._name,this.name), myText, listView,function(){
 			playCardAnimation(resPng.wucaixiayi_png, function(){
-				wucaixiayiEffect(usePlayer,callBack);
+				advWucaixiayiEffect(usePlayer,callBack);
 			});
 		});
 	}else if(this.name==string_handCardNameTianxuanwuyin){
