@@ -1,4 +1,4 @@
-// 初始化30张怪物牌
+// 挑战模式初始化30张怪物牌
 function initMonsterDeck() {
 	var _monsterDeck=[];
 	var _npcDeck=[];
@@ -17,6 +17,25 @@ function initMonsterDeck() {
 	// sp开关开启，加入【火麒麟】
 	if(spSwitch=="true"){
 		_monsterDeck.push(-1);
+	}
+	_monsterDeck.sort(function(){ return 0.5 - Math.random() }) ;
+	return _monsterDeck;
+}
+// 冒险模式初始化30张怪物牌
+function advInitMonsterDeck() {
+	var _monsterDeck=[];
+	var _npcDeck=[];
+	for(var i=20;i<43;i++){
+		_npcDeck.push(i);
+	}
+	_npcDeck.sort(function(){ return 0.5 - Math.random() }) ;
+	for(var i=0;i<30;i++){
+		if(i<20){
+			_monsterDeck.push(i);
+		}else{
+			_monsterDeck.push(_npcDeck.shift());
+		}
+		_monsterDeck.sort(function(){ return 0.5 - Math.random() }) ;
 	}
 	_monsterDeck.sort(function(){ return 0.5 - Math.random() }) ;
 	return _monsterDeck;

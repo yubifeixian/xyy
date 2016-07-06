@@ -10,6 +10,7 @@ var GameLayer=cc.Layer.extend({
 		// this.mySchedule(skillCharacters_ZhaolingerMengshe, 0.1);
 		// var button=new ccui.Button();
 		// this.addChild(button);
+		
 	},
 	init:function(){
 		initPlayer();
@@ -617,6 +618,11 @@ var GameLayer=cc.Layer.extend({
 		player1.hadImageView.retain();
 		player1.playerArmText=player1ArmText;
 		player1.playerDefenseText=player1DefenseText;
+		player1.playerPet1Text=player1Pet1Text;
+		player1.playerPet2Text=player1Pet2Text;
+		player1.playerPet3Text=player1Pet3Text;
+		player1.playerPet4Text=player1Pet4Text;
+		player1.playerPet5Text=player1Pet5Text;
 		
 		player2.deathImageView=player2DeathImageView;
 		player2.deathImageView.setVisible(false);
@@ -628,6 +634,11 @@ var GameLayer=cc.Layer.extend({
 		player2.hadImageView.retain();
 		player2.playerArmText=player2ArmText;
 		player2.playerDefenseText=player2DefenseText;
+		player2.playerPet1Text=player2Pet1Text;
+		player2.playerPet2Text=player2Pet2Text;
+		player2.playerPet3Text=player2Pet3Text;
+		player2.playerPet4Text=player2Pet4Text;
+		player2.playerPet5Text=player2Pet5Text;
 		
 		player3.deathImageView=player3DeathImageView;
 		player3.deathImageView.setVisible(false);
@@ -639,6 +650,11 @@ var GameLayer=cc.Layer.extend({
 		player3.hadImageView.retain();
 		player3.playerArmText=player3ArmText;
 		player3.playerDefenseText=player3DefenseText;
+		player3.playerPet1Text=player3Pet1Text;
+		player3.playerPet2Text=player3Pet2Text;
+		player3.playerPet3Text=player3Pet3Text;
+		player3.playerPet4Text=player3Pet4Text;
+		player3.playerPet5Text=player3Pet5Text;
 		
 		player4.deathImageView=player4DeathImageView;
 		player4.deathImageView.setVisible(false);
@@ -650,6 +666,11 @@ var GameLayer=cc.Layer.extend({
 		player4.hadImageView.retain();
 		player4.playerArmText=player4ArmText;
 		player4.playerDefenseText=player4DefenseText;
+		player4.playerPet1Text=player4Pet1Text;
+		player4.playerPet2Text=player4Pet2Text;
+		player4.playerPet3Text=player4Pet3Text;
+		player4.playerPet4Text=player4Pet4Text;
+		player4.playerPet5Text=player4Pet5Text;
 		
 		textAreaAddMessage("玩家1(您)选择了"+player1._name,myText,listView);
 		textAreaAddMessage("玩家2(队友)选择了"+player2._name,myText,listView);

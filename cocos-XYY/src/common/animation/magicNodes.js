@@ -128,3 +128,198 @@ var DefenseNode=cc.Node.extend({
 		}, this)));
 	}
 })
+
+var FengFazhenNode=cc.Node.extend({
+	font:null,
+	ball:null,
+	fazhen:null,
+	targetView:null,
+	light:null,
+	ctor:function(targetView){
+		this._super();
+		this.targetView=targetView;
+		this.font=new ccui.ImageView(resPng.petFengFont_png);
+		this.ball=new ccui.ImageView(resPng.petFengBall_png);
+		this.fazhen=new ccui.ImageView(resPng.petFengFazhen_png);
+		this.light=new ccui.ImageView(resPng.petLight_png);
+		this.addChild(this.ball);
+		this.addChild(this.fazhen);
+		this.addChild(this.font);
+		this.addChild(this.light);
+		this.font.setPosition(monsterLabel.getPosition());
+		this.ball.setPosition(monsterLabel.getPosition());
+		this.fazhen.setPosition(monsterLabel.getPosition());
+		this.light.setPosition(monsterLabel.getPosition());
+		this.light.setOpacity(120);
+		this.light.setColor(cc.color.GREEN);
+		this.play();
+	},
+	play:function(){
+		this.fazhen.runAction(cc.repeatForever(cc.rotateBy(0.5, 90)));
+		var _action=cc.spawn(cc.rotateBy(1, -360),cc.scaleTo(1, 0.5),cc.moveTo(1, this.targetView.getWorldPosition()));
+		this.ball.runAction(cc.sequence(_action,cc.callFunc(function(){
+			this.fazhen.runAction(cc.fadeOut(0.2));
+			this.ball.runAction(cc.sequence(cc.fadeOut(0.2),cc.callFunc(function(){
+				this.removeFromParent();
+			}, this)));
+		}, this)));
+		this.font.runAction(cc.spawn(cc.scaleBy(0.5, 4),cc.fadeOut(1)));
+		this.light.runAction(cc.spawn(cc.scaleBy(0.5, 6),cc.fadeOut(0.5)));
+	}
+})
+
+var LeiFazhenNode=cc.Node.extend({
+	font:null,
+	ball:null,
+	fazhen:null,
+	targetView:null,
+	light:null,
+	ctor:function(targetView){
+		this._super();
+		this.targetView=targetView;
+		this.font=new ccui.ImageView(resPng.petLeiFont_png);
+		this.ball=new ccui.ImageView(resPng.petLeiBall_png);
+		this.fazhen=new ccui.ImageView(resPng.petLeiFazhen_png);
+		this.light=new ccui.ImageView(resPng.petLight_png);
+		this.addChild(this.ball);
+		this.addChild(this.fazhen);
+		this.addChild(this.font);
+		this.addChild(this.light);
+		this.font.setPosition(monsterLabel.getPosition());
+		this.ball.setPosition(monsterLabel.getPosition());
+		this.fazhen.setPosition(monsterLabel.getPosition());
+		this.light.setPosition(monsterLabel.getPosition());
+		this.light.setOpacity(120);
+		this.light.setColor(cc.color.YELLOW);
+		this.play();
+	},
+	play:function(){
+		this.fazhen.runAction(cc.repeatForever(cc.rotateBy(0.5, 90)));
+		var _action=cc.spawn(cc.rotateBy(1, -360),cc.scaleTo(1, 0.5),cc.moveTo(1, this.targetView.getWorldPosition()));
+		this.ball.runAction(cc.sequence(_action,cc.callFunc(function(){
+			this.fazhen.runAction(cc.fadeOut(0.2));
+			this.ball.runAction(cc.sequence(cc.fadeOut(0.2),cc.callFunc(function(){
+				this.removeFromParent();
+			}, this)));
+		}, this)));
+		this.font.runAction(cc.spawn(cc.scaleBy(0.5, 4),cc.fadeOut(1)));
+		this.light.runAction(cc.spawn(cc.scaleBy(0.5, 6),cc.fadeOut(0.5)));
+	}
+})
+
+var ShuiFazhenNode=cc.Node.extend({
+	font:null,
+	ball:null,
+	fazhen:null,
+	targetView:null,
+	light:null,
+	ctor:function(targetView){
+		this._super();
+		this.targetView=targetView;
+		this.font=new ccui.ImageView(resPng.petShuiFont_png);
+		this.ball=new ccui.ImageView(resPng.petShuiBall_png);
+		this.fazhen=new ccui.ImageView(resPng.petShuiFazhen_png);
+		this.light=new ccui.ImageView(resPng.petLight_png);
+		this.addChild(this.ball);
+		this.addChild(this.fazhen);
+		this.addChild(this.font);
+		this.addChild(this.light);
+		this.font.setPosition(monsterLabel.getPosition());
+		this.ball.setPosition(monsterLabel.getPosition());
+		this.fazhen.setPosition(monsterLabel.getPosition());
+		this.light.setPosition(monsterLabel.getPosition());
+		this.light.setOpacity(120);
+		this.light.setColor(cc.color.BLUE);
+		this.play();
+	},
+	play:function(){
+		this.fazhen.runAction(cc.repeatForever(cc.rotateBy(0.5, 90)));
+		var _action=cc.spawn(cc.rotateBy(1, -360),cc.scaleTo(1, 0.5),cc.moveTo(1, this.targetView.getWorldPosition()));
+		this.ball.runAction(cc.sequence(_action,cc.callFunc(function(){
+			this.fazhen.runAction(cc.fadeOut(0.2));
+			this.ball.runAction(cc.sequence(cc.fadeOut(0.2),cc.callFunc(function(){
+				this.removeFromParent();
+			}, this)));
+		}, this)));
+		this.font.runAction(cc.spawn(cc.scaleBy(0.5, 4),cc.fadeOut(1)));
+		this.light.runAction(cc.spawn(cc.scaleBy(0.5, 6),cc.fadeOut(0.5)));
+	}
+})
+
+var HuoFazhenNode=cc.Node.extend({
+	font:null,
+	ball:null,
+	fazhen:null,
+	targetView:null,
+	light:null,
+	ctor:function(targetView){
+		this._super();
+		this.targetView=targetView;
+		this.font=new ccui.ImageView(resPng.petHuoFont_png);
+		this.ball=new ccui.ImageView(resPng.petHuoBall_png);
+		this.fazhen=new ccui.ImageView(resPng.petHuoFazhen_png);
+		this.light=new ccui.ImageView(resPng.petLight_png);
+		this.addChild(this.ball);
+		this.addChild(this.fazhen);
+		this.addChild(this.font);
+		this.addChild(this.light);
+		this.font.setPosition(monsterLabel.getPosition());
+		this.ball.setPosition(monsterLabel.getPosition());
+		this.fazhen.setPosition(monsterLabel.getPosition());
+		this.light.setPosition(monsterLabel.getPosition());
+		this.light.setOpacity(120);
+		this.light.setColor(cc.color.RED);
+		this.play();
+	},
+	play:function(){
+		this.fazhen.runAction(cc.repeatForever(cc.rotateBy(0.5, 90)));
+		var _action=cc.spawn(cc.rotateBy(1, -360),cc.scaleTo(1, 0.5),cc.moveTo(1, this.targetView.getWorldPosition()));
+		this.ball.runAction(cc.sequence(_action,cc.callFunc(function(){
+			this.fazhen.runAction(cc.fadeOut(0.2));
+			this.ball.runAction(cc.sequence(cc.fadeOut(0.2),cc.callFunc(function(){
+				this.removeFromParent();
+			}, this)));
+		}, this)));
+		this.font.runAction(cc.spawn(cc.scaleBy(0.5, 4),cc.fadeOut(1)));
+		this.light.runAction(cc.spawn(cc.scaleBy(0.5, 6),cc.fadeOut(0.5)));
+	}
+})
+
+var TuFazhenNode=cc.Node.extend({
+	font:null,
+	ball:null,
+	fazhen:null,
+	targetView:null,
+	light:null,
+	ctor:function(targetView){
+		this._super();
+		this.targetView=targetView;
+		this.font=new ccui.ImageView(resPng.petTuFont_png);
+		this.ball=new ccui.ImageView(resPng.petTuBall_png);
+		this.fazhen=new ccui.ImageView(resPng.petTuFazhen_png);
+		this.light=new ccui.ImageView(resPng.petLight_png);
+		this.addChild(this.ball);
+		this.addChild(this.fazhen);
+		this.addChild(this.font);
+		this.addChild(this.light);
+		this.font.setPosition(monsterLabel.getPosition());
+		this.ball.setPosition(monsterLabel.getPosition());
+		this.fazhen.setPosition(monsterLabel.getPosition());
+		this.light.setPosition(monsterLabel.getPosition());
+		this.light.setOpacity(120);
+		this.light.setColor(cc.color.ORANGE);
+		this.play();
+	},
+	play:function(){
+		this.fazhen.runAction(cc.repeatForever(cc.rotateBy(0.5, 90)));
+		var _action=cc.spawn(cc.rotateBy(1, -360),cc.scaleTo(1, 0.5),cc.moveTo(1, this.targetView.getWorldPosition()));
+		this.ball.runAction(cc.sequence(_action,cc.callFunc(function(){
+			this.fazhen.runAction(cc.fadeOut(0.2));
+			this.ball.runAction(cc.sequence(cc.fadeOut(0.2),cc.callFunc(function(){
+				this.removeFromParent();
+			}, this)));
+		}, this)));
+		this.font.runAction(cc.spawn(cc.scaleBy(0.5, 4),cc.fadeOut(1)));
+		this.light.runAction(cc.spawn(cc.scaleBy(0.5, 6),cc.fadeOut(0.5)));
+	}
+})
