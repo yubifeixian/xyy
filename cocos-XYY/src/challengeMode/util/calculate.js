@@ -199,7 +199,7 @@ function calculate_Pets(winner, monster,callBack) {
 		}
 	} else if (monster.nature=="雷") {
 		if (winner.pet_LeiMonster == null) {
-			mainScene.addChild(new LeiFazhenNode(winner.playerPet1Text));
+			mainScene.addChild(new LeiFazhenNode(winner.playerPet2Text));
 			textAreaAddMessage(winner._name+"获得"+monster.name+"为宠物", myText, listView);
 			winner.pet_Lei = monster.name;
 			pet_Effect(monster, winner);
@@ -225,7 +225,7 @@ function calculate_Pets(winner, monster,callBack) {
 						updata_PetsEffect(winner.pet_LeiMonster,winner);
 						winner.pet_Lei = monster.name;
 						winner.pet_LeiMonster = monster;
-						mainScene.addChild(new LeiFazhenNode(winner.playerPet1Text));
+						mainScene.addChild(new LeiFazhenNode(winner.playerPet2Text));
 						textAreaAddMessage(winner._name+"获得了宠物:"+winner.pet_LeiMonster.name, myText, listView);
 						pet_Effect(monster, winner);
 						// 紫萱【关爱】技能
@@ -259,7 +259,7 @@ function calculate_Pets(winner, monster,callBack) {
 		}
 	} else if (monster.nature=="水") {
 		if (winner.pet_ShuiMonster == null) {
-			mainScene.addChild(new ShuiFazhenNode(winner.playerPet1Text));
+			mainScene.addChild(new ShuiFazhenNode(winner.playerPet3Text));
 			textAreaAddMessage(winner._name+"获得"+monster.name+"为宠物", myText, listView);
 			winner.pet_Shui = monster.name;
 			pet_Effect(monster, winner);
@@ -285,7 +285,7 @@ function calculate_Pets(winner, monster,callBack) {
 						updata_PetsEffect(winner.pet_ShuiMonster,winner);
 						winner.pet_Shui = monster.name;
 						winner.pet_ShuiMonster = monster;
-						mainScene.addChild(new ShuiFazhenNode(winner.playerPet1Text));
+						mainScene.addChild(new ShuiFazhenNode(winner.playerPet3Text));
 						textAreaAddMessage(winner._name+"获得了宠物:"+winner.pet_ShuiMonster.name, myText, listView);
 						pet_Effect(monster, winner);
 						// 紫萱【关爱】技能
@@ -324,7 +324,7 @@ function calculate_Pets(winner, monster,callBack) {
 				textAreaAddMessage(winner._name+"无火属性宠物，无法获得"+monster.name+"为宠物", myText, listView,callBack);
 				return;
 			}
-			mainScene.addChild(new HuoFazhenNode(winner.playerPet1Text));
+			mainScene.addChild(new HuoFazhenNode(winner.playerPet4Text));
 			textAreaAddMessage(winner._name+"获得"+monster.name+"为宠物", myText, listView);
 			winner.pet_Huo = monster.name;
 			pet_Effect(monster, winner);
@@ -350,7 +350,7 @@ function calculate_Pets(winner, monster,callBack) {
 						updata_PetsEffect(winner.pet_HuoMonster,winner);
 						winner.pet_Huo = monster.name;
 						winner.pet_HuoMonster = monster;
-						mainScene.addChild(new HuoFazhenNode(winner.playerPet1Text));
+						mainScene.addChild(new HuoFazhenNode(winner.playerPet4Text));
 						textAreaAddMessage(winner._name+"获得了宠物:"+winner.pet_HuoMonster.name, myText, listView);
 						pet_Effect(monster, winner);
 						// 紫萱【关爱】技能
@@ -384,6 +384,7 @@ function calculate_Pets(winner, monster,callBack) {
 		}
 	} else if (monster.nature=="土") {
 		if (winner.pet_TuMonster == null) {
+			mainScene.addChild(new TuFazhenNode(winner.playerPet5Text));
 			textAreaAddMessage(winner._name+"获得"+monster.name+"为宠物", myText, listView);
 			winner.pet_Tu = monster.name;
 			pet_Effect(monster, winner);
@@ -409,6 +410,7 @@ function calculate_Pets(winner, monster,callBack) {
 						updata_PetsEffect(winner.pet_TuMonster,winner);
 						winner.pet_Tu = monster.name;
 						winner.pet_TuMonster = monster;
+						mainScene.addChild(new TuFazhenNode(winner.playerPet5Text));
 						textAreaAddMessage(winner._name+"获得了宠物:"+winner.pet_TuMonster.name, myText, listView);
 						pet_Effect(monster, winner);
 						// 紫萱【关爱】技能
