@@ -41,7 +41,7 @@ var SelectSkillDialogLayer=BaseDialogLayer.extend({
 		this.addChild(dialog);
 	},
 	sendResult:function(){
-		cc.eventManager.resumeTarget(mainScene, true);
+		//cc.eventManager.resumeTarget(mainScene, true);
 		this.removeFromParent(true);
 		this.callBack(this.result);
 	}

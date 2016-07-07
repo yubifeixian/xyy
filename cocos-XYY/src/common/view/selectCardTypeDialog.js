@@ -86,7 +86,7 @@ var selectCardTypeDialogLayer=BaseDialogLayer.extend({
 	},
 	sendResult:function(){
 		var temp=this;
-		cc.eventManager.resumeTarget(mainScene, true);
+		//cc.eventManager.resumeTarget(mainScene, true);
 		this.removeFromParent(true);
 		this.callBack(this.result);
 	}

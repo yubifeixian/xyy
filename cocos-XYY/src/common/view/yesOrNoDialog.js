@@ -37,7 +37,7 @@ var yesOrNoDialogLayer=BaseDialogLayer.extend({
 		this.addChild(dialog.node);
 	},
 	sendResult:function(){
-		cc.eventManager.resumeTarget(this.getParent(), true);
+		//cc.eventManager.resumeTarget(this.getParent(), true);
 		this.removeFromParent(true);
 		this.callBack(this.result);
 		//this.release();

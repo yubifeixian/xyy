@@ -95,8 +95,7 @@ var selectNumberDialogLayer=BaseDialogLayer.extend({
 	},
 	sendResult:function(){
 		var temp=this;
-		cc.eventManager.resumeTarget(mainScene, true);
-		//cc.eventManager.dispatchCustomEvent("dialogEvent",temp.event.getUserData());
+		//cc.eventManager.resumeTarget(mainScene, true);
 		this.removeFromParent(true);
 		this.callBack(this.result);
 	}

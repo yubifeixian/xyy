@@ -24,7 +24,7 @@ var skillAnimationLayer=BaseDialogLayer.extend({
 	},
 	destory:function(){
 		this.removeFromParent();
-		cc.eventManager.resumeTarget(mainScene, true);
+		//cc.eventManager.resumeTarget(mainScene, true);
 		if(this._callBack!=null){
 			this._callBack();
 		}

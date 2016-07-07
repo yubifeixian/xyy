@@ -7,7 +7,6 @@ var selectCampDialogLayer=BaseDialogLayer.extend({
 	message:null,
 	checkBox1:null,
 	checkBox2:null,
-	checkBoxList:null,
 	result:null,
 	confirmButton:null,
 	callBack:null,
@@ -15,7 +14,6 @@ var selectCampDialogLayer=BaseDialogLayer.extend({
 		this._super();
 		this.message=message;
 		this.callBack=callBack;
-		this.checkBoxList=new Array();
 		this.result=CAMP.CHUFAFANG;
 		this.init();
 	},
@@ -27,44 +25,54 @@ var selectCampDialogLayer=BaseDialogLayer.extend({
 		this.checkBox1.setUserData(CAMP.CHUFAFANG);
 		this.checkBox2=ccui.helper.seekWidgetByName(dialog.node, "CheckBox2");
 		this.checkBox2.setUserData(CAMP.GUAIWUFANG);
-		this.checkBoxList.push(this.checkBox1);
-		this.checkBoxList.push(this.checkBox2);
 		var temp=this;
-		this.checkBox1.addTouchEventListener(function(sender,type){
-			if(type==2){
-				if(!sender.isSelected()){
-					temp.checkBox2.setSelected(false);
-					temp.result=sender.getUserData();
-				}else{
-					temp.result=temp.checkBox2.getUserData();
-					temp.checkBox2.setSelected(true);
-				}
+		this.checkBox1.addEventListener(function(render,type){
+			switch (type) {
+			case ccui.CheckBox.EVENT_SELECTED:
+				temp.checkBox2.setSelected(false);
+				temp.result=temp.checkBox1.getUserData();
+				break;
+
+			case ccui.CheckBox.EVENT_UNSELECTED:
+				temp.checkBox2.setSelected(true);
+				temp.result=temp.checkBox2.getUserData();
+				break;
 			}
-		}, this.checkBox1);
-		this.checkBox2.addTouchEventListener(function(sender,type){
-			if(type==2){
-				if(!sender.isSelected()){
-					temp.checkBox1.setSelected(false);
-					temp.result=sender.getUserData();
-				}else{
-					temp.result=temp.checkBox1.getUserData();
-					temp.checkBox1.setSelected(true);
-				}
+		},this);
+		this.checkBox2.addEventListener(function(render,type){
+			switch (type) {
+			case ccui.CheckBox.EVENT_SELECTED:
+				temp.checkBox1.setSelected(false);
+				temp.result=temp.checkBox2.getUserData();
+				break;
+				
+			case ccui.CheckBox.EVENT_UNSELECTED:
+				temp.checkBox1.setSelected(true);
+				temp.result=temp.checkBox1.getUserData();
+				break;
 			}
-		},this.checkBox2);
+		},this);
+		
+		
+		
+		/*this.checkBox1.addClickEventListener(function(){
+			temp.checkBox2.setSelected(false);
+			if(!temp.checkBox1.isSelected()){
+				temp.result=temp.checkBox1.getUserData();
+			}else{
+				temp.result=temp.checkBox2.getUserData();
+				temp.checkBox2.setSelected(true);
+			}
+		});*/
+		
 		this.confirmButton=ccui.helper.seekWidgetByName(dialog.node, "confirmButton");
-		this.confirmButton.addTouchEventListener(function(sender,type){
-			if(type==2){
+		this.confirmButton.addClickEventListener(function(){
 				temp.sendResult();
-			}
-		}, this.confirmButton);
+		});
 		this.addChild(dialog.node);
 	},
 	sendResult:function(){
-		var temp=this;
-		cc.eventManager.resumeTarget(mainScene, true);
 		this.removeFromParent(true);
 		this.callBack(this.result);
-		//cc.eventManager.dispatchCustomEvent("dialogEvent",temp.event.getUserData());
 	}
 });

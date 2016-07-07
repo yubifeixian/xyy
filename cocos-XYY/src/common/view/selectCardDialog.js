@@ -90,7 +90,7 @@ var selectCardDialogLayer=BaseDialogLayer.extend({
 	},
 	sendResult:function(){
 		var temp=this;
-		cc.eventManager.resumeTarget(mainScene, true);
+		//cc.eventManager.resumeTarget(mainScene, true);
 		//cc.eventManager.dispatchCustomEvent("dialogEvent",temp.event.getUserData());
 		this.removeFromParent(true);
 		if(this.callBack!=null){

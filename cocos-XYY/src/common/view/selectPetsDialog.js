@@ -98,9 +98,8 @@ var selectPetsDialogLayer=BaseDialogLayer.extend({
 	},
 	sendResult:function(){
 		var temp=this;
-		cc.eventManager.resumeTarget(mainScene, true);
+		//cc.eventManager.resumeTarget(mainScene, true);
 		this.removeFromParent(true);
-		//cc.eventManager.dispatchCustomEvent("dialogEvent",temp.event.getUserData());
 		this.callBack(this.result);
 	}
 })
