@@ -13,7 +13,7 @@ function getStage1_2Instance(){
 		characterList.push(tempPlayer1);
 		characterList.push(tempPlayer2);
 		addDialog(mainScene, new ChooseCharacterDialog(characterList,Text.chooseAdditionalAwardCharacter, function(selectPlayer1){
-			canUseCharacterList.pushUnique(selectPlayer1);
+			canUseCharacterList.pushUnique(selectPlayer1._ID);
 			saveNewCharacterIdToLocalStorage();
 			callBack();
 		}));

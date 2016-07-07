@@ -20,7 +20,7 @@ var AdvGameScene=cc.Scene.extend({
 		}
 		//nowGameModel=ADVGAMESCENEMODEL.LEFT;
 		loadGameSave();
-		//nowStage=getStage1_3Instance();
+		//nowStage=getStage1_2Instance();
 		this.layer=new AdvGameSceneLayer(nowGameModel,nowStage);
 		this.addChild(this.layer);
 	},

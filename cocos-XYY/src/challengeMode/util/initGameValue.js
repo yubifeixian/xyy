@@ -211,7 +211,7 @@ function initGameValue(){
 	// 发初始手牌
 	addHandCard(nowPlayerTerm,nowPlayerTerm[0],nowPlayerTerm[0],null,[3,3,3,3],true,false);
 	// addHandCard(nowPlayerTerm,nowPlayerTerm[0],nowPlayerTerm[0],null,[25,0,2,0],true,false);
-	 // addHandCard([player1],player1,player1,34,[1],false,false);//天雷破
+	 //addHandCard([player1],player1,player1,34,[1],false,false);//天雷破
 	 // addHandCard([player4],player4,player4,25,[1],false,false);//灵葫仙丹
 	// addHandCard([player1],player1,player1,43,[1],false,false);//偷盗
 	// addHandCard([player1],player1,player1,22,[1],false,false);//鼠儿果
@@ -229,15 +229,15 @@ function initGameValue(){
 	 * parseInt(player1.skillTempList.length / 2); }
 	 */
 	// player1.takeOver=true;
-	 // player1.hp=1;
+	  //player1.hp=1;
 	 // player3.hp=1;
 	// player1.defenseExtent=2;
 	// player2.hp=0;
 	 // player3.hp=1;
 	 // player4.hp=0;
-	// isDeath(player3,[player3,player4], true,null,true);
+	//isDeath(player1,[player1], true,null,true);
 	// player2.handCard=new Array();
-	// player1.defense="踏云靴";
+	//player1.defense="龙魂战铠";
 	// player2.arms1="天蛇杖";
 	// player4.arms1="无尘剑";
 	// player4.defense="乾坤道袍";

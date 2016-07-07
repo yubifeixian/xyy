@@ -114,7 +114,7 @@ function initAdvGameValue(){
 		//new Tantadeqiongding(48).openEffect();
 		//jimushuiEffect(myControlPlayer,null);
 	});
-	//advAddHandCard([player1],player1,player1,59,[1],false,false);//天剑
+	//advAddHandCard([player1],player1,player1,59,[10],false,false);//天剑
 	//advAddHandCard([player2],player2,player2,28,[1],false,false);//魔剑
 	
 

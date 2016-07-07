@@ -840,10 +840,10 @@ function skillCharacters_KonglinShengmingxianji(nowplayer) {
 			}
 		}
 	}
+	characterCardManager(nowplayer, 25);
 	mainScene.addChild(new NormalSkillAnimationLayer(skillnameShengmingxianji,nowplayer.hadImageView,function(){
 		textAreaAddMessage(nameKonglin+"【生命献祭】技能触发，变身为“魔尊”",myText,listView);
 		// 将【孔璘】替换为【魔尊】
-		characterCardManager(nowplayer, 25);
 		nowplayer.hadImageView.loadTexture(nowplayer.playerPicSrc);
 		switch (who) {
 		case 1:
@@ -878,15 +878,14 @@ function skillCharacters_MozunXushidaifa() {
 function skillCharacters_MozunBenghuai() {
 	if (nowPlayerTerm[nowPlayerNumber].skillNameList.containsObject(skillnameBenghuai)
 			&& nowPlayerTerm[nowPlayerNumber].hp > 0) {
-		mainScene.addChild(new NormalSkillAnimationLayer(skillnameBenghuai,nowPlayerTerm[nowPlayerNumber].hadImageView,function(){
-			textAreaAddMessage("魔尊【崩坏】效果触发，HP-1",myText,listView);
-			useYingu([nowPlayerTerm[nowPlayerNumber]],nowPlayerTerm[nowPlayerNumber],nowPlayerTerm[nowPlayerNumber],[1],true,baseEffectReduceHPEffect,function(){
-				// 唐雪见【追打】技能
-				skillCharactersTangxuejianZhuida(function(){
-					heartList=new Array();
-				});
+		mainScene.addChild(new NormalSkillAnimationLayer(skillnameBenghuai,nowPlayerTerm[nowPlayerNumber].hadImageView));
+		textAreaAddMessage("魔尊【崩坏】效果触发，HP-1",myText,listView);
+		useYingu([nowPlayerTerm[nowPlayerNumber]],nowPlayerTerm[nowPlayerNumber],nowPlayerTerm[nowPlayerNumber],[1],true,baseEffectReduceHPEffect,function(){
+			// 唐雪见【追打】技能
+			skillCharactersTangxuejianZhuida(function(){
+				heartList=new Array();
 			});
-		}));
+		});
 	}
 }
 

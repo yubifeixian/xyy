@@ -31,9 +31,9 @@ var AttackTargetLayer=cc.Layer.extend({
 		// this.targetPoint=cc.p(this.targetPoint.x+this.offsetX,this.targetPoint.y+this.offsetY);
 		// this.streakNode.setPosition(this.targetPoint);
 		// var action=cc.delayTime(this.delay);
-		var action=cc.fadeOut(this.delay);
+		//var action=cc.fadeOut(this.delay);
 		var move=cc.moveTo(0.5, this.endPoint.x,this.endPoint.y);
-		this.streakNode.runAction(cc.sequence(move,action,cc.callFunc(function(){
+		this.streakNode.runAction(cc.sequence(move,cc.callFunc(function(){
 			this.removeFromParent();
 			if(this.callback!=null){
 				this.callback();
