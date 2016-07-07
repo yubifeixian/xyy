@@ -784,7 +784,7 @@ function advUseYingu(heartList,firstPlayer,usePlayer,heartNumberList,canUseLongh
 								}));
 							}else{
 								if(hasYingu){
-									advPalyer1UseYingungu(cardYingu,heartList,firstPlayer,usePlayer,heartNumberList,canUseLonghunzhankai,callBack,callBack2);
+									advPalyer1UseYingu(cardYingu,heartList,firstPlayer,usePlayer,heartNumberList,canUseLonghunzhankai,callBack,callBack2);
 								}else{
 									advYinguHandle(heartList, firstPlayer, usePlayer, false, heartNumberList,canUseLonghunzhankai,callBack,callBack2);
 								}

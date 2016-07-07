@@ -105,7 +105,7 @@ function initAdvGameValue(){
 	game_MonsterDeck = new Array();
 	game_MonsterDeck = advInitMonsterDeck();
 	game_MonsterDeck=addCrisisCard(game_MonsterDeck,nowStage.stageCrisisCards);
-	//game_MonsterDeck[0]=11;
+	//game_MonsterDeck[0]=2;
 	//cc.log("monterDeck = "+game_MonsterDeck);
 	//boss.bingxingjueList.push(1);
 	initGropCard(function(){
@@ -122,6 +122,7 @@ function initAdvGameValue(){
 	//boss.handCard.remove(0);
 	//boss.hp=1;
 	//player1.pet_FengMonster=new GoumangMonster(0);
+	//player1.defense="天帝祭服";
 	//player1.pet_Feng="句芒";
 	//player1.pet_LeiMonster=new JiliangyinzheMonster(4);
 	//player1.pet_Lei="积粮隐者";
