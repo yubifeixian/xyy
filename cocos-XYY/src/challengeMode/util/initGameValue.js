@@ -191,7 +191,7 @@ function initGameValue(){
 	// 洗怪物牌堆
 	game_MonsterDeck = new Array();
 	game_MonsterDeck = initMonsterDeck();
-	//game_MonsterDeck[0]= 0;
+	//game_MonsterDeck[0]= 9;
 	// game_MonsterDeck[1]= -1;
 
 	/*
@@ -229,7 +229,7 @@ function initGameValue(){
 	 * parseInt(player1.skillTempList.length / 2); }
 	 */
 	// player1.takeOver=true;
-	  //player1.hp=1;
+	 // player1.hp=1;
 	 // player3.hp=1;
 	// player1.defenseExtent=2;
 	// player2.hp=0;
@@ -237,7 +237,7 @@ function initGameValue(){
 	 // player4.hp=0;
 	//isDeath(player1,[player1], true,null,true);
 	// player2.handCard=new Array();
-	//player1.defense="龙魂战铠";
+	//player1.defense="五彩霞衣";
 	// player2.arms1="天蛇杖";
 	// player4.arms1="无尘剑";
 	// player4.defense="乾坤道袍";

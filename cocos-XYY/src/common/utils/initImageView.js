@@ -1,4 +1,6 @@
 mainScene=null;
+//表示回合行动的光圈
+actionMark=null;
 // 设置头像
 player1DeathImageView=null;
 player2DeathImageView=null;

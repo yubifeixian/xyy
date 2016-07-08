@@ -1,5 +1,5 @@
 function round_Start() {
-	nowPlayerTerm[nowPlayerNumber].hadImageView.setOpacity(255);
+	showActionMark();
 	if(nowPlayerTerm[nowPlayerNumber].takeOver){
 		textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"从横置状态中恢复", myText, listView);
 		nowPlayerTerm[nowPlayerNumber].takeOver=false;
@@ -721,7 +721,8 @@ function roundEnding(){
 	laShouCuiHuaList=new Array();
 	// 回合结束，判断是否游戏结束
 	if (!judgeWinorLose()) {
-		nowPlayerTerm[nowPlayerNumber].hadImageView.setOpacity(150);
+		//nowPlayerTerm[nowPlayerNumber].hadImageView.setOpacity(150);
+		removeActionMark();
 		textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"的回合结束", myText, listView);
 		// 魔尊【崩坏】技能
 		skillCharacters_MozunBenghuai();

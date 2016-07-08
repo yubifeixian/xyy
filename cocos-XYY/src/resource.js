@@ -466,6 +466,7 @@ var resPng={
 		petTuFont_png:"res/drawable-hdpi/tu_font.png",
 		petTuBall_png:"res/drawable-hdpi/tuqiu.png",
 		petTuFazhen_png:"res/drawable-hdpi/tuxifanzhen2.png",
+		actionLight_png:"res/drawable-hdpi/EXMT_guangquan.png"
 }
 
 var magicSrc=["res/drawable-hdpi/lei.plist",

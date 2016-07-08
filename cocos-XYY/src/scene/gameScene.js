@@ -614,7 +614,6 @@ var GameLayer=cc.Layer.extend({
 		
 		player1PicLabel.loadTexture(player1.playerPicSrc,ccui.Widget.LOCAL_TEXTURE);
 		player1.hadImageView=player1PicLabel;
-		player1.hadImageView.setOpacity(150);
 		player1.hadImageView.retain();
 		player1.playerArmText=player1ArmText;
 		player1.playerDefenseText=player1DefenseText;
@@ -630,7 +629,6 @@ var GameLayer=cc.Layer.extend({
 		
 		player2PicLabel.loadTexture(player2.playerPicSrc,ccui.Widget.LOCAL_TEXTURE);
 		player2.hadImageView=player2PicLabel;
-		player2.hadImageView.setOpacity(150);
 		player2.hadImageView.retain();
 		player2.playerArmText=player2ArmText;
 		player2.playerDefenseText=player2DefenseText;
@@ -646,7 +644,6 @@ var GameLayer=cc.Layer.extend({
 		
 		player3PicLabel.loadTexture(player3.playerPicSrc,ccui.Widget.LOCAL_TEXTURE);
 		player3.hadImageView=player3PicLabel;
-		player3.hadImageView.setOpacity(150);
 		player3.hadImageView.retain();
 		player3.playerArmText=player3ArmText;
 		player3.playerDefenseText=player3DefenseText;
@@ -662,7 +659,6 @@ var GameLayer=cc.Layer.extend({
 		
 		player4PicLabel.loadTexture(player4.playerPicSrc,ccui.Widget.LOCAL_TEXTURE);
 		player4.hadImageView=player4PicLabel;
-		player4.hadImageView.setOpacity(150);
 		player4.hadImageView.retain();
 		player4.playerArmText=player4ArmText;
 		player4.playerDefenseText=player4DefenseText;

@@ -98,8 +98,11 @@ function initGameView(){
 	player1DefenseText=ccui.helper.seekWidgetByName(mainScene, "player1DefenseText");
 	player1DefenseText.ignoreContentAdaptWithSize(true);
 	player2DefenseText=ccui.helper.seekWidgetByName(mainScene, "player2DefenseText");
+	player2DefenseText.ignoreContentAdaptWithSize(true);
 	player3DefenseText=ccui.helper.seekWidgetByName(mainScene, "player3DefenseText");
+	player3DefenseText.ignoreContentAdaptWithSize(true);
 	player4DefenseText=ccui.helper.seekWidgetByName(mainScene, "player4DefenseText");
+	player4DefenseText.ignoreContentAdaptWithSize(true);
 	
 	// 设置宠物
 	player1Pet1Text=ccui.helper.seekWidgetByName(mainScene, "player1Pet1Text");
@@ -114,22 +117,37 @@ function initGameView(){
 	player1Pet5Text.ignoreContentAdaptWithSize(true);
 
 	player2Pet1Text=ccui.helper.seekWidgetByName(mainScene, "player2Pet1Text");
+	player2Pet1Text.ignoreContentAdaptWithSize(true);
 	player2Pet2Text=ccui.helper.seekWidgetByName(mainScene, "player2Pet2Text");
+	player2Pet2Text.ignoreContentAdaptWithSize(true);
 	player2Pet3Text=ccui.helper.seekWidgetByName(mainScene, "player2Pet3Text");
+	player2Pet3Text.ignoreContentAdaptWithSize(true);
 	player2Pet4Text=ccui.helper.seekWidgetByName(mainScene, "player2Pet4Text");
+	player2Pet4Text.ignoreContentAdaptWithSize(true);
 	player2Pet5Text=ccui.helper.seekWidgetByName(mainScene, "player2Pet5Text");
+	player2Pet5Text.ignoreContentAdaptWithSize(true);
 
 	player3Pet1Text=ccui.helper.seekWidgetByName(mainScene, "player3Pet1Text");
+	player3Pet1Text.ignoreContentAdaptWithSize(true);
 	player3Pet2Text=ccui.helper.seekWidgetByName(mainScene, "player3Pet2Text");
+	player3Pet2Text.ignoreContentAdaptWithSize(true);
 	player3Pet3Text=ccui.helper.seekWidgetByName(mainScene, "player3Pet3Text");
+	player3Pet3Text.ignoreContentAdaptWithSize(true);
 	player3Pet4Text=ccui.helper.seekWidgetByName(mainScene, "player3Pet4Text");
+	player3Pet4Text.ignoreContentAdaptWithSize(true);
 	player3Pet5Text=ccui.helper.seekWidgetByName(mainScene, "player3Pet5Text");
+	player3Pet5Text.ignoreContentAdaptWithSize(true);
 
 	player4Pet1Text=ccui.helper.seekWidgetByName(mainScene, "player4Pet1Text");
+	player4Pet1Text.ignoreContentAdaptWithSize(true);
 	player4Pet2Text=ccui.helper.seekWidgetByName(mainScene, "player4Pet2Text");
+	player4Pet2Text.ignoreContentAdaptWithSize(true);
 	player4Pet3Text=ccui.helper.seekWidgetByName(mainScene, "player4Pet3Text");
+	player4Pet3Text.ignoreContentAdaptWithSize(true);
 	player4Pet4Text=ccui.helper.seekWidgetByName(mainScene, "player4Pet4Text");
+	player4Pet4Text.ignoreContentAdaptWithSize(true);
 	player4Pet5Text=ccui.helper.seekWidgetByName(mainScene, "player4Pet5Text");
+	player4Pet5Text.ignoreContentAdaptWithSize(true);
 	
 	// 设置ListView
 	listView=ccui.helper.seekWidgetByName(mainScene, "ListView");

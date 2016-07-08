@@ -861,5 +861,14 @@ function shiziyaoshuoAddCombatEffect(callBack){
 	}
 }
 
-
+//显示回合行动光圈
+function showActionMark(){
+	actionMark=new ActionMarkNode();
+	actionMark.setPosition(nowPlayerTerm[nowPlayerNumber].hadImageView.getPosition());
+	mainScene.addChild(actionMark);
+}
+//移除回合行动光圈
+function removeActionMark(){
+	actionMark.end();
+}
 

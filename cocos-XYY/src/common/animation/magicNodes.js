@@ -323,3 +323,33 @@ var TuFazhenNode=cc.Node.extend({
 		this.light.runAction(cc.spawn(cc.scaleBy(0.5, 6),cc.fadeOut(0.5)));
 	}
 })
+
+//当前回合角色行动时，头像上的光圈
+var ActionMarkNode=cc.Node.extend({
+	spriteOut:null,
+	spriteIn:null,
+	ctor:function(){
+		this._super();
+		this.spriteIn=new ccui.ImageView(resPng.actionLight_png);
+		this.spriteOut=this.spriteIn.clone();
+		this.spriteIn.setOpacity(200);
+		this.spriteOut.setOpacity(200);
+		this.spriteIn.setScale(0.75);
+		this.spriteOut.setScale(0.8);
+		this.addChild(this.spriteIn);
+		this.addChild(this.spriteOut);
+		this.play();
+	},
+	play:function(){
+		var _action=cc.sequence(cc.rotateBy(0.5, 360),cc.delayTime(0.2),cc.rotateBy(0.5, -360));
+		var _action2=cc.sequence(cc.rotateBy(0.6, -360),cc.delayTime(0.4),cc.rotateBy(0.6, 360));
+		this.spriteIn.runAction(new cc.RepeatForever(_action));
+		this.spriteOut.runAction(new cc.RepeatForever(_action2));
+	},
+	end:function(){
+		this.spriteIn.removeFromParent();
+		this.spriteOut.runAction(cc.sequence(cc.spawn(cc.scaleBy(0.2,2),cc.fadeOut(0.05)),cc.callFunc(function(){
+			this.removeFromParent();
+		},this)));
+	}
+})
