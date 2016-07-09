@@ -225,6 +225,7 @@ function jieruchouHandle(skillUser,endUser,useSkillList,targetList,callBack){
 	for(var i=0;i<useSkillList.length;i++){
 		if(useSkillList[i]._name==skillUser._name){
 			nextUserIndex=i+1;
+			nextUserIndex%=useSkillList.length;
 			break;
 		}
 	}
@@ -247,7 +248,7 @@ function jieruchouHandle(skillUser,endUser,useSkillList,targetList,callBack){
 		useYingu(tempHeartList,tempHeartList[0],tempHeartList[0],tempHeartNumberList,true,baseEffectReduceHPEffect,function(){
 			// 唐雪见【追打】技能
 			skillCharactersTangxuejianZhuida(function(){
-				heartList=new Array();
+				heartList=[];
 				if(skillUser._name==endUser._name){
 					if(callBack!=null){
 						callBack();

@@ -191,7 +191,7 @@ function initGameValue(){
 	// 洗怪物牌堆
 	game_MonsterDeck = new Array();
 	game_MonsterDeck = initMonsterDeck();
-	//game_MonsterDeck[0]= 9;
+	//game_MonsterDeck[0]= 11;
 	// game_MonsterDeck[1]= -1;
 
 	/*
@@ -230,11 +230,11 @@ function initGameValue(){
 	 */
 	// player1.takeOver=true;
 	 // player1.hp=1;
-	 // player3.hp=1;
+	 //player3.hp=1;
 	// player1.defenseExtent=2;
 	// player2.hp=0;
 	 // player3.hp=1;
-	 // player4.hp=0;
+	  //player4.hp=0;
 	//isDeath(player1,[player1], true,null,true);
 	// player2.handCard=new Array();
 	//player1.defense="五彩霞衣";

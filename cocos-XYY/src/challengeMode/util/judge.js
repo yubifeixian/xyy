@@ -756,15 +756,6 @@ function judgeWhoUseFightCard(callBack) {
 	}
 }
 
-// 判断当前牌数
-function calcultCardNumber(){
-	var cardNumber=game_HandCard_Start.length+game_DropHandCard.length+player1.handCard.length+player2.handCard.length+player3.handCard.length+player4.handCard.length+baseEffectCountequment(player1)+baseEffectCountequment(player2)+baseEffectCountequment(player3)+baseEffectCountequment(player4);
-	if(cardNumber!=56){
-		cc.log("牌量为："+cardNumber);
-		cc.director.pause();
-	}
-}
-
 // 判断某角色是否拥有非boss级宠物
 function judgeMonsterLevelNotBoss(player) {
 	var count = 0;
