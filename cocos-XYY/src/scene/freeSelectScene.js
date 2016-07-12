@@ -25,16 +25,12 @@ var FreeSelectLayer=cc.Layer.extend({
 			cc.director.runScene(new IndexScene());
 		});
 		var showSelectSkill=function(selectPlayer){
-			cc.eventManager.pauseTarget(root.node, true);
 			isLongClick=true;
 			var message="【"+selectPlayer.skill_1+"】\n"+selectPlayer.skill1Effect+"\n【"+selectPlayer.skill_2+"】\n"+selectPlayer.skill2Effect+"\n";
 			if(selectPlayer.skill_3!=null&&selectPlayer.skill_3!=Text.nil&&selectPlayer.skill_3!=""){
 				message+="【"+selectPlayer.skill_3+"】\n"+selectPlayer.skill3Effect;
 			}
-			this.addChild(new detailDialogLayer(selectPlayer,function(){
-				// isLongClick=false;
-				cc.eventManager.resumeTarget(root.node, true);
-			}));
+			this.addChild(new detailDialogLayer(selectPlayer));
 		}.bind(this);
 		for(var i=0;i<this.playerNumberList.length;i++){
 			var tempPlayer=new Player();
@@ -53,7 +49,6 @@ var FreeSelectLayer=cc.Layer.extend({
 					if(isLongClick){
 						isLongClick=false;
 					}else{
-						cc.eventManager.pauseTarget(root.node, true);
 						temp.addChild(new yesOrNoDialogLayer(Text.mineChooseResult.format(choose._name),function(result){
 							if(result){
 								temp.playerNumberList.removeObject(choose._ID);
@@ -105,5 +100,7 @@ var FreeSelectScene=cc.Scene.extend({
 		this._super();
 		var layer=new FreeSelectLayer();
 		this.addChild(layer);
+		var touchLayer=new TouchLayer();
+		this.addChild(touchLayer);
 	}
 });

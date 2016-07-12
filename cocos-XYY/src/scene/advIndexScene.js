@@ -55,5 +55,7 @@ var AdvIndexScene=cc.Scene.extend({
 		this._super();
 		var layer=new AdvIndexSceneLayer();
 		this.addChild(layer);
+		var touchLayer=new TouchLayer();
+		this.addChild(touchLayer);
 	}
 })

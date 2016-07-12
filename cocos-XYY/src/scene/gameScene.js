@@ -927,6 +927,8 @@ var GameScene = cc.Scene.extend({
 		this._super();
 		this.layer = new GameLayer();
 		this.addChild(this.layer);
+		var touchLayer=new TouchLayer();
+		this.addChild(touchLayer);
 		skillCharacters_XuanxiaoJiebai(round_Start);
 	},
 	onEnterTransitionDidFinish:function(){

@@ -196,5 +196,8 @@ var IndexScene=cc.Scene.extend({
 			}
 		}, this);
 		this.addChild(indexLayer);
+		
+		var touchLayer=new TouchLayer();
+		this.addChild(touchLayer);
 	}
 });

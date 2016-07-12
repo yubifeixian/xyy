@@ -144,5 +144,7 @@ var AchivementScene=cc.Scene.extend({
 		this._super();
 		var layer=new AchivementLayer();
 		this.addChild(layer);
+		var touchLayer=new TouchLayer();
+		this.addChild(touchLayer);
 	}
 })

@@ -206,6 +206,8 @@ var ChooseScene=cc.Scene.extend({
 		this._super();
 		var chooseLayer=new ChooseLayer();
 		this.addChild(chooseLayer);
+		var touchLayer=new TouchLayer();
+		this.addChild(touchLayer);
 	}
 });
 

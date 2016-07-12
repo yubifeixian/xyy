@@ -23,6 +23,8 @@ var AdvGameScene=cc.Scene.extend({
 		//nowStage=getStage1_2Instance();
 		this.layer=new AdvGameSceneLayer(nowGameModel,nowStage);
 		this.addChild(this.layer);
+		var touchLayer=new TouchLayer();
+		this.addChild(touchLayer);
 	},
 	onExitTransitionDidStart:function(){
 		this._super();

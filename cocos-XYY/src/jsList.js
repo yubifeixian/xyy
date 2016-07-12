@@ -47,6 +47,7 @@ var jsList=[
 "src/common/view/skillAnimationLayer.js",
 "src/common/view/ChooseZoneLayer.js",
 "src/common/view/ResultLayer.js",
+"src/common/view/TouchLayer.js",
 "src/scene/achivementScene.js",
 "src/scene/chooseScene.js",
 "src/scene/freeSelectScene.js",
