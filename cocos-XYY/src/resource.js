@@ -61,7 +61,8 @@ var res = {
     eventLayer_json:"res/eventLayer.json",
     addCardAnimationLayer:"res/addCardAnimationLayer.json",
     ResultLayer:"res/ResultLayer.json",
-    NormalSkillAnimationLayer:"res/NormalSkillLayer.json"
+    NormalSkillAnimationLayer:"res/NormalSkillLayer.json",
+    FlowerParticle_plist:"res/drawable-hdpi/particle_flowers.plist"
     
 };
 
@@ -468,8 +469,12 @@ var resPng={
 		petTuFazhen_png:"res/drawable-hdpi/tuxifanzhen2.png",
 		actionLight_png:"res/drawable-hdpi/EXMT_guangquan.png",
 		touchGuangquan_png:"res/drawable-hdpi/guangqua.png"
+		
 }
 
+/**
+ * plist在前，对应的png在后
+ */
 var magicSrc=["res/drawable-hdpi/lei.plist",
               "res/drawable-hdpi/lei.png",
               "res/drawable-hdpi/huo.plist",
@@ -479,21 +484,10 @@ var magicSrc=["res/drawable-hdpi/lei.plist",
               "res/drawable-hdpi/tu.plist",
               "res/drawable-hdpi/tu.png",
               "res/drawable-hdpi/shui.plist",
-              "res/drawable-hdpi/shui.png"
+              "res/drawable-hdpi/shui.png",
+              "res/drawable-hdpi/jiaxue.plist",
+              "res/drawable-hdpi/jiaxue.png"
               ]
-/*var magicSrc={
-		Lei_plist:"res/drawable-hdpi/lei.plist",
-		lei_png:"res/drawable-hdpi/lei.png",
-		Huo_plist:"res/drawable-hdpi/huo.plist",
-		huo_png:"res/drawable-hdpi/huo.png",
-		Feng_plist:"res/drawable-hdpi/feng.plist",
-		feng_png:"res/drawable-hdpi/feng.png",
-		Tu_plist:"res/drawable-hdpi/tu.plist",
-		tu_png:"res/drawable-hdpi/tu.png",
-		Shui_plist:"res/drawable-hdpi/shui.plist",
-		shui_png:"res/drawable-hdpi/shui.png"
-}
-*/
 var g_json=[]
 for (var i in res) {
 	g_json.push(res[i]);

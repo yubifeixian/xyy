@@ -1,3 +1,24 @@
+var TreatNode=cc.Sprite.extend({
+	animation:null,
+	ctor:function(){
+		this._super();
+		this.initAnimation();
+	},
+	initAnimation:function(){
+		this.animation=new cc.Animation();
+		for(var i=1;i<16;i++){
+			var frameName="EXMT_T_jiaxue00"+fix(i, 2)+".png";
+			var spriteFrame=GameFrameCache.getCache(frameName);
+			this.animation.addSpriteFrame(spriteFrame);
+		}
+		this.animation.setDelayPerUnit(0.1);
+		this.animation.setRestoreOriginalFrame(true);
+	},
+	getAction:function(){
+		return cc.animate(this.animation);
+	}
+})
+
 var MagicNodeLei=cc.Sprite.extend({
 	animation:null,
 	ctor:function(){

@@ -1,6 +1,6 @@
 {
   "ID": "4f367c72-3829-4b3a-b128-54524d7e7e95",
-  "Version": "2.3.2.3",
+  "Version": "2.3.4",
   "Name": "IndexScene",
   "Content": {
     "Content": {
@@ -126,10 +126,10 @@
             },
             "HorizontalEdge": "BothEdge",
             "VerticalEdge": "BothEdge",
-            "LeftMargin": 182.91,
-            "RightMargin": 633.09,
-            "TopMargin": -8.2172,
-            "BottomMargin": 232.2172,
+            "LeftMargin": 182.88,
+            "RightMargin": 633.12,
+            "TopMargin": -8.192,
+            "BottomMargin": 232.192,
             "Tag": 164,
             "ActionTag": -1485556470,
             "Size": {
@@ -184,17 +184,17 @@
               "Y": 0.0322
             },
             "PreSize": {
-              "X": 0.0,
-              "Y": 0.0
+              "X": 0.3333,
+              "Y": 0.0406
             },
-            "LeftMargin": 625.8386,
-            "RightMargin": 16.1614,
+            "LeftMargin": 624.8386,
+            "RightMargin": 15.1614,
             "TopMargin": 606.3828,
             "BottomMargin": 7.6172,
             "Tag": 192,
             "ActionTag": 1858667711,
             "Size": {
-              "X": 318.0,
+              "X": 320.0,
               "Y": 26.0
             },
             "Name": "versionLabel",
@@ -267,10 +267,10 @@
             },
             "HorizontalEdge": "BothEdge",
             "VerticalEdge": "BothEdge",
-            "LeftMargin": 470.8609,
-            "RightMargin": 316.3391,
-            "TopMargin": -25.23,
-            "BottomMargin": 249.23,
+            "LeftMargin": 470.88,
+            "RightMargin": 316.3199,
+            "TopMargin": -25.216,
+            "BottomMargin": 249.216,
             "Tag": 346,
             "ActionTag": -1971237540,
             "Size": {
@@ -347,10 +347,10 @@
             },
             "HorizontalEdge": "BothEdge",
             "VerticalEdge": "BothEdge",
-            "LeftMargin": 616.7529,
-            "RightMargin": 151.2471,
-            "TopMargin": 220.0192,
-            "BottomMargin": 3.9809,
+            "LeftMargin": 616.8,
+            "RightMargin": 151.2,
+            "TopMargin": 220.032,
+            "BottomMargin": 3.968,
             "Tag": 431,
             "ActionTag": 79434845,
             "Size": {
@@ -424,8 +424,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 63.902,
-              "Y": 584.0353
+              "X": 63.936,
+              "Y": 584.064
             },
             "Scale": {
               "ScaleX": 0.6068,
@@ -447,10 +447,10 @@
             },
             "HorizontalEdge": "BothEdge",
             "VerticalEdge": "BothEdge",
-            "LeftMargin": -8.098,
-            "RightMargin": 824.098,
-            "TopMargin": -14.4354,
-            "BottomMargin": 513.6353,
+            "LeftMargin": -8.064,
+            "RightMargin": 824.064,
+            "TopMargin": -14.464,
+            "BottomMargin": 513.6639,
             "Tag": 408,
             "ActionTag": -458467155,
             "Size": {
@@ -527,10 +527,10 @@
             },
             "HorizontalEdge": "BothEdge",
             "VerticalEdge": "BothEdge",
-            "LeftMargin": 285.3419,
-            "RightMargin": 482.6581,
-            "TopMargin": 258.8314,
-            "BottomMargin": 29.1686,
+            "LeftMargin": 285.312,
+            "RightMargin": 482.688,
+            "TopMargin": 258.816,
+            "BottomMargin": 29.184,
             "Tag": 349,
             "ActionTag": 96246619,
             "Size": {
@@ -563,7 +563,7 @@
         "drawable-hdpi/startgame_clicked.png",
         "drawable-hdpi/startgame_unclicked.png"
       ],
-      "ctype": "GameProjectData"
+      "ctype": "GameFileData"
     }
   },
   "Type": "Scene"
