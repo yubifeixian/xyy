@@ -49,6 +49,8 @@ var HuoqilinMonster=BaseMonster.extend({
 			}else if(callBack!=null){
 				callBack();
 			}
+		}else{
+			callBack();
 		}
 	},
 	loseEffect:function(callBack){
@@ -66,17 +68,19 @@ var HuoqilinMonster=BaseMonster.extend({
 			}else if(callBack!=null){
 				callBack();
 			}
-		}
-		for(var i=0;i<tempHeartList.length;i++){
-			mainScene.addChild(new MagicLayer(tempHeartList[i].hadImageView,new MagicNodeHuo()));
-		}
-		useYingu(tempHeartList, tempHeartList[0], tempHeartList[0], tempHeartNumberList, true, baseEffectReduceHPEffect,function(){
-			skillCharactersTangxuejianZhuida(function(){
-				heartList=new Array();
-				if(callBack!=null){
-					callBack();
-				}
+			for(var i=0;i<tempHeartList.length;i++){
+				mainScene.addChild(new MagicLayer(tempHeartList[i].hadImageView,new MagicNodeHuo()));
+			}
+			useYingu(tempHeartList, tempHeartList[0], tempHeartList[0], tempHeartNumberList, true, baseEffectReduceHPEffect,function(){
+				skillCharactersTangxuejianZhuida(function(){
+					heartList=new Array();
+					if(callBack!=null){
+						callBack();
+					}
+				});
 			});
-		});
+		}else{
+			callBack();
+		}
 	}
 })
