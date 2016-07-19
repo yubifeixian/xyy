@@ -746,6 +746,7 @@ var AdvGameSceneLayer=cc.Layer.extend({
 		player2DefenseText.setString(player2.defense);
 		player3DefenseText.setString(player3.defense);
 		bossDefenseText.setString(boss.defense);
+		
 
 		if(player1.pet_FengMonster!=null){
 			player1Pet1Text.setString(player1.pet_FengMonster.name);

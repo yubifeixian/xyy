@@ -115,7 +115,7 @@ function initAdvGameValue(){
 		//jimushuiEffect(myControlPlayer,null);
 	});
 	//advAddHandCard([player1],player1,player1,59,[10],false,false);//天剑
-	//advAddHandCard([player2],player2,player2,28,[1],false,false);//魔剑
+	//advAddHandCard([boss],boss,boss,55,[1],false,false);//魔剑
 	
 
 	//boss.yinguList.push(boss.handCard[0]);

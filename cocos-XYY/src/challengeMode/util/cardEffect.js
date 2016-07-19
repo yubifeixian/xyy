@@ -1145,7 +1145,7 @@ function modaotianzhaEffect(player,armNumber,callBack){
 
 function mojianEffect(player,armNumber,callBack){
 	var tempArmNumber=armNumber!=null?armNumber:1;
-	advBaseEffectZhuangbeiArms(player,tempArmNumber, 0, 1, string_handCardNameMojian,callBack);
+	baseEffectZhuangbeiArms(player,tempArmNumber, 0, 1, string_handCardNameMojian,callBack);
 }
 
 // 装备区中魔剑典当效果

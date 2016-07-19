@@ -363,7 +363,9 @@ function advBaseEffectZhuangbeiArms(player,select, combat, extent,name,callBack)
 
 // 装备防具
 function baseEffectZhuangbeiDefenses(player,combat,extent, name,callBack) {
-	mainScene.addChild(new DefenseNode(player.playerDefenseText));
+	if(player.playerDefenseText!=null){
+		mainScene.addChild(new DefenseNode(player.playerDefenseText));
+	}
 	if (player.defense!=Text.nil) {
 		advRemove_Card_Into_DropDeck(player.defense);
 	}
@@ -861,13 +863,13 @@ function shiziyaoshuoAddCombatEffect(callBack){
 	}
 }
 
-//显示回合行动光圈
+// 显示回合行动光圈
 function showActionMark(){
 	actionMark=new ActionMarkNode();
 	actionMark.setPosition(nowPlayerTerm[nowPlayerNumber].hadImageView.getPosition());
 	mainScene.addChild(actionMark);
 }
-//移除回合行动光圈
+// 移除回合行动光圈
 function removeActionMark(){
 	actionMark.end();
 }
