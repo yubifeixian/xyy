@@ -16,16 +16,17 @@ var TouchLayer=cc.Layer.extend({
 				return true;
 			}
 		}, this);
-		var _particle;
-		this.schedule(function(){
+		var _particle=new cc.ParticleSystem(res.FlowerParticle_plist);
+		this.addChild(_particle);
+		/*this.schedule(function(){
 			if(_particle!=null){
 				_particle.removeFromParent();	
 			}
 			_particle=this.createParticle();
 			this.addChild(_particle);
-		}, 2);
+		}, 2);*/
 	},
-	createParticle:function(){
+	/*createParticle:function(){
 		if(cc.pool.hasObject(cc.ParticleSystem)){
 			return cc.pool.getFromPool(cc.ParticleSystem,res.FlowerParticle_plist);
 		}else{
@@ -33,5 +34,5 @@ var TouchLayer=cc.Layer.extend({
 			cc.pool.putInPool(_particle);
 			return _particle;
 		}
-	}
+	}*/
 })
