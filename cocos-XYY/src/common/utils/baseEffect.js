@@ -411,7 +411,6 @@ function baseEfectPerishPet(pet_Shuxing,selectPlayer) {
 // 驯化效果，交换宠物
 function baseEffectChangepets(player1, player2,
 		pet_Shuxing) {
-	cc.log(pet_Shuxing);
 	var tempPetName = null;
 	var tempMonster = null;
 	if (pet_Shuxing==Text.natureFeng) {

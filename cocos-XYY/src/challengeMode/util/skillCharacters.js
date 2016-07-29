@@ -221,6 +221,7 @@ function skillCharacters_ZhaolingerMengsheNvwa(callBack) {
  * @param callBack
  */
 function jieruchouHandle(skillUser,endUser,useSkillList,targetList,callBack){
+	cc.log("endPalyerName = "+endUser._name);
 	var nextUserIndex=0;
 	for(var i=0;i<useSkillList.length;i++){
 		if(useSkillList[i]._name==skillUser._name){
@@ -229,8 +230,6 @@ function jieruchouHandle(skillUser,endUser,useSkillList,targetList,callBack){
 			break;
 		}
 	}
-	
-	
 	mainScene.addChild(new skillAnimationLayer(skillUser.animation,function(){
 		myAudioPlayer(audioLinyueruJieruchou);
 		textAreaAddMessage(skillUser._name+"【嫉恶如仇】效果触发，敌方所有参战者HP-1", myText, listView);
@@ -252,8 +251,8 @@ function jieruchouHandle(skillUser,endUser,useSkillList,targetList,callBack){
 				if(skillUser._name==endUser._name){
 					if(callBack!=null){
 						callBack();
-						return;
 					}
+					return;
 				}
 				jieruchouHandle(useSkillList[nextUserIndex],endUser,useSkillList,targetList,callBack);
 			});

@@ -340,7 +340,7 @@ function npcEffectXunhua(monster,callBack){
 						
 					}));
 				}else{
-					textAreaAddMessage(Text.xunhuaError, myText, listView);
+					textAreaAddMessage(Text.xunhuaError1, myText, listView);
 					callBack();
 					buttonManager(order2Button, true, true);
 				}
@@ -393,7 +393,9 @@ function advNpcEffectXunhua(monster,callBack){
 
 function npcEffectJoin(monster,callBack){
 	if(nowPlayerTerm[nowPlayerNumber]._name==player1._name){
-		addDialog(mainScene, new selectPlayerDialogLayer(true,true,false,false,Text.choosePlayerDropAllCard,false,false,function(selectPlayer){
+		var showPlayer1=player1.handCard.length>0;
+		var showPlayer2=player2.handCard.length>0;
+		addDialog(mainScene, new selectPlayerDialogLayer(showPlayer1,showPlayer2,false,false,Text.choosePlayerDropAllCard,false,false,function(selectPlayer){
 			var cardNumber=selectPlayer.handCard.length;
 			for (var i=selectPlayer.handCard.length-1; i>=0;i--) {
 				remove_Card_Into_DropDeck(selectPlayer.handCard[i].name);
@@ -415,7 +417,10 @@ function npcEffectJoin(monster,callBack){
 
 function advNpcEffectJoin(monster,callBack){
 	if(nowPlayerTerm[nowPlayerNumber]._name==myControlPlayer._name){
-		addDialog(mainScene, new selectPlayerDialogLayer(true,true,true,false,Text.choosePlayerDropAllCard,false,false,function(selectPlayer){
+		var showPlayer1=player1.handCard.length>0;
+		var showPlayer2=player2.handCard.length>0;
+		var showPlayer3=player3.handCard.length>0;
+		addDialog(mainScene, new selectPlayerDialogLayer(showPlayer1,showPlayer2,showPlayer3,false,Text.choosePlayerDropAllCard,false,false,function(selectPlayer){
 			var cardNumber=selectPlayer.handCard.length;
 			for (var i=selectPlayer.handCard.length-1; i>=0;i--) {
 				advRemove_Card_Into_DropDeck(selectPlayer.handCard[i].name);

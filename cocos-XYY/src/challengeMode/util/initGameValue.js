@@ -191,7 +191,7 @@ function initGameValue(){
 	// 洗怪物牌堆
 	game_MonsterDeck = new Array();
 	game_MonsterDeck = initMonsterDeck();
-	//game_MonsterDeck[0]= 11;
+	//game_MonsterDeck[0]= 6;
 	// game_MonsterDeck[0]= -1;
 
 	/*
@@ -234,16 +234,16 @@ function initGameValue(){
 	// player1.defenseExtent=2;
 	// player2.hp=0;
 	 // player3.hp=1;
-	  //player4.hp=0;
-	//isDeath(player1,[player1], true,null,true);
+	  //player1.hp=0;
+	  //isDeath(player1,[player1], true,null,true);
 	// player2.handCard=new Array();
 	//player1.defense="五彩霞衣";
 	// player2.arms1="天蛇杖";
 	// player4.arms1="无尘剑";
 	// player4.defense="乾坤道袍";
 	// isDeath(player3, true);
-	// player3.hp=0;
-	// isDeath(player3, true);
+	 //player4.hp=0;
+	 //isDeath(player4, false);
 	// player4.hp=0;
 	// isDeath(player4, true);
 	// player1.pet_LeiMonster=new XiejianxianMonster();
@@ -264,7 +264,7 @@ function initGameValue(){
 	// player2.pet_ShuiMonster=new MonsterModel("水魔兽");
 	// player2.pet_Shui=player2.pet_ShuiMonster.name;
 	// player1.pet_TuMonster=new MonsterModel("天鬼皇");
-	// calculate_Pets(player1, new XiejianxianMonster());
+	 //calculate_Pets(player3, new XiejianxianMonster());
 	// calculate_Pets(player1, new JinchanguimuMonster());
 	// calculate_Pets(player2, pet_TuMonster);
 	// calculate_Pets(player3, pet_TuMonster);
