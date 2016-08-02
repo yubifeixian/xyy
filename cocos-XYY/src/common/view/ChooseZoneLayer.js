@@ -7,6 +7,13 @@ var ChooseZoneLayer=cc.Layer.extend({
 	result:false,
 	ctor:function(message,callBack){
 		this._super();
+		cc.eventManager.addListener({
+			swallowTouches: true,
+			event:cc.EventListener.TOUCH_ONE_BY_ONE,
+			onTouchBegan:function(touches,event){
+				return true;
+			}
+		}, this);
 		this._chooseZone=chooseZone.clone();
 		this.message=message;
 		this.callBack=callBack;
