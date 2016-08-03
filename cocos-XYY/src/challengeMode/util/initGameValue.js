@@ -192,7 +192,7 @@ function initGameValue(){
 	game_MonsterDeck = new Array();
 	game_MonsterDeck = initMonsterDeck();
 	//game_MonsterDeck[0]= 6;
-	// game_MonsterDeck[0]= -1;
+	 //game_MonsterDeck[0]= -1;
 
 	/*
 	 * game_MonsterDeck.push(game_MonsterDeck[0]);

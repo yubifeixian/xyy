@@ -55,32 +55,35 @@ var HuoqilinMonster=BaseMonster.extend({
 	},
 	loseEffect:function(callBack){
 		this._super();
-		var tempHeartList=[nowPlayerTerm[nowPlayerNumber]];
-		var tempHeartNumberList=[2];
-		if (fight_Trigger.length > 1) {
-			if (!isJinchanguimu(fight_Trigger[1],"火麒麟效果对金蟾鬼母无效")) {
+		var tempHeartList=new Array();
+		var tempHeartNumberList=new Array();
+		if(!skillCharacters_XuanxiaoNingbingfenyan(nowPlayerTerm[nowPlayerNumber])){
+			tempHeartList.push(nowPlayerTerm[nowPlayerNumber]);
+			tempHeartNumberList.push(2);
+		}
+		if (fight_Trigger.length == 1) {
+			textAreaAddMessage("无支援者", myText, listView);
+		} else if (fight_Trigger.length > 1) {
+			if (!isJinchanguimu(fight_Trigger[1],"火麒麟失败结算对金蟾鬼母无效")) {
 				if (fight_Trigger[1].hp > 0) {
-					tempHeartList.push(fight_Trigger[1]);
-					tempHeartNumberList.push(2);
-				}else if(callBack!=null){
+					if(!skillCharacters_XuanxiaoNingbingfenyan(fight_Trigger[1])){
+						tempHeartList.push(fight_Trigger[1]);
+						tempHeartNumberList.push(2);
+					}
+				}
+			}
+		}
+		for(var i=0;i<tempHeartList.length;i++){
+			mainScene.addChild(new MagicLayer(tempHeartList[i].hadImageView,new MagicNodeHuo()));
+		}
+		useYingu(tempHeartList, tempHeartList[0], tempHeartList[0], tempHeartNumberList, true, baseEffectReduceHPEffect, function(){
+			// 唐雪见【追打】效果
+			skillCharactersTangxuejianZhuida(function(){
+				heartList=new Array();
+				if(callBack!=null){
 					callBack();
 				}
-			}else if(callBack!=null){
-				callBack();
-			}
-			for(var i=0;i<tempHeartList.length;i++){
-				mainScene.addChild(new MagicLayer(tempHeartList[i].hadImageView,new MagicNodeHuo()));
-			}
-			useYingu(tempHeartList, tempHeartList[0], tempHeartList[0], tempHeartNumberList, true, baseEffectReduceHPEffect,function(){
-				skillCharactersTangxuejianZhuida(function(){
-					heartList=new Array();
-					if(callBack!=null){
-						callBack();
-					}
-				});
 			});
-		}else{
-			callBack();
-		}
+		});
 	}
 })
