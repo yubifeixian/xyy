@@ -6,8 +6,8 @@ var AdvHuayaoshui=AdvBaseMonster.extend({
 		this.combat = 0;
 		this.dodge = 1;
 		this.finalMark = 0;
-		this.openEffectText = Text.huayaoshuiEffectText;//翻出效果
-		this.winEffectText = Text.huayaoshuiEffect2Text;//混战效果
+		this.openEffectText = Text.huayaoshuiEffectText;// 翻出效果
+		this.winEffectText = Text.huayaoshuiEffect2Text;// 混战效果
 		this.loseEffectText = "";
 		this.petEffectText = "";
 		this.monsterPicSrc = resPng.huayaoshui_png;
@@ -23,14 +23,17 @@ var AdvHuayaoshui=AdvBaseMonster.extend({
 			var player3Shown=baseEffectCountPets(player3)>0?true:false;
 			addDialog(mainScene, new selectAdvPlayerDialogLayer(player1Shown,player2Shown, player3Shown, false,
 					Text.chooseHuayaoshuiPet.format(restCombat), canCancel, false,function(resultPlayer){
-				var selectPlayer=resultPlayer;
-				addDialog(mainScene, new selectPetsDialogLayer(Text.chooseHuayaoshuiPet.format(restCombat),selectPlayer,function(pet){
-					textAreaAddMessage(Text.perishPet.format(temp.name,selectPlayer._name,pet.name), myText, listView);
-					perishPet(pet.nature,selectPlayer);
-					restCombat-=pet.combat;
-					temp.chooseEffect(restCombat, callBack);
-				}));
-				
+				if(resultPlayer!=null){
+					var selectPlayer=resultPlayer;
+					addDialog(mainScene, new selectPetsDialogLayer(Text.chooseHuayaoshuiPet.format(restCombat),selectPlayer,function(pet){
+						textAreaAddMessage(Text.perishPet.format(temp.name,selectPlayer._name,pet.name), myText, listView);
+						perishPet(pet.nature,selectPlayer);
+						restCombat-=pet.combat;
+						temp.chooseEffect(restCombat, callBack);
+					}));
+				}else{
+					callBack();
+				}
 			}));
 		}else if(callBack!=null){
 			callBack();
