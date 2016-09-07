@@ -162,7 +162,7 @@ function advaiSkillXingxuan_Pengren() {
 }
 
 // AI 王蓬絮 【饕餮】
-function advAiSKillWangpengxu_Taotietie(callBack) {
+function advAiSKillWangpengxu_Taotie(callBack) {
 	var wangpengxuPlayer = nowPlayerTerm[nowPlayerNumber];
 	if (wangpengxuPlayer._name!=myControlPlayer._name
 			&& wangpengxuPlayer.hp > 0 && wangpengxuPlayer.hp <= 3
@@ -187,7 +187,7 @@ function advAiSKillWangpengxu_Taotietie(callBack) {
 
 // AI 王蓬絮 【合成饰品】
 // 由于本技能是在“使用完技牌之后”触发，因此无需callBack
-function advAiSkillWangpengxu_Hehcengshipinghiping() {
+function advAiSkillWangpengxu_Hehcengshiping() {
 	var usedHechengshiping = false;
 	var wangpengxuPlayer = nowPlayerTerm[nowPlayerNumber];
 	if (wangpengxuPlayer._name!=myControlPlayer._name
@@ -226,7 +226,7 @@ function advAiSkillWangpengxu_Hehcengshipinghiping() {
 
 
 // AI 韩菱纱 【劫富济贫】
-function advAiSkillHanlingsha_Jiefujipinin(callBack) {
+function advAiSkillHanlingsha_Jiefujipin(callBack) {
 	var hanlingshaPlayer=null;
 	for (var i=0;i<nowPlayerTerm.length;i++) {
 		if (nowPlayerTerm[i].hp > 0
@@ -248,7 +248,7 @@ function advAiSkillHanlingsha_Jiefujipinin(callBack) {
 
 // AI 韩菱纱【搜囊探宝】
 
-function advAiSkillHanlingsha_Sounangtanbaobao(callBack) {
+function advAiSkillHanlingsha_Sounangtanbao(callBack) {
 	var hanlingshaPlayer = nowPlayerTerm[nowPlayerNumber];
 	var useTongqianbiao = baseEffectCountequment(boss)>0?true:false;
 	var useToudao = boss.handCard.length > 0 ? true : false;
