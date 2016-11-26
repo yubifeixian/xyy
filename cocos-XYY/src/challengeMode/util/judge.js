@@ -194,10 +194,12 @@ function loveEffect(deathPlayer,callBack){
 }
 
 function digui(playerList,nowNumber,maxNumber,callBack){
-	nowNumber++;
 	if(nowNumber<maxNumber){
 		baseEffectReduceHPEffect(playerList[nowNumber],[playerList[nowNumber]], 1, false, function(){
-			digui(playerList, nowNumber, maxNumber,callBack);
+			baseEffectReduceHP(playerList[nowNumber],[playerList[nowNumber]], 1,false,function(){
+				nowNumber++;
+				digui(playerList, nowNumber, maxNumber,callBack);
+			},false);
 		},false);
 	}else if(callBack!=null){
 		callBack();

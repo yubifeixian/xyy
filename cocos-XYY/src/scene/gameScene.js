@@ -591,8 +591,9 @@ var GameLayer=cc.Layer.extend({
 					if (tempPlayer.handCard.length<= MAX) {
 						textAreaAddMessage("手牌弃置完毕", myText, listView);
 						buttonManager(order1Button, false, false);
-						buttonManager(order2Button, true, true);
+						//buttonManager(order2Button, true, true);
 						dropCarding = false;
+						autoNextStep();
 					}
 				}
 			}

@@ -4,7 +4,8 @@ function round_Start() {
 		textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"从横置状态中恢复", myText, listView);
 		nowPlayerTerm[nowPlayerNumber].takeOver=false;
 		nextStep=7;
-		buttonManager(order2Button, true, true);
+		autoNextStep();
+		//buttonManager(order2Button, true, true);
 		
 	}else{
 		buttonManager(order1Button, false, false);
@@ -13,7 +14,9 @@ function round_Start() {
 		skillCharacters_MozunXushidaifa();
 		// 龙葵/龙葵鬼 变身
 		longkui_Bianshen(function(){
-			buttonManager(order2Button, true, true);
+			// buttonManager(order2Button, true, true);
+			autoNextStep();
+			
 		});
 	}
 }
@@ -40,14 +43,14 @@ function roundEventHandle(result){
 				if (game_EventCardDeck.length == 0){
 					game_EventCardDeck = initEventCardDeck();
 				}
-				buttonManager(order2Button, true, true);
+				//buttonManager(order2Button, true, true);
+				autoNextStep();
 			});
 		});
 	}else{
-		textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"不翻事件牌", myText, listView,function(){
-			textAreaAddMessage("请选择“下一阶段”", myText, listView);
-			buttonManager(order2Button, true, true);
-		});
+		textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"不翻事件牌", myText, listView);
+		//buttonManager(order2Button, true, true);
+		autoNextStep();
 	}
 }
 
@@ -65,15 +68,18 @@ function roundSkillCard(){
 					baseAIUseSkillCard(0,nowPlayerTerm[nowPlayerNumber].handCard.length);
 				}else{
 					aiUseSkillAfterUsingSkillCard(function(){
-						textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"的技牌阶段结束", myText, listView);
-						buttonManager(order2Button, true, true);
+						textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"的技牌阶段结束", myText, listView,function(){
+							autoNextStep();
+						});
+						//buttonManager(order2Button, true, true);
 					});
 				}
 			});
 		}
 	}else{
 		nextStep=8;
-		buttonManager(order2Button, true, true);
+		autoNextStep();
+		//buttonManager(order2Button, true, true);
 	}
 }
 
@@ -99,7 +105,6 @@ function roundAttack1(){
 function roundAttactk1Handle(result){
 	jincantuoqiao = false;
 	fight_SecondMonster = null;
-	fight_FirstMonster = topMonsterCard(game_MonsterDeck[0]);
 	if(result){
 		attakedMoster=true;
 		var message="";
@@ -118,15 +123,15 @@ function roundAttactk1Handle(result){
 			if(game_MonsterDeck.length==0){
 				judgeWinorLose();
 			}else{
-				tempMonster=topMonsterCard(game_MonsterDeck[0]);
-				game_MonsterDeck.removeObject(game_MonsterDeck[0]);
-				//monsterLabel.loadTexture(fight_FirstMonster.monsterPicSrc);
+				fight_FirstMonster=topMonsterCard(game_MonsterDeck.shift());
+				// monsterLabel.loadTexture(fight_FirstMonster.monsterPicSrc);
 				turnMonsterCardLayer=new TurnMonsterCardLayer(fight_FirstMonster);
 				mainScene.addChild(turnMonsterCardLayer);
 				textAreaAddMessage("翻取怪物牌【"+fight_FirstMonster.name+"】弃置", myText, listView,function(){
 					nextStep=6;
-					textAreaAddMessage("请点击下一阶段", myText, listView);
-					buttonManager(order2Button, true, true);
+					//textAreaAddMessage("请点击下一阶段", myText, listView);
+					//buttonManager(order2Button, true, true);
+					autoNextStep();
 				});
 			}
 		});
@@ -303,7 +308,7 @@ function takeOverCardIsNPC(){
 					turnMonsterCardLayer.instead();
 					turnMonsterCardLayer=new TurnMonsterCardLayer(fight_FirstMonster);
 					mainScene.addChild(turnMonsterCardLayer);
-					//monsterLabel.loadTexture(fight_FirstMonster.monsterPicSrc);
+					// monsterLabel.loadTexture(fight_FirstMonster.monsterPicSrc);
 					textAreaAddMessage("翻取怪物牌:"+fight_FirstMonster.name, myText, listView, function(){
 						takeOverCardIsNPC();
 					});
@@ -402,7 +407,7 @@ function hunzhanHandle(result){
 		turnMonsterCardLayer.instead();
 		turnMonsterCardLayer=new TurnMonsterCardLayer(fight_SecondMonster);
 		mainScene.addChild(turnMonsterCardLayer);
-		//monsterLabel.loadTexture(fight_SecondMonster.monsterPicSrc);
+		// monsterLabel.loadTexture(fight_SecondMonster.monsterPicSrc);
 		tempMonster = fight_SecondMonster;
 		if (fight_SecondMonster.dodge == 0) {
 			for (var i=0;i<nowPlayerTerm[nowPlayerNumber].friendList.length;i++) {
@@ -451,7 +456,8 @@ function roundAttack2(){
 	}else{
 		// 怪物牌堆已经为空，不再混战，直接进入打怪结算
 		textAreaAddMessage("请选择要用的战牌或进入下一阶段", myText, listView);
-		buttonManager(order2Button, true, true);
+		//buttonManager(order2Button, true, true);
+		autoNextStep();
 	}
 }
 
@@ -483,14 +489,16 @@ function roundAttack3(){
 									calculate_Pets(nowPlayerTerm[nowPlayerNumber],fight_SecondMonster,function(){
 										// 林月如【嫉恶如仇】技能
 										skillCharacters_LinyueruJieruchou(fight_Monster, fight_Trigger);
-										buttonManager(order2Button, true, true);
+										//buttonManager(order2Button, true, true);
+										autoNextStep();
 									});
 								});
 							}else{
 								// 触发者因为第二只怪物的胜利结算而阵亡，则打怪结束
 								// 林月如【嫉恶如仇】技能
 								skillCharacters_LinyueruJieruchou(fight_Monster, fight_Trigger);
-								buttonManager(order2Button, true, true);
+								//buttonManager(order2Button, true, true);
+								autoNextStep();
 							}
 						});
 					}else{
@@ -498,18 +506,21 @@ function roundAttack3(){
 						calculate_Pets(nowPlayerTerm[nowPlayerNumber], fight_FirstMonster,function(){
 							// 林月如【嫉恶如仇】技能
 							skillCharacters_LinyueruJieruchou(fight_Monster, fight_Trigger);
-							buttonManager(order2Button, true, true);
+							//buttonManager(order2Button, true, true);
+							autoNextStep();
 						});
 					}
 				}else{
 					// 触发者阵亡，直接结束后面的结算
 					// 林月如【嫉恶如仇】技能
 					skillCharacters_LinyueruJieruchou(fight_Monster, fight_Trigger);
-					buttonManager(order2Button, true, true);
+					//buttonManager(order2Button, true, true);
+					autoNextStep();
 				}
 			});
 		},function(){
-			buttonManager(order2Button, true, true);
+			autoNextStep();
+			//buttonManager(order2Button, true, true);
 		});
 	}else{
 		textAreaAddMessage("打怪失败", myText, listView);
@@ -521,20 +532,23 @@ function roundAttack3(){
 					fight_SecondMonster.loseEffect(function(){
 						skillCharacters_LinyueruJieruchou(fight_Trigger, fight_Monster,function(){
 							skillCharacters_WenhuiManheng(function(){
-								buttonManager(order2Button, true, true);
+								//buttonManager(order2Button, true, true);
+								autoNextStep();
 							});
 						});
 					});
 				}else{
 					skillCharacters_LinyueruJieruchou(fight_Trigger, fight_Monster,function(){
 						skillCharacters_WenhuiManheng(function(){
-							buttonManager(order2Button, true, true);
+							//buttonManager(order2Button, true, true);
+							autoNextStep();
 						});
 					});
 				}
 			});
 		},function(){
-			buttonManager(order2Button, true, true);
+			autoNextStep();
+			//buttonManager(order2Button, true, true);
 		});
 		
 	}
@@ -579,14 +593,16 @@ function roundAttackEnd(){
 				skillCharacters_YuntianheHouyisheriongEnd();
 				// 龙幽sp【妖枪】效果结束
 				skillCharacters_YaoqiangEnd();
-				// 酒剑仙【醉仙望月步】触发
+				// 姜世离【牺牲】死亡退场
 				skillCharacters_JiangshiliXishenHandle();
 				textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"的打怪阶段结束", myText, listView);
+				// 酒剑仙【醉仙望月步】触发
 				skillCharacters_JiujianxianZuixianwangyubu();
-				buttonManager(order2Button, true, true);
 				if(nowPlayerTerm[nowPlayerNumber].hp<=0){
 					nextStep=8;
 				}
+				//autoNextStep();
+				buttonManager(order2Button, true, true);
 			});
 		});
 }
@@ -615,7 +631,8 @@ function roundAddHandCard(){
 				textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"由于【醉仙望月步】效果，多补1张牌", myText, listView);
 			}
 			addHandCard([nowPlayerTerm[nowPlayerNumber]],nowPlayerTerm[nowPlayerNumber],nowPlayerTerm[nowPlayerNumber],null,[addCardNumber],true,true);
-			buttonManager(order2Button, true, true);
+			autoNextStep();
+			//buttonManager(order2Button, true, true);
 		});
 	}
 }
@@ -656,15 +673,16 @@ function roundDropCard(){
 							nowPlayerTerm[nowPlayerNumber].handCard.removeObject(tempCard);
 							tempCard.release();
 						}
-						buttonManager(order2Button, true, true);
+						//buttonManager(order2Button, true, true);
+						autoNextStep();
 					}
 				} else {
 					if (nowPlayerNumber == 0) {
 						buttonManager(order1Button, true, true);
-						// buttonManager(order2Button, true, true);
 					}
 					textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"不用弃牌", myText, listView);
-					buttonManager(order2Button, true, true);
+					autoNextStep();
+					//buttonManager(order2Button, true, true);
 				}
 			});
 		});
@@ -721,12 +739,13 @@ function roundEnding(){
 	laShouCuiHuaList=new Array();
 	// 回合结束，判断是否游戏结束
 	if (!judgeWinorLose()) {
-		//nowPlayerTerm[nowPlayerNumber].hadImageView.setOpacity(150);
+		// nowPlayerTerm[nowPlayerNumber].hadImageView.setOpacity(150);
 		removeActionMark();
 		textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"的回合结束", myText, listView);
 		// 魔尊【崩坏】技能
 		skillCharacters_MozunBenghuai();
-		buttonManager(order2Button, true, true);
+		autoNextStep();
+		//buttonManager(order2Button, true, true);
 	}
 }
 
@@ -780,6 +799,22 @@ function sendRoundMessageManager(){
 			nextStep=-1;
 		}
 	}
+}
+
+/**
+ * 自动进入下一阶段
+ */
+
+function autoNextStep(){
+	order2Button.runAction(cc.sequence(cc.delayTime(1),cc.callFunc(function(){
+		for(var i=0;i<player1.handCard.length;i++){
+			player1.handCard[i].clicked=false;
+			player1.handCard[i].setOpacity(200);
+		}
+		buttonManager(order2Button, false, false);
+		nextStep++;
+		sendRoundMessageManager();
+	})));
 }
 
 

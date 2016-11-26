@@ -87,11 +87,11 @@ var FreeSelectLayer=cc.Layer.extend({
 		player4=new Player();
 		this.playerNumberList.sort(function(){ return 0.5 - Math.random() }) ;
 		characterCardManager(player2,this.playerNumberList[0]);
-		// characterCardManager(player2,27);
+		// characterCardManager(player2,2);
 		characterCardManager(player3,this.playerNumberList[6]);
-		//characterCardManager(player3,19);
+		//characterCardManager(player3,1);
 		characterCardManager(player4,this.playerNumberList[12]);
-		// characterCardManager(player4,10);
+		//characterCardManager(player4,3);
 	}
 });
 

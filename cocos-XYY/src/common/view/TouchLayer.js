@@ -16,8 +16,8 @@ var TouchLayer=cc.Layer.extend({
 				return true;
 			}
 		}, this);
-		var _particle=new cc.ParticleSystem(res.FlowerParticle_plist);
-		this.addChild(_particle);
+		//var _particle=new cc.ParticleSystem(res.FlowerParticle_plist);
+		//this.addChild(_particle);
 		/*this.schedule(function(){
 			if(_particle!=null){
 				_particle.removeFromParent();	

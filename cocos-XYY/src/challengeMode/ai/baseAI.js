@@ -183,7 +183,8 @@ function baseAIUseSKillCardHelper(used,nowPlayer,nowIndex){
 			}))); 
 		}else{
 			textAreaAddMessage(nowPlayer._name+"的技牌阶段结束", myText, listView);
-			buttonManager(order2Button, true, true);
+			autoNextStep();
+			//buttonManager(order2Button, true, true);
 		}
 	}else{
 		nowIndex++;
@@ -195,7 +196,8 @@ function baseAIUseSKillCardHelper(used,nowPlayer,nowIndex){
 		}else{
 			aiUseSkillAfterUsingSkillCard(function(){
 				textAreaAddMessage(nowPlayer._name+"的技牌阶段结束", myText, listView);
-				buttonManager(order2Button, true, true);
+				autoNextStep();
+				//buttonManager(order2Button, true, true);
 			});
 		}
 	}
