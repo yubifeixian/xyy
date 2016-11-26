@@ -673,8 +673,8 @@ function roundDropCard(){
 							nowPlayerTerm[nowPlayerNumber].handCard.removeObject(tempCard);
 							tempCard.release();
 						}
-						//buttonManager(order2Button, true, true);
 						autoNextStep();
+						//buttonManager(order2Button, true, true);
 					}
 				} else {
 					if (nowPlayerNumber == 0) {
