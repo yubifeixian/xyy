@@ -108,10 +108,10 @@ function advDropDiejingHandle(deathPlayer,haveDiejingPlayer,callBack){
 	}
 }
 
-//startPlayer:濒死的玩家
-//nextPlayer:询问是否蝶精的玩家
-//result=1:用了蝶精 2:有但是没用蝶精 
-//3:没有蝶精
+// startPlayer:濒死的玩家
+// nextPlayer:询问是否蝶精的玩家
+// result=1:用了蝶精 2:有但是没用蝶精
+// 3:没有蝶精
 function advDiejingHandle(startPlayer,nextPlayer,result,callBack){
 	if(startPlayer._name!=boss._name){
 		switch (result) {
@@ -181,10 +181,12 @@ function advLoveEffect(deathPlayer,callBack){
 }
 
 function advDigui(playerList,nowNumber,maxNumber,callBack){
-	nowNumber++;
 	if(nowNumber<maxNumber){
 		advBaseEffectReduceHPEffect(playerList[nowNumber], 1, false, function(){
-			advDigui(playerList, nowNumber, maxNumber,callBack);
+			advBaseEffectReduceHP(playerList[nowNumber], 1,false,function(){
+				nowNumber++;
+				advDigui(playerList, nowNumber, maxNumber,callBack);
+			})
 		},false);
 	}else if(callBack!=null){
 		callBack();
@@ -295,8 +297,7 @@ function advHandleDeath(deathPlayer,callBack){
 						deathPlayer.hadImageView.loadTexture(deathPlayer.playerDeathPicSrc);
 					}
 					/*
-					 * if (deathPlayer._name==nameMoyi){ suoHunList=new
-					 * Array(); }
+					 * if (deathPlayer._name==nameMoyi){ suoHunList=new Array(); }
 					 */
 					advUpdate_PetsEffect(deathPlayer.pet_FengMonster, deathPlayer);
 					deathPlayer.pet_FengMonster = null;
@@ -430,8 +431,8 @@ function advAskTianxiangxumingluHandle(deathPlayer,askPlayer,callBack){
 	}
 }
 
-//startPlayer:死亡求灵葫仙丹的玩家
-//usedPlayer:当前需要检测灵狐的玩家
+// startPlayer:死亡求灵葫仙丹的玩家
+// usedPlayer:当前需要检测灵狐的玩家
 function advUseLinghuxiandan(startPlayer,usedPlayer,callBack){
 	advSkillCharacters_XingxuanPengrenWhenDeath(startPlayer,usedPlayer,function(){
 		var cardLinghuxiandan=null;
@@ -481,9 +482,9 @@ function advUseLinghuxiandan(startPlayer,usedPlayer,callBack){
 	},callBack);
 }
 
-//hasLinghuxiandan=null：有灵狐且用了
-//hasLinghuxiandan=1：有灵狐但没用
-//hasLinghuxiandan=2：
+// hasLinghuxiandan=null：有灵狐且用了
+// hasLinghuxiandan=1：有灵狐但没用
+// hasLinghuxiandan=2：
 function advLinghuxiandanHandle(startPlayer,usedPlayer,hasLinghuxiandan,callBack){
 	if(hasLinghuxiandan==null){
 		if(!game_Bingxingjue){
@@ -678,7 +679,7 @@ function advBaofa_Tayunxue(player,callBack,callBack2,canUseTayunxue){
 }
 
 
-//判断该角色是否命中
+// 判断该角色是否命中
 function advAttactIsMiss(player,monster) {
 	var tempPlayer = nowPlayerTerm[nowPlayerNumber];
 	if (tempPlayer.skillNameList.containsObject(skillnameYuexingzhishu)
@@ -692,7 +693,7 @@ function advAttactIsMiss(player,monster) {
 }
 
 
-//决定哪方出战牌
+// 决定哪方出战牌
 function advJudgeWhoUseFightCard(callBack) {
 	// 魔主翻牌
 	// cc.log("魔主要翻牌了");
@@ -709,8 +710,8 @@ function advJudgeWhoUseFightCard(callBack) {
 	});
 }
 
-//callBack1:危机牌本身的效果
-//callBack2:跳过危机牌效果之后应该做的操作
+// callBack1:危机牌本身的效果
+// callBack2:跳过危机牌效果之后应该做的操作
 function askHuanmeihuazhou(player,callBack1,callBack2){
 	var cardHuanmeihuazhou=null;
 	for(var i=0;i<player.handCard.length;i++){
@@ -753,8 +754,8 @@ function askHuanmeihuazhou(player,callBack1,callBack2){
 		}
 	}
 }
-//callBack1:危机牌本身的效果
-//callBack2:跳过危机牌效果之后应该做的操作
+// callBack1:危机牌本身的效果
+// callBack2:跳过危机牌效果之后应该做的操作
 function askHuanmeihuazhouHandle(cardHuanmeihuazhou,player, callBack1,callBack2){
 	if(!game_Bingxingjue){
 		textAreaAddMessage(player._name+"使用【幻魅画轴】效果，使本次危机牌效果无效", myText, listView);
