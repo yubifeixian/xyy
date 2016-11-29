@@ -5,7 +5,7 @@ function round_Start() {
 		nowPlayerTerm[nowPlayerNumber].takeOver=false;
 		nextStep=7;
 		autoNextStep();
-		//buttonManager(order2Button, true, true);
+		// buttonManager(order2Button, true, true);
 		
 	}else{
 		buttonManager(order1Button, false, false);
@@ -43,13 +43,13 @@ function roundEventHandle(result){
 				if (game_EventCardDeck.length == 0){
 					game_EventCardDeck = initEventCardDeck();
 				}
-				//buttonManager(order2Button, true, true);
+				// buttonManager(order2Button, true, true);
 				autoNextStep();
 			});
 		});
 	}else{
 		textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"不翻事件牌", myText, listView);
-		//buttonManager(order2Button, true, true);
+		// buttonManager(order2Button, true, true);
 		autoNextStep();
 	}
 }
@@ -71,7 +71,7 @@ function roundSkillCard(){
 						textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"的技牌阶段结束", myText, listView,function(){
 							autoNextStep();
 						});
-						//buttonManager(order2Button, true, true);
+						// buttonManager(order2Button, true, true);
 					});
 				}
 			});
@@ -79,7 +79,7 @@ function roundSkillCard(){
 	}else{
 		nextStep=8;
 		autoNextStep();
-		//buttonManager(order2Button, true, true);
+		// buttonManager(order2Button, true, true);
 	}
 }
 
@@ -129,8 +129,8 @@ function roundAttactk1Handle(result){
 				mainScene.addChild(turnMonsterCardLayer);
 				textAreaAddMessage("翻取怪物牌【"+fight_FirstMonster.name+"】弃置", myText, listView,function(){
 					nextStep=6;
-					//textAreaAddMessage("请点击下一阶段", myText, listView);
-					//buttonManager(order2Button, true, true);
+					// textAreaAddMessage("请点击下一阶段", myText, listView);
+					// buttonManager(order2Button, true, true);
 					autoNextStep();
 				});
 			}
@@ -456,7 +456,7 @@ function roundAttack2(){
 	}else{
 		// 怪物牌堆已经为空，不再混战，直接进入打怪结算
 		textAreaAddMessage("请选择要用的战牌或进入下一阶段", myText, listView);
-		//buttonManager(order2Button, true, true);
+		// buttonManager(order2Button, true, true);
 		autoNextStep();
 	}
 }
@@ -489,7 +489,8 @@ function roundAttack3(){
 									calculate_Pets(nowPlayerTerm[nowPlayerNumber],fight_SecondMonster,function(){
 										// 林月如【嫉恶如仇】技能
 										skillCharacters_LinyueruJieruchou(fight_Monster, fight_Trigger);
-										//buttonManager(order2Button, true, true);
+										// buttonManager(order2Button, true,
+										// true);
 										autoNextStep();
 									});
 								});
@@ -497,7 +498,7 @@ function roundAttack3(){
 								// 触发者因为第二只怪物的胜利结算而阵亡，则打怪结束
 								// 林月如【嫉恶如仇】技能
 								skillCharacters_LinyueruJieruchou(fight_Monster, fight_Trigger);
-								//buttonManager(order2Button, true, true);
+								// buttonManager(order2Button, true, true);
 								autoNextStep();
 							}
 						});
@@ -506,7 +507,7 @@ function roundAttack3(){
 						calculate_Pets(nowPlayerTerm[nowPlayerNumber], fight_FirstMonster,function(){
 							// 林月如【嫉恶如仇】技能
 							skillCharacters_LinyueruJieruchou(fight_Monster, fight_Trigger);
-							//buttonManager(order2Button, true, true);
+							// buttonManager(order2Button, true, true);
 							autoNextStep();
 						});
 					}
@@ -514,13 +515,13 @@ function roundAttack3(){
 					// 触发者阵亡，直接结束后面的结算
 					// 林月如【嫉恶如仇】技能
 					skillCharacters_LinyueruJieruchou(fight_Monster, fight_Trigger);
-					//buttonManager(order2Button, true, true);
+					// buttonManager(order2Button, true, true);
 					autoNextStep();
 				}
 			});
 		},function(){
 			autoNextStep();
-			//buttonManager(order2Button, true, true);
+			// buttonManager(order2Button, true, true);
 		});
 	}else{
 		textAreaAddMessage("打怪失败", myText, listView);
@@ -532,7 +533,7 @@ function roundAttack3(){
 					fight_SecondMonster.loseEffect(function(){
 						skillCharacters_LinyueruJieruchou(fight_Trigger, fight_Monster,function(){
 							skillCharacters_WenhuiManheng(function(){
-								//buttonManager(order2Button, true, true);
+								// buttonManager(order2Button, true, true);
 								autoNextStep();
 							});
 						});
@@ -540,7 +541,7 @@ function roundAttack3(){
 				}else{
 					skillCharacters_LinyueruJieruchou(fight_Trigger, fight_Monster,function(){
 						skillCharacters_WenhuiManheng(function(){
-							//buttonManager(order2Button, true, true);
+							// buttonManager(order2Button, true, true);
 							autoNextStep();
 						});
 					});
@@ -548,7 +549,7 @@ function roundAttack3(){
 			});
 		},function(){
 			autoNextStep();
-			//buttonManager(order2Button, true, true);
+			// buttonManager(order2Button, true, true);
 		});
 		
 	}
@@ -601,7 +602,7 @@ function roundAttackEnd(){
 				if(nowPlayerTerm[nowPlayerNumber].hp<=0){
 					nextStep=8;
 				}
-				//autoNextStep();
+				// autoNextStep();
 				buttonManager(order2Button, true, true);
 			});
 		});
@@ -632,7 +633,7 @@ function roundAddHandCard(){
 			}
 			addHandCard([nowPlayerTerm[nowPlayerNumber]],nowPlayerTerm[nowPlayerNumber],nowPlayerTerm[nowPlayerNumber],null,[addCardNumber],true,true);
 			autoNextStep();
-			//buttonManager(order2Button, true, true);
+			// buttonManager(order2Button, true, true);
 		});
 	}
 }
@@ -674,7 +675,7 @@ function roundDropCard(){
 							tempCard.release();
 						}
 						autoNextStep();
-						//buttonManager(order2Button, true, true);
+						// buttonManager(order2Button, true, true);
 					}
 				} else {
 					if (nowPlayerNumber == 0) {
@@ -682,7 +683,7 @@ function roundDropCard(){
 					}
 					textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"不用弃牌", myText, listView);
 					autoNextStep();
-					//buttonManager(order2Button, true, true);
+					// buttonManager(order2Button, true, true);
 				}
 			});
 		});
@@ -745,7 +746,7 @@ function roundEnding(){
 		// 魔尊【崩坏】技能
 		skillCharacters_MozunBenghuai();
 		autoNextStep();
-		//buttonManager(order2Button, true, true);
+		// buttonManager(order2Button, true, true);
 	}
 }
 
@@ -806,15 +807,19 @@ function sendRoundMessageManager(){
  */
 
 function autoNextStep(){
-	order2Button.runAction(cc.sequence(cc.delayTime(1),cc.callFunc(function(){
-		for(var i=0;i<player1.handCard.length;i++){
-			player1.handCard[i].clicked=false;
-			player1.handCard[i].setOpacity(200);
-		}
-		buttonManager(order2Button, false, false);
-		nextStep++;
-		sendRoundMessageManager();
-	})));
+	if(autoNextStepSwitch=="true"){
+		order2Button.runAction(cc.sequence(cc.delayTime(1),cc.callFunc(function(){
+			for(var i=0;i<player1.handCard.length;i++){
+				player1.handCard[i].clicked=false;
+				player1.handCard[i].setOpacity(200);
+			}
+			buttonManager(order2Button, false, false);
+			nextStep++;
+			sendRoundMessageManager();
+		})));
+	}else{
+		buttonManager(order2Button, true, true);
+	}
 }
 
 

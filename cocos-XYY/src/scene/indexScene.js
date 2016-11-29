@@ -1,4 +1,5 @@
 musicSwitch=cc.sys.localStorage.getItem("musicSwitch")||"true";
+autoNextStepSwitch=cc.sys.localStorage.getItem("autoNextStepSwitch")||"false";
 showFirstDialog=true;
 isLongClick=false;
 spSwitch=cc.sys.localStorage.getItem("spSwtich");
@@ -16,7 +17,7 @@ var IndexLayer=cc.Layer.extend({
 	adventureButton:null,
 	exitButton:null,
 	spButton:null,
-	musicButton:null,
+	settingBtn:null,
 	ctor:function(){
 		this._super();
 		this.init();
@@ -149,12 +150,9 @@ var IndexLayer=cc.Layer.extend({
 			cc.sys.localStorage.setItem("spSwtich",spSwitch);
 			this.spButtonManager();
 		}.bind(this));
-		this.musicButton=ccui.helper.seekWidgetByName(indexRoot.node, "musicButton");
-		this.musicButtonManager();
-		this.musicButton.addClickEventListener(function(){
-			musicSwitch=(musicSwitch=="true")?"false":"true";
-			cc.sys.localStorage.setItem("musicSwitch",musicSwitch);
-			this.musicButtonManager();
+		this.settingBtn=ccui.helper.seekWidgetByName(indexRoot.node, "settingBtn");
+		this.settingBtn.addClickEventListener(function(){
+			temp.addChild(new SettingLayer());
 		}.bind(this));
 	},
 	spButtonManager:function(){
@@ -162,13 +160,6 @@ var IndexLayer=cc.Layer.extend({
 			this.spButton.loadTexture("res/drawable-hdpi/spbutton_clicked.png");
 		}else{
 			this.spButton.loadTexture("res/drawable-hdpi/spbutton_unclicked.png");
-		}
-	},
-	musicButtonManager:function(){
-		if(musicSwitch=="true"){
-			this.musicButton.loadTexture("res/drawable-hdpi/musicButton_on.png");
-		}else{
-			this.musicButton.loadTexture("res/drawable-hdpi/musicButton_off.png");
 		}
 	}
 });

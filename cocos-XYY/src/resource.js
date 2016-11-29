@@ -62,7 +62,8 @@ var res = {
     addCardAnimationLayer:"res/addCardAnimationLayer.json",
     ResultLayer:"res/ResultLayer.json",
     NormalSkillAnimationLayer:"res/NormalSkillLayer.json",
-    FlowerParticle_plist:"res/drawable-hdpi/particle_flowers.plist"
+    FlowerParticle_plist:"res/drawable-hdpi/particle_flowers.plist",
+    SettingLayer_json:"res/SettingLayer.json"
     
 };
 

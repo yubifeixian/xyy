@@ -371,7 +371,7 @@ var Text={
 		placeShushan:"蜀山",
 		placeMojie:"魔界",
 		
-		
+		setting_autoNextStep:"开启\"便捷操作\"后，在AI行动时可在部分时机自动进入下一阶段,而无须玩家手动点击(“冒险模式”下暂时无效)"
 		
 		
 		

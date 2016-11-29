@@ -201,7 +201,7 @@ function avdTakeOverCardIsNPC(){
 						game_MonsterDropDeck.push(fight_FirstMonster.uid);
 						advAttackMonsterHandle();
 					}else{
-						npc_Effect(fight_FirstMonster,result,function(){
+						advNpc_Effect(fight_FirstMonster,result,function(){
 							nextStep=5;
 							advRoundAttackEnd();
 						});

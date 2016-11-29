@@ -411,56 +411,6 @@
             "ctype": "ImageViewObjectData"
           },
           {
-            "FileData": {
-              "Type": "Normal",
-              "Path": "drawable-hdpi/musicButton_on.png",
-              "Plist": ""
-            },
-            "Scale9Width": 78,
-            "Scale9Height": 73,
-            "TouchEnable": true,
-            "AnchorPoint": {
-              "ScaleX": 0.5,
-              "ScaleY": 0.5
-            },
-            "Position": {
-              "X": 63.936,
-              "Y": 584.064
-            },
-            "Scale": {
-              "ScaleX": 0.6068,
-              "ScaleY": 0.6068
-            },
-            "CColor": {},
-            "IconVisible": false,
-            "PrePosition": {
-              "X": 0.0666,
-              "Y": 0.9126
-            },
-            "PercentWidthEnable": true,
-            "PercentHeightEnable": true,
-            "PercentWidthEnabled": true,
-            "PercentHeightEnabled": true,
-            "PreSize": {
-              "X": 0.15,
-              "Y": 0.22
-            },
-            "HorizontalEdge": "BothEdge",
-            "VerticalEdge": "BothEdge",
-            "LeftMargin": -8.064,
-            "RightMargin": 824.064,
-            "TopMargin": -14.464,
-            "BottomMargin": 513.6639,
-            "Tag": 408,
-            "ActionTag": -458467155,
-            "Size": {
-              "X": 144.0,
-              "Y": 140.8
-            },
-            "Name": "musicButton",
-            "ctype": "ImageViewObjectData"
-          },
-          {
             "FontSize": 14,
             "ButtonText": "",
             "TextColor": {
@@ -539,6 +489,58 @@
             },
             "Name": "fresSelectButton",
             "ctype": "ButtonObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/settingBtn.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 30,
+            "Scale9OriginY": 30,
+            "Scale9Width": 33,
+            "Scale9Height": 32,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 900.1918,
+              "Y": 582.3366
+            },
+            "Scale": {
+              "ScaleX": 1.409,
+              "ScaleY": 1.409
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.9377,
+              "Y": 0.9099
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.0969,
+              "Y": 0.1438
+            },
+            "LeftMargin": 853.6797,
+            "RightMargin": 13.2962,
+            "TopMargin": 11.6474,
+            "BottomMargin": 536.3206,
+            "Tag": 249,
+            "ActionTag": -919953390,
+            "Size": {
+              "X": 93.024,
+              "Y": 92.032
+            },
+            "Name": "settingBtn",
+            "ctype": "ImageViewObjectData"
           }
         ],
         "Size": {
@@ -559,7 +561,7 @@
         "drawable-hdpi/adventuremode_unclicked.png",
         "drawable-hdpi/fangzhen.ttf",
         "drawable-hdpi/homeBg.png",
-        "drawable-hdpi/musicButton_on.png",
+        "drawable-hdpi/settingBtn.png",
         "drawable-hdpi/startgame_clicked.png",
         "drawable-hdpi/startgame_unclicked.png"
       ],
