@@ -221,7 +221,7 @@ function initGameValue(){
 	// addHandCard([player4],player4,player4,18,[1],false,false);//隐蛊
 	 //addHandCard([player1],player1,player1,47,[1],false,false);//无尘剑
 	 //addHandCard([player1],player1,player1,52,[1],false,false);//无尘剑
-	// addHandCard([player3],player3,player3,50,[1],false,false);//天蛇杖
+	//addHandCard([player1],player1,player1,50,[1],false,false);//天蛇杖
 
 	/*
 	 * for(var i=0;i<2;i++){ var leiling = new createHandCardImageView("雷灵");
@@ -258,17 +258,9 @@ function initGameValue(){
 	 * player3.pet_Lei=player3.pet_LeiMonster.name; player3.pet_HuoMonster=new
 	 * MonsterModel("肥肥"); player3.pet_Huo=player3.pet_HuoMonster.name;
 	 */
-	// player1.pet_FengMonster=new MonsterModel("句芒");
-	// player1.pet_Feng=player1.pet_FengMonster.name;
-	// player1.pet_HuoMonster=new MonsterModel("肥肥");
-	// player1.pet_Huo=player1.pet_HuoMonster.name;
-	// player2.pet_ShuiMonster=new MonsterModel("水魔兽");
-	// player2.pet_Shui=player2.pet_ShuiMonster.name;
-	// player1.pet_TuMonster=new MonsterModel("天鬼皇");
 	 //calculate_Pets(player3, new XiejianxianMonster());
-	// calculate_Pets(player1, new JinchanguimuMonster());
-	// calculate_Pets(player2, pet_TuMonster);
-	// calculate_Pets(player3, pet_TuMonster);
+	 //calculate_Pets(player3, new JinchanguimuMonster());
+	 //calculate_Pets(player3, new YelingMonster());
 	// calculate_Pets(player4, pet_TuMonster);
 	// player1.pet_Tu=player1.pet_TuMonster.name;
 	// pet_Effect(player1.pet_TuMonster, player1);
