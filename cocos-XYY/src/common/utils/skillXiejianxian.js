@@ -14,7 +14,7 @@ function skillXiejianxian_HasXiejianxian(player){
 
 function skillXiejianxianXiejianxianPetEffect(player) {
 	textAreaAddMessage(Text.xiejianxianPetEffect.format(player._name), myText, listView);
-	if (player.arms1!=Text.nil) {
+	if (player.arms1!=Text.nil&&player.arms1.indexOf("(扣置)")<0) {
 		player.xiejianxian_Arms1Name = player.arms1;
 		player.xiejianxian_Arms1Combat = player.arms1Combat;
 		player.xiejianxian_Arms1Extent = player.arms1Extent;
@@ -24,7 +24,7 @@ function skillXiejianxianXiejianxianPetEffect(player) {
 		player.tempZhuangbeiSkillCombat+=player._name==nameLinyueru?1:0;
 		player.tempZhuangbeiSkillExtent += player._name==nameJiujianxian?1:0;
 	}
-	if (player.arms2!=Text.nil) {
+	if (player.arms2!=Text.nil&&player.arms2.indexOf("(扣置)")<0) {
 		player.xiejianxian_Arms2Name = player.arms2;
 		player.xiejianxian_Arms2Combat = player.arms2Combat;
 		player.xiejianxian_Arms2Extent = player.arms2Extent;

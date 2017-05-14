@@ -220,7 +220,7 @@ function initGameValue(){
 	// addHandCard([player3],player3,player3,28,[1],false,false);//冰心
 	// addHandCard([player4],player4,player4,18,[1],false,false);//隐蛊
 	 //addHandCard([player1],player1,player1,47,[1],false,false);//无尘剑
-	 //addHandCard([player1],player1,player1,52,[1],false,false);//无尘剑
+	 //addHandCard([player1],player1,player1,52,[1],false,false);//天帝祭服
 	//addHandCard([player1],player1,player1,50,[1],false,false);//天蛇杖
 
 	/*

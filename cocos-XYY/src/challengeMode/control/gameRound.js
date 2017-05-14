@@ -631,9 +631,10 @@ function roundAddHandCard(){
 				addCardNumber++;
 				textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"由于【醉仙望月步】效果，多补1张牌", myText, listView);
 			}
-			addHandCard([nowPlayerTerm[nowPlayerNumber]],nowPlayerTerm[nowPlayerNumber],nowPlayerTerm[nowPlayerNumber],null,[addCardNumber],true,true);
-			autoNextStep();
-			// buttonManager(order2Button, true, true);
+			addHandCard([nowPlayerTerm[nowPlayerNumber]],nowPlayerTerm[nowPlayerNumber],nowPlayerTerm[nowPlayerNumber],null,[addCardNumber],true,true,function(){
+				autoNextStep();
+			});
+			//buttonManager(order2Button, true, true);
 		});
 	}
 }
