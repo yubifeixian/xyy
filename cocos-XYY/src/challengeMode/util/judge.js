@@ -799,7 +799,9 @@ function huoqilingPetEffect(callBack){
 		}
 	}
 	if(_huoqilingOwner==null){
-		callBack();
+		if(callBack!=null){
+			callBack();
+		}
 		return;
 	}
 	var _trigger=false;
@@ -810,10 +812,10 @@ function huoqilingPetEffect(callBack){
 		}
 	}
 	if(_trigger){
-		triggerCombat+=3;
+		addTrigerCombat(3);
 		textAreaAddMessage("火麒麟宠物效果，触发方战力+3", myText, listView,callBack);
 	}else{
-		monsterCombat+=3;
+		addMonsterCombat(3);
 		textAreaAddMessage("火麒麟宠物效果，妨碍方战力+3", myText, listView,callBack);
 	}
 }

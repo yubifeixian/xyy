@@ -375,13 +375,13 @@ function useNpcZhuzhanCard(callBack){
 				}
 				addDialog(mainScene, new ChooseZoneLayer("是否为触发方增加战力？(否则为怪物方增加)",function(result){
 					if(result){
-						triggerCombat+=addCombat;
+						addTrigerCombat(addCombat);
 						textAreaAddMessage(player1._name+"使用NPC助战效果，为触发方增加"+addCombat+"点战力", myText, listView,function(){
 							// 进入下一阶段
 							callBack();
 						});
 					}else{
-						monsterCombat+=addCombat;
+						addMonsterCombat(addCombat);
 						textAreaAddMessage(player1._name+"使用NPC助战效果，为怪物方增加"+addCombat+"点战力", myText, listView,function(){
 							// 进入下一阶段
 							callBack();
@@ -567,8 +567,7 @@ function roundAttackEnd(){
 				ai_AttackMonster = false;
 				fight_Trigger=new Array(); // 战斗结束时，清空本回合触发方列表
 				fight_Monster=new Array(); // 战斗结束时，清空本回合怪物方列表
-				monsterCombat = 0;
-				triggerCombat = 0;
+				resetBattleCombat();
 				NPCEffect = false;
 				linyueruSpBiwuzhaoqinMaleList=[];
 				linyueruSpBiwuzhaoqinFemaleList=[];
@@ -701,8 +700,7 @@ function roundEnding(){
 		turnMonsterCardLayer.instead();
 		turnMonsterCardLayer=null;
 	}
-	monsterCombat = 0;
-	triggerCombat = 0;
+	resetBattleCombat();
 	game_Bingxingjue=false;
 	attakedMoster=false;
 	tempMonster = null;

@@ -3,6 +3,8 @@ function getCharacterList() {
 	var standerCharacterList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
 			14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24 ];
 	var fengmingyushiCharacterList=[ 27, 28, 29, 30, 31, 33];
+	var wulingfeixianCharacterList=[45];
+
 	for(var i=0;i<standerCharacterList.length;i++){
 		characterList.push(standerCharacterList[i]);
 	}
@@ -47,6 +49,9 @@ function getCharacterList() {
 		//处理【赵灵儿sp】
 		characterList.removeObject(2);
 		characterList.push(44);
+
+		//处理【徐长卿】
+		characterList.push(45);
 		
 	}
 	characterList.sort(function(){ return 0.5 - Math.random() }) ;

@@ -1373,15 +1373,11 @@ function yinguHandle(heartList,firstPlayer,effectPlayer,isUsedYingu,heartNumberL
 function tianxuanwuyinHandle(result){
 	if(result==CAMP.CHUFAFANG){
 		textAreaAddMessage("触发方战力+2",myText,listView);
-		for (var i = 0; i < 2; i++){
-			triggerCombat++;
-		}
+		addTrigerCombat(2);
 		mainScene.addChild(new NumberAnimationLayer("+2",triggerCombatBMFont));
 	}else if(result==CAMP.GUAIWUFANG){
 		textAreaAddMessage("怪物方战力+2",myText,listView);
-		for (var i = 0; i < 2; i++){
-			monsterCombat++;
-		}
+		addMonsterCombat(2);
 		mainScene.addChild(new NumberAnimationLayer("+2",monsterCombatBMFont));
 	}
 }

@@ -459,10 +459,9 @@ function aiUseSkillAfterUsingSkillCard(callBack) {
 		aiSkillXingxuan_Pengren(callBack);
 	} else if (aiPlayer._name==nameWangpengxu) {
 		aiSkillWangpengxu_Hehcengshiping();
-		aiSkillWangpengxu_Hehcengshiping();
 		callBack();
 	}else{
-		callBack();
+		aiSkillXuchangqing_Zhangmenren(callBack);
 	}
 }
 

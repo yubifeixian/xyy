@@ -1,13 +1,14 @@
 var triggerCombat = 0;
+var tempTrigerCombat=0;
 var monsterCombat = 0;
-
+var tempMonsterCombat=0;
 
 // 出场效果结算之后再次判断支援、妨碍是否命中，且计算双方战力比
 function calculate_Attack(callBack) {
 	attack_1 = true;
-	//龙幽【表现欲】后续处理
+	// 龙幽【表现欲】后续处理
 	skillCharacters_LongyouBiaoxianyuHandle(function(){
-		//重楼sp【霸气】后续处理
+		// 重楼sp【霸气】后续处理
 		skillCharacters_ChonglouSpBaqiHandle(function(){
 			// 先判断支援妨碍是否命中，并计算各自方的战力
 			triggerCombat = fight_Trigger[0].combat;
@@ -18,77 +19,9 @@ function calculate_Attack(callBack) {
 				skillCharacters_MoyiSuohunAddCombat(function(){
 					// 梦蛇【女娲】技能
 					skillCharacters_ZhaolingerMengsheNvwa(function(){
-						//姜云凡sp【狂风寨】技能
+						// 姜云凡sp【狂风寨】技能
 						skillCharacters_JiangyunfanSpKuangfengzhai(function(){
-							if (fight_Trigger.length > 1) {
-								// 当支援者没有因为出场效果而死亡时：
-								if (fight_Trigger[1].hp > 0||fight_Trigger[1]._name==nameLiumengliMengkuilei
-										|| fight_Trigger[1]._name==nameJinchanguimu) {
-									var isNotMiss = attactIsMiss(fight_Trigger[1],fight_FirstMonster);
-									// 龙幽【越行之术】技能
-									if (isNotMiss) {
-										triggerCombat += fight_Trigger[1].combat;
-										textAreaAddMessage(fight_Trigger[1]._name+"支援成功，触发方战力增加,当前战力为："+triggerCombat, myText, listView);
-									} else {
-										textAreaAddMessage(fight_Trigger[1]._name+"支援失败", myText, listView);
-										// 沈欺霜【仙霞五奇】技能
-										skillCharacters_ShenqishuangXianxiawuqi(false, fight_Trigger[0], fight_Trigger[0]);
-									}
-								}else{
-									textAreaAddMessage(fight_Trigger[1]._name+"支援者阵亡，无法支援", myText, listView);
-									// 支援者阵亡，沈欺霜【仙霞五奇】重新发动
-									skillCharacters_ShenqishuangXianxiawuqi(true, nowPlayerTerm[nowPlayerNumber], fight_Trigger[0]);
-								}
-							} else {
-								// 无人支援，沈欺霜【仙霞五奇】重新发动
-								skillCharacters_ShenqishuangXianxiawuqi(true, nowPlayerTerm[nowPlayerNumber], fight_Trigger[0]);
-							}
-							if (fight_Monster.length > 0) {
-								// cc.log("现在的妨碍者是"+fight_Monster[0]._name);
-								if (fight_Monster[0]._name==nameLiumengliMengkuilei
-										|| fight_Monster[0].hp != 0
-										|| fight_Monster[0]._name==nameJinchanguimu) {
-									var isNotMiss =attactIsMiss(fight_Monster[0],fight_FirstMonster);
-									if (isNotMiss) {
-										monsterCombat += fight_Monster[0].combat;
-										textAreaAddMessage(fight_Monster[0]._name+"妨碍成功,怪物方战力增加,当前战力为："+monsterCombat, myText, listView,function(){
-											//callBack();
-											huoqilingPetEffect(callBack);
-										});
-									} else {
-										textAreaAddMessage(fight_Monster[0]._name+"妨碍失败", myText, listView,function(){
-											// 沈欺霜【仙霞五奇】技能
-											skillCharacters_ShenqishuangXianxiawuqi(false, fight_Monster[0], fight_FirstMonster);
-											//callBack();
-											huoqilingPetEffect(callBack);
-										});
-									}
-								}else{
-									textAreaAddMessage(fight_Monster[0]._name+"妨碍者阵亡,无法妨碍", myText, listView,function(){
-										// 无人妨碍，沈欺霜【仙霞五奇】重新发动
-										// 沈欺霜【仙霞五奇】技能
-										var temPlayer = player1;
-										if (nowPlayerNumber == 0
-												|| nowPlayerNumber == 2) {
-											temPlayer = player3;
-										}
-										skillCharacters_ShenqishuangXianxiawuqi(true, temPlayer, fight_FirstMonster);
-										//callBack();
-										huoqilingPetEffect(callBack);
-									});
-								}
-							} else {
-								// 无人妨碍，沈欺霜【仙霞五奇】重新发动
-								// 沈欺霜【仙霞五奇】技能
-								var temPlayer = player1;
-								if (nowPlayerNumber == 0
-										|| nowPlayerNumber == 2) {
-									temPlayer = player3;
-								}
-								skillCharacters_ShenqishuangXianxiawuqi(true, temPlayer, fight_FirstMonster);
-								//callBack();
-								huoqilingPetEffect(callBack);
-							}
+							countBattle(callBack);
 						});
 					});
 				});
@@ -96,6 +29,93 @@ function calculate_Attack(callBack) {
 		})
 	});
 }
+
+function countBattle(callBack){
+	// 触发方战力=触发者的战力
+	triggerCombat = fight_Trigger[0].combat;
+	// 怪物方战力=怪物战力
+	monsterCombat = fight_FirstMonster.combat;
+	// 先处理触发方,有支援者时
+	if (fight_Trigger.length > 1) {
+		// 当支援者没有因为出场效果而死亡时：
+		if (fight_Trigger[1].hp > 0||fight_Trigger[1]._name==nameLiumengliMengkuilei
+			|| fight_Trigger[1]._name==nameJinchanguimu) {
+			var isNotMiss = attactIsMiss(fight_Trigger[1],fight_FirstMonster);
+			// 龙幽【越行之术】技能
+			if (isNotMiss) {
+				triggerCombat += fight_Trigger[1].combat;
+				textAreaAddMessage(fight_Trigger[1]._name+"支援成功，触发方战力增加,当前战力为："+triggerCombat, myText, listView);
+			} else {
+				textAreaAddMessage(fight_Trigger[1]._name+"支援失败", myText, listView);
+				// 沈欺霜【仙霞五奇】技能
+				skillCharacters_ShenqishuangXianxiawuqi(false, fight_Trigger[0], fight_Trigger[0]);
+			}
+		}else{
+			textAreaAddMessage(fight_Trigger[1]._name+"支援者阵亡，无法支援", myText, listView);
+			// 支援者阵亡，沈欺霜【仙霞五奇】重新发动
+			skillCharacters_ShenqishuangXianxiawuqi(true, nowPlayerTerm[nowPlayerNumber], fight_Trigger[0]);
+		}
+	} else {
+		// 无人支援，沈欺霜【仙霞五奇】重新发动
+		skillCharacters_ShenqishuangXianxiawuqi(true, nowPlayerTerm[nowPlayerNumber], fight_Trigger[0]);
+	}
+	// 在处理妨碍方，有妨碍者时
+	if (fight_Monster.length > 0) {
+		// cc.log("现在的妨碍者是"+fight_Monster[0]._name);
+		if (fight_Monster[0]._name==nameLiumengliMengkuilei
+			|| fight_Monster[0].hp != 0
+			|| fight_Monster[0]._name==nameJinchanguimu) {
+			var isNotMiss =attactIsMiss(fight_Monster[0],fight_FirstMonster);
+			if (isNotMiss) {
+				monsterCombat += fight_Monster[0].combat;
+				textAreaAddMessage(fight_Monster[0]._name+"妨碍成功,怪物方战力增加,当前战力为："+monsterCombat, myText, listView,function(){
+					// callBack();
+					huoqilingPetEffect(callBack);
+				});
+			} else {
+				textAreaAddMessage(fight_Monster[0]._name+"妨碍失败", myText, listView,function(){
+					// 沈欺霜【仙霞五奇】技能
+					skillCharacters_ShenqishuangXianxiawuqi(false, fight_Monster[0], fight_FirstMonster);
+					// callBack();
+					huoqilingPetEffect(callBack);
+				});
+			}
+		}else{
+			textAreaAddMessage(fight_Monster[0]._name+"妨碍者阵亡,无法妨碍", myText, listView,function(){
+				// 无人妨碍，沈欺霜【仙霞五奇】重新发动
+				// 沈欺霜【仙霞五奇】技能
+				var temPlayer = player1;
+				if (nowPlayerNumber == 0
+					|| nowPlayerNumber == 2) {
+					temPlayer = player3;
+				}
+				skillCharacters_ShenqishuangXianxiawuqi(true, temPlayer, fight_FirstMonster);
+				// callBack();
+				huoqilingPetEffect(callBack);
+			});
+		}
+	} else {
+		// 无人妨碍，沈欺霜【仙霞五奇】重新发动
+		// 沈欺霜【仙霞五奇】技能
+		var temPlayer = player1;
+		if (nowPlayerNumber == 0
+			|| nowPlayerNumber == 2) {
+			temPlayer = player3;
+		}
+		skillCharacters_ShenqishuangXianxiawuqi(true, temPlayer, fight_FirstMonster);
+		// callBack();
+		huoqilingPetEffect(callBack);
+	}
+	
+	triggerCombat+=tempTrigerCombat;
+	monsterCombat+=tempMonsterCombat;
+
+	// 如果此时还有混战怪物，则还需要增加混战怪物的战力
+	if(fight_SecondMonster!=null){
+		monsterCombat += fight_SecondMonster.combat;
+	}
+}
+
 
 // 初次判断
 function calculateAttakIsMiss(callBack){
@@ -319,7 +339,7 @@ function calculate_Pets(winner, monster,callBack) {
 		}
 	} else if (monster.nature=="火") {
 		if (winner.pet_HuoMonster == null) {
-			//火麒麟胜利效果
+			// 火麒麟胜利效果
 			if(monster.name==nameHuoqilin){
 				textAreaAddMessage(winner._name+"无火属性宠物，无法获得"+monster.name+"为宠物", myText, listView,callBack);
 				return;
@@ -443,4 +463,22 @@ function calculate_Pets(winner, monster,callBack) {
 			}
 		}
 	}
+}
+
+function addTrigerCombat(value){
+	triggerCombat+=value;
+	tempTrigerCombat+=value;
+}
+
+function addMonsterCombat(value){
+	monsterCombat+=value;
+	tempMonsterCombat+=value;
+}
+
+
+function resetBattleCombat(){
+	triggerCombat=0;
+	tempTrigerCombat=0;
+	monsterCombat=0;
+	tempMonsterCombat=0;
 }

@@ -131,6 +131,7 @@ var GameLayer=cc.Layer.extend({
 							skillCharacters_BaiyueZhaohuanshuimoshou(player1);
 							skillCharacters_YuntianheHouyisherigong(player1);
 							skillCharacters_JiangshiliXishen(player1);
+							skillCharacters_XuchangqingShushanjianjue(player1);
 						}
 					}
 					skillCharacters_WangpengxuHechengshipin();
@@ -468,7 +469,7 @@ var GameLayer=cc.Layer.extend({
 						var effected = false;
 						for (var i=0;i<fight_Trigger.length;i++) {
 							if (fight_Trigger[i]._name==player1._name) {
-								triggerCombat += 3;
+								addTrigerCombat(3);
 								effected = true;
 								break;
 							}
@@ -476,7 +477,7 @@ var GameLayer=cc.Layer.extend({
 						if (!effected) {
 							for (var i=0;i<fight_Monster.length;i++) {
 								if (fight_Monster[i]._name==player1._name) {
-									monsterCombat += 3;
+									addMonsterCombat(3);
 									break;
 								}
 							}

@@ -145,8 +145,7 @@ function initPlayer(){
 }
 
 function initGameValue(){
-	triggerCombat=0;
-	monsterCombat=0;
+	resetBattleCombat();
 	skillButton_DropCardEffect=false;
 	skillEffectDropCard=false;
 	yuntianhe_HouYiSheRiGong=0;
