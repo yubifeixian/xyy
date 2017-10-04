@@ -137,6 +137,7 @@ var GameLayer=cc.Layer.extend({
 					skillCharacters_WangpengxuHechengshipin();
 			}
 		}, player1SkillButton2);
+		
 		player1SkillButton3.addTouchEventListener(function(sender,type){
 			if(type==2){
 				skillCharacters_XiaomanLianyao();
@@ -151,6 +152,12 @@ var GameLayer=cc.Layer.extend({
 				}
 			}
 		}, player1SkillButton3);
+		
+		teamSkill1Button.addTouchEventListener(function(sender,type){
+			if(type==2){
+				skillCharacter_Zhangmenren(player1);
+			}
+		},teamSkill1Button);
 
 
 
@@ -592,7 +599,7 @@ var GameLayer=cc.Layer.extend({
 					if (tempPlayer.handCard.length<= MAX) {
 						textAreaAddMessage("手牌弃置完毕", myText, listView);
 						buttonManager(order1Button, false, false);
-						//buttonManager(order2Button, true, true);
+						// buttonManager(order2Button, true, true);
 						dropCarding = false;
 						autoNextStep();
 					}

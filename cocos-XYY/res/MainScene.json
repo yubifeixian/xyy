@@ -1,6 +1,6 @@
 {
   "ID": "bd7265d3-b3af-4306-9c1e-4f5a5e7b70a4",
-  "Version": "2.3.2.3",
+  "Version": "2.3.4",
   "Name": "MainScene",
   "Content": {
     "Content": {
@@ -14,6 +14,7 @@
       "ObjectData": {
         "Children": [
           {
+            "ClipAble": false,
             "ComboBoxIndex": 1,
             "SingleColor": {
               "R": 22,
@@ -103,10 +104,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 20.5279,
-                "RightMargin": 868.2401,
-                "TopMargin": 492.4802,
-                "BottomMargin": 63.1038,
+                "LeftMargin": 20.544,
+                "RightMargin": 868.224,
+                "TopMargin": 492.512,
+                "BottomMargin": 63.072,
                 "Tag": 2,
                 "ActionTag": 1729405892,
                 "Size": {
@@ -261,8 +262,8 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 3.88,
-                "RightMargin": 735.32,
+                "LeftMargin": 3.84,
+                "RightMargin": 735.36,
                 "TopMargin": 567.68,
                 "BottomMargin": -23.68,
                 "Tag": 4,
@@ -342,8 +343,8 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 79.2241,
-                "RightMargin": 659.976,
+                "LeftMargin": 79.2,
+                "RightMargin": 660.0,
                 "TopMargin": 567.68,
                 "BottomMargin": -23.68,
                 "Tag": 5,
@@ -356,6 +357,7 @@
                 "ctype": "ButtonObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -375,8 +377,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -453,19 +455,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.3599,
+                      "X": 0.3665,
                       "Y": 0.2025
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 48.024,
-                    "RightMargin": 48.024,
+                    "LeftMargin": 47.524,
+                    "RightMargin": 47.524,
                     "TopMargin": 70.896,
                     "BottomMargin": 70.896,
                     "Tag": 8,
                     "ActionTag": 312548111,
                     "Size": {
-                      "X": 54.0,
+                      "X": 55.0,
                       "Y": 36.0
                     },
                     "Name": "player1CombatText",
@@ -517,8 +519,8 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": -229.2649,
-                "RightMargin": 229.2649,
+                "LeftMargin": -229.248,
+                "RightMargin": 229.248,
                 "TopMargin": 297.28,
                 "BottomMargin": -297.28,
                 "Tag": 7,
@@ -531,6 +533,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -550,8 +553,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -628,19 +631,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.3599,
+                      "X": 0.3665,
                       "Y": 0.2025
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 48.024,
-                    "RightMargin": 48.024,
+                    "LeftMargin": 47.524,
+                    "RightMargin": 47.524,
                     "TopMargin": 70.896,
                     "BottomMargin": 70.896,
                     "Tag": 11,
                     "ActionTag": -1794883667,
                     "Size": {
-                      "X": 54.0,
+                      "X": 55.0,
                       "Y": 36.0
                     },
                     "Name": "player1ExtentText",
@@ -692,10 +695,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": -151.1216,
-                "RightMargin": 151.1216,
-                "TopMargin": 297.2801,
-                "BottomMargin": -297.2801,
+                "LeftMargin": -151.104,
+                "RightMargin": 151.104,
+                "TopMargin": 297.28,
+                "BottomMargin": -297.28,
                 "Tag": 10,
                 "ActionTag": -1202924487,
                 "Size": {
@@ -706,6 +709,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -725,8 +729,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -804,19 +808,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.7997,
+                      "X": 0.8131,
                       "Y": 0.1687
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 15.024,
-                    "RightMargin": 15.024,
+                    "LeftMargin": 14.024,
+                    "RightMargin": 14.024,
                     "TopMargin": 73.896,
                     "BottomMargin": 73.896,
                     "Tag": 13,
                     "ActionTag": -1063856277,
                     "Size": {
-                      "X": 120.0,
+                      "X": 122.0,
                       "Y": 30.0
                     },
                     "Name": "player1Pet1Text",
@@ -868,8 +872,8 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": -56.2479,
-                "RightMargin": 56.2479,
+                "LeftMargin": -56.256,
+                "RightMargin": 56.256,
                 "TopMargin": 296.192,
                 "BottomMargin": -296.192,
                 "Tag": 12,
@@ -882,6 +886,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -901,8 +906,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -979,19 +984,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.7997,
+                      "X": 0.8131,
                       "Y": 0.1687
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 15.024,
-                    "RightMargin": 15.024,
+                    "LeftMargin": 14.024,
+                    "RightMargin": 14.024,
                     "TopMargin": 73.896,
                     "BottomMargin": 73.896,
                     "Tag": 16,
                     "ActionTag": 731063882,
                     "Size": {
-                      "X": 120.0,
+                      "X": 122.0,
                       "Y": 30.0
                     },
                     "Name": "player1Pet2Text",
@@ -1043,8 +1048,8 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 55.2087,
-                "RightMargin": -55.2087,
+                "LeftMargin": 55.2,
+                "RightMargin": -55.2,
                 "TopMargin": 296.192,
                 "BottomMargin": -296.192,
                 "Tag": 15,
@@ -1057,6 +1062,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -1076,8 +1082,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -1154,19 +1160,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.7997,
+                      "X": 0.8131,
                       "Y": 0.1687
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 15.024,
-                    "RightMargin": 15.024,
+                    "LeftMargin": 14.024,
+                    "RightMargin": 14.024,
                     "TopMargin": 73.896,
                     "BottomMargin": 73.896,
                     "Tag": 19,
                     "ActionTag": -917700059,
                     "Size": {
-                      "X": 120.0,
+                      "X": 122.0,
                       "Y": 30.0
                     },
                     "Name": "player1Pet3Text",
@@ -1218,8 +1224,8 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 164.6495,
-                "RightMargin": -164.6495,
+                "LeftMargin": 164.64,
+                "RightMargin": -164.64,
                 "TopMargin": 296.192,
                 "BottomMargin": -296.192,
                 "Tag": 18,
@@ -1232,6 +1238,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -1251,8 +1258,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -1330,19 +1337,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.7997,
+                      "X": 0.8131,
                       "Y": 0.1687
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 15.024,
-                    "RightMargin": 15.024,
+                    "LeftMargin": 14.024,
+                    "RightMargin": 14.024,
                     "TopMargin": 73.896,
                     "BottomMargin": 73.896,
                     "Tag": 22,
                     "ActionTag": -303918337,
                     "Size": {
-                      "X": 120.0,
+                      "X": 122.0,
                       "Y": 30.0
                     },
                     "Name": "player1Pet4Text",
@@ -1394,8 +1401,8 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 272.458,
-                "RightMargin": -272.458,
+                "LeftMargin": 272.448,
+                "RightMargin": -272.448,
                 "TopMargin": 296.192,
                 "BottomMargin": -296.192,
                 "Tag": 21,
@@ -1408,6 +1415,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -1427,8 +1435,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -1505,19 +1513,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.7997,
+                      "X": 0.8131,
                       "Y": 0.1687
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 15.024,
-                    "RightMargin": 15.024,
+                    "LeftMargin": 14.024,
+                    "RightMargin": 14.024,
                     "TopMargin": 73.896,
                     "BottomMargin": 73.896,
                     "Tag": 25,
                     "ActionTag": -917168729,
                     "Size": {
-                      "X": 120.0,
+                      "X": 122.0,
                       "Y": 30.0
                     },
                     "Name": "player1Pet5Text",
@@ -1569,8 +1577,8 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 378.73,
-                "RightMargin": -378.73,
+                "LeftMargin": 378.72,
+                "RightMargin": -378.72,
                 "TopMargin": 296.192,
                 "BottomMargin": -296.192,
                 "Tag": 24,
@@ -1583,6 +1591,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -1602,8 +1611,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 52,
-                "Scale9Height": 21,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -1685,19 +1694,19 @@
                     "PercentWidthEnabled": true,
                     "PercentHeightEnabled": true,
                     "PreSize": {
-                      "X": 0.4199,
+                      "X": 0.3132,
                       "Y": 0.1012
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 54.524,
-                    "RightMargin": 50.524,
+                    "LeftMargin": 53.5196,
+                    "RightMargin": 49.5283,
                     "TopMargin": 79.896,
                     "BottomMargin": 79.896,
                     "Tag": 28,
                     "ActionTag": -1096787343,
                     "Size": {
-                      "X": 45.0,
+                      "X": 47.0,
                       "Y": 18.0
                     },
                     "Name": "player1hpText",
@@ -1749,10 +1758,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": -456.0945,
-                "RightMargin": 456.0945,
-                "TopMargin": 254.0037,
-                "BottomMargin": -254.0037,
+                "LeftMargin": -456.096,
+                "RightMargin": 456.096,
+                "TopMargin": 254.016,
+                "BottomMargin": -254.016,
                 "Tag": 27,
                 "ActionTag": 480649788,
                 "Size": {
@@ -1763,6 +1772,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -1782,8 +1792,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -1860,19 +1870,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.6398,
+                      "X": 0.6531,
                       "Y": 0.27
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 27.024,
-                    "RightMargin": 27.024,
+                    "LeftMargin": 26.024,
+                    "RightMargin": 26.024,
                     "TopMargin": 64.896,
                     "BottomMargin": 64.896,
                     "Tag": 31,
                     "ActionTag": -1463967270,
                     "Size": {
-                      "X": 96.0,
+                      "X": 98.0,
                       "Y": 48.0
                     },
                     "Name": "player1ArmText",
@@ -1924,10 +1934,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": -120.401,
-                "RightMargin": 613.361,
-                "TopMargin": 393.6596,
-                "BottomMargin": -5.6276,
+                "LeftMargin": -120.432,
+                "RightMargin": 613.392,
+                "TopMargin": 393.632,
+                "BottomMargin": -5.6,
                 "Tag": 30,
                 "ActionTag": 398908580,
                 "Size": {
@@ -1938,6 +1948,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -1957,8 +1968,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -2035,19 +2046,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.5865,
-                      "Y": 0.1237
+                      "X": 0.6531,
+                      "Y": 0.135
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 31.024,
-                    "RightMargin": 31.024,
-                    "TopMargin": 77.896,
-                    "BottomMargin": 77.896,
+                    "LeftMargin": 26.024,
+                    "RightMargin": 26.024,
+                    "TopMargin": 76.896,
+                    "BottomMargin": 76.896,
                     "Tag": 34,
                     "ActionTag": -717921904,
                     "Size": {
-                      "X": 96.0,
+                      "X": 98.0,
                       "Y": 24.0
                     },
                     "Name": "player1DefenseText",
@@ -2099,10 +2110,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": -170.0456,
-                "RightMargin": 663.0056,
-                "TopMargin": 409.9711,
-                "BottomMargin": -21.9391,
+                "LeftMargin": -170.0759,
+                "RightMargin": 663.0359,
+                "TopMargin": 410.0045,
+                "BottomMargin": -21.9725,
                 "Tag": 33,
                 "ActionTag": -1888437564,
                 "Size": {
@@ -2393,8 +2404,8 @@
                 "VerticalEdge": "BothEdge",
                 "LeftMargin": 868.896,
                 "RightMargin": 19.8719,
-                "TopMargin": 376.9199,
-                "BottomMargin": 178.6641,
+                "TopMargin": 376.928,
+                "BottomMargin": 178.656,
                 "Tag": 106,
                 "ActionTag": -964675017,
                 "Size": {
@@ -2405,6 +2416,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -2424,8 +2436,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 52,
-                "Scale9Height": 21,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -2503,19 +2515,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.4199,
+                      "X": 0.3132,
                       "Y": 0.1012
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 43.524,
-                    "RightMargin": 43.524,
+                    "LeftMargin": 51.524,
+                    "RightMargin": 51.524,
                     "TopMargin": 79.896,
                     "BottomMargin": 79.896,
                     "Tag": 115,
                     "ActionTag": -1501926534,
                     "Size": {
-                      "X": 45.0,
+                      "X": 47.0,
                       "Y": 18.0
                     },
                     "Name": "player4hpText",
@@ -2567,10 +2579,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 390.7557,
-                "RightMargin": -390.7556,
-                "TopMargin": 137.5615,
-                "BottomMargin": -137.5614,
+                "LeftMargin": 390.72,
+                "RightMargin": -390.72,
+                "TopMargin": 137.536,
+                "BottomMargin": -137.536,
                 "Tag": 114,
                 "ActionTag": -888059545,
                 "Size": {
@@ -2619,10 +2631,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 17.528,
-                "RightMargin": 871.2401,
-                "TopMargin": 58.9524,
-                "BottomMargin": 496.6316,
+                "LeftMargin": 17.568,
+                "RightMargin": 871.2,
+                "TopMargin": 58.976,
+                "BottomMargin": 496.608,
                 "Tag": 36,
                 "ActionTag": 487218911,
                 "Size": {
@@ -2633,6 +2645,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -2652,8 +2665,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 52,
-                "Scale9Height": 21,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -2731,19 +2744,19 @@
                       "Y": 0.489
                     },
                     "PreSize": {
-                      "X": 0.4199,
+                      "X": 0.3132,
                       "Y": 0.1012
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 51.1164,
-                    "RightMargin": 35.9316,
+                    "LeftMargin": 59.1164,
+                    "RightMargin": 43.9316,
                     "TopMargin": 81.8517,
                     "BottomMargin": 77.9403,
                     "Tag": 42,
                     "ActionTag": 1148043780,
                     "Size": {
-                      "X": 45.0,
+                      "X": 47.0,
                       "Y": 18.0
                     },
                     "Name": "player3hpText",
@@ -2795,10 +2808,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": -458.5658,
-                "RightMargin": 458.5658,
-                "TopMargin": -178.909,
-                "BottomMargin": 178.909,
+                "LeftMargin": -458.592,
+                "RightMargin": 458.592,
+                "TopMargin": -178.88,
+                "BottomMargin": 178.88,
                 "Tag": 41,
                 "ActionTag": 2111048950,
                 "Size": {
@@ -2809,6 +2822,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -2828,8 +2842,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -2906,19 +2920,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.3599,
+                      "X": 0.3665,
                       "Y": 0.2025
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 48.024,
-                    "RightMargin": 48.024,
+                    "LeftMargin": 47.524,
+                    "RightMargin": 47.524,
                     "TopMargin": 70.896,
                     "BottomMargin": 70.896,
                     "Tag": 118,
                     "ActionTag": 377010264,
                     "Size": {
-                      "X": 54.0,
+                      "X": 55.0,
                       "Y": 36.0
                     },
                     "Name": "player4CombatText",
@@ -2970,10 +2984,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 346.8942,
-                "RightMargin": -346.8942,
-                "TopMargin": -10.709,
-                "BottomMargin": 10.709,
+                "LeftMargin": 346.848,
+                "RightMargin": -346.848,
+                "TopMargin": -10.752,
+                "BottomMargin": 10.752,
                 "Tag": 117,
                 "ActionTag": -4980367,
                 "Size": {
@@ -2984,6 +2998,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -3003,8 +3018,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -3081,19 +3096,19 @@
                       "Y": 0.5888
                     },
                     "PreSize": {
-                      "X": 0.3599,
+                      "X": 0.3665,
                       "Y": 0.2025
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 48.024,
-                    "RightMargin": 48.024,
+                    "LeftMargin": 47.524,
+                    "RightMargin": 47.524,
                     "TopMargin": 55.1081,
                     "BottomMargin": 86.6839,
                     "Tag": 45,
                     "ActionTag": -687852569,
                     "Size": {
-                      "X": 54.0,
+                      "X": 55.0,
                       "Y": 36.0
                     },
                     "Name": "player3CombatText",
@@ -3145,10 +3160,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": -454.9339,
-                "RightMargin": 454.9339,
-                "TopMargin": -73.8313,
-                "BottomMargin": 73.8313,
+                "LeftMargin": -454.944,
+                "RightMargin": 454.944,
+                "TopMargin": -73.856,
+                "BottomMargin": 73.856,
                 "Tag": 44,
                 "ActionTag": 1675722941,
                 "Size": {
@@ -3159,6 +3174,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -3178,8 +3194,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -3255,19 +3271,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.6398,
+                      "X": 0.6531,
                       "Y": 0.27
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 40.0215,
-                    "RightMargin": 14.0265,
+                    "LeftMargin": 39.0182,
+                    "RightMargin": 13.0298,
                     "TopMargin": 64.896,
                     "BottomMargin": 64.896,
                     "Tag": 124,
                     "ActionTag": -1272632753,
                     "Size": {
-                      "X": 96.0,
+                      "X": 98.0,
                       "Y": 48.0
                     },
                     "Name": "player4ArmText",
@@ -3319,10 +3335,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 600.0485,
-                "RightMargin": -107.0885,
-                "TopMargin": 289.0419,
-                "BottomMargin": 98.9901,
+                "LeftMargin": 600.0239,
+                "RightMargin": -107.064,
+                "TopMargin": 289.0611,
+                "BottomMargin": 98.9709,
                 "Tag": 123,
                 "ActionTag": -854347140,
                 "Size": {
@@ -3333,6 +3349,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -3352,8 +3369,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -3429,19 +3446,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.6398,
+                      "X": 0.6531,
                       "Y": 0.27
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 27.024,
-                    "RightMargin": 27.024,
+                    "LeftMargin": 26.024,
+                    "RightMargin": 26.024,
                     "TopMargin": 64.896,
                     "BottomMargin": 64.896,
                     "Tag": 48,
                     "ActionTag": 657963194,
                     "Size": {
-                      "X": 96.0,
+                      "X": 98.0,
                       "Y": 48.0
                     },
                     "Name": "player3ArmText",
@@ -3493,10 +3510,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": -212.2318,
-                "RightMargin": 705.1918,
-                "TopMargin": 51.9599,
-                "BottomMargin": 336.0721,
+                "LeftMargin": -212.208,
+                "RightMargin": 705.168,
+                "TopMargin": 51.936,
+                "BottomMargin": 336.096,
                 "Tag": 47,
                 "ActionTag": 1311614177,
                 "Size": {
@@ -3507,6 +3524,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -3526,8 +3544,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -3603,19 +3621,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.5865,
+                      "X": 0.5998,
                       "Y": 0.1237
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 31.024,
-                    "RightMargin": 31.024,
+                    "LeftMargin": 30.024,
+                    "RightMargin": 30.024,
                     "TopMargin": 77.896,
                     "BottomMargin": 77.896,
                     "Tag": 127,
                     "ActionTag": 368541095,
                     "Size": {
-                      "X": 88.0,
+                      "X": 90.0,
                       "Y": 22.0
                     },
                     "Name": "player4DefenseText",
@@ -3668,9 +3686,9 @@
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
                 "LeftMargin": 533.424,
-                "RightMargin": -40.464,
-                "TopMargin": 265.1068,
-                "BottomMargin": 122.9252,
+                "RightMargin": -40.4641,
+                "TopMargin": 265.12,
+                "BottomMargin": 122.912,
                 "Tag": 126,
                 "ActionTag": 2076942917,
                 "Size": {
@@ -3681,6 +3699,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -3700,8 +3719,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -3777,19 +3796,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.5865,
+                      "X": 0.5998,
                       "Y": 0.1237
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 31.024,
-                    "RightMargin": 31.024,
+                    "LeftMargin": 30.024,
+                    "RightMargin": 30.024,
                     "TopMargin": 77.896,
                     "BottomMargin": 77.896,
                     "Tag": 51,
                     "ActionTag": 777216877,
                     "Size": {
-                      "X": 88.0,
+                      "X": 90.0,
                       "Y": 22.0
                     },
                     "Name": "player3DefenseText",
@@ -3841,10 +3860,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": -210.1654,
-                "RightMargin": 703.1254,
-                "TopMargin": 85.9895,
-                "BottomMargin": 302.0425,
+                "LeftMargin": -210.192,
+                "RightMargin": 703.152,
+                "TopMargin": 85.984,
+                "BottomMargin": 302.048,
                 "Tag": 50,
                 "ActionTag": -1239084552,
                 "Size": {
@@ -3855,6 +3874,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -3874,8 +3894,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -3952,19 +3972,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.7997,
+                      "X": 0.8131,
                       "Y": 0.1687
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 15.024,
-                    "RightMargin": 15.024,
+                    "LeftMargin": 14.024,
+                    "RightMargin": 14.024,
                     "TopMargin": 73.896,
                     "BottomMargin": 73.896,
                     "Tag": 130,
                     "ActionTag": 1513457080,
                     "Size": {
-                      "X": 120.0,
+                      "X": 122.0,
                       "Y": 30.0
                     },
                     "Name": "player4Pet1Text",
@@ -4016,10 +4036,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 381.8971,
-                "RightMargin": -381.8971,
-                "TopMargin": -35.0132,
-                "BottomMargin": 35.0132,
+                "LeftMargin": 381.888,
+                "RightMargin": -381.8879,
+                "TopMargin": -35.008,
+                "BottomMargin": 35.008,
                 "Tag": 129,
                 "ActionTag": 1786882102,
                 "Size": {
@@ -4030,6 +4050,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -4049,8 +4070,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -4127,19 +4148,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.7997,
+                      "X": 0.8131,
                       "Y": 0.1687
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 15.024,
-                    "RightMargin": 15.024,
+                    "LeftMargin": 14.024,
+                    "RightMargin": 14.024,
                     "TopMargin": 73.896,
                     "BottomMargin": 73.896,
                     "Tag": 54,
                     "ActionTag": -64693271,
                     "Size": {
-                      "X": 120.0,
+                      "X": 122.0,
                       "Y": 30.0
                     },
                     "Name": "player3Pet1Text",
@@ -4191,10 +4212,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": -459.9286,
-                "RightMargin": 459.9286,
-                "TopMargin": -1.1357,
-                "BottomMargin": 1.1357,
+                "LeftMargin": -459.936,
+                "RightMargin": 459.936,
+                "TopMargin": -1.152,
+                "BottomMargin": 1.152,
                 "Tag": 53,
                 "ActionTag": 143488968,
                 "Size": {
@@ -4205,6 +4226,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -4224,8 +4246,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -4302,19 +4324,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.7997,
+                      "X": 0.8131,
                       "Y": 0.1687
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 15.024,
-                    "RightMargin": 15.024,
+                    "LeftMargin": 14.024,
+                    "RightMargin": 14.024,
                     "TopMargin": 73.896,
                     "BottomMargin": 73.896,
                     "Tag": 133,
                     "ActionTag": -854771033,
                     "Size": {
-                      "X": 120.0,
+                      "X": 122.0,
                       "Y": 30.0
                     },
                     "Name": "player4Pet2Text",
@@ -4366,10 +4388,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 381.8971,
-                "RightMargin": -381.8971,
-                "TopMargin": -68.8416,
-                "BottomMargin": 68.8416,
+                "LeftMargin": 381.888,
+                "RightMargin": -381.8879,
+                "TopMargin": -68.864,
+                "BottomMargin": 68.864,
                 "Tag": 132,
                 "ActionTag": -1125100651,
                 "Size": {
@@ -4380,6 +4402,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -4399,8 +4422,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -4477,19 +4500,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.7997,
+                      "X": 0.8131,
                       "Y": 0.1687
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 15.024,
-                    "RightMargin": 15.024,
+                    "LeftMargin": 14.024,
+                    "RightMargin": 14.024,
                     "TopMargin": 73.896,
                     "BottomMargin": 73.896,
                     "Tag": 57,
                     "ActionTag": -2026354906,
                     "Size": {
-                      "X": 120.0,
+                      "X": 122.0,
                       "Y": 30.0
                     },
                     "Name": "player3Pet2Text",
@@ -4542,8 +4565,8 @@
                 "VerticalEdge": "BothEdge",
                 "LeftMargin": -459.936,
                 "RightMargin": 459.936,
-                "TopMargin": 36.4697,
-                "BottomMargin": -36.4697,
+                "TopMargin": 36.48,
+                "BottomMargin": -36.48,
                 "Tag": 56,
                 "ActionTag": -980134923,
                 "Size": {
@@ -4554,6 +4577,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -4573,8 +4597,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -4651,19 +4675,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.7997,
+                      "X": 0.8131,
                       "Y": 0.1687
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 15.024,
-                    "RightMargin": 15.024,
+                    "LeftMargin": 14.024,
+                    "RightMargin": 14.024,
                     "TopMargin": 73.896,
                     "BottomMargin": 73.896,
                     "Tag": 136,
                     "ActionTag": -1932900403,
                     "Size": {
-                      "X": 120.0,
+                      "X": 122.0,
                       "Y": 30.0
                     },
                     "Name": "player4Pet3Text",
@@ -4715,10 +4739,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 381.8971,
-                "RightMargin": -381.8971,
-                "TopMargin": -104.3759,
-                "BottomMargin": 104.3759,
+                "LeftMargin": 381.888,
+                "RightMargin": -381.8879,
+                "TopMargin": -104.384,
+                "BottomMargin": 104.384,
                 "Tag": 135,
                 "ActionTag": 2023374467,
                 "Size": {
@@ -4729,6 +4753,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -4748,8 +4773,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -4826,19 +4851,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.7997,
+                      "X": 0.8131,
                       "Y": 0.1687
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 15.024,
-                    "RightMargin": 15.024,
+                    "LeftMargin": 14.024,
+                    "RightMargin": 14.024,
                     "TopMargin": 73.896,
                     "BottomMargin": 73.896,
                     "Tag": 60,
                     "ActionTag": -1652498265,
                     "Size": {
-                      "X": 120.0,
+                      "X": 122.0,
                       "Y": 30.0
                     },
                     "Name": "player3Pet3Text",
@@ -4891,8 +4916,8 @@
                 "VerticalEdge": "BothEdge",
                 "LeftMargin": -459.936,
                 "RightMargin": 459.936,
-                "TopMargin": 74.5247,
-                "BottomMargin": -74.5247,
+                "TopMargin": 74.496,
+                "BottomMargin": -74.496,
                 "Tag": 59,
                 "ActionTag": 1862996107,
                 "Size": {
@@ -4903,6 +4928,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -4922,8 +4948,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -5000,19 +5026,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.7997,
+                      "X": 0.8131,
                       "Y": 0.1687
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 15.024,
-                    "RightMargin": 15.024,
+                    "LeftMargin": 14.024,
+                    "RightMargin": 14.024,
                     "TopMargin": 73.896,
                     "BottomMargin": 73.896,
                     "Tag": 139,
                     "ActionTag": 1194348638,
                     "Size": {
-                      "X": 120.0,
+                      "X": 122.0,
                       "Y": 30.0
                     },
                     "Name": "player4Pet4Text",
@@ -5064,10 +5090,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 381.8971,
-                "RightMargin": -381.8971,
-                "TopMargin": -139.3295,
-                "BottomMargin": 139.3294,
+                "LeftMargin": 381.888,
+                "RightMargin": -381.8879,
+                "TopMargin": -139.328,
+                "BottomMargin": 139.328,
                 "Tag": 138,
                 "ActionTag": 1535865129,
                 "Size": {
@@ -5078,6 +5104,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -5097,8 +5124,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -5175,19 +5202,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.7997,
+                      "X": 0.8131,
                       "Y": 0.1687
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 15.024,
-                    "RightMargin": 15.024,
+                    "LeftMargin": 14.024,
+                    "RightMargin": 14.024,
                     "TopMargin": 73.896,
                     "BottomMargin": 73.896,
                     "Tag": 63,
                     "ActionTag": 1965388811,
                     "Size": {
-                      "X": 120.0,
+                      "X": 122.0,
                       "Y": 30.0
                     },
                     "Name": "player3Pet4Text",
@@ -5241,8 +5268,8 @@
                 "VerticalEdge": "BothEdge",
                 "LeftMargin": -459.936,
                 "RightMargin": 459.936,
-                "TopMargin": 112.3414,
-                "BottomMargin": -112.3415,
+                "TopMargin": 112.32,
+                "BottomMargin": -112.32,
                 "Tag": 62,
                 "ActionTag": 130796284,
                 "Size": {
@@ -5253,6 +5280,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -5272,8 +5300,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -5350,19 +5378,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.7997,
+                      "X": 0.8131,
                       "Y": 0.1687
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 15.024,
-                    "RightMargin": 15.024,
+                    "LeftMargin": 14.024,
+                    "RightMargin": 14.024,
                     "TopMargin": 73.896,
                     "BottomMargin": 73.896,
                     "Tag": 142,
                     "ActionTag": 1537342591,
                     "Size": {
-                      "X": 120.0,
+                      "X": 122.0,
                       "Y": 30.0
                     },
                     "Name": "player4Pet5Text",
@@ -5414,10 +5442,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 381.9106,
-                "RightMargin": -381.9106,
-                "TopMargin": -175.3788,
-                "BottomMargin": 175.3788,
+                "LeftMargin": 381.888,
+                "RightMargin": -381.8879,
+                "TopMargin": -175.36,
+                "BottomMargin": 175.36,
                 "Tag": 141,
                 "ActionTag": -666038808,
                 "Size": {
@@ -5428,6 +5456,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -5447,8 +5476,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -5525,19 +5554,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.7997,
+                      "X": 0.8131,
                       "Y": 0.1687
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 15.024,
-                    "RightMargin": 15.024,
+                    "LeftMargin": 14.024,
+                    "RightMargin": 14.024,
                     "TopMargin": 73.896,
                     "BottomMargin": 73.896,
                     "Tag": 66,
                     "ActionTag": -1844311376,
                     "Size": {
-                      "X": 120.0,
+                      "X": 122.0,
                       "Y": 30.0
                     },
                     "Name": "player3Pet5Text",
@@ -5590,8 +5619,8 @@
                 "VerticalEdge": "BothEdge",
                 "LeftMargin": -459.936,
                 "RightMargin": 459.936,
-                "TopMargin": 150.256,
-                "BottomMargin": -150.256,
+                "TopMargin": 150.272,
+                "BottomMargin": -150.272,
                 "Tag": 65,
                 "ActionTag": -668798314,
                 "Size": {
@@ -5602,6 +5631,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -5621,8 +5651,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -5699,19 +5729,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.3599,
+                      "X": 0.3665,
                       "Y": 0.2025
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 48.024,
-                    "RightMargin": 48.024,
+                    "LeftMargin": 47.524,
+                    "RightMargin": 47.524,
                     "TopMargin": 70.896,
                     "BottomMargin": 70.896,
                     "Tag": 121,
                     "ActionTag": -1955981962,
                     "Size": {
-                      "X": 54.0,
+                      "X": 55.0,
                       "Y": 36.0
                     },
                     "Name": "player4ExtentText",
@@ -5763,10 +5793,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 392.5424,
-                "RightMargin": -392.5425,
-                "TopMargin": -94.3463,
-                "BottomMargin": 94.3463,
+                "LeftMargin": 392.544,
+                "RightMargin": -392.5439,
+                "TopMargin": -94.336,
+                "BottomMargin": 94.336,
                 "Tag": 120,
                 "ActionTag": 941913179,
                 "Size": {
@@ -5777,6 +5807,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -5796,8 +5827,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -5874,19 +5905,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.3599,
+                      "X": 0.3665,
                       "Y": 0.2025
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 48.024,
-                    "RightMargin": 48.024,
+                    "LeftMargin": 47.524,
+                    "RightMargin": 47.524,
                     "TopMargin": 70.896,
                     "BottomMargin": 70.896,
                     "Tag": 67,
                     "ActionTag": 1271681868,
                     "Size": {
-                      "X": 54.0,
+                      "X": 55.0,
                       "Y": 36.0
                     },
                     "Name": "player3ExtentText",
@@ -5938,10 +5969,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": -453.8593,
-                "RightMargin": 453.8593,
-                "TopMargin": -38.5029,
-                "BottomMargin": 38.5029,
+                "LeftMargin": -453.888,
+                "RightMargin": 453.888,
+                "TopMargin": -38.528,
+                "BottomMargin": 38.528,
                 "Tag": 66,
                 "ActionTag": -1026547094,
                 "Size": {
@@ -5952,6 +5983,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -5971,8 +6003,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -6049,19 +6081,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.3599,
+                      "X": 0.3665,
                       "Y": 0.2025
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 48.024,
-                    "RightMargin": 48.024,
+                    "LeftMargin": 47.524,
+                    "RightMargin": 47.524,
                     "TopMargin": 70.896,
                     "BottomMargin": 70.896,
                     "Tag": 112,
                     "ActionTag": 376351582,
                     "Size": {
-                      "X": 54.0,
+                      "X": 55.0,
                       "Y": 36.0
                     },
                     "Name": "player4HandCardText",
@@ -6114,9 +6146,9 @@
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
                 "LeftMargin": 286.944,
-                "RightMargin": -286.944,
-                "TopMargin": 27.1693,
-                "BottomMargin": -27.1693,
+                "RightMargin": -286.9441,
+                "TopMargin": 27.2,
+                "BottomMargin": -27.2,
                 "Tag": 111,
                 "ActionTag": 1238393406,
                 "Size": {
@@ -6127,6 +6159,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -6146,8 +6179,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -6224,19 +6257,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.3599,
+                      "X": 0.3665,
                       "Y": 0.2025
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 48.024,
-                    "RightMargin": 48.024,
+                    "LeftMargin": 47.524,
+                    "RightMargin": 47.524,
                     "TopMargin": 70.896,
                     "BottomMargin": 70.896,
                     "Tag": 70,
                     "ActionTag": 1365849769,
                     "Size": {
-                      "X": 54.0,
+                      "X": 55.0,
                       "Y": 36.0
                     },
                     "Name": "player3HandCardText",
@@ -6287,10 +6320,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": -360.831,
-                "RightMargin": 360.831,
-                "TopMargin": -213.5543,
-                "BottomMargin": 213.5543,
+                "LeftMargin": -360.864,
+                "RightMargin": 360.864,
+                "TopMargin": -213.568,
+                "BottomMargin": 213.568,
                 "Tag": 69,
                 "ActionTag": 1811473924,
                 "Size": {
@@ -6366,10 +6399,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 591.6134,
-                "RightMargin": 158.3866,
-                "TopMargin": 12.8727,
-                "BottomMargin": 537.1273,
+                "LeftMargin": 591.552,
+                "RightMargin": 158.4,
+                "TopMargin": 12.864,
+                "BottomMargin": 537.152,
                 "Tag": 72,
                 "ActionTag": 997911483,
                 "Size": {
@@ -6446,10 +6479,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 513.6064,
-                "RightMargin": 236.3936,
-                "TopMargin": 13.9997,
-                "BottomMargin": 536.0003,
+                "LeftMargin": 513.6,
+                "RightMargin": 236.352,
+                "TopMargin": 14.016,
+                "BottomMargin": 536.0,
                 "Tag": 73,
                 "ActionTag": 793979874,
                 "Size": {
@@ -6526,10 +6559,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 437.0633,
-                "RightMargin": 312.9367,
-                "TopMargin": 13.3044,
-                "BottomMargin": 536.6956,
+                "LeftMargin": 436.992,
+                "RightMargin": 312.96,
+                "TopMargin": 13.312,
+                "BottomMargin": 536.704,
                 "Tag": 74,
                 "ActionTag": -9657738,
                 "Size": {
@@ -6577,10 +6610,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 825.1862,
-                "RightMargin": 63.5818,
-                "TopMargin": 6.7089,
-                "BottomMargin": 548.8751,
+                "LeftMargin": 825.2161,
+                "RightMargin": 63.552,
+                "TopMargin": 6.688,
+                "BottomMargin": 548.896,
                 "Tag": 71,
                 "ActionTag": 445060031,
                 "Size": {
@@ -6591,6 +6624,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -6610,8 +6644,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 52,
-                "Scale9Height": 21,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -6689,19 +6723,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.4199,
+                      "X": 0.3132,
                       "Y": 0.1012
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 52.524,
-                    "RightMargin": 52.524,
+                    "LeftMargin": 51.524,
+                    "RightMargin": 51.524,
                     "TopMargin": 79.896,
                     "BottomMargin": 79.896,
                     "Tag": 77,
                     "ActionTag": -414416828,
                     "Size": {
-                      "X": 45.0,
+                      "X": 47.0,
                       "Y": 18.0
                     },
                     "Name": "player2hpText",
@@ -6753,10 +6787,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 346.2719,
-                "RightMargin": -346.2719,
-                "TopMargin": -223.2959,
-                "BottomMargin": 236.0959,
+                "LeftMargin": 346.272,
+                "RightMargin": -346.272,
+                "TopMargin": -223.296,
+                "BottomMargin": 236.096,
                 "Tag": 76,
                 "ActionTag": -1282884737,
                 "Size": {
@@ -6767,6 +6801,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -6786,8 +6821,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -6864,19 +6899,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.3599,
+                      "X": 0.3665,
                       "Y": 0.2025
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 48.024,
-                    "RightMargin": 48.024,
+                    "LeftMargin": 47.524,
+                    "RightMargin": 47.524,
                     "TopMargin": 70.896,
                     "BottomMargin": 70.896,
                     "Tag": 80,
                     "ActionTag": 452335135,
                     "Size": {
-                      "X": 54.0,
+                      "X": 55.0,
                       "Y": 36.0
                     },
                     "Name": "player2CombatText",
@@ -6927,10 +6962,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 167.0477,
-                "RightMargin": -167.0477,
-                "TopMargin": -297.2068,
-                "BottomMargin": 297.2068,
+                "LeftMargin": 167.04,
+                "RightMargin": -167.04,
+                "TopMargin": -297.216,
+                "BottomMargin": 297.216,
                 "Tag": 79,
                 "ActionTag": -38395583,
                 "Size": {
@@ -6941,6 +6976,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -6960,8 +6996,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -7038,19 +7074,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.3599,
+                      "X": 0.3665,
                       "Y": 0.2025
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 48.024,
-                    "RightMargin": 48.024,
+                    "LeftMargin": 47.524,
+                    "RightMargin": 47.524,
                     "TopMargin": 70.896,
                     "BottomMargin": 70.896,
                     "Tag": 81,
                     "ActionTag": 469065534,
                     "Size": {
-                      "X": 54.0,
+                      "X": 55.0,
                       "Y": 36.0
                     },
                     "Name": "player2ExtentText",
@@ -7102,8 +7138,8 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 79.4117,
-                "RightMargin": -79.4116,
+                "LeftMargin": 79.392,
+                "RightMargin": -79.3921,
                 "TopMargin": -297.216,
                 "BottomMargin": 297.216,
                 "Tag": 80,
@@ -7116,6 +7152,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -7135,8 +7172,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -7213,19 +7250,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.7997,
+                      "X": 0.8131,
                       "Y": 0.1687
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 15.024,
-                    "RightMargin": 15.024,
+                    "LeftMargin": 14.024,
+                    "RightMargin": 14.024,
                     "TopMargin": 73.896,
                     "BottomMargin": 73.896,
                     "Tag": 84,
                     "ActionTag": 1741593806,
                     "Size": {
-                      "X": 120.0,
+                      "X": 122.0,
                       "Y": 30.0
                     },
                     "Name": "player2Pet1Text",
@@ -7277,8 +7314,8 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": -25.282,
-                "RightMargin": 25.282,
+                "LeftMargin": -25.248,
+                "RightMargin": 25.248,
                 "TopMargin": -294.848,
                 "BottomMargin": 294.848,
                 "Tag": 83,
@@ -7291,6 +7328,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -7310,8 +7348,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -7388,19 +7426,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.7997,
+                      "X": 0.8131,
                       "Y": 0.1687
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 15.024,
-                    "RightMargin": 15.024,
+                    "LeftMargin": 14.024,
+                    "RightMargin": 14.024,
                     "TopMargin": 73.896,
                     "BottomMargin": 73.896,
                     "Tag": 87,
                     "ActionTag": -1005565860,
                     "Size": {
-                      "X": 120.0,
+                      "X": 122.0,
                       "Y": 30.0
                     },
                     "Name": "player2Pet2Text",
@@ -7452,8 +7490,8 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": -134.8429,
-                "RightMargin": 134.8429,
+                "LeftMargin": -134.88,
+                "RightMargin": 134.88,
                 "TopMargin": -294.848,
                 "BottomMargin": 294.848,
                 "Tag": 86,
@@ -7466,6 +7504,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -7485,8 +7524,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -7563,19 +7602,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.7997,
+                      "X": 0.8131,
                       "Y": 0.1687
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 15.024,
-                    "RightMargin": 15.024,
+                    "LeftMargin": 14.024,
+                    "RightMargin": 14.024,
                     "TopMargin": 73.896,
                     "BottomMargin": 73.896,
                     "Tag": 90,
                     "ActionTag": 1432111780,
                     "Size": {
-                      "X": 120.0,
+                      "X": 122.0,
                       "Y": 30.0
                     },
                     "Name": "player2Pet3Text",
@@ -7627,8 +7666,8 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": -245.0888,
-                "RightMargin": 245.0889,
+                "LeftMargin": -245.088,
+                "RightMargin": 245.088,
                 "TopMargin": -294.848,
                 "BottomMargin": 294.848,
                 "Tag": 89,
@@ -7641,6 +7680,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -7660,8 +7700,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -7738,19 +7778,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.7997,
+                      "X": 0.8131,
                       "Y": 0.1687
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 15.024,
-                    "RightMargin": 15.024,
+                    "LeftMargin": 14.024,
+                    "RightMargin": 14.024,
                     "TopMargin": 73.896,
                     "BottomMargin": 73.896,
                     "Tag": 93,
                     "ActionTag": -185672016,
                     "Size": {
-                      "X": 120.0,
+                      "X": 122.0,
                       "Y": 30.0
                     },
                     "Name": "player2Pet4Text",
@@ -7802,8 +7842,8 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": -352.7341,
-                "RightMargin": 352.7341,
+                "LeftMargin": -352.704,
+                "RightMargin": 352.704,
                 "TopMargin": -294.848,
                 "BottomMargin": 294.848,
                 "Tag": 92,
@@ -7816,6 +7856,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -7835,8 +7876,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -7913,19 +7954,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.7997,
+                      "X": 0.8131,
                       "Y": 0.1687
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 15.024,
-                    "RightMargin": 15.024,
+                    "LeftMargin": 14.024,
+                    "RightMargin": 14.024,
                     "TopMargin": 73.896,
                     "BottomMargin": 73.896,
                     "Tag": 96,
                     "ActionTag": -534579838,
                     "Size": {
-                      "X": 120.0,
+                      "X": 122.0,
                       "Y": 30.0
                     },
                     "Name": "player2Pet5Text",
@@ -7977,10 +8018,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": -462.0774,
-                "RightMargin": 462.0774,
-                "TopMargin": -294.8685,
-                "BottomMargin": 294.8685,
+                "LeftMargin": -462.048,
+                "RightMargin": 462.048,
+                "TopMargin": -294.848,
+                "BottomMargin": 294.848,
                 "Tag": 95,
                 "ActionTag": -1522578210,
                 "Size": {
@@ -7991,6 +8032,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -8010,8 +8052,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -8087,19 +8129,19 @@
                       "Y": 0.4533
                     },
                     "PreSize": {
-                      "X": 0.6398,
+                      "X": 0.6531,
                       "Y": 0.27
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 27.024,
-                    "RightMargin": 27.024,
+                    "LeftMargin": 26.024,
+                    "RightMargin": 26.024,
                     "TopMargin": 73.1989,
                     "BottomMargin": 56.5931,
                     "Tag": 99,
                     "ActionTag": -551871042,
                     "Size": {
-                      "X": 96.0,
+                      "X": 98.0,
                       "Y": 48.0
                     },
                     "Name": "player2ArmText",
@@ -8151,10 +8193,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 495.499,
-                "RightMargin": -2.5391,
-                "TopMargin": -102.1425,
-                "BottomMargin": 490.1744,
+                "LeftMargin": 495.504,
+                "RightMargin": -2.544,
+                "TopMargin": -102.112,
+                "BottomMargin": 490.144,
                 "Tag": 98,
                 "ActionTag": 1637459409,
                 "Size": {
@@ -8165,6 +8207,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -8184,8 +8227,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -8261,19 +8304,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.5865,
+                      "X": 0.5998,
                       "Y": 0.1237
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 31.024,
-                    "RightMargin": 31.024,
+                    "LeftMargin": 30.024,
+                    "RightMargin": 30.024,
                     "TopMargin": 77.896,
                     "BottomMargin": 77.896,
                     "Tag": 102,
                     "ActionTag": -427326153,
                     "Size": {
-                      "X": 88.0,
+                      "X": 90.0,
                       "Y": 22.0
                     },
                     "Name": "player2DefenseText",
@@ -8325,10 +8368,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 495.9231,
-                "RightMargin": -2.9631,
-                "TopMargin": -65.7985,
-                "BottomMargin": 453.8304,
+                "LeftMargin": 495.888,
+                "RightMargin": -2.928,
+                "TopMargin": -65.824,
+                "BottomMargin": 453.856,
                 "Tag": 101,
                 "ActionTag": 5821745,
                 "Size": {
@@ -8339,6 +8382,7 @@
                 "ctype": "ImageViewObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
                   "Type": "Normal",
@@ -8358,8 +8402,8 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 49,
-                "Scale9Height": 20,
+                "Scale9Width": 98,
+                "Scale9Height": 35,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -8436,19 +8480,19 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.3599,
+                      "X": 0.3665,
                       "Y": 0.2025
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 48.024,
-                    "RightMargin": 48.024,
+                    "LeftMargin": 47.524,
+                    "RightMargin": 47.524,
                     "TopMargin": 70.896,
                     "BottomMargin": 70.896,
                     "Tag": 105,
                     "ActionTag": 537178535,
                     "Size": {
-                      "X": 54.0,
+                      "X": 55.0,
                       "Y": 36.0
                     },
                     "Name": "player2HandCardText",
@@ -8502,8 +8546,8 @@
                 "VerticalEdge": "BothEdge",
                 "LeftMargin": 167.04,
                 "RightMargin": -167.04,
-                "TopMargin": -261.7943,
-                "BottomMargin": 261.7943,
+                "TopMargin": -261.824,
+                "BottomMargin": 261.824,
                 "Tag": 104,
                 "ActionTag": 2083762996,
                 "Size": {
@@ -8766,8 +8810,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 555.7791,
-                  "Y": 99.0636
+                  "X": 599.2337,
+                  "Y": 96.3478
                 },
                 "Scale": {
                   "ScaleX": 2.2171,
@@ -8776,23 +8820,27 @@
                 "CColor": {},
                 "IconVisible": false,
                 "PrePosition": {
-                  "X": 0.5789,
-                  "Y": 0.1548
+                  "X": 0.6242,
+                  "Y": 0.1505
                 },
+                "PercentWidthEnable": true,
+                "PercentHeightEnable": true,
+                "PercentWidthEnabled": true,
+                "PercentHeightEnabled": true,
                 "PreSize": {
-                  "X": 0.3958,
+                  "X": 0.3,
                   "Y": 0.0922
                 },
-                "LeftMargin": 365.7791,
-                "RightMargin": 214.2209,
-                "TopMargin": 511.4364,
-                "BottomMargin": 69.5636,
+                "LeftMargin": 455.2337,
+                "RightMargin": 216.7663,
+                "TopMargin": 514.1482,
+                "BottomMargin": 66.8438,
                 "Tag": 167,
                 "ActionTag": -309449512,
                 "ZOrder": 1,
                 "Size": {
-                  "X": 380.0,
-                  "Y": 59.0
+                  "X": 288.0,
+                  "Y": 59.008
                 },
                 "Alpha": 87,
                 "Name": "handCardZoneBg",
@@ -8817,7 +8865,7 @@
                   "ScaleY": 1.0
                 },
                 "Scale9Enable": true,
-                "Scale9Width": 10,
+                "Scale9Width": 1,
                 "Scale9Height": 1,
                 "TouchEnable": true,
                 "AnchorPoint": {
@@ -8825,8 +8873,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 555.648,
-                  "Y": 100.864
+                  "X": 596.3854,
+                  "Y": 95.4324
                 },
                 "Scale": {
                   "ScaleX": 3.5214,
@@ -8835,23 +8883,23 @@
                 "CColor": {},
                 "IconVisible": false,
                 "PrePosition": {
-                  "X": 0.5788,
-                  "Y": 0.1576
+                  "X": 0.6212,
+                  "Y": 0.1491
                 },
                 "PercentWidthEnable": true,
                 "PercentHeightEnable": true,
                 "PercentWidthEnabled": true,
                 "PercentHeightEnabled": true,
                 "PreSize": {
-                  "X": 0.2083,
+                  "X": 0.18,
                   "Y": 0.35
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 455.664,
-                "RightMargin": 304.368,
-                "TopMargin": 427.136,
-                "BottomMargin": -11.136,
+                "LeftMargin": 509.9854,
+                "RightMargin": 277.2146,
+                "TopMargin": 432.5676,
+                "BottomMargin": -16.5676,
                 "Tag": 35,
                 "Children": [
                   {
@@ -8878,14 +8926,14 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.05,
+                      "X": 0.0521,
                       "Y": 0.4018
                     },
                     "PreSize": {
-                      "X": 0.1,
-                      "Y": 0.9
+                      "X": 0.1042,
+                      "Y": 0.8036
                     },
-                    "RightMargin": 179.968,
+                    "RightMargin": 172.0,
                     "TopMargin": 44.0,
                     "Tag": 169,
                     "ActionTag": -1161262330,
@@ -8899,7 +8947,7 @@
                 ],
                 "ActionTag": 462372518,
                 "Size": {
-                  "X": 199.968,
+                  "X": 172.8,
                   "Y": 224.0
                 },
                 "Name": "handCardZone",
@@ -8928,8 +8976,10 @@
                 "ColorVector": {
                   "ScaleY": 1.0
                 },
-                "Scale9Width": 1,
-                "Scale9Height": 10,
+                "Scale9OriginX": 30,
+                "Scale9OriginY": 25,
+                "Scale9Width": 242,
+                "Scale9Height": 27,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5058,
@@ -8991,7 +9041,7 @@
                     },
                     "Position": {
                       "X": 0.0,
-                      "Y": 213.0
+                      "Y": 202.0
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -9004,20 +9054,19 @@
                     "IconVisible": false,
                     "PrePosition": {
                       "X": 0.0,
-                      "Y": 1.0
+                      "Y": 0.9018
                     },
                     "PreSize": {
                       "X": 0.0,
-                      "Y": 0.0982
+                      "Y": 0.1964
                     },
                     "RightMargin": 288.0,
-                    "TopMargin": 1.0,
-                    "BottomMargin": 201.0,
+                    "BottomMargin": 180.0,
                     "Tag": 371,
                     "ActionTag": 1822069047,
                     "Size": {
                       "X": 0.0,
-                      "Y": 22.0
+                      "Y": 44.0
                     },
                     "Name": "myText",
                     "ctype": "TextObjectData"
@@ -9134,10 +9183,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 550.864,
-                "RightMargin": 309.136,
-                "TopMargin": 142.864,
-                "BottomMargin": 357.136,
+                "LeftMargin": 550.848,
+                "RightMargin": 309.1201,
+                "TopMargin": 142.848,
+                "BottomMargin": 357.12,
                 "Tag": 150,
                 "ActionTag": 983372240,
                 "Size": {
@@ -9237,15 +9286,15 @@
                   "Y": 0.8436
                 },
                 "PreSize": {
-                  "X": 0.1042,
-                  "Y": 0.0313
+                  "X": 0.1146,
+                  "Y": 0.0312
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 548.5535,
-                "RightMargin": 301.4465,
-                "TopMargin": 90.1195,
-                "BottomMargin": 529.8805,
+                "LeftMargin": 548.552,
+                "RightMargin": 301.448,
+                "TopMargin": 90.096,
+                "BottomMargin": 529.904,
                 "Tag": 626,
                 "ActionTag": -708957551,
                 "Size": {
@@ -9296,15 +9345,15 @@
                   "Y": 0.7978
                 },
                 "PreSize": {
-                  "X": 0.1042,
-                  "Y": 0.0313
+                  "X": 0.1146,
+                  "Y": 0.0312
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 548.5524,
-                "RightMargin": 301.4476,
-                "TopMargin": 119.4229,
-                "BottomMargin": 500.5771,
+                "LeftMargin": 548.552,
+                "RightMargin": 301.448,
+                "TopMargin": 119.408,
+                "BottomMargin": 500.592,
                 "Tag": 627,
                 "ActionTag": 461252019,
                 "Size": {
@@ -9345,10 +9394,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 657.221,
-                "RightMargin": 215.779,
-                "TopMargin": 82.0964,
-                "BottomMargin": 525.9036,
+                "LeftMargin": 657.204,
+                "RightMargin": 215.796,
+                "TopMargin": 82.112,
+                "BottomMargin": 525.888,
                 "Tag": 629,
                 "ActionTag": 1602365676,
                 "Size": {
@@ -9389,10 +9438,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 657.2046,
-                "RightMargin": 215.7954,
-                "TopMargin": 112.0621,
-                "BottomMargin": 495.9379,
+                "LeftMargin": 657.204,
+                "RightMargin": 215.796,
+                "TopMargin": 112.064,
+                "BottomMargin": 495.936,
                 "Tag": 630,
                 "ActionTag": 919736331,
                 "Size": {
@@ -9428,15 +9477,15 @@
                   "Y": 0.577
                 },
                 "PreSize": {
-                  "X": 0.001,
+                  "X": 0.0604,
                   "Y": 0.05
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 607.8187,
-                "RightMargin": 294.1813,
-                "TopMargin": 254.7206,
-                "BottomMargin": 353.2794,
+                "LeftMargin": 607.864,
+                "RightMargin": 294.136,
+                "TopMargin": 254.72,
+                "BottomMargin": 353.28,
                 "Tag": 388,
                 "ActionTag": 875222259,
                 "Size": {
@@ -9501,8 +9550,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 646.5741,
-                  "Y": 286.099
+                  "X": 646.56,
+                  "Y": 286.08
                 },
                 "Scale": {
                   "ScaleX": 0.7316,
@@ -9515,15 +9564,15 @@
                   "Y": 0.447
                 },
                 "PreSize": {
-                  "X": 0.001,
+                  "X": 0.0604,
                   "Y": 0.05
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 617.5741,
-                "RightMargin": 284.4259,
-                "TopMargin": 337.901,
-                "BottomMargin": 270.099,
+                "LeftMargin": 617.56,
+                "RightMargin": 284.44,
+                "TopMargin": 337.92,
+                "BottomMargin": 270.08,
                 "Tag": 387,
                 "ActionTag": 1776702922,
                 "Size": {
@@ -9559,7 +9608,7 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 356.9985,
+                  "X": 357.024,
                   "Y": 297.28
                 },
                 "Scale": {
@@ -9586,8 +9635,8 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 317.0145,
-                "RightMargin": 563.0175,
+                "LeftMargin": 317.04,
+                "RightMargin": 562.992,
                 "TopMargin": 332.704,
                 "BottomMargin": 287.264,
                 "Tag": 148,
@@ -9600,6 +9649,7 @@
                 "ctype": "TextObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "SingleColor": {
                   "R": 150,
@@ -9613,14 +9663,16 @@
                 "ColorVector": {
                   "ScaleY": 1.0
                 },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 474.6126,
-                  "Y": 215.9188
+                  "X": 474.624,
+                  "Y": 215.936
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -9642,10 +9694,10 @@
                 },
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
-                "LeftMargin": 186.6126,
-                "RightMargin": 197.3875,
-                "TopMargin": 360.0812,
-                "BottomMargin": 151.9188,
+                "LeftMargin": 186.624,
+                "RightMargin": 197.376,
+                "TopMargin": 360.064,
+                "BottomMargin": 151.936,
                 "Tag": 193,
                 "Children": [
                   {
@@ -9691,7 +9743,7 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 281.4443,
+                      "X": 281.4336,
                       "Y": 35.2
                     },
                     "Scale": {
@@ -9714,8 +9766,8 @@
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 195.0443,
-                    "RightMargin": 208.1556,
+                    "LeftMargin": 195.0336,
+                    "RightMargin": 208.1664,
                     "TopMargin": 60.8,
                     "BottomMargin": 3.2,
                     "Tag": 142,
@@ -9771,8 +9823,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 483.0182,
-                      "Y": 35.1951
+                      "X": 483.0336,
+                      "Y": 35.2
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -9794,10 +9846,10 @@
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 396.6183,
-                    "RightMargin": 6.5817,
-                    "TopMargin": 60.8049,
-                    "BottomMargin": 3.1951,
+                    "LeftMargin": 396.6336,
+                    "RightMargin": 6.5664,
+                    "TopMargin": 60.8,
+                    "BottomMargin": 3.2,
                     "Tag": 143,
                     "ActionTag": -777487437,
                     "Size": {
@@ -9851,7 +9903,7 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 88.5642,
+                      "X": 88.5888,
                       "Y": 35.2
                     },
                     "Scale": {
@@ -9874,8 +9926,8 @@
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 2.1643,
-                    "RightMargin": 401.0357,
+                    "LeftMargin": 2.1888,
+                    "RightMargin": 401.0112,
                     "TopMargin": 60.8,
                     "BottomMargin": 3.2,
                     "Tag": 141,
@@ -9890,13 +9942,14 @@
                 ],
                 "ActionTag": 1662624525,
                 "Size": {
-                  "X": 575.9999,
+                  "X": 576.0,
                   "Y": 128.0
                 },
                 "Name": "operateZone",
                 "ctype": "PanelObjectData"
               },
               {
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "SingleColor": {
                   "R": 150,
@@ -9910,6 +9963,8 @@
                 "ColorVector": {
                   "ScaleY": 1.0
                 },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -9940,7 +9995,7 @@
                 "HorizontalEdge": "BothEdge",
                 "VerticalEdge": "BothEdge",
                 "LeftMargin": 186.624,
-                "RightMargin": 197.3761,
+                "RightMargin": 197.376,
                 "TopMargin": 360.064,
                 "BottomMargin": 151.936,
                 "Tag": 194,
@@ -9988,7 +10043,7 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 440.7206,
+                      "X": 440.6976,
                       "Y": 37.6832
                     },
                     "Scale": {
@@ -10011,15 +10066,15 @@
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 355.2206,
-                    "RightMargin": 49.7794,
-                    "TopMargin": 51.3168,
-                    "BottomMargin": -1.3168,
+                    "LeftMargin": 355.1904,
+                    "RightMargin": 49.7952,
+                    "TopMargin": 51.3152,
+                    "BottomMargin": -1.3184,
                     "Tag": 196,
                     "ActionTag": 1013049202,
                     "Size": {
-                      "X": 171.0,
-                      "Y": 78.0
+                      "X": 171.0144,
+                      "Y": 78.0032
                     },
                     "Name": "cancelBtn",
                     "ctype": "ButtonObjectData"
@@ -10067,7 +10122,7 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 88.5642,
+                      "X": 88.5888,
                       "Y": 35.2
                     },
                     "Scale": {
@@ -10090,15 +10145,15 @@
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 3.0642,
-                    "RightMargin": 401.9357,
-                    "TopMargin": 53.8,
-                    "BottomMargin": -3.8,
+                    "LeftMargin": 3.0816,
+                    "RightMargin": 401.904,
+                    "TopMargin": 53.7984,
+                    "BottomMargin": -3.8016,
                     "Tag": 197,
                     "ActionTag": 1483965414,
                     "Size": {
-                      "X": 171.0,
-                      "Y": 78.0
+                      "X": 171.0144,
+                      "Y": 78.0032
                     },
                     "Name": "confirmBtn",
                     "ctype": "ButtonObjectData"
@@ -10128,8 +10183,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 259.9996,
-                      "Y": 89.1041
+                      "X": 260.0064,
+                      "Y": 89.1008
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -10142,19 +10197,19 @@
                       "Y": 0.6961
                     },
                     "PreSize": {
-                      "X": 0.1736,
-                      "Y": 0.1563
+                      "X": 0.9844,
+                      "Y": 0.1875
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 19.9996,
-                    "RightMargin": 76.0004,
-                    "TopMargin": 28.8959,
-                    "BottomMargin": 79.1041,
+                    "LeftMargin": -23.4936,
+                    "RightMargin": 32.4936,
+                    "TopMargin": 26.8992,
+                    "BottomMargin": 77.1008,
                     "Tag": 198,
                     "ActionTag": -264998130,
                     "Size": {
-                      "X": 576.0,
+                      "X": 567.0,
                       "Y": 24.0
                     },
                     "Name": "msgText",
@@ -10163,12 +10218,94 @@
                 ],
                 "ActionTag": 1428078728,
                 "Size": {
-                  "X": 575.9999,
+                  "X": 576.0,
                   "Y": 128.0
                 },
                 "VisibleForFrame": false,
                 "Name": "chooseZone",
                 "ctype": "PanelObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Press.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/lixiaoyao_xiagurouchang.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 69,
+                "Scale9OriginY": 29,
+                "Scale9Width": 72,
+                "Scale9Height": 32,
+                "OutlineSize": 0,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 0.0,
+                "ShadowOffsetY": 0.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 245.7834,
+                  "Y": 116.1635
+                },
+                "Scale": {
+                  "ScaleX": 0.3352,
+                  "ScaleY": 0.3496
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.256,
+                  "Y": 0.1815
+                },
+                "PercentWidthEnable": true,
+                "PercentHeightEnable": true,
+                "PercentWidthEnabled": true,
+                "PercentHeightEnabled": true,
+                "PreSize": {
+                  "X": 0.23,
+                  "Y": 0.15
+                },
+                "HorizontalEdge": "BothEdge",
+                "VerticalEdge": "BothEdge",
+                "LeftMargin": 135.3834,
+                "RightMargin": 603.8167,
+                "TopMargin": 475.8365,
+                "BottomMargin": 68.1635,
+                "Tag": 369,
+                "ActionTag": 296718440,
+                "Size": {
+                  "X": 220.8,
+                  "Y": 96.0
+                },
+                "VisibleForFrame": false,
+                "Name": "teamSkill1Button",
+                "ctype": "ButtonObjectData"
               }
             ],
             "ActionTag": 59598670,
@@ -10217,8 +10354,8 @@
             "VerticalEdge": "BothEdge",
             "LeftMargin": 868.416,
             "RightMargin": 14.784,
-            "TopMargin": 388.9839,
-            "BottomMargin": 187.0161,
+            "TopMargin": 388.992,
+            "BottomMargin": 187.008,
             "Tag": 170,
             "ActionTag": 1362064973,
             "Size": {
@@ -10264,10 +10401,10 @@
             },
             "HorizontalEdge": "BothEdge",
             "VerticalEdge": "BothEdge",
-            "LeftMargin": 18.3199,
-            "RightMargin": 864.8801,
-            "TopMargin": 506.5286,
-            "BottomMargin": 69.4714,
+            "LeftMargin": 18.336,
+            "RightMargin": 864.864,
+            "TopMargin": 506.56,
+            "BottomMargin": 69.44,
             "Tag": 173,
             "ActionTag": -1159587444,
             "Size": {
@@ -10313,10 +10450,10 @@
             },
             "HorizontalEdge": "BothEdge",
             "VerticalEdge": "BothEdge",
-            "LeftMargin": 15.992,
-            "RightMargin": 867.208,
-            "TopMargin": 70.5679,
-            "BottomMargin": 505.4321,
+            "LeftMargin": 16.032,
+            "RightMargin": 867.168,
+            "TopMargin": 70.592,
+            "BottomMargin": 505.408,
             "Tag": 174,
             "ActionTag": 220794096,
             "Size": {
@@ -10362,10 +10499,10 @@
             },
             "HorizontalEdge": "BothEdge",
             "VerticalEdge": "BothEdge",
-            "LeftMargin": 822.4752,
-            "RightMargin": 60.7247,
-            "TopMargin": 17.9736,
-            "BottomMargin": 558.0264,
+            "LeftMargin": 822.432,
+            "RightMargin": 60.7679,
+            "TopMargin": 17.984,
+            "BottomMargin": 558.016,
             "Tag": 175,
             "ActionTag": 863152343,
             "Size": {
@@ -10433,7 +10570,7 @@
         "drawable-hdpi/piaochuang.png",
         "drawable-hdpi/textview.9.png"
       ],
-      "ctype": "GameProjectData"
+      "ctype": "GameFileData"
     }
   },
   "Type": "Scene"

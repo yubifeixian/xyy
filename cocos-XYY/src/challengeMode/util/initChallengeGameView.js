@@ -44,6 +44,7 @@ function initGameView(){
 	player1SkillButton1=ccui.helper.seekWidgetByName(mainScene, "player1Skill1Button");
 	player1SkillButton2=ccui.helper.seekWidgetByName(mainScene, "player1Skill2Button");
 	player1SkillButton3=ccui.helper.seekWidgetByName(mainScene, "player1Skill3Button");
+	teamSkill1Button=ccui.helper.seekWidgetByName(mainScene, "teamSkill1Button");
 	
 	player2SkillButton1=ccui.helper.seekWidgetByName(mainScene, "player2Skill1Button");
 	player2SkillButton2=ccui.helper.seekWidgetByName(mainScene, "player2Skill2Button");
@@ -195,6 +196,13 @@ function initGameView(){
 	player4DeathImageView=ccui.helper.seekWidgetByName(mainScene, "player4DeathImageView");
 	
 	turnMonsterCardLayer=null;
+	
+	if(player1.friendList[1].skillNameList.containsObject(skillnameZhangmenren)){
+		teamSkill1Button.setVisible(true);
+		teamSkill1Button.loadTextures(player1.friendList[1].skillButton1,
+				player1.friendList[1].skillButton1,
+				player1.friendList[1].skillButton1,ccui.Widget.LOCAL_TEXTURE);
+	}
 	
 	mainScene.retain();
 }

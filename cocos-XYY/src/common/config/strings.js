@@ -236,6 +236,7 @@ var skillnameHuihunxinameng="回魂仙梦";
 var effectHuihunxianmeng="技牌阶段，丢弃1张手牌，可获取在场任意一名角色的技能，直到回合结束";
 var skillnameShengling="圣灵";
 var effectShengling="任何技牌都可作为【五气朝元】使用或典当";
+var nameXuchangqing="徐长卿";
 var skillnameZhangmenren="掌门人";
 var effectZhangmenren="技牌阶段，其他玩家可将任意数量手牌交给自己";
 var skillnameShushanjianjue="蜀山剑诀";

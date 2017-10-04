@@ -647,6 +647,14 @@ function advChangeCharacter(oldPlayer,monster,handCardNumber,callBack){
 			skillXiejianxianXiejianxianPetEffect(oldPlayer);
 		}
 	}
+	if(player1.friendList[1].skillNameList.containsObject(skillnameZhangmenren)){
+		teamSkill1Button.setVisible(true);
+		teamSkill1Button.loadTextures(player1.friendList[1].skillButton1,
+				player1.friendList[1].skillButton1,
+				player1.friendList[1].skillButton1,ccui.Widget.LOCAL_TEXTURE);
+	}else{
+		teamSkill1Button.setVisible(false);
+	}
 	if (oldPlayer._name==nameZixuan) {
 		if (oldPlayer.pet_FengMonster != null) {
 			advSkillCharacters_ZixuanShensheng(oldPlayer,oldPlayer.pet_FengMonster);

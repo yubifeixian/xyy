@@ -109,7 +109,6 @@ var selectNpcEffectDialogLayer=BaseDialogLayer.extend({
 						buttonManager(this.effectButton2, false, false);
 						break;
 					}
-					cc.log("monsterName="+this.npcMonster.name);
 					if(nowPlayerTerm[i].hp>0&&nowPlayerTerm[i]._name==this.npcMonster.name){
 						buttonManager(this.effectButton2, false, false);
 						break;

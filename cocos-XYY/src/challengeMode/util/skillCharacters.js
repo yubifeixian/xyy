@@ -207,7 +207,7 @@ function skillCharacters_ZhaolingerMengsheNvwa(callBack) {
 
 /**
  * 嫉恶如仇效果处理
- *
+ * 
  * @param skillUser
  *            当前发动技能的角色
  * @param endUser
@@ -418,11 +418,11 @@ function skillCharacters_JiujianxianZuixianwangyubu() {
         } else {
             // AI决定是否发动【醉仙望月步】
             /*
-             * if (BaseEffect.haveHowManyCardOfType(jiujianxian,
-             * CardType.fight_card) > 0 && jiujianxian.friendList.get(1).hp > 0 &&
-             * jiujianxian.hp > 2) { InitGameActivity.lock = false; opinion =
-             * YesorNoDialog.YES_OPTION; }
-             */
+			 * if (BaseEffect.haveHowManyCardOfType(jiujianxian,
+			 * CardType.fight_card) > 0 && jiujianxian.friendList.get(1).hp > 0 &&
+			 * jiujianxian.hp > 2) { InitGameActivity.lock = false; opinion =
+			 * YesorNoDialog.YES_OPTION; }
+			 */
         }
     }
 }
@@ -4065,7 +4065,7 @@ function skillCharacters_ZhaolingerspShengling(player) {
                 skillCardList.push(player.handCard[i]);
             }
         }
-        addDialog(mainScene, new selectCardDialogLayer("请选择1张技牌当作【五气朝元】使用或典当", skillCardList, 1, skillCardList.length, true, function (selectList) {
+        addDialog(mainScene, new selectCardDialogLayer("请选择1张技牌当作【五气朝元】使用或典当", skillCardList, 1, 1, true, function (selectList) {
             if (selectList != null) {
                 var selectCard = selectList.pop();
                 remove_Card_Into_DropDeck(selectCard.name);
@@ -4077,7 +4077,32 @@ function skillCharacters_ZhaolingerspShengling(player) {
     }
 }
 
-//徐长卿【蜀山剑决】
+// 徐长卿【掌门人】
+function skillCharacter_Zhangmenren(player){
+	if(!player.friendList[1].skillNameList.containsObject(skillnameZhangmenren)){
+		return;
+	}	
+	if(nextStep!=2){
+		return;
+	}
+	if(player.handCard.length==0){
+		return;
+	}
+	addDialog(mainScene, new selectCardDialogLayer("请选择任意数量的手牌交给队友【徐长卿】", player.handCard, 1, player.handCard.length, true, function (selectList) {
+		if (selectList != null) {
+			for(var i=0;i<selectList.length;i++){
+				var selectCard = selectList[i];
+				remove_Card_Into_DropDeck(selectCard.name);
+				player.handCard.removeObject(selectCard);
+				selectCard.removeFromParent();
+				player.friendList[1].handCard.push(selectCard);
+			}
+		}
+	}));
+}
+
+
+// 徐长卿【蜀山剑决】
 function skillCharacters_XuchangqingShushanjianjue(player) {
     if (player._name != player1._name || player.handCard.length == 0 || !player.skillNameList.containsObject(skillnameShushanjianjue)) {
     	return;
@@ -4098,7 +4123,7 @@ function skillCharacters_XuchangqingShushanjianjue(player) {
             	textAreaAddMessage("徐长卿发动【蜀山剑诀】,命中+1",myText, listView);
                 baseEffectAddTempExtent(player, 1);
             }
-            //重新计算当前战斗的情况
+            // 重新计算当前战斗的情况
             countBattle();
         }));
     }));

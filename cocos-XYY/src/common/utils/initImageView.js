@@ -14,6 +14,8 @@ player3PicLabel=null;
 player1SkillButton1=null;
 player1SkillButton2=null;
 player1SkillButton3=null;
+//玩家的队友的技能按钮
+teamSkill1Button=null;
 
 player2SkillButton1=null;
 player2SkillButton2=null;
