@@ -4079,7 +4079,7 @@ function skillCharacters_ZhaolingerspShengling(player) {
 
 // 徐长卿【掌门人】
 function skillCharacter_Zhangmenren(player){
-	if(!player.friendList[1].skillNameList.containsObject(skillnameZhangmenren)){
+	if(!player.friendList[1].skillNameList.containsObject(skillnameZhangmenren)||!player.friendList[1].hp<=0){
 		return;
 	}	
 	if(nextStep!=2){
@@ -4129,8 +4129,69 @@ function skillCharacters_XuchangqingShushanjianjue(player) {
     }));
 }
 
+// 景天【永安当】主动使用时的效果
+function skillCharacters_JingtianYongandang(player,step,callback){
+	if(!player.skillNameList.containsObject(skillnameYongandang)&&
+			(!player.friendList[1].skillNameList.containsObject(skillnameYongandang)
+					||player.friendList[1].hp<=0)){
+		return;
+	}
+	if((step<2||step>4)||player.usedAttackCard){
+		return;
+	}
+	var _yongandangpiao=null
+	for(var i=0;i<player.handCard.length;i++){
+		if(player.handCard[i].name==string_handCardNameYongandangpiao){
+			_yongandangpiao=player.handCard[i];
+			break;
+		}
+	}
+	if(_yongandangpiao==null){
+		return;
+	}
+	addDialog(mainScene, new yesOrNoDialogLayer("是否发动【永安当】效果?",function(ret){
+		if(ret){
+			remove_Card_Into_DropDeck(_yongandangpiao.name);
+			player.handCard.removeObject(_yongandangpiao);
+			_yongandangpiao.removeFromParent();
+			addDialog(mainScene, new AnyCardDialog(step==2?1:2,player,player,callback));
+		}
+	}));
+}
 
-
+function skillCharacters_JingtianYongandangAsk(callback,targetCardName,player){
+	if(!player.skillNameList.containsObject(skillnameYongandang)&&
+			(!player.friendList[1].skillNameList.containsObject(skillnameYongandang)
+					||player.friendList[1].hp<=0)){
+		callback(false);
+		return;
+	}
+	var _yongandangpiao=null
+	for(var i=0;i<player.handCard.length;i++){
+		if(player.handCard[i].name==string_handCardNameYongandangpiao){
+			_yongandangpiao=player.handCard[i];
+			break;
+		}
+	}
+	if(_yongandangpiao==null){
+		callback(false);
+		return;
+	}
+	if(player._name!=player1._name){
+		callback(false);
+		return;
+	}
+	addDialog(mainScene, new ChooseZoneLayer("是否发动【永安当】效果,将【永安当票】视作【"+targetCardName+"】使用?",function(ret){
+		if(ret){
+			remove_Card_Into_DropDeck(_yongandangpiao.name);
+			player.handCard.removeObject(_yongandangpiao);
+			_yongandangpiao.removeFromParent();
+			callback(true);
+		}else{
+			callback(false);
+		}
+	}));
+}
 
 
 

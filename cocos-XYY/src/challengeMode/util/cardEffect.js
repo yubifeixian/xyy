@@ -21,64 +21,78 @@ function useDongmingbaojing(usePlayer,callBack){
 		number%=nowPlayerTerm.length;
 		askBingxingjuePlayer=nowPlayerTerm[number];
 		if(tempPlayer.hp>0&&tempPlayer.handCard.length>0){
-			for(var i=0;i<tempPlayer.handCard.length;i++){
-				if(tempPlayer.handCard[i].name==string_handCardNameDongmingbaojing){
-					haveDongmingbaojing=true;
-					cardDongmingbaojing=tempPlayer.handCard[i];
-					if(tempPlayer._name==player1._name){
-						addDialog(mainScene, new ChooseZoneLayer("是否使用洞冥宝镜？",function(result){
-							if(result){
-								AchivementProgress.addAchivementProgress(initCardAchivement.achivementDongmingbaojing);
-								mainScene.addChild(new AttackTargetLayer(tempPlayer.hadImageView,cardAnimationLabel,function(){
-									textAreaAddMessage(player1._name+"打出了【洞冥宝镜】", myText, listView,function(){
-										remove_Card_Into_DropDeck(cardDongmingbaojing.name);
-										player1.handCard.removeObject(cardDongmingbaojing);
-										cardDongmingbaojing.removeFromParent();
-										cardDongmingbaojing.release();
-										playCardAnimation("res/drawable-hdpi/dongmingbaojing.png", function(){
-											useBingxingjue(tempPlayer,askBingxingjuePlayer,function(){
-												dongmingbaojingEffect(tempPlayer,null,callBack);
+			skillCharacters_JingtianYongandangAsk(function(result){
+				if(result){
+					mainScene.addChild(new AttackTargetLayer(tempPlayer.hadImageView,cardAnimationLabel,function(){
+						textAreaAddMessage(tempPlayer._name+"打出了【洞冥宝镜】", myText, listView,function(){
+							playCardAnimation("res/drawable-hdpi/dongmingbaojing.png", function(){
+								useBingxingjue(tempPlayer,askBingxingjuePlayer,function(){
+									dongmingbaojingEffect(tempPlayer,null,callBack);
+								});
+							});
+						});
+					}));
+				}else{
+					for(var i=0;i<tempPlayer.handCard.length;i++){
+						if(tempPlayer.handCard[i].name==string_handCardNameDongmingbaojing){
+							haveDongmingbaojing=true;
+							cardDongmingbaojing=tempPlayer.handCard[i];
+							if(tempPlayer._name==player1._name){
+								addDialog(mainScene, new ChooseZoneLayer("是否使用洞冥宝镜？",function(result){
+									if(result){
+										AchivementProgress.addAchivementProgress(initCardAchivement.achivementDongmingbaojing);
+										mainScene.addChild(new AttackTargetLayer(tempPlayer.hadImageView,cardAnimationLabel,function(){
+											textAreaAddMessage(player1._name+"打出了【洞冥宝镜】", myText, listView,function(){
+												remove_Card_Into_DropDeck(cardDongmingbaojing.name);
+												player1.handCard.removeObject(cardDongmingbaojing);
+												cardDongmingbaojing.removeFromParent();
+												cardDongmingbaojing.release();
+												playCardAnimation("res/drawable-hdpi/dongmingbaojing.png", function(){
+													useBingxingjue(tempPlayer,askBingxingjuePlayer,function(){
+														dongmingbaojingEffect(tempPlayer,null,callBack);
+													});
+												});
 											});
-										});
-									});
-								}));
-							}else{
-								// game_Bingxingjue=1;//表示有洞冥宝镜但是不想用
-								dongmingbaojingEffect(tempPlayer,2,callBack);
-							}
-						}));
-						break;
-					}else{
-						// AI判断是否使用洞冥宝镜
-						var aiUseDongmingbaojingResult=true;
-						if(aiUseDongmingbaojingResult){
-							mainScene.addChild(new AttackTargetLayer(tempPlayer.hadImageView,cardAnimationLabel,function(){
-								textAreaAddMessage(tempPlayer._name+"打出了【洞冥宝镜】", myText, listView)
-								mainScene.runAction(cc.Sequence.create( cc.DelayTime.create(1), cc.CallFunc.create(function () {
-									// 执行下一个代码
-									if(aiUseDongmingbaojingResult){
-										// 移除手牌
-										remove_Card_Into_DropDeck(cardDongmingbaojing.name);
-										tempPlayer.handCard.removeObject(cardDongmingbaojing);
-										cardDongmingbaojing.release();
-										// 询问冰心,根据结果处理洞明的效果
-										playCardAnimation("res/drawable-hdpi/dongmingbaojing.png", function(){
-											useBingxingjue(tempPlayer,askBingxingjuePlayer,function(aiUseDongmingbaojingResult){
-												dongmingbaojingEffect(tempPlayer,null,callBack);
-											});
-										});
+										}));
+									}else{
+										// game_Bingxingjue=1;//表示有洞冥宝镜但是不想用
+										dongmingbaojingEffect(tempPlayer,2,callBack);
 									}
-								}))); 
-							}));
+								}));
+								break;
+							}else{
+								// AI判断是否使用洞冥宝镜
+								var aiUseDongmingbaojingResult=true;
+								if(aiUseDongmingbaojingResult){
+									mainScene.addChild(new AttackTargetLayer(tempPlayer.hadImageView,cardAnimationLabel,function(){
+										textAreaAddMessage(tempPlayer._name+"打出了【洞冥宝镜】", myText, listView)
+										mainScene.runAction(cc.Sequence.create( cc.DelayTime.create(1), cc.CallFunc.create(function () {
+											// 执行下一个代码
+											if(aiUseDongmingbaojingResult){
+												// 移除手牌
+												remove_Card_Into_DropDeck(cardDongmingbaojing.name);
+												tempPlayer.handCard.removeObject(cardDongmingbaojing);
+												cardDongmingbaojing.release();
+												// 询问冰心,根据结果处理洞明的效果
+												playCardAnimation("res/drawable-hdpi/dongmingbaojing.png", function(){
+													useBingxingjue(tempPlayer,askBingxingjuePlayer,function(aiUseDongmingbaojingResult){
+														dongmingbaojingEffect(tempPlayer,null,callBack);
+													});
+												});
+											}
+										}))); 
+									}));
+								}
+								break;
+							}
 						}
-						break;
+					}
+					if(haveDongmingbaojing==false){
+						dongmingbaojingEffect(tempPlayer,1,callBack);
+						// dongmingbaojingEffect(tempPlayer,1,callBack);
 					}
 				}
-			}
-			if(haveDongmingbaojing==false){
-				dongmingbaojingEffect(tempPlayer,1,callBack);
-				// dongmingbaojingEffect(tempPlayer,1,callBack);
-			}
+			}, string_handCardNameDongmingbaojing, tempPlayer);
 		}else{
 			if(askBingxingjuePlayer._name!=nowPlayerTerm[nowPlayerNumber]._name){
 				useDongmingbaojing(askBingxingjuePlayer,callBack);
@@ -165,64 +179,73 @@ function useBingxingjue(startPlayer,nextPlayer,callBack){
 	var showDialog=false;
 	var cardBingxingjue=null;
 	if(nextPlayer.hp>0&&nextPlayer.handCard.length>0){
-		for(var i=0;i<nextPlayer.handCard.length;i++){
-			if(nextPlayer.handCard[i].name==string_handCardNameBingxinjue){
-				cardBingxingjue=nextPlayer.handCard[i];
-				haveBingxingjue=true;
-				if(nextPlayer._name==player1._name){
-					showDialog=true;
-					break;
-				}else{
-					// AI判断是否使用冰心诀
-					var aiUseBingxingjueResult=player1IsPlayer2Friend(startPlayer, nextPlayer)?false:true;
-					if(aiUseBingxingjueResult){
-						remove_Card_Into_DropDeck(cardBingxingjue.name);
-						nextPlayer.handCard.removeObject(cardBingxingjue);
-						cardBingxingjue.release();
-						mainScene.addChild(new AttackTargetLayer(nextPlayer.hadImageView,cardAnimationLabel,function(){
-							playCardAnimation("res/drawable-hdpi/bingxinjue.png", function(){
+		skillCharacters_JingtianYongandangAsk(function(result){
+			if(result){
+				mainScene.addChild(new AttackTargetLayer(nextPlayer.hadImageView,cardAnimationLabel,function(){
+					playCardAnimation("res/drawable-hdpi/bingxinjue.png", function(){
+						bingxingjueHandle(callBack,startPlayer,nextPlayer,result);
+					});
+				}));
+			}else{
+				for(var i=0;i<nextPlayer.handCard.length;i++){
+					if(nextPlayer.handCard[i].name==string_handCardNameBingxinjue){
+						cardBingxingjue=nextPlayer.handCard[i];
+						haveBingxingjue=true;
+						if(nextPlayer._name==player1._name){
+							showDialog=true;
+							break;
+						}else{
+							// AI判断是否使用冰心诀
+							var aiUseBingxingjueResult=player1IsPlayer2Friend(startPlayer, nextPlayer)?false:true;
+							if(aiUseBingxingjueResult){
+								remove_Card_Into_DropDeck(cardBingxingjue.name);
+								nextPlayer.handCard.removeObject(cardBingxingjue);
+								cardBingxingjue.release();
+								mainScene.addChild(new AttackTargetLayer(nextPlayer.hadImageView,cardAnimationLabel,function(){
+									playCardAnimation("res/drawable-hdpi/bingxinjue.png", function(){
+										bingxingjueHandle(callBack,startPlayer,nextPlayer,aiUseBingxingjueResult);
+									});
+								}));
+							}else{
 								bingxingjueHandle(callBack,startPlayer,nextPlayer,aiUseBingxingjueResult);
-							});
-						}));
-					}else{
-						bingxingjueHandle(callBack,startPlayer,nextPlayer,aiUseBingxingjueResult);
+							}
+							return;
+						}
+
 					}
-					return;
 				}
-				
-			}
-		}
-		if(showDialog){
-			addDialog(mainScene, new ChooseZoneLayer("是否使用冰心诀？",function(result){
-				if(result){
-					AchivementProgress.addAchivementProgress(initCardAchivement.achivementBingxinjue);
-					remove_Card_Into_DropDeck(cardBingxingjue.name);
-					player1.handCard.removeObject(cardBingxingjue);
-					cardBingxingjue.removeFromParent();
-					cardBingxingjue.release();
-					mainScene.addChild(new AttackTargetLayer(player1.hadImageView,cardAnimationLabel,function(){
-						playCardAnimation("res/drawable-hdpi/bingxinjue.png", function(){
-							bingxingjueHandle(callBack,startPlayer,nextPlayer,result);
-						});
+				if(showDialog){
+					addDialog(mainScene, new ChooseZoneLayer("是否使用冰心诀？",function(result){
+						if(result){
+							AchivementProgress.addAchivementProgress(initCardAchivement.achivementBingxinjue);
+							remove_Card_Into_DropDeck(cardBingxingjue.name);
+							player1.handCard.removeObject(cardBingxingjue);
+							cardBingxingjue.removeFromParent();
+							cardBingxingjue.release();
+							mainScene.addChild(new AttackTargetLayer(player1.hadImageView,cardAnimationLabel,function(){
+								playCardAnimation("res/drawable-hdpi/bingxinjue.png", function(){
+									bingxingjueHandle(callBack,startPlayer,nextPlayer,result);
+								});
+							}));
+						}else{
+							skillCharacters_SumeiJujue(nextPlayer,function(){
+								playCardAnimation("res/drawable-hdpi/bingxinjue.png", function(){
+									bingxingjueHandle(callBack,startPlayer,nextPlayer,true);
+								});
+							},function(){
+								bingxingjueHandle(callBack,startPlayer,nextPlayer,false);
+							});
+						}
 					}));
-				}else{
+				}else if(haveBingxingjue==false){
 					skillCharacters_SumeiJujue(nextPlayer,function(){
-						playCardAnimation("res/drawable-hdpi/bingxinjue.png", function(){
-							bingxingjueHandle(callBack,startPlayer,nextPlayer,true);
-						});
+						bingxingjueHandle(callBack,startPlayer,nextPlayer,true);
 					},function(){
 						bingxingjueHandle(callBack,startPlayer,nextPlayer,false);
 					});
 				}
-			}));
-		}else if(haveBingxingjue==false){
-			skillCharacters_SumeiJujue(nextPlayer,function(){
-				bingxingjueHandle(callBack,startPlayer,nextPlayer,true);
-			},function(){
-				bingxingjueHandle(callBack,startPlayer,nextPlayer,false);
-			});
-			// bingxingjueHandle(callBack,startPlayer,nextPlayer,false);
-		}
+			}
+		},string_handCardNameBingxinjue,nextPlayer);
 	}else{
 		var nextNumber=0;
 		for(var i=0;i<nowPlayerTerm.length;i++){
@@ -421,6 +444,26 @@ function shuerguoEffect(usePlayer,callBack){
 		}
 	}else{
 		textAreaAddMessage("【鼠儿果】效果无效", myText, listView);
+		game_Bingxingjue=false;
+		if(callBack!=null){
+			callBack();
+		}
+	}
+}
+function yongandangpiaoEffect(usePlayer,callBack){
+	longkuiRongzhuCardName=string_handCardNameYongandangpiao;
+	if(game_Bingxingjue==false){
+		var addCardPlayerList = [];
+		var addCardNumberList = [];
+		for (var i = 0; i < nowPlayerTerm.length; i++) {
+			if (player1IsPlayer2Friend(nowPlayerTerm[i], usePlayer)) {
+				addCardPlayerList.push(nowPlayerTerm[i]);
+				addCardNumberList.push(1);
+			}
+		}
+		addHandCard(addCardPlayerList, addCardPlayerList[0], addCardPlayerList[0], null, addCardNumberList, true, true);
+	}else{
+		textAreaAddMessage("【永安当票】效果无效", myText, listView);
 		game_Bingxingjue=false;
 		if(callBack!=null){
 			callBack();
@@ -1243,88 +1286,100 @@ function useYingu(heartList,firstPlayer,usePlayer,heartNumberList,canUseLonghunz
 	var hasYingu=false;
 	var hasTiandijifu=false;
 	if(heartList!=null&&heartList.length>0){
-		// 判断当前用户是否有【隐蛊】
-		for(var i=0;i<usePlayer.handCard.length;i++){
+		skillCharacters_JingtianYongandangAsk(function(result){
+			if(result){
+				mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
+					textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,string_handCardNameYingu), myText, listView,function(){
+						playCardAnimation("res/drawable-hdpi/yingu.png",function(){
+							useBingxingjue(usePlayer, usePlayer,function(){
+								yinguHandle(heartList,firstPlayer,usePlayer, result,heartNumberList,canUseLonghunzhankai, callBack,callBack2);
+							},callBack2);
+						});
+					});
+				}));
+			}else{
+				// 判断当前用户是否有【隐蛊】
+				for(var i=0;i<usePlayer.handCard.length;i++){
 
-			if((usePlayer.defense==string_handCardNameTiandijifu&&usePlayer.handCard.length>0)){
-				hasTiandijifu=true;
-			}
-			if(usePlayer.handCard[i].name==string_handCardNameYingu){
-				hasYingu=true;
-				cardYingu=usePlayer.handCard[i];
-				break;
-			}
-		}
-		if(hasTiandijifu||hasYingu){
-			if(usePlayer._name==player1._name){
-				if(hasTiandijifu){
-					addDialog(mainScene, new ChooseZoneLayer("是否发动【天帝祭服】效果，将任意手牌当【隐蛊】使用？",function(result){
-						if(result){
-							addDialog(mainScene, new selectCardDialogLayer("请选择1张手牌当作【隐蛊】使用",usePlayer.handCard,1,1,false,function(select){
-								var selectCard=select.pop();
-								remove_Card_Into_DropDeck(selectCard.name);
-								usePlayer.handCard.removeObject(selectCard);
-								selectCard.removeFromParent();
-								useBingxingjue(usePlayer, usePlayer,function(){
-									yinguHandle(heartList,firstPlayer,usePlayer, result,heartNumberList,canUseLonghunzhankai, callBack,callBack2);
-								});
-							}));
-						}else{
-							if(hasYingu){
-								palyer1UseYingu(cardYingu,heartList,firstPlayer,usePlayer,heartNumberList,canUseLonghunzhankai,callBack,callBack2);
-							}else{
-								yinguHandle(heartList, firstPlayer, usePlayer, false, heartNumberList,canUseLonghunzhankai,callBack,callBack2);
-							}
-						}
-					}));
-				}else{
-					addDialog(mainScene, new ChooseZoneLayer("是否使用隐蛊？",function(result){
-						if(result){
-							AchivementProgress.addAchivementProgress(initCardAchivement.achivementYingu);
-							remove_Card_Into_DropDeck(cardYingu.name);
-							usePlayer.handCard.removeObject(cardYingu);
-							cardYingu.removeFromParent();
-							mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
-								textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,string_handCardNameYingu), myText, listView,function(){
-									playCardAnimation("res/drawable-hdpi/yingu.png",function(){
+					if((usePlayer.defense==string_handCardNameTiandijifu&&usePlayer.handCard.length>0)){
+						hasTiandijifu=true;
+					}
+					if(usePlayer.handCard[i].name==string_handCardNameYingu){
+						hasYingu=true;
+						cardYingu=usePlayer.handCard[i];
+						break;
+					}
+				}
+				if(hasTiandijifu||hasYingu){
+					if(usePlayer._name==player1._name){
+						if(hasTiandijifu){
+							addDialog(mainScene, new ChooseZoneLayer("是否发动【天帝祭服】效果，将任意手牌当【隐蛊】使用？",function(result){
+								if(result){
+									addDialog(mainScene, new selectCardDialogLayer("请选择1张手牌当作【隐蛊】使用",usePlayer.handCard,1,1,false,function(select){
+										var selectCard=select.pop();
+										remove_Card_Into_DropDeck(selectCard.name);
+										usePlayer.handCard.removeObject(selectCard);
+										selectCard.removeFromParent();
 										useBingxingjue(usePlayer, usePlayer,function(){
 											yinguHandle(heartList,firstPlayer,usePlayer, result,heartNumberList,canUseLonghunzhankai, callBack,callBack2);
-										},callBack2);
-									});
-								});
+										});
+									}));
+								}else{
+									if(hasYingu){
+										palyer1UseYingu(cardYingu,heartList,firstPlayer,usePlayer,heartNumberList,canUseLonghunzhankai,callBack,callBack2);
+									}else{
+										yinguHandle(heartList, firstPlayer, usePlayer, false, heartNumberList,canUseLonghunzhankai,callBack,callBack2);
+									}
+								}
 							}));
 						}else{
-							yinguHandle(heartList,firstPlayer,usePlayer, result,heartNumberList,canUseLonghunzhankai, callBack,callBack2);
+							addDialog(mainScene, new ChooseZoneLayer("是否使用隐蛊？",function(result){
+								if(result){
+									AchivementProgress.addAchivementProgress(initCardAchivement.achivementYingu);
+									remove_Card_Into_DropDeck(cardYingu.name);
+									usePlayer.handCard.removeObject(cardYingu);
+									cardYingu.removeFromParent();
+									mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
+										textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,string_handCardNameYingu), myText, listView,function(){
+											playCardAnimation("res/drawable-hdpi/yingu.png",function(){
+												useBingxingjue(usePlayer, usePlayer,function(){
+													yinguHandle(heartList,firstPlayer,usePlayer, result,heartNumberList,canUseLonghunzhankai, callBack,callBack2);
+												},callBack2);
+											});
+										});
+									}));
+								}else{
+									yinguHandle(heartList,firstPlayer,usePlayer, result,heartNumberList,canUseLonghunzhankai, callBack,callBack2);
+								}
+							}));
 						}
-					}));
-				}
-			}else{
-				if(hasYingu){
-					// AI使用隐蛊
-					useYingu=true;
-					if(useYingu){
-					remove_Card_Into_DropDeck(cardYingu.name);
-					usePlayer.handCard.removeObject(cardYingu);
-						mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
-							textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,string_handCardNameYingu), myText, listView,function(){
-								playCardAnimation("res/drawable-hdpi/yingu.png",function(){
-									useBingxingjue(usePlayer, usePlayer, function(){
-										yinguHandle(heartList,firstPlayer,usePlayer, useYingu, heartNumberList,canUseLonghunzhankai,callBack,callBack2);
-									},callBack2);
-								});
-							});
-						}));
+					}else{
+						if(hasYingu){
+							// AI使用隐蛊
+							useYingu=true;
+							if(useYingu){
+								remove_Card_Into_DropDeck(cardYingu.name);
+								usePlayer.handCard.removeObject(cardYingu);
+								mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
+									textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,string_handCardNameYingu), myText, listView,function(){
+										playCardAnimation("res/drawable-hdpi/yingu.png",function(){
+											useBingxingjue(usePlayer, usePlayer, function(){
+												yinguHandle(heartList,firstPlayer,usePlayer, useYingu, heartNumberList,canUseLonghunzhankai,callBack,callBack2);
+											},callBack2);
+										});
+									});
+								}));
+							}
+						}else{
+							yinguHandle(heartList, firstPlayer, usePlayer, false, heartNumberList,canUseLonghunzhankai,callBack,callBack2);
+						}
 					}
 				}else{
-					yinguHandle(heartList, firstPlayer, usePlayer, false, heartNumberList,canUseLonghunzhankai,callBack,callBack2);
+					// 当前玩家没有隐蛊，先触发唐雨柔【咏圣调】效果
+					skillCharacters_TangyurouYongshengdiao_yingu(heartList, firstPlayer, usePlayer, heartNumberList,canUseLonghunzhankai,callBack,callBack2)
 				}
 			}
-		}else{
-			// 当前玩家没有隐蛊，先触发唐雨柔【咏圣调】效果
-			skillCharacters_TangyurouYongshengdiao_yingu(heartList, firstPlayer, usePlayer, heartNumberList,canUseLonghunzhankai,callBack,callBack2)
-			// yinguHandle(heartList, firstPlayer, usePlayer, false,
-			// heartNumberList,canUseLonghunzhankai,callBack,callBack2);
-		}
+		}, string_handCardNameYingu, usePlayer);
 	}else if(callBack2!=null){
 		callBack2();
 	}

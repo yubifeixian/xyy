@@ -885,4 +885,7 @@ function remove_Card_Into_DropDeck(cardName) {
 			game_DropHandCard.push(55);
 	else if (cardName==string_handCardNameLonghunzhankai)
 			game_DropHandCard.push(56);
+	else if(cardName==string_handCardNameYongandangpiao){
+		game_DropHandCard.push(57);
+	}
 }

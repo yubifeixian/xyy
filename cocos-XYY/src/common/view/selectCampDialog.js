@@ -53,18 +53,6 @@ var selectCampDialogLayer=BaseDialogLayer.extend({
 			}
 		},this);
 		
-		
-		
-		/*this.checkBox1.addClickEventListener(function(){
-			temp.checkBox2.setSelected(false);
-			if(!temp.checkBox1.isSelected()){
-				temp.result=temp.checkBox1.getUserData();
-			}else{
-				temp.result=temp.checkBox2.getUserData();
-				temp.checkBox2.setSelected(true);
-			}
-		});*/
-		
 		this.confirmButton=ccui.helper.seekWidgetByName(dialog.node, "confirmButton");
 		this.confirmButton.addClickEventListener(function(){
 				temp.sendResult();

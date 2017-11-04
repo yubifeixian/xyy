@@ -245,6 +245,16 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 				});
 			});
 		}));
+	}else if(this.name==string_handCardNameYongandangpiao){
+		mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
+			textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,temp.name), myText, listView,function(){
+				playCardAnimation("res/drawable-hdpi/yongandangpiao.png", function(){
+					useBingxingjue(usePlayer, usePlayer, function(){
+						yongandangpiaoEffect(effectPlayer,callBack)
+					});
+				});
+			});
+		}));
 	}
 }
 
@@ -605,3 +615,4 @@ var handCardTianxiangxuminglu=new Card(string_handCardNameTianxiangxuminglu);
 var handCardHuanmeihuazhou=new Card(string_handCardNameHuanmeihuazhou);
 var handCardTiangangdouyi=new Card(string_handCardNameTiangangdouyi);
 var handCardShiziyaoshuo=new Card(string_handCardNameShiziyaoshuo);
+var handCardYongandangpiao=new Card(string_handCardNameYongandangpiao);

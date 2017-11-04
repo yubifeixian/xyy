@@ -457,52 +457,65 @@ function useLinghuxiandan(startPlayer,usedPlayer,callBack){
 		var cardLinghuxiandan=null;
 		var hasLinghuxiandan=false;
 		var usedResult=false;
-		for(var i=0;i<usedPlayer.handCard.length;i++){
-			if(usedPlayer.handCard[i].name==string_handCardNameLinghuxiandan){
-				cardLinghuxiandan=usedPlayer.handCard[i];
-				hasLinghuxiandan=true;
-				if(usedPlayer._name==player1._name){
-					addDialog(mainScene, new ChooseZoneLayer("是否对"+startPlayer._name+"使用灵葫仙丹？",function(result){
-						if(result){
-							usedResult=true;
-							remove_Card_Into_DropDeck(cardLinghuxiandan.name);
-							usedPlayer.handCard.removeObject(cardLinghuxiandan);
-							cardLinghuxiandan.removeFromParent();
-							mainScene.addChild(new AttackTargetLayer(usedPlayer.hadImageView,cardAnimationLabel,function(){
-								playCardAnimation("res/drawable-hdpi/linghuxiandan.png", function(){
-									useBingxingjue(usedPlayer, usedPlayer, function(){
-										LinghuxiandanHandle(startPlayer, usedPlayer,null,callBack);
-									});
-								});
+		skillCharacters_JingtianYongandangAsk(function(result){
+			if(result){
+				usedResult=true;
+				mainScene.addChild(new AttackTargetLayer(usedPlayer.hadImageView,cardAnimationLabel,function(){
+					playCardAnimation("res/drawable-hdpi/linghuxiandan.png", function(){
+						useBingxingjue(usedPlayer, usedPlayer, function(){
+							LinghuxiandanHandle(startPlayer, usedPlayer,null,callBack);
+						});
+					});
+				}));
+			}else{
+				for(var i=0;i<usedPlayer.handCard.length;i++){
+					if(usedPlayer.handCard[i].name==string_handCardNameLinghuxiandan){
+						cardLinghuxiandan=usedPlayer.handCard[i];
+						hasLinghuxiandan=true;
+						if(usedPlayer._name==player1._name){
+							addDialog(mainScene, new ChooseZoneLayer("是否对"+startPlayer._name+"使用灵葫仙丹？",function(result){
+								if(result){
+									usedResult=true;
+									remove_Card_Into_DropDeck(cardLinghuxiandan.name);
+									usedPlayer.handCard.removeObject(cardLinghuxiandan);
+									cardLinghuxiandan.removeFromParent();
+									mainScene.addChild(new AttackTargetLayer(usedPlayer.hadImageView,cardAnimationLabel,function(){
+										playCardAnimation("res/drawable-hdpi/linghuxiandan.png", function(){
+											useBingxingjue(usedPlayer, usedPlayer, function(){
+												LinghuxiandanHandle(startPlayer, usedPlayer,null,callBack);
+											});
+										});
+									}));
+								}else{
+									LinghuxiandanHandle(startPlayer,usedPlayer,1,callBack);
+								}
 							}));
 						}else{
-							LinghuxiandanHandle(startPlayer,usedPlayer,1,callBack);
+							// AI决定是否出灵葫仙丹
+							var shouldUseLinghuxiandan=player1IsPlayer2Friend(startPlayer, usedPlayer);
+							if(shouldUseLinghuxiandan){
+								remove_Card_Into_DropDeck(cardLinghuxiandan.name);
+								usedPlayer.handCard.removeObject(cardLinghuxiandan);
+								mainScene.addChild(new AttackTargetLayer(usedPlayer.hadImageView,cardAnimationLabel,function(){
+									playCardAnimation("res/drawable-hdpi/linghuxiandan.png", function(){
+										useBingxingjue(usedPlayer,usedPlayer , function(){
+											LinghuxiandanHandle(startPlayer, usedPlayer,null,callBack);
+										});
+									});
+								}));
+
+							}else{
+								LinghuxiandanHandle(startPlayer, usedPlayer,1,callBack);
+							}
 						}
-					}));
-				}else{
-					// AI决定是否出灵葫仙丹
-					var shouldUseLinghuxiandan=player1IsPlayer2Friend(startPlayer, usedPlayer);
-					if(shouldUseLinghuxiandan){
-						remove_Card_Into_DropDeck(cardLinghuxiandan.name);
-						usedPlayer.handCard.removeObject(cardLinghuxiandan);
-						mainScene.addChild(new AttackTargetLayer(usedPlayer.hadImageView,cardAnimationLabel,function(){
-							playCardAnimation("res/drawable-hdpi/linghuxiandan.png", function(){
-								useBingxingjue(usedPlayer,usedPlayer , function(){
-									LinghuxiandanHandle(startPlayer, usedPlayer,null,callBack);
-								});
-							});
-						}));
-						
-					}else{
-						LinghuxiandanHandle(startPlayer, usedPlayer,1,callBack);
+						break;
 					}
 				}
-				break;
+				if(!hasLinghuxiandan){
+					LinghuxiandanHandle(startPlayer,usedPlayer,2,callBack);
+				}
 			}
-		}
-		if(!hasLinghuxiandan){
-			LinghuxiandanHandle(startPlayer,usedPlayer,2,callBack);
-		}
+		}, string_handCardNameLinghuxiandan, usedPlayer);
 	},callBack);
 }
 // hasLinghuxiandan=null：有灵狐且用了
@@ -680,14 +693,15 @@ function has_Longhunzhankai(player) {
 }
 
 function player1IsPlayer2Friend(player1,player2){
-	var result=false;
+	if(player1.hp<=0||player2.hp<=0){
+		return false;
+	}
 	for(var i=0;i<player2.friendList.length;i++){
 		if(player1._name==player2.friendList[i]._name){
-			result=true;
-			break;
+			return true;
 		}
 	}
-	return result;
+	return false;
 }
 
 // 判断该角色是否命中

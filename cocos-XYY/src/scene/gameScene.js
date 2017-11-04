@@ -102,7 +102,10 @@ var GameLayer=cc.Layer.extend({
 						skillCharacters_WangpengxuTaotie();
 						skillCharacters_HanlinshaSounangtanbao(player1);
 						skillCharacters_LongyouSpZhencha(player1);
+						skillCharacters_JingtianYongandang(player1,nextStep);
 					}
+				}else if(nextStep==3||nextStep==4){
+					skillCharacters_JingtianYongandang(player1,nextStep);
 				}
 			}
 		}, player1SkillButton1);
@@ -156,6 +159,9 @@ var GameLayer=cc.Layer.extend({
 		teamSkill1Button.addTouchEventListener(function(sender,type){
 			if(type==2){
 				skillCharacter_Zhangmenren(player1);
+				skillCharacters_JingtianYongandang(player1,nextStep);
+			}else if(type==3||type==4){
+				skillCharacters_JingtianYongandang(player1,nextStep);
 			}
 		},teamSkill1Button);
 
@@ -582,6 +588,8 @@ var GameLayer=cc.Layer.extend({
 					}else if(selectHandCard.name==string_handCardNameJinchantuoqiao){
 						player1.usedAttackCard=true;
 						handCardJinchantuoqiao.effect(player1, player1, true, false);
+					}else if(selectHandCard.name==string_handCardNameYongandangpiao){
+						handCardYongandangpiao.effect(player1, player1, true, false);
 					}
 					selectHandCard=null;
 				}else if(selectHandCard.clicked

@@ -63,7 +63,8 @@ var res = {
     ResultLayer: "res/ResultLayer.json",
     NormalSkillAnimationLayer: "res/NormalSkillLayer.json",
     FlowerParticle_plist: "res/drawable-hdpi/particle_flowers.plist",
-    SettingLayer_json: "res/SettingLayer.json"
+    SettingLayer_json: "res/SettingLayer.json",
+    AnyCardDialog_json:"res/anyCardDialog.json"
 
 };
 
@@ -473,7 +474,13 @@ var resPng = {
     xuchangqing_png:"res/drawable-hdpi/xuchangqing.png",
     xuchangqingdeath_png:"res/drawable-hdpi/xuchangqingdeath.png",
     xuchangqing_zhangmenren_png:"res/drawable-hdpi/xuchangqing_zhangmenren.png",
-    xuchangqing_shushanjianjue_png:"res/drawable-hdpi/xuchangqing_shushanjianjue.png"
+    xuchangqing_shushanjianjue_png:"res/drawable-hdpi/xuchangqing_shushanjianjue.png",
+    jingtian_png:"res/drawable-hdpi/jingtian.png",
+    jingtiandeath_png:"res/drawable-hdpi/jingtiandeath.png",
+    jingtian_yongandang_png:"res/drawable-hdpi/jingtian_yongandang.png",
+    jingtian_laoban_png:"res/drawable-hdpi/jingtian_laoban.png",
+    jingtian_datuanyuan_png:"res/drawable-hdpi/jingtian_datuanyuan.png",
+    yongandangpiao_png:"res/drawable-hdpi/yongandangpiao.png"
 
 }
 

@@ -10,6 +10,7 @@ var Text={
 		askBaofaFeifei:"是否爆发肥肥？",
 		askBaofaTayunxue:"是否爆发【踏云靴】免疫本次伤害？",
 		askDiandang:"是否发动“典当”效果？",
+		askJingtian_Yongandang:"是否发动“永安当”效果,将【永安当票】作为任意技牌/特殊牌使用？",
 		baofaFeifeiEffect:"{0}爆发肥肥，本方战力+3",
 		changeCardFromDeck:"{0}从牌堆中交换了手牌",
 		player1ExchangeCardWithPlayer2:"{0}与{1}手牌对调",

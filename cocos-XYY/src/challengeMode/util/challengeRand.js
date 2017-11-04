@@ -4,9 +4,13 @@ function initHandCardDeck(array) {
 	// /*鼠儿果*/22,23,24,/*灵葫仙丹*/25,26,27,/*冰心诀*/28,29,30,/*铜钱镖*/31,32,33,/*天雷破*/34,35,36,/*天罡战气*/37,38,
 	// /*金蝉脱壳*/39,40,/*窥测天机*/41,42,/*偷盗*/43,44,/*五气朝元*/45,46,/*魔剑*/47,/*彩环*/48,/*魔刀天吒*/49,/*天蛇仗*/50,
 	// /*无尘剑*/51,/*天帝祭服*/52,/*乾坤道袍*/53,/*五彩霞衣*/54,/*踏云靴*/55,/*龙魂战铠*/56};
-	// return HandCardDeck;
 	for (var i = 1; i < 57; i++){
 		array.push(i);
+		array.sort(function(){ return 0.5 - Math.random() }) ;
+	}
+	// 57,58,59 :永安当票
+	for(var i=57;i<60;i++){
+		array.push();
 		array.sort(function(){ return 0.5 - Math.random() }) ;
 	}
 	return array;
@@ -243,6 +247,14 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 				player.handCard.push(longhunzhankai);
 				if (player._name==player1._name) {
 					handCardZone.pushBackCustomItem(longhunzhankai);
+				}
+			}else if(cardNumber>=57&&cardNumber<=59){
+				var yongandangpiao=new createHandCardImageView(string_handCardNameYongandangpiao,
+						cardNumber,"res/drawable-hdpi/yongandangpiao.png",CARDTYPE.SKILLCARD, 
+						"【"+string_handCardNameYongandangpiao+"】我方全体各补1张手牌");
+				player.handCard.push(yongandangpiao);
+				if (player._name==player1._name) {
+					handCardZone.pushBackCustomItem(yongandangpiao);
 				}
 			}
 		}

@@ -197,7 +197,8 @@ function initGameView(){
 	
 	turnMonsterCardLayer=null;
 	
-	if(player1.friendList[1].skillNameList.containsObject(skillnameZhangmenren)){
+	if((player1.friendList[1].skillNameList.containsObject(skillnameZhangmenren))
+			||(player1.friendList[1].skillNameList.containsObject(skillnameYongandang))){
 		teamSkill1Button.setVisible(true);
 		teamSkill1Button.loadTextures(player1.friendList[1].skillButton1,
 				player1.friendList[1].skillButton1,

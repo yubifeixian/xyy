@@ -221,6 +221,7 @@ function initGameValue(){
 	 //addHandCard([player1],player1,player1,47,[1],false,false);//无尘剑
 	 //addHandCard([player1],player1,player1,52,[1],false,false);//天帝祭服
 	//addHandCard([player1],player1,player1,50,[1],false,false);//天蛇杖
+	addHandCard([player1],player1,player1,58,[1],false,false);//永安当票
 
 	/*
 	 * for(var i=0;i<2;i++){ var leiling = new createHandCardImageView("雷灵");
@@ -229,7 +230,7 @@ function initGameValue(){
 	 * parseInt(player1.skillTempList.length / 2); }
 	 */
 	// player1.takeOver=true;
-	 // player1.hp=1;
+	 player1.hp=1;
 	 //player3.hp=1;
 	// player1.defenseExtent=2;
 	//player2.hp=1;
