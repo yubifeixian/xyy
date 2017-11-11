@@ -1107,8 +1107,8 @@ function wuqichaoyuanEffect(usePlayer,canDiandang,callBack){
 			addDialog(mainScene, new ChooseZoneLayer("是否发动“典当”效果？",function(result){
 				if(result){
 					textAreaAddMessage(usePlayer._name+"发动【五气朝元】典当效果，从牌堆中补1张牌", myText, listView);
-					skillCharacters_JingtianLaoban(usePlayer,45,function(){
-						remove_Card_Into_DropDeck(string_handCardNameWuqichaoyuan);
+					skillCharacters_JingtianLaoban(usePlayer,45,null,function(){
+						game_DropHandCard.removeObject(45);
 					});
 					addHandCard([usePlayer],usePlayer,usePlayer,null,[1],true,true,callBack);
 					
@@ -1144,13 +1144,10 @@ function wuqichaoyuanEffect(usePlayer,canDiandang,callBack){
 			if (is_DianDang) {
 				// 典当
 				textAreaAddMessage(usePlayer._name+"典当【五气朝元】，从牌堆中补1张牌", myText, listView);
-				skillCharacters_JingtianLaoban(usePlayer,45,function(){
-					remove_Card_Into_DropDeck(string_handCardNameWuqichaoyuan);
+				skillCharacters_JingtianLaoban(usePlayer,45,null,function(){
+					game_DropHandCard.removeObject(45);
 				});
 				addHandCard([usePlayer],usePlayer,usePlayer,null,[1],true,true,callBack);
-				/*
-				 * if(callBack!=null){ callBack(); }
-				 */
 			}else{
 				useBingxingjue(usePlayer, usePlayer, function(){
 					if(!game_Bingxingjue){

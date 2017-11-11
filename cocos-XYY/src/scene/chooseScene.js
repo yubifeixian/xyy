@@ -24,7 +24,7 @@ ChooseLayer=cc.Layer.extend({
 		//characterCardManager(player2,46);
 		characterCardManager(player3,characterList[11]);
 		//characterCardManager(player3,5);
-		//characterCardManager(player4,characterList[21]);
+		characterCardManager(player4,characterList[21]);
 		 characterCardManager(player4,46);
 		
 		var tempPlayer1=new Player();

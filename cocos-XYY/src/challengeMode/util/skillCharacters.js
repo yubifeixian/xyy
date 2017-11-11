@@ -4220,7 +4220,9 @@ function skillCharacters_JingtianLaoban(player,cardNumber,dropCardCallback,callb
 		return;
 	}
 	if(player1IsPlayer2Friend(_jingtian, player)){
-		dropCardCallback();
+		if(dropCardCallback!=null){
+			dropCardCallback();
+		}
 		if(callback!=null){
 			callback();
 		}
