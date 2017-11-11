@@ -4193,6 +4193,43 @@ function skillCharacters_JingtianYongandangAsk(callback,targetCardName,player){
 	}));
 }
 
+// 景天：主动使用【典当】效果时的判断
+function skillCharacters_JingtianLaobanAsk(player){
+	if(player.skillNameList.containsObject(skillnameLaoban)){
+		textAreaAddMessage("景天【老板】效果发动，无法使用典当效果",myText, listView);
+		return false;
+	}
+	return true;
+}
+
+// 景天：敌方玩家使用【典当】效果时的处理
+function skillCharacters_JingtianLaoban(player,cardNumber,dropCardCallback,callback){
+	var _jingtian=null;
+	for (var i = 0; i < nowPlayerTerm.length; i++) {
+		if (nowPlayerTerm[i].hp > 0
+				&& nowPlayerTerm[i].skillNameList.containsObject(skillnameLaoban)) {
+			_jingtian=nowPlayerTerm[i];
+			break;
+		}
+	}
+	if(_jingtian==null){
+		dropCardCallback();
+		if(callback!=null){
+			callback();
+		}
+		return;
+	}
+	if(player1IsPlayer2Friend(_jingtian, player)){
+		dropCardCallback();
+		if(callback!=null){
+			callback();
+		}
+		return;
+	}
+	textAreaAddMessage("景天【老板】效果发动，获得敌方典当的牌",myText, listView);
+	addHandCard([_jingtian],_jingtian,_jingtian,cardNumber,[1],false,false,callback);
+	
+}
 
 
 

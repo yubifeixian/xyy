@@ -1100,11 +1100,18 @@ function tongqianbiaoEffect(usePlayer,callBack){
 
 function wuqichaoyuanEffect(usePlayer,canDiandang,callBack){
 	if(canDiandang){
+		canDiandang=skillCharacters_JingtianLaobanAsk(usePlayer);
+	}
+	if(canDiandang){
 		if(usePlayer._name==player1._name){
 			addDialog(mainScene, new ChooseZoneLayer("是否发动“典当”效果？",function(result){
 				if(result){
 					textAreaAddMessage(usePlayer._name+"发动【五气朝元】典当效果，从牌堆中补1张牌", myText, listView);
+					skillCharacters_JingtianLaoban(usePlayer,45,function(){
+						remove_Card_Into_DropDeck(string_handCardNameWuqichaoyuan);
+					});
 					addHandCard([usePlayer],usePlayer,usePlayer,null,[1],true,true,callBack);
+					
 				}else{
 					useBingxingjue(usePlayer, usePlayer, function(){
 						longkuiRongzhuCardName=string_handCardNameWuqichaoyuan;
@@ -1137,8 +1144,9 @@ function wuqichaoyuanEffect(usePlayer,canDiandang,callBack){
 			if (is_DianDang) {
 				// 典当
 				textAreaAddMessage(usePlayer._name+"典当【五气朝元】，从牌堆中补1张牌", myText, listView);
-				// newHandCard(randHandCardNumber(game_HandCard_Start,game_DropHandCard),usePlayer,
-				// 1, true);
+				skillCharacters_JingtianLaoban(usePlayer,45,function(){
+					remove_Card_Into_DropDeck(string_handCardNameWuqichaoyuan);
+				});
 				addHandCard([usePlayer],usePlayer,usePlayer,null,[1],true,true,callBack);
 				/*
 				 * if(callBack!=null){ callBack(); }
@@ -1195,9 +1203,14 @@ function mojianEffect(player,armNumber,callBack){
 function mojianDiandangEffectInEqumentZone(callBack){
 	if(player1.arms1==string_handCardNameMojian||
 			player1.arms2==string_handCardNameMojian){
+		if(!skillCharacters_JingtianLaobanAsk(player1)){
+			return;
+		}
 		addDialog(mainScene, new ChooseZoneLayer("是否典当【魔剑】补2张牌？",function(result){
 			if(result){
-				remove_Card_Into_DropDeck(string_handCardNameMojian);
+				skillCharacters_JingtianLaoban(usePlayer,47,function(){
+					remove_Card_Into_DropDeck(string_handCardNameMojian);
+				});
 				if (player1.arms1==string_handCardNameMojian) {
 					player1.arms1 = "无";
 					player1.arms1Combat = 0;

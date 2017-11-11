@@ -565,7 +565,7 @@ var GameLayer=cc.Layer.extend({
 					}else if(selectHandCard.name==string_handCardNameTongqianbiao){
 						handCardTongqianbiao.effect(player1, player1, true, false);
 					}else if(selectHandCard.name==string_handCardNameWuqichaoyuan){
-						handCardWuqichaoyuan.effect(player1, player1, true, true);
+						handCardWuqichaoyuan.effect(player1, player1, false, true);
 					}else if(selectHandCard.name==string_handCardNameQiankundaopao){
 						handCardQiankundaopao.effect(player1, player1, false, false);
 					}else if(selectHandCard.name==string_handCardNameTayunxue){

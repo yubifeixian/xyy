@@ -120,36 +120,43 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 			});
 		});
 	}else if(this.name==string_handCardNameMojian){
+		function _diandangEffect(){
+			mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
+				textAreaAddMessage(Text.playerEquipCard.format(usePlayer._name,temp.name), myText, listView,function(){
+					playCardAnimation("res/drawable-hdpi/mojian.png", function(){
+						skillCharacters_ZhaolingerShuangjian(usePlayer, mojianEffect,callBack);
+					});
+				});
+			}));
+		}
+		
+		var _canUseDiandang=skillCharacters_JingtianLaobanAsk(usePlayer);
+		if(!_canUseDiandang){
+			_diandangEffect();
+			return;
+		}
 		if(usePlayer._name==player1._name){
 			addDialog(mainScene, new ChooseZoneLayer(Text.askDiandang,function(result){
 				if(result){
-					remove_Card_Into_DropDeck(string_handCardNameMojian);
-					textAreaAddMessage(Text.addHandCard.format(usePlayer._name,2), myText, listView);
-					addHandCard([usePlayer],usePlayer,usePlayer,null,[2],true,true,callBack);
+					skillCharacters_JingtianLaoban(usePlayer,47,function(){
+						remove_Card_Into_DropDeck(string_handCardNameMojian);
+						textAreaAddMessage(Text.addHandCard.format(usePlayer._name,2), myText, listView);
+						addHandCard([usePlayer],usePlayer,usePlayer,null,[2],true,true,callBack);
+					},callBack);
 				}else{
-					mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
-						textAreaAddMessage(Text.playerEquipCard.format(usePlayer._name,temp.name), myText, listView,function(){
-							playCardAnimation("res/drawable-hdpi/mojian.png", function(){
-								skillCharacters_ZhaolingerShuangjian(usePlayer, mojianEffect,callBack);
-							});
-						});
-					}));
+					_diandangEffect();
 				}
 			}));
 		}else{
 			// AI处理典当或装备魔剑
 			if(usePlayer.arms1!=Text.nil||usePlayer.handCard.length==0){
-				remove_Card_Into_DropDeck(string_handCardNameMojian);
-				textAreaAddMessage(Text.diandangMojian.format(usePlayer._name), myText, listView);
-				addHandCard([usePlayer],usePlayer,usePlayer,null,[2],true,true,callBack);
+				skillCharacters_JingtianLaoban(usePlayer, 47, function(){
+					remove_Card_Into_DropDeck(string_handCardNameMojian);
+					textAreaAddMessage(Text.diandangMojian.format(usePlayer._name), myText, listView);
+					addHandCard([usePlayer],usePlayer,usePlayer,null,[2],true,true,callBack);
+				}, callBack)
 			}else{
-				mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
-					textAreaAddMessage(Text.playerEquipCard.format(usePlayer._name,temp.name), myText, listView,function(){
-						playCardAnimation("res/drawable-hdpi/mojian.png", function(){
-							skillCharacters_ZhaolingerShuangjian(usePlayer, mojianEffect,callBack);
-						});
-					});
-				}));
+				_diandangEffect();
 			}
 		}
 		
