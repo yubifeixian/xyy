@@ -4149,7 +4149,7 @@ function skillCharacters_JingtianYongandang(player,step,callback){
 	if(_yongandangpiao==null){
 		return;
 	}
-	addDialog(mainScene, new yesOrNoDialogLayer("是否发动【永安当】效果?",function(ret){
+	addDialog(mainScene, new ChooseZoneLayer("是否发动【永安当】效果?",function(ret){
 		if(ret){
 			remove_Card_Into_DropDeck(_yongandangpiao.name);
 			player.handCard.removeObject(_yongandangpiao);
