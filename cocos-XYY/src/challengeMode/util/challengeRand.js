@@ -425,52 +425,126 @@ function event_Effect(cardNumber,callBack) {
 	}
 }
 
+function equmentNameMappingCardInfo(equmentName){
+	equmentName=equmentName.replaceAll("\\(扣置\\)");
+	var _cardInfo={
+			name:"",
+			cardID:0,
+			cardSrcID:0,
+			cardType:0, 
+			cardMessage:""
+			
+	};
+	_cardInfo.name=equmentName;
+	switch (equmentName) {
+	case string_handCardNameMojian:
+		_cardInfo.cardID=47;
+		_cardInfo.cardSrcID="res/drawable-hdpi/mojian.png";
+		_cardInfo.cardType=CARDTYPE.ARMCARD; 
+		_cardInfo.cardMessage="【"+string_handCardNameMojian+
+		"】命中+1;典当：您的技牌阶段，可以放弃"+
+		string_handCardNameMojian+"（是否装备均可），之后您补2张牌";
+	case string_handCardNameCaihuan:
+		_cardInfo.cardID=48;
+		_cardInfo.cardSrcID="res/drawable-hdpi/caihuan.png";
+		_cardInfo.cardType=CARDTYPE.ARMCARD; 
+		_cardInfo.cardMessage="【"+string_handCardNameCaihuan+	"】命中+2";
+	case string_handCardNameModaotianzha:
+		_cardInfo.cardID=49;
+		_cardInfo.cardSrcID="res/drawable-hdpi/tianzha.png";
+		_cardInfo.cardType=CARDTYPE.ARMCARD; 
+		_cardInfo.cardMessage="【"+string_handCardNameModaotianzha+"】战力+2";
+	case string_handCardNameTianshezhang:
+		_cardInfo.cardID=50;
+		_cardInfo.cardSrcID="res/drawable-hdpi/tianshezhang.png";
+		_cardInfo.cardType=CARDTYPE.ARMCARD; 
+		_cardInfo.cardMessage="【"+string_handCardNameTianshezhang+"】战力+1装备"+
+		string_handCardNameTianshezhang+"的角色，如果HP得到回复" +
+		"（倾慕除外），HP回复额外+1";
+	case string_handCardNameWuchenjian:
+		_cardInfo.cardID=51;
+		_cardInfo.cardSrcID="res/drawable-hdpi/wuchenjian.png";
+		_cardInfo.cardType=CARDTYPE.ARMCARD; 
+		_cardInfo.cardMessage="【"+string_handCardNameWuchenjian+"】战力+1，命中+1";
+	case string_handCardNameTiandijifu:
+		_cardInfo.cardID=52;
+		_cardInfo.cardSrcID="res/drawable-hdpi/tiandijifu.png";
+		_cardInfo.cardType=CARDTYPE.DEFENSECARD; 
+		_cardInfo.cardMessage="【"+string_handCardNameTiandijifu+"】装备后，" +
+		"您可将任意手牌当作【隐蛊】使用";
+	case string_handCardNameQiankundaopao:
+		_cardInfo.cardID=53;
+		_cardInfo.cardSrcID="res/drawable-hdpi/qiankundaopao.png";
+		_cardInfo.cardType=CARDTYPE.DEFENSECARD; 
+		_cardInfo.cardMessage="【"+string_handCardNameQiankundaopao+"】战力+1；装备后，" +
+		"您免疫技牌导致的HP伤害";
+	case string_handCardNameWucaixiayi:
+		_cardInfo.cardID=54;
+		_cardInfo.cardSrcID="res/drawable-hdpi/wucaixiayi.png";
+		_cardInfo.cardType=CARDTYPE.DEFENSECARD; 
+		_cardInfo.cardMessage="【"+string_handCardNameWucaixiayi+"】战力+1爆发：装备后，您HP为0时，可丢弃" +
+		string_handCardNameWucaixiayi+"复活并恢复2点HP";
+	case string_handCardNameTayunxue:
+		_cardInfo.cardID=55;
+		_cardInfo.cardSrcID="res/drawable-hdpi/tayunxue.png";
+		_cardInfo.cardType=CARDTYPE.DEFENSECARD; 
+		_cardInfo.cardMessage="【"+string_handCardNameTayunxue+"】命中+1爆发：装备后收到伤害时（倾慕除外）,您可丢弃" +
+		string_handCardNameTayunxue+"，免疫本次伤害，并令HP回复1点";
+	case string_handCardNameLonghunzhankai:
+		_cardInfo.cardID=56;
+		_cardInfo.cardSrcID="res/drawable-hdpi/longhunzhankai.png";
+		_cardInfo.cardType=CARDTYPE.DEFENSECARD; 
+		_cardInfo.cardMessage="【"+string_handCardNameLonghunzhankai+"】装备后，您受到任何伤害（倾慕除外），HP损失降低1点，最低可降至0";
+	}
+	return _cardInfo;
+}
+
 // player2:装备的新主人
 function player1GetPlayer2Equment(nowPlayer,equmentName){
-	equmentName=equmentName.replaceAll("\\(扣置\\)");;
-	if (equmentName==string_handCardNameMojian
-	/* ||equmentName==string_handCardNameMojian+"(扣置)" */) {
+	/*equmentName=equmentName.replaceAll("\\(扣置\\)");
+	if (equmentName==string_handCardNameMojian) {
 		// newHandCard(47,nowPlayer, 1, false);
 		addHandCard([nowPlayer],nowPlayer,nowPlayer,47,[1],false,false);
 	} else if (equmentName==string_handCardNameWuchenjian
-	/* ||equmentName==string_handCardNameWuchenjian+"(扣置)" */) {
+	 ||equmentName==string_handCardNameWuchenjian+"(扣置)" ) {
 		// newHandCard(51,nowPlayer, 1, false);
 		addHandCard([nowPlayer],nowPlayer,nowPlayer,51,[1],false,false);
 	} else if (equmentName==string_handCardNameTianshezhang
-	/* ||equmentName==string_handCardNameTianshezhang+"(扣置)" */) {
+	 ||equmentName==string_handCardNameTianshezhang+"(扣置)" ) {
 		// newHandCard(50,nowPlayer, 1, false);
 		addHandCard([nowPlayer],nowPlayer,nowPlayer,50,[1],false,false);
 	} else if (equmentName==string_handCardNameCaihuan
-	/* ||equmentName==string_handCardNameCaihuan+"(扣置)" */) {
+	 ||equmentName==string_handCardNameCaihuan+"(扣置)" ) {
 		// newHandCard(48,nowPlayer, 1, false);
 		addHandCard([nowPlayer],nowPlayer,nowPlayer,48,[1],false,false);
 	} else if (equmentName==string_handCardNameModaotianzha
-	/* ||equmentName==string_handCardNameModaotianzha+"(扣置)" */) {
+	 ||equmentName==string_handCardNameModaotianzha+"(扣置)" ) {
 		// newHandCard(49,nowPlayer, 1, false);
 		addHandCard([nowPlayer],nowPlayer,nowPlayer,49,[1],false,false);
 	}else if (equmentName==string_handCardNameQiankundaopao
-	/* ||equmentName==string_handCardNameQiankundaopao+"(扣置)" */) {
+	 ||equmentName==string_handCardNameQiankundaopao+"(扣置)" ) {
 		// newHandCard(53,nowPlayer, 1, false);
 		addHandCard([nowPlayer],nowPlayer,nowPlayer,53,[1],false,false);
 	} else if (equmentName==string_handCardNameTiandijifu
-	/* ||equmentName==string_handCardNameTiandijifu+"(扣置)" */){
+	 ||equmentName==string_handCardNameTiandijifu+"(扣置)" ){
 		// newHandCard(52,nowPlayer, 1, false, true);
 		addHandCard([nowPlayer],nowPlayer,nowPlayer,52,[1],false,false);
 	}
 	else if (equmentName==string_handCardNameLonghunzhankai
-	/* ||equmentName==string_handCardNameLonghunzhankai+"(扣置)" */){
+	 ||equmentName==string_handCardNameLonghunzhankai+"(扣置)" ){
 		// newHandCard(56,nowPlayer, 1, false, true);
 		addHandCard([nowPlayer],nowPlayer,nowPlayer,56,[1],false,false);
 	}
 	else if (equmentName==string_handCardNameWucaixiayi
-	/* ||equmentName==string_handCardNameWucaixiayi+"(扣置)" */) {
+	 ||equmentName==string_handCardNameWucaixiayi+"(扣置)" ) {
 		// newHandCard(54,nowPlayer, 1, false, true);
 		addHandCard([nowPlayer],nowPlayer,nowPlayer,54,[1],false,false);
 	} else if (equmentName==string_handCardNameTayunxue
-	/* ||equmentName==string_handCardNameTayunxue+"(扣置)" */) {
+	 ||equmentName==string_handCardNameTayunxue+"(扣置)" ) {
 		// newHandCard(55,nowPlayer, 1, false, true);
 		addHandCard([nowPlayer],nowPlayer,nowPlayer,55,[1],false,false);
-	}
+	}*/
+	addHandCard([nowPlayer],nowPlayer,nowPlayeequmentNameMappingCardInfoId(equmentName).cardID,[1],false,false);
 }
 
 function topMonsterCard(number) {
