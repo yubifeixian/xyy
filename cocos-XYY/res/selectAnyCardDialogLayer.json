@@ -1,0 +1,583 @@
+{
+  "ID": "750e1019-7d24-44d1-aafd-85d98f2c5835",
+  "Version": "2.3.4",
+  "Name": "selectAnyCardDialogLayer",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 192,
+        "Children": [
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 102,
+            "FileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/dialogCommon.png",
+              "Plist": ""
+            },
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 40,
+            "Scale9OriginY": 32,
+            "Scale9Width": 124,
+            "Scale9Height": 140,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 480.0,
+              "Y": 320.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.8,
+              "Y": 1.0
+            },
+            "LeftMargin": 96.0,
+            "RightMargin": 96.0,
+            "Tag": 204,
+            "Children": [
+              {
+                "FontSize": 24,
+                "LabelText": "的请选择指定的的请选择指定的的请选择指定的的请选择指定的\n的请选择指定的的请选择指定的的请选择指定的的请选择指定的\n的请选择指定的的请选择指定的的请选择指定的的请选择指定的",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/fangzhen.ttf",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 377.6257,
+                  "Y": 563.1526
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.4917,
+                  "Y": 0.8799
+                },
+                "PreSize": {
+                  "X": 0.875,
+                  "Y": 0.1219
+                },
+                "LeftMargin": 41.6257,
+                "RightMargin": 54.3742,
+                "TopMargin": 37.8474,
+                "BottomMargin": 524.1526,
+                "Tag": 205,
+                "ActionTag": 2048926223,
+                "Size": {
+                  "X": 672.0,
+                  "Y": 78.0
+                },
+                "Name": "message",
+                "ctype": "TextObjectData"
+              },
+              {
+                "ItemMargin": 3,
+                "VerticalType": "Align_VerticalCenter",
+                "ScrollDirectionType": 0,
+                "ClipAble": false,
+                "BackColorAlpha": 102,
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/piaochuang.png",
+                  "Plist": ""
+                },
+                "SingleColor": {
+                  "R": 150,
+                  "G": 150
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 150
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 125,
+                "Scale9OriginY": 19,
+                "Scale9Width": 130,
+                "Scale9Height": 21,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 382.0974,
+                  "Y": 454.4059
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.4975,
+                  "Y": 0.71
+                },
+                "PercentWidthEnable": true,
+                "PercentHeightEnable": true,
+                "PercentWidthEnabled": true,
+                "PercentHeightEnabled": true,
+                "PreSize": {
+                  "X": 0.9,
+                  "Y": 0.2
+                },
+                "LeftMargin": 36.4975,
+                "RightMargin": 40.3026,
+                "TopMargin": 121.5941,
+                "BottomMargin": 390.4059,
+                "Tag": 214,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "drawable-hdpi/caihuan.jpg",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 19,
+                    "Scale9OriginY": 27,
+                    "Scale9Width": 22,
+                    "Scale9Height": 29,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 37.5,
+                      "Y": 64.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0543,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.1085,
+                      "Y": 0.7813
+                    },
+                    "RightMargin": 616.2,
+                    "TopMargin": 14.0,
+                    "BottomMargin": 14.0,
+                    "Tag": 215,
+                    "ActionTag": 1460022511,
+                    "Size": {
+                      "X": 75.0,
+                      "Y": 100.0
+                    },
+                    "Alpha": 159,
+                    "Name": "itemExample",
+                    "ctype": "ImageViewObjectData"
+                  }
+                ],
+                "ActionTag": 1491866725,
+                "Size": {
+                  "X": 691.2,
+                  "Y": 128.0
+                },
+                "Name": "handCardListView",
+                "ctype": "ListViewObjectData"
+              },
+              {
+                "ItemMargin": 3,
+                "VerticalType": "Align_VerticalCenter",
+                "ScrollDirectionType": 0,
+                "ClipAble": true,
+                "BackColorAlpha": 102,
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/piaochuang.png",
+                  "Plist": ""
+                },
+                "SingleColor": {
+                  "R": 150,
+                  "G": 150
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 150
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 125,
+                "Scale9OriginY": 19,
+                "Scale9Width": 130,
+                "Scale9Height": 21,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 384.0,
+                  "Y": 316.1011
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.4939
+                },
+                "PercentWidthEnable": true,
+                "PercentHeightEnable": true,
+                "PercentWidthEnabled": true,
+                "PercentHeightEnabled": true,
+                "PreSize": {
+                  "X": 0.9,
+                  "Y": 0.2
+                },
+                "LeftMargin": 38.4,
+                "RightMargin": 38.4,
+                "TopMargin": 259.8989,
+                "BottomMargin": 252.1011,
+                "Tag": 227,
+                "ActionTag": 1405425128,
+                "Size": {
+                  "X": 691.2,
+                  "Y": 128.0
+                },
+                "Name": "equmentListView",
+                "ctype": "ListViewObjectData"
+              },
+              {
+                "ItemMargin": 3,
+                "VerticalType": "Align_VerticalCenter",
+                "ScrollDirectionType": 0,
+                "ClipAble": true,
+                "BackColorAlpha": 102,
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/piaochuang.png",
+                  "Plist": ""
+                },
+                "SingleColor": {
+                  "R": 150,
+                  "G": 150
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 150
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 125,
+                "Scale9OriginY": 19,
+                "Scale9Width": 130,
+                "Scale9Height": 21,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 380.1949,
+                  "Y": 177.2975
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.495,
+                  "Y": 0.277
+                },
+                "PercentWidthEnable": true,
+                "PercentHeightEnable": true,
+                "PercentWidthEnabled": true,
+                "PercentHeightEnabled": true,
+                "PreSize": {
+                  "X": 0.9,
+                  "Y": 0.2
+                },
+                "LeftMargin": 34.5949,
+                "RightMargin": 42.2051,
+                "TopMargin": 398.7025,
+                "BottomMargin": 113.2975,
+                "Tag": 241,
+                "ActionTag": 1040441628,
+                "Size": {
+                  "X": 691.2,
+                  "Y": 128.0
+                },
+                "Name": "ornamentListView",
+                "ctype": "ListViewObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/confirmbutton3.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/confirmbutton2.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/confirmbutton.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 141,
+                "Scale9Height": 56,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 384.0,
+                  "Y": 63.616
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.0994
+                },
+                "PercentWidthEnable": true,
+                "PercentHeightEnable": true,
+                "PercentWidthEnabled": true,
+                "PercentHeightEnabled": true,
+                "PreSize": {
+                  "X": 0.2227,
+                  "Y": 0.1219
+                },
+                "LeftMargin": 298.5,
+                "RightMargin": 298.5,
+                "TopMargin": 537.384,
+                "BottomMargin": 24.616,
+                "Tag": 243,
+                "ActionTag": -878320490,
+                "Size": {
+                  "X": 171.0,
+                  "Y": 78.0
+                },
+                "Name": "confirmBtn",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/closebutton3.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/closebutton2.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/closebutton.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 37,
+                "Scale9Height": 45,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 749.1918,
+                  "Y": 600.6262
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.9755,
+                  "Y": 0.9385
+                },
+                "PercentWidthEnable": true,
+                "PercentHeightEnable": true,
+                "PercentWidthEnabled": true,
+                "PercentHeightEnabled": true,
+                "PreSize": {
+                  "X": 0.0872,
+                  "Y": 0.1047
+                },
+                "LeftMargin": 715.6918,
+                "RightMargin": -14.6918,
+                "TopMargin": 5.8738,
+                "BottomMargin": 567.1262,
+                "Tag": 244,
+                "ActionTag": -923023628,
+                "Size": {
+                  "X": 67.0,
+                  "Y": 67.0
+                },
+                "Name": "closeBtn",
+                "ctype": "ButtonObjectData"
+              }
+            ],
+            "ActionTag": 319620336,
+            "Size": {
+              "X": 767.9999,
+              "Y": 640.0
+            },
+            "Name": "Panel_4",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Size": {
+          "X": 960.0,
+          "Y": 640.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "drawable-hdpi/caihuan.jpg",
+        "drawable-hdpi/closebutton.png",
+        "drawable-hdpi/closebutton2.png",
+        "drawable-hdpi/closebutton3.png",
+        "drawable-hdpi/confirmbutton.png",
+        "drawable-hdpi/confirmbutton2.png",
+        "drawable-hdpi/confirmbutton3.png",
+        "drawable-hdpi/dialogCommon.png",
+        "drawable-hdpi/fangzhen.ttf",
+        "drawable-hdpi/piaochuang.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

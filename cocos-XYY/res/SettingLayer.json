@@ -1,0 +1,478 @@
+{
+  "ID": "ba562922-aeda-400b-83d0-472df79be897",
+  "Version": "2.3.4",
+  "Name": "SettingLayer",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 267,
+        "Children": [
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 102,
+            "FileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/dialogCommon.png",
+              "Plist": ""
+            },
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 66,
+            "Scale9OriginY": 66,
+            "Scale9Width": 68,
+            "Scale9Height": 68,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 480.0,
+              "Y": 320.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.9,
+              "Y": 0.9
+            },
+            "LeftMargin": 48.0,
+            "RightMargin": 48.0,
+            "TopMargin": 32.0,
+            "BottomMargin": 32.0,
+            "Tag": 268,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/closebutton.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 22,
+                "Scale9OriginY": 22,
+                "Scale9Width": 23,
+                "Scale9Height": 23,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 812.1138,
+                  "Y": 532.9552
+                },
+                "Scale": {
+                  "ScaleX": 1.6039,
+                  "ScaleY": 1.6039
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.9399,
+                  "Y": 0.9253
+                },
+                "PreSize": {
+                  "X": 0.0775,
+                  "Y": 0.1163
+                },
+                "LeftMargin": 778.6138,
+                "RightMargin": 18.3862,
+                "TopMargin": 9.5448,
+                "BottomMargin": 499.4552,
+                "Tag": 275,
+                "ActionTag": 1079789518,
+                "Size": {
+                  "X": 67.0,
+                  "Y": 67.0
+                },
+                "Name": "closeBtn",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FontSize": 72,
+                "LabelText": "设置",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/mini.TTF",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 432.0,
+                  "Y": 489.0839
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "G": 165,
+                  "B": 0
+                },
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.8491
+                },
+                "PreSize": {
+                  "X": 0.169,
+                  "Y": 0.1458
+                },
+                "LeftMargin": 359.0,
+                "RightMargin": 359.0,
+                "TopMargin": 44.9161,
+                "BottomMargin": 447.0839,
+                "Tag": 270,
+                "ActionTag": -1031941011,
+                "Size": {
+                  "X": 146.0,
+                  "Y": 84.0
+                },
+                "Name": "titleText",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 72,
+                "LabelText": "音乐",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/mini.TTF",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 224.64,
+                  "Y": 322.56
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.26,
+                  "Y": 0.56
+                },
+                "PreSize": {
+                  "X": 0.169,
+                  "Y": 0.1458
+                },
+                "LeftMargin": 151.64,
+                "RightMargin": 566.36,
+                "TopMargin": 211.44,
+                "BottomMargin": 280.56,
+                "Tag": 271,
+                "ActionTag": 848672785,
+                "Size": {
+                  "X": 146.0,
+                  "Y": 84.0
+                },
+                "Name": "musicText",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/zhu_kai.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 54,
+                "Scale9OriginY": 24,
+                "Scale9Width": 57,
+                "Scale9Height": 27,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 639.36,
+                  "Y": 322.5602
+                },
+                "Scale": {
+                  "ScaleX": 1.5496,
+                  "ScaleY": 1.5496
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.74,
+                  "Y": 0.56
+                },
+                "PercentWidthEnable": true,
+                "PercentHeightEnable": true,
+                "PercentWidthEnabled": true,
+                "PercentHeightEnabled": true,
+                "PreSize": {
+                  "X": 0.191,
+                  "Y": 0.1302
+                },
+                "LeftMargin": 556.86,
+                "RightMargin": 142.14,
+                "TopMargin": 215.9398,
+                "BottomMargin": 285.0602,
+                "Tag": 272,
+                "ActionTag": 1045246671,
+                "Size": {
+                  "X": 165.0,
+                  "Y": 75.0
+                },
+                "Name": "musicBtn",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FontSize": 72,
+                "LabelText": "便捷操作",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/mini.TTF",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 224.64,
+                  "Y": 167.5008
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.26,
+                  "Y": 0.2908
+                },
+                "PreSize": {
+                  "X": 0.3356,
+                  "Y": 0.1458
+                },
+                "LeftMargin": 79.64,
+                "RightMargin": 494.36,
+                "TopMargin": 366.4992,
+                "BottomMargin": 125.5008,
+                "Tag": 273,
+                "ActionTag": -569051706,
+                "Size": {
+                  "X": 290.0,
+                  "Y": 84.0
+                },
+                "Name": "AutoStepText",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/zhu_kai.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 54,
+                "Scale9OriginY": 24,
+                "Scale9Width": 57,
+                "Scale9Height": 27,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 639.36,
+                  "Y": 167.5008
+                },
+                "Scale": {
+                  "ScaleX": 1.5496,
+                  "ScaleY": 1.5496
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.74,
+                  "Y": 0.2908
+                },
+                "PercentWidthEnable": true,
+                "PercentHeightEnable": true,
+                "PercentWidthEnabled": true,
+                "PercentHeightEnabled": true,
+                "PreSize": {
+                  "X": 0.191,
+                  "Y": 0.1302
+                },
+                "LeftMargin": 556.86,
+                "RightMargin": 142.14,
+                "TopMargin": 370.9992,
+                "BottomMargin": 130.0008,
+                "Tag": 274,
+                "ActionTag": -451283713,
+                "Size": {
+                  "X": 165.0,
+                  "Y": 75.0
+                },
+                "Name": "AutoStepBtn",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "drawable-hdpi/weizhi.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 46,
+                "Scale9OriginY": 46,
+                "Scale9Width": 18,
+                "Scale9Height": 18,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 412.4736,
+                  "Y": 169.6896
+                },
+                "Scale": {
+                  "ScaleX": 0.7227,
+                  "ScaleY": 0.7227
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.4774,
+                  "Y": 0.2946
+                },
+                "PercentWidthEnable": true,
+                "PercentHeightEnable": true,
+                "PercentWidthEnabled": true,
+                "PercentHeightEnabled": true,
+                "PreSize": {
+                  "X": 0.1273,
+                  "Y": 0.191
+                },
+                "LeftMargin": 357.48,
+                "RightMargin": 396.5328,
+                "TopMargin": 351.3024,
+                "BottomMargin": 114.6816,
+                "Tag": 276,
+                "ActionTag": -1771796066,
+                "Size": {
+                  "X": 109.9872,
+                  "Y": 110.016
+                },
+                "Name": "tips",
+                "ctype": "ImageViewObjectData"
+              }
+            ],
+            "ActionTag": -1793799720,
+            "Size": {
+              "X": 864.0,
+              "Y": 576.0
+            },
+            "Name": "Bg",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Size": {
+          "X": 960.0,
+          "Y": 640.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "drawable-hdpi/closebutton.png",
+        "drawable-hdpi/dialogCommon.png",
+        "drawable-hdpi/mini.TTF",
+        "drawable-hdpi/weizhi.png",
+        "drawable-hdpi/zhu_kai.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

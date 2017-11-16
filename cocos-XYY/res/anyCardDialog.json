@@ -1,0 +1,1166 @@
+{
+  "ID": "af4b3611-1093-408c-b21e-f856ad84aaca",
+  "Version": "2.3.4",
+  "Name": "anyCardDialog",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 261,
+        "Children": [
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 102,
+            "FileData": {
+              "Type": "Normal",
+              "Path": "drawable-hdpi/dialogCommon.png",
+              "Plist": ""
+            },
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 34,
+            "Scale9OriginY": 40,
+            "Scale9Width": 136,
+            "Scale9Height": 126,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 480.0,
+              "Y": 320.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.8,
+              "Y": 0.9
+            },
+            "LeftMargin": 96.0,
+            "RightMargin": 96.0,
+            "TopMargin": 32.0,
+            "BottomMargin": 32.0,
+            "Tag": 262,
+            "Children": [
+              {
+                "InnerNodeSize": {
+                  "Width": 691,
+                  "Height": 1180
+                },
+                "ScrollDirectionType": "Vertical",
+                "ClipAble": true,
+                "BackColorAlpha": 102,
+                "SingleColor": {
+                  "G": 150,
+                  "B": 100
+                },
+                "FirstColor": {
+                  "G": 150,
+                  "B": 100
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 384.0,
+                  "Y": 288.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.5
+                },
+                "PercentWidthEnable": true,
+                "PercentHeightEnable": true,
+                "PercentWidthEnabled": true,
+                "PercentHeightEnabled": true,
+                "PreSize": {
+                  "X": 0.9,
+                  "Y": 0.9
+                },
+                "LeftMargin": 38.4,
+                "RightMargin": 38.4,
+                "TopMargin": 28.8,
+                "BottomMargin": 28.8,
+                "Tag": 263,
+                "Children": [
+                  {
+                    "ClipAble": false,
+                    "BackColorAlpha": 102,
+                    "SingleColor": {
+                      "R": 150,
+                      "G": 200
+                    },
+                    "FirstColor": {
+                      "R": 150,
+                      "G": 200
+                    },
+                    "EndColor": {},
+                    "ColorVector": {
+                      "ScaleY": 1.0
+                    },
+                    "Scale9Width": 1,
+                    "Scale9Height": 1,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 345.6,
+                      "Y": 590.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.5
+                    },
+                    "PercentWidthEnable": true,
+                    "PercentHeightEnable": true,
+                    "PercentWidthEnabled": true,
+                    "PercentHeightEnabled": true,
+                    "PreSize": {
+                      "X": 1.0,
+                      "Y": 1.0
+                    },
+                    "Tag": 264,
+                    "Children": [
+                      {
+                        "FontSize": 36,
+                        "ButtonText": "窥测天机",
+                        "FontResource": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/mini.TTF",
+                          "Plist": ""
+                        },
+                        "TextColor": {
+                          "R": 144,
+                          "G": 238,
+                          "B": 144
+                        },
+                        "DisabledFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_disable.png",
+                          "Plist": ""
+                        },
+                        "PressedFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_click.png",
+                          "Plist": ""
+                        },
+                        "NormalFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_unclick.png",
+                          "Plist": ""
+                        },
+                        "Scale9Enable": true,
+                        "Scale9OriginX": 15,
+                        "Scale9OriginY": 11,
+                        "Scale9Width": 180,
+                        "Scale9Height": 68,
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 110.1082,
+                          "Y": 1126.5461
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.1593,
+                          "Y": 0.9547
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.3038,
+                          "Y": 0.0763
+                        },
+                        "LeftMargin": 5.1081,
+                        "RightMargin": 476.0918,
+                        "TopMargin": 8.4539,
+                        "BottomMargin": 1081.5461,
+                        "Tag": 265,
+                        "ActionTag": -1828196248,
+                        "Size": {
+                          "X": 210.0,
+                          "Y": 90.0
+                        },
+                        "Name": "btn_kuicetianji",
+                        "ctype": "ButtonObjectData"
+                      },
+                      {
+                        "FontSize": 36,
+                        "ButtonText": "鼠儿果",
+                        "FontResource": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/mini.TTF",
+                          "Plist": ""
+                        },
+                        "TextColor": {
+                          "R": 144,
+                          "G": 238,
+                          "B": 144
+                        },
+                        "DisabledFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_disable.png",
+                          "Plist": ""
+                        },
+                        "PressedFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_click.png",
+                          "Plist": ""
+                        },
+                        "NormalFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_unclick.png",
+                          "Plist": ""
+                        },
+                        "Scale9Enable": true,
+                        "Scale9OriginX": 15,
+                        "Scale9OriginY": 11,
+                        "Scale9Width": 180,
+                        "Scale9Height": 68,
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5719,
+                          "ScaleY": 0.4464
+                        },
+                        "Position": {
+                          "X": 364.7734,
+                          "Y": 1121.7247
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5277,
+                          "Y": 0.9506
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.3038,
+                          "Y": 0.0763
+                        },
+                        "LeftMargin": 244.6781,
+                        "RightMargin": 236.5218,
+                        "TopMargin": 8.4537,
+                        "BottomMargin": 1081.5461,
+                        "Tag": 266,
+                        "ActionTag": -577312484,
+                        "Size": {
+                          "X": 210.0,
+                          "Y": 90.0
+                        },
+                        "Name": "btn_shuerguo",
+                        "ctype": "ButtonObjectData"
+                      },
+                      {
+                        "FontSize": 36,
+                        "ButtonText": "天雷破",
+                        "FontResource": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/mini.TTF",
+                          "Plist": ""
+                        },
+                        "TextColor": {
+                          "R": 144,
+                          "G": 238,
+                          "B": 144
+                        },
+                        "DisabledFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_disable.png",
+                          "Plist": ""
+                        },
+                        "PressedFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_click.png",
+                          "Plist": ""
+                        },
+                        "NormalFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_unclick.png",
+                          "Plist": ""
+                        },
+                        "Scale9Enable": true,
+                        "Scale9OriginX": 15,
+                        "Scale9OriginY": 11,
+                        "Scale9Width": 180,
+                        "Scale9Height": 68,
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 582.7507,
+                          "Y": 1126.5461
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.8431,
+                          "Y": 0.9547
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.3038,
+                          "Y": 0.0763
+                        },
+                        "LeftMargin": 477.7507,
+                        "RightMargin": 3.4493,
+                        "TopMargin": 8.4539,
+                        "BottomMargin": 1081.5461,
+                        "Tag": 267,
+                        "ActionTag": -1347144145,
+                        "Size": {
+                          "X": 210.0,
+                          "Y": 90.0
+                        },
+                        "Name": "btn_tianleipo",
+                        "ctype": "ButtonObjectData"
+                      },
+                      {
+                        "FontSize": 36,
+                        "ButtonText": "铜钱镖",
+                        "FontResource": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/mini.TTF",
+                          "Plist": ""
+                        },
+                        "TextColor": {
+                          "R": 144,
+                          "G": 238,
+                          "B": 144
+                        },
+                        "DisabledFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_disable.png",
+                          "Plist": ""
+                        },
+                        "PressedFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_click.png",
+                          "Plist": ""
+                        },
+                        "NormalFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_unclick.png",
+                          "Plist": ""
+                        },
+                        "Scale9Enable": true,
+                        "Scale9OriginX": 15,
+                        "Scale9OriginY": 11,
+                        "Scale9Width": 180,
+                        "Scale9Height": 68,
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 110.1082,
+                          "Y": 1002.7639
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.1593,
+                          "Y": 0.8498
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.3038,
+                          "Y": 0.0763
+                        },
+                        "LeftMargin": 5.1081,
+                        "RightMargin": 476.0918,
+                        "TopMargin": 132.2361,
+                        "BottomMargin": 957.7639,
+                        "Tag": 268,
+                        "ActionTag": 2131006635,
+                        "Size": {
+                          "X": 210.0,
+                          "Y": 90.0
+                        },
+                        "Name": "btn_tongqianbiao",
+                        "ctype": "ButtonObjectData"
+                      },
+                      {
+                        "FontSize": 36,
+                        "ButtonText": "偷盗",
+                        "FontResource": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/mini.TTF",
+                          "Plist": ""
+                        },
+                        "TextColor": {
+                          "R": 144,
+                          "G": 238,
+                          "B": 144
+                        },
+                        "DisabledFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_disable.png",
+                          "Plist": ""
+                        },
+                        "PressedFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_click.png",
+                          "Plist": ""
+                        },
+                        "NormalFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_unclick.png",
+                          "Plist": ""
+                        },
+                        "Scale9Enable": true,
+                        "Scale9OriginX": 15,
+                        "Scale9OriginY": 11,
+                        "Scale9Width": 180,
+                        "Scale9Height": 68,
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 349.678,
+                          "Y": 1002.7639
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5059,
+                          "Y": 0.8498
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.3038,
+                          "Y": 0.0763
+                        },
+                        "LeftMargin": 244.678,
+                        "RightMargin": 236.5219,
+                        "TopMargin": 132.2361,
+                        "BottomMargin": 957.7639,
+                        "Tag": 269,
+                        "ActionTag": 103560252,
+                        "Size": {
+                          "X": 210.0,
+                          "Y": 90.0
+                        },
+                        "Name": "btn_toudao",
+                        "ctype": "ButtonObjectData"
+                      },
+                      {
+                        "FontSize": 36,
+                        "ButtonText": "五气朝元",
+                        "FontResource": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/mini.TTF",
+                          "Plist": ""
+                        },
+                        "TextColor": {
+                          "R": 144,
+                          "G": 238,
+                          "B": 144
+                        },
+                        "DisabledFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_disable.png",
+                          "Plist": ""
+                        },
+                        "PressedFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_click.png",
+                          "Plist": ""
+                        },
+                        "NormalFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_unclick.png",
+                          "Plist": ""
+                        },
+                        "Scale9Enable": true,
+                        "Scale9OriginX": 15,
+                        "Scale9OriginY": 11,
+                        "Scale9Width": 180,
+                        "Scale9Height": 68,
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 582.7507,
+                          "Y": 1002.7639
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.8431,
+                          "Y": 0.8498
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.3038,
+                          "Y": 0.0763
+                        },
+                        "LeftMargin": 477.7507,
+                        "RightMargin": 3.4493,
+                        "TopMargin": 132.2361,
+                        "BottomMargin": 957.7639,
+                        "Tag": 270,
+                        "ActionTag": 780367875,
+                        "Size": {
+                          "X": 210.0,
+                          "Y": 90.0
+                        },
+                        "Name": "btn_wuqichaoyuan",
+                        "ctype": "ButtonObjectData"
+                      },
+                      {
+                        "FontSize": 36,
+                        "ButtonText": "金蚕王",
+                        "FontResource": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/mini.TTF",
+                          "Plist": ""
+                        },
+                        "TextColor": {
+                          "B": 0
+                        },
+                        "DisabledFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_disable.png",
+                          "Plist": ""
+                        },
+                        "PressedFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_click.png",
+                          "Plist": ""
+                        },
+                        "NormalFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_unclick.png",
+                          "Plist": ""
+                        },
+                        "Scale9Enable": true,
+                        "Scale9OriginX": 15,
+                        "Scale9OriginY": 11,
+                        "Scale9Width": 180,
+                        "Scale9Height": 68,
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 110.1082,
+                          "Y": 877.094
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.1593,
+                          "Y": 0.7433
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.3038,
+                          "Y": 0.0763
+                        },
+                        "LeftMargin": 5.1081,
+                        "RightMargin": 476.0918,
+                        "TopMargin": 257.906,
+                        "BottomMargin": 832.094,
+                        "Tag": 271,
+                        "ActionTag": 1875277527,
+                        "Size": {
+                          "X": 210.0,
+                          "Y": 90.0
+                        },
+                        "Name": "btn_jincanwang",
+                        "ctype": "ButtonObjectData"
+                      },
+                      {
+                        "FontSize": 36,
+                        "ButtonText": "金蝉脱壳",
+                        "FontResource": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/mini.TTF",
+                          "Plist": ""
+                        },
+                        "TextColor": {
+                          "B": 0
+                        },
+                        "DisabledFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_disable.png",
+                          "Plist": ""
+                        },
+                        "PressedFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_click.png",
+                          "Plist": ""
+                        },
+                        "NormalFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_unclick.png",
+                          "Plist": ""
+                        },
+                        "Scale9Enable": true,
+                        "Scale9OriginX": 15,
+                        "Scale9OriginY": 11,
+                        "Scale9Width": 180,
+                        "Scale9Height": 68,
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 349.678,
+                          "Y": 877.094
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5059,
+                          "Y": 0.7433
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.3038,
+                          "Y": 0.0763
+                        },
+                        "LeftMargin": 244.678,
+                        "RightMargin": 236.5219,
+                        "TopMargin": 257.906,
+                        "BottomMargin": 832.094,
+                        "Tag": 272,
+                        "ActionTag": 1408214300,
+                        "Size": {
+                          "X": 210.0,
+                          "Y": 90.0
+                        },
+                        "Name": "btn_jinchantuoqiao",
+                        "ctype": "ButtonObjectData"
+                      },
+                      {
+                        "FontSize": 36,
+                        "ButtonText": "天罡战气",
+                        "FontResource": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/mini.TTF",
+                          "Plist": ""
+                        },
+                        "TextColor": {
+                          "B": 0
+                        },
+                        "DisabledFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_disable.png",
+                          "Plist": ""
+                        },
+                        "PressedFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_click.png",
+                          "Plist": ""
+                        },
+                        "NormalFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_unclick.png",
+                          "Plist": ""
+                        },
+                        "Scale9Enable": true,
+                        "Scale9OriginX": 15,
+                        "Scale9OriginY": 11,
+                        "Scale9Width": 180,
+                        "Scale9Height": 68,
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 582.7507,
+                          "Y": 877.094
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.8431,
+                          "Y": 0.7433
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.3038,
+                          "Y": 0.0763
+                        },
+                        "LeftMargin": 477.7507,
+                        "RightMargin": 3.4493,
+                        "TopMargin": 257.906,
+                        "BottomMargin": 832.094,
+                        "Tag": 273,
+                        "ActionTag": -1119375974,
+                        "Size": {
+                          "X": 210.0,
+                          "Y": 90.0
+                        },
+                        "Name": "btn_tiangangzhanqi",
+                        "ctype": "ButtonObjectData"
+                      },
+                      {
+                        "FontSize": 36,
+                        "ButtonText": "天玄五音",
+                        "FontResource": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/mini.TTF",
+                          "Plist": ""
+                        },
+                        "TextColor": {
+                          "B": 0
+                        },
+                        "DisabledFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_disable.png",
+                          "Plist": ""
+                        },
+                        "PressedFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_click.png",
+                          "Plist": ""
+                        },
+                        "NormalFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_unclick.png",
+                          "Plist": ""
+                        },
+                        "Scale9Enable": true,
+                        "Scale9OriginX": 15,
+                        "Scale9OriginY": 11,
+                        "Scale9Width": 180,
+                        "Scale9Height": 68,
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 110.1082,
+                          "Y": 752.958
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.1593,
+                          "Y": 0.6381
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.3038,
+                          "Y": 0.0763
+                        },
+                        "LeftMargin": 5.1081,
+                        "RightMargin": 476.0918,
+                        "TopMargin": 382.042,
+                        "BottomMargin": 707.958,
+                        "Tag": 274,
+                        "ActionTag": -367205176,
+                        "Size": {
+                          "X": 210.0,
+                          "Y": 90.0
+                        },
+                        "Name": "btn_tianxuanwuyin",
+                        "ctype": "ButtonObjectData"
+                      },
+                      {
+                        "FontSize": 36,
+                        "ButtonText": "灵葫仙丹",
+                        "FontResource": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/mini.TTF",
+                          "Plist": ""
+                        },
+                        "TextColor": {
+                          "R": 191,
+                          "G": 191,
+                          "B": 191
+                        },
+                        "DisabledFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_disable.png",
+                          "Plist": ""
+                        },
+                        "PressedFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_click.png",
+                          "Plist": ""
+                        },
+                        "NormalFileData": {
+                          "Type": "Normal",
+                          "Path": "drawable-hdpi/skillButton_unclick.png",
+                          "Plist": ""
+                        },
+                        "Scale9Enable": true,
+                        "Scale9OriginX": 15,
+                        "Scale9OriginY": 11,
+                        "Scale9Width": 180,
+                        "Scale9Height": 68,
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 349.678,
+                          "Y": 752.958
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5059,
+                          "Y": 0.6381
+                        },
+                        "PercentWidthEnable": true,
+                        "PercentHeightEnable": true,
+                        "PercentWidthEnabled": true,
+                        "PercentHeightEnabled": true,
+                        "PreSize": {
+                          "X": 0.3038,
+                          "Y": 0.0763
+                        },
+                        "LeftMargin": 244.678,
+                        "RightMargin": 236.5219,
+                        "TopMargin": 382.042,
+                        "BottomMargin": 707.958,
+                        "Tag": 275,
+                        "ActionTag": -1433977573,
+                        "Size": {
+                          "X": 210.0,
+                          "Y": 90.0
+                        },
+                        "Name": "btn_linghuxiandan",
+                        "ctype": "ButtonObjectData"
+                      }
+                    ],
+                    "ActionTag": 1259160602,
+                    "Size": {
+                      "X": 691.2,
+                      "Y": 1180.0
+                    },
+                    "Name": "Panel_3",
+                    "ctype": "PanelObjectData"
+                  }
+                ],
+                "ActionTag": 355360178,
+                "Size": {
+                  "X": 691.0,
+                  "Y": 518.0
+                },
+                "Name": "ScrollView_2",
+                "ctype": "ScrollViewObjectData"
+              }
+            ],
+            "ActionTag": -1223342993,
+            "Size": {
+              "X": 767.9999,
+              "Y": 576.0
+            },
+            "Name": "Panel_1",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Size": {
+          "X": 960.0,
+          "Y": 640.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "drawable-hdpi/dialogCommon.png",
+        "drawable-hdpi/mini.TTF",
+        "drawable-hdpi/skillButton_click.png",
+        "drawable-hdpi/skillButton_disable.png",
+        "drawable-hdpi/skillButton_unclick.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}
