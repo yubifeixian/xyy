@@ -444,16 +444,19 @@ function equmentNameMappingCardInfo(equmentName){
 		_cardInfo.cardMessage="【"+string_handCardNameMojian+
 		"】命中+1;典当：您的技牌阶段，可以放弃"+
 		string_handCardNameMojian+"（是否装备均可），之后您补2张牌";
+		break;
 	case string_handCardNameCaihuan:
 		_cardInfo.cardID=48;
 		_cardInfo.cardSrcID="res/drawable-hdpi/caihuan.png";
 		_cardInfo.cardType=CARDTYPE.ARMCARD; 
 		_cardInfo.cardMessage="【"+string_handCardNameCaihuan+	"】命中+2";
+		break;
 	case string_handCardNameModaotianzha:
 		_cardInfo.cardID=49;
 		_cardInfo.cardSrcID="res/drawable-hdpi/tianzha.png";
 		_cardInfo.cardType=CARDTYPE.ARMCARD; 
 		_cardInfo.cardMessage="【"+string_handCardNameModaotianzha+"】战力+2";
+		break;
 	case string_handCardNameTianshezhang:
 		_cardInfo.cardID=50;
 		_cardInfo.cardSrcID="res/drawable-hdpi/tianshezhang.png";
@@ -461,40 +464,47 @@ function equmentNameMappingCardInfo(equmentName){
 		_cardInfo.cardMessage="【"+string_handCardNameTianshezhang+"】战力+1装备"+
 		string_handCardNameTianshezhang+"的角色，如果HP得到回复" +
 		"（倾慕除外），HP回复额外+1";
+		break;
 	case string_handCardNameWuchenjian:
 		_cardInfo.cardID=51;
 		_cardInfo.cardSrcID="res/drawable-hdpi/wuchenjian.png";
 		_cardInfo.cardType=CARDTYPE.ARMCARD; 
 		_cardInfo.cardMessage="【"+string_handCardNameWuchenjian+"】战力+1，命中+1";
+		break;
 	case string_handCardNameTiandijifu:
 		_cardInfo.cardID=52;
 		_cardInfo.cardSrcID="res/drawable-hdpi/tiandijifu.png";
 		_cardInfo.cardType=CARDTYPE.DEFENSECARD; 
 		_cardInfo.cardMessage="【"+string_handCardNameTiandijifu+"】装备后，" +
 		"您可将任意手牌当作【隐蛊】使用";
+		break;
 	case string_handCardNameQiankundaopao:
 		_cardInfo.cardID=53;
 		_cardInfo.cardSrcID="res/drawable-hdpi/qiankundaopao.png";
 		_cardInfo.cardType=CARDTYPE.DEFENSECARD; 
 		_cardInfo.cardMessage="【"+string_handCardNameQiankundaopao+"】战力+1；装备后，" +
 		"您免疫技牌导致的HP伤害";
+		break;
 	case string_handCardNameWucaixiayi:
 		_cardInfo.cardID=54;
 		_cardInfo.cardSrcID="res/drawable-hdpi/wucaixiayi.png";
 		_cardInfo.cardType=CARDTYPE.DEFENSECARD; 
 		_cardInfo.cardMessage="【"+string_handCardNameWucaixiayi+"】战力+1爆发：装备后，您HP为0时，可丢弃" +
 		string_handCardNameWucaixiayi+"复活并恢复2点HP";
+		break;
 	case string_handCardNameTayunxue:
 		_cardInfo.cardID=55;
 		_cardInfo.cardSrcID="res/drawable-hdpi/tayunxue.png";
 		_cardInfo.cardType=CARDTYPE.DEFENSECARD; 
 		_cardInfo.cardMessage="【"+string_handCardNameTayunxue+"】命中+1爆发：装备后收到伤害时（倾慕除外）,您可丢弃" +
 		string_handCardNameTayunxue+"，免疫本次伤害，并令HP回复1点";
+		break;
 	case string_handCardNameLonghunzhankai:
 		_cardInfo.cardID=56;
 		_cardInfo.cardSrcID="res/drawable-hdpi/longhunzhankai.png";
 		_cardInfo.cardType=CARDTYPE.DEFENSECARD; 
 		_cardInfo.cardMessage="【"+string_handCardNameLonghunzhankai+"】装备后，您受到任何伤害（倾慕除外），HP损失降低1点，最低可降至0";
+		break;
 	}
 	return _cardInfo;
 }

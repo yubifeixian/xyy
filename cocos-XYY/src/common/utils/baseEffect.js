@@ -238,6 +238,14 @@ function baseEffectCountequment(player) {
 	return count;
 }
 
+//计算王蓬絮【饰品】数量
+function baseEffectCountOrnament(player){
+	if(player.skillNameList.containsObject(skillnameHechengshipin)){
+		return player.skillTempList.length;
+	}
+	return 0;
+}
+
 // 统计宠物数量
 function baseEffectCountPets(player) {
 	var count = 0;

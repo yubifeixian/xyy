@@ -847,7 +847,7 @@ function tongqianbiaoEffect(usePlayer,callBack){
 								addDialog(mainScene,new selectCardDialogLayer("请选择丢弃的饰品",effectPlayer.skillTempList,1,1,false,function(result){
 									var card=result.pop();
 									remove_Card_Into_DropDeck(card.name);
-									effectPlayer.handCard.removeObject(card);
+									effectPlayer.skillTempList.removeObject(card);
 									effectPlayer.maxCombat--;
 									textAreaAddMessage(usePlayer._name+"弃掉"+effectPlayer._name+"的一件饰品【"+card.name+"】", myText, listView, null);
 								}));

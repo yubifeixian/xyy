@@ -4230,7 +4230,110 @@ function skillCharacters_JingtianLaoban(player,cardNumber,dropCardCallback,callb
 	}
 	textAreaAddMessage("景天【老板】效果发动，获得敌方典当的牌",myText, listView);
 	addHandCard([_jingtian],_jingtian,_jingtian,cardNumber,[1],false,false,callback);
-	
+}
+
+// 景天【大团圆】效果
+function skillCharacter_JingtianDatuanyuan(deathPlayer,callback){
+	var _jingtianArray=[];
+	for (var i = 0; i < nowPlayerTerm.length; i++) {
+		if (nowPlayerTerm[i].hp<=0||
+				nowPlayerTerm[i].handCard.length+baseEffectCountequment(nowPlayerTerm[i])+baseEffectCountOrnament(nowPlayerTerm[i])<2||
+				!nowPlayerTerm[i].skillNameList.containsObject(skillnameDatuanyuan)) {
+			_jingtianArray.push(nowPlayerTerm[i]);
+			continue;
+		}
+		_jingtianArray.push(nowPlayerTerm[i]);
+	}
+	if(_jingtianArray.length==0){
+		callback();
+	}else{
+		datuanyuanHandle(_jingtianArray,_jingtianArray[0],deathPlayer,callback);
+	}
+}
+
+function datuanyuanHandle(playerArray,targetPlayer,deathPlayer,callback){
+	var _nextIndex=null;
+	for(var i=0;i<playerArray.length;i++){
+		if(playerArray[i]._name==targetPlayer._name){
+			_nextIndex=i+1;
+			break;
+		}
+	}
+	var _nextPlayer=null;
+	if(_nextIndex<playerArray.length){
+		_nextPlayer=playerArray[_nextIndex];
+	}
+	if(targetPlayer._name==player1._name){
+		addDialog(mainScene, new selectAnyCardDialogLayer("请选择舍弃2张牌发动【大团圆】",
+				2,true,targetPlayer,function(resultList){
+			for(var i=0;i<resultList.length;i++){
+				var _tmpCard=resultList[i];
+				switch(_tmpCard.cardType){
+				case SELECTANYCARD_TYPE.HANDCARD:
+					remove_Card_Into_DropDeck(_tmpCard.name);
+					targetPlayer.handCard.removeObject(_tmpCard);
+					_tmpCard.extraData.removeFromParent();
+					break;
+				case SELECTANYCARD_TYPE.ARM_1:
+					remove_Card_Into_DropDeck(targetPlayer.arms1);
+					targetPlayer.arms1 = "无";
+					targetPlayer.arms1Combat = 0;
+					targetPlayer.arms1Extent = 0;
+					targetPlayer.tempZhuangbeiSkillCombat=0;
+					targetPlayer.tempZhuangbeiSkillExtent=0;
+					break;
+				case SELECTANYCARD_TYPE.ARM_2:
+					remove_Card_Into_DropDeck(targetPlayer.arms2);
+					targetPlayer.arms2 = "无";
+					targetPlayer.arms2Combat = 0;
+					targetPlayer.arms2Extent = 0;
+					break;
+				case SELECTANYCARD_TYPE.DEFENSE:
+					remove_Card_Into_DropDeck(targetPlayer.defense);
+					targetPlayer.defense = "无";
+					targetPlayer.defenseCombat = 0;
+					targetPlayer.defenseExtent = 0;
+					break;
+				case SELECTANYCARD_TYPE.ORNAMENT:
+					remove_Card_Into_DropDeck(_tmpCard.name);
+					targetPlayer.skillTempList.removeObject(card);
+					targetPlayer.maxCombat--;
+					break;
+				}
+			}
+			//重新设定死亡角色的倾慕者
+			addDialog(mainScene, new selectLoverDialogLayer(4,function(loverList){
+				deathPlayer.lover1=Text.nil;
+				deathPlayer.lover2=Text.nil;
+				deathPlayer.lover3=Text.nil;
+				deathPlayer.lover4=Text.nil;
+				if(loverList.length==0){
+					textAreaAddMessage(targetPlayer._name+"发动【大团圆】，将 "+deathPlayer._name+"的倾慕者修改为:无", myText, listView, null);
+					return;
+				}
+				var _str="";
+				for(var i=0;i<loverList.length;i++){
+					eval("deathPlayer.lover"+(i+1)+"=loverList[i]");
+					_str+=loverList[i];
+					if(i<loverList.length-1){
+						_str+=",";
+					}
+				}
+				textAreaAddMessage(targetPlayer._name+"发动【大团圆】，将 "+deathPlayer._name+"的倾慕者修改为:"+_str, myText, listView, null);
+				cc.log(deathPlayer.lover1);
+				cc.log(deathPlayer.lover2);
+				cc.log(deathPlayer.lover3);
+				cc.log(deathPlayer.lover4);
+			},callback));
+		},callback));
+	}else{
+		// AI选择大团圆的执行情况，默认不发动
+		if(_nextPlayer==null){
+			callback();
+		}else{
+			datuanyuanHandle(playerArray, _nextPlayer, deathPlayer, callback);
+		}
+	}
 }
 
 

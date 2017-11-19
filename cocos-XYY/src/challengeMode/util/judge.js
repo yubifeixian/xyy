@@ -9,8 +9,6 @@ function judgetDeath(player,heartPlayerList,callBack,isNotLoverEffect){
 	nextIndex=nowIndex+1;
 	nextIndex%=heartPlayerList.length;
 	if(nextIndex==0){
-		// cc.log("开始处理死亡"+heartPlayerList[0]._name+"后的效果,isNotLoverEffect =
-		// "+isNotLoverEffect);
 		afterDeathHanle(heartPlayerList[0],heartPlayerList,callBack,isNotLoverEffect);
 	}else{
 		isDeath(heartPlayerList[nextIndex], heartPlayerList, true, callBack,isNotLoverEffect);
@@ -18,26 +16,28 @@ function judgetDeath(player,heartPlayerList,callBack,isNotLoverEffect){
 }
 
 function isDeath(player,heartPlayerList,canHelp,callBack,isNotLoverEffect){
-	// cc.log("进入isDeath Method");
 	if(!player.isDeath&&player.hp==0){
-		if(canHelp){
-			useLinghuxiandan(player, player, function(){
-				if(player.hp==0){
-					if(player.defense==string_handCardNameWucaixiayi){
-						askWucaixiayi(player,function(){
-							judgetDeath(player, heartPlayerList, callBack,isNotLoverEffect);
-						});
+		//景天【大团圆】效果
+		skillCharacter_JingtianDatuanyuan(player, function(){
+			if(canHelp){
+				useLinghuxiandan(player, player, function(){
+					if(player.hp==0){
+						if(player.defense==string_handCardNameWucaixiayi){
+							askWucaixiayi(player,function(){
+								judgetDeath(player, heartPlayerList, callBack,isNotLoverEffect);
+							});
+						}else{
+							// 没有五彩霞衣的情况
+							askDiejing(player,player,function(){
+								judgetDeath(player, heartPlayerList, callBack,isNotLoverEffect);
+							});
+						}
 					}else{
-						// 没有五彩霞衣的情况
-						askDiejing(player,player,function(){
-							judgetDeath(player, heartPlayerList, callBack,isNotLoverEffect);
-						});
+						judgetDeath(player, heartPlayerList, callBack,isNotLoverEffect);
 					}
-				}else{
-					judgetDeath(player, heartPlayerList, callBack,isNotLoverEffect);
-				}
-			});
-		}
+				});
+			}
+		});
 	}else{
 		judgetDeath(player, heartPlayerList, callBack,isNotLoverEffect);
 	}

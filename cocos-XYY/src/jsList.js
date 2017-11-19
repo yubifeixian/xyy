@@ -51,6 +51,7 @@ var jsList=[
 "src/common/view/SettingLayer.js",
 "src/common/view/anyCardDialog.js",
 "src/common/view/selectAnyCardDialogLayer.js",
+"src/common/view/selectLoverDialog.js",
 "src/scene/achivementScene.js",
 "src/scene/chooseScene.js",
 "src/scene/freeSelectScene.js",

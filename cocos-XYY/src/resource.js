@@ -65,7 +65,8 @@ var res = {
     FlowerParticle_plist: "res/drawable-hdpi/particle_flowers.plist",
     SettingLayer_json: "res/SettingLayer.json",
     AnyCardDialog_json:"res/anyCardDialog.json",
-    SelectAnyCardDialog_json:"res/selectAnyCardDialogLayer.json"
+    SelectAnyCardDialog_json:"res/selectAnyCardDialogLayer.json",
+    SelectLovarDialog_json:"res/selectLoverLayer.json"
 
 };
 
