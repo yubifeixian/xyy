@@ -361,6 +361,9 @@ function afterDeathHanle(player,heartPlayerList,callBack,isNotLoverEffect){
 			if (player.friendList[1].hp > 0) {
 				if (player._name==player1._name) {
 					handCardZone.removeAllItems();
+				}else if(player.skillNameList.containsObject(skillnameZhangmenren)||
+						player.skillNameList.containsObject(skillnameYongandang)){
+					teamSkill1Button.setVisible(false);
 				}
 				if(isNotLoverEffect){
 					textAreaAddMessage(player.friendList[1]._name+"补牌2张", myText, listView);

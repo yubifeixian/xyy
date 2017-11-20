@@ -50,11 +50,13 @@ function getCharacterList() {
 		characterList.removeObject(2);
 		characterList.push(44);
 
+	}
+	//TODO:2扩开关
+	if(true){
 		//处理【徐长卿】
 		characterList.push(45);
 		//处理【景天】
-		//characterList.push(46);
-		
+		characterList.push(46);
 	}
 	characterList.sort(function(){ return 0.5 - Math.random() }) ;
 	return characterList;

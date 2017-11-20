@@ -4239,7 +4239,6 @@ function skillCharacter_JingtianDatuanyuan(deathPlayer,callback){
 		if (nowPlayerTerm[i].hp<=0||
 				nowPlayerTerm[i].handCard.length+baseEffectCountequment(nowPlayerTerm[i])+baseEffectCountOrnament(nowPlayerTerm[i])<2||
 				!nowPlayerTerm[i].skillNameList.containsObject(skillnameDatuanyuan)) {
-			_jingtianArray.push(nowPlayerTerm[i]);
 			continue;
 		}
 		_jingtianArray.push(nowPlayerTerm[i]);
