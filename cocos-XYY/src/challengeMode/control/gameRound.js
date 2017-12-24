@@ -887,5 +887,10 @@ function remove_Card_Into_DropDeck(cardName) {
 			game_DropHandCard.push(56);
 	else if(cardName==string_handCardNameYongandangpiao){
 		game_DropHandCard.push(57);
+	}else if (cardName==string_handCardNameXihe||cardName==string_handCardNameXihe+"(扣置)"){
+		game_DropHandCard.push(60);
+	}else if(cardName==string_handCardNameWangshu||
+			cardName==string_handCardNameWangshu+"(扣置)"){
+		
 	}
 }

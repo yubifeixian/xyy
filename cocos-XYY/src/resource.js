@@ -482,7 +482,9 @@ var resPng = {
     jingtian_yongandang_png:"res/drawable-hdpi/jingtian_yongandang.png",
     jingtian_laoban_png:"res/drawable-hdpi/jingtian_laoban.png",
     jingtian_datuanyuan_png:"res/drawable-hdpi/jingtian_datuanyuan.png",
-    yongandangpiao_png:"res/drawable-hdpi/yongandangpiao.png"
+    yongandangpiao_png:"res/drawable-hdpi/yongandangpiao.png",
+    xihejian_png:"res/drawable-hdpi/xihejian.jpg",
+    wangshujian_png:"res/drawable-hdpi/wangshujian.jpg"
 
 }
 

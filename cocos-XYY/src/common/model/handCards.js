@@ -262,6 +262,18 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 				});
 			});
 		}));
+	}else if(this.name==string_handCardNameXihe){
+		textAreaAddMessage(Text.playerEquipCard.format(usePlayer._name,temp.name), myText, listView,function(){
+			playCardAnimation("res/drawable-hdpi/xihejian.jpg", function(){
+				skillCharacters_ZhaolingerShuangjian(usePlayer, xiheEffect,callBack);
+			});
+		});
+	}else if(this.name==string_handCardNameWangshu){
+		textAreaAddMessage(Text.playerEquipCard.format(usePlayer._name,temp.name), myText, listView,function(){
+			playCardAnimation("res/drawable-hdpi/wangshujian.jpg", function(){
+				skillCharacters_ZhaolingerShuangjian(usePlayer, wangshuEffect,callBack);
+			});
+		});
 	}
 }
 
@@ -623,3 +635,5 @@ var handCardHuanmeihuazhou=new Card(string_handCardNameHuanmeihuazhou);
 var handCardTiangangdouyi=new Card(string_handCardNameTiangangdouyi);
 var handCardShiziyaoshuo=new Card(string_handCardNameShiziyaoshuo);
 var handCardYongandangpiao=new Card(string_handCardNameYongandangpiao);
+var handCardXihe=new Card(string_handCardNameXihe);
+var handCardWangshu=new Card(string_handCardNameWangshu);

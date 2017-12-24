@@ -590,6 +590,10 @@ var GameLayer=cc.Layer.extend({
 						handCardJinchantuoqiao.effect(player1, player1, true, false);
 					}else if(selectHandCard.name==string_handCardNameYongandangpiao){
 						handCardYongandangpiao.effect(player1, player1, true, false);
+					}else if(selectHandCard.name==string_handCardNameXihe){
+						handCardXihe.effect(player1, player1, false, false);
+					}else if(selectHandCard.name==string_handCardNameWangshu){
+						handCardWangshu.effect(player1, player1, false, false);
 					}
 					selectHandCard=null;
 				}else if(selectHandCard.clicked

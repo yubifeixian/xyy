@@ -1196,6 +1196,35 @@ function mojianEffect(player,armNumber,callBack){
 	baseEffectZhuangbeiArms(player,tempArmNumber, 0, 1, string_handCardNameMojian,callBack);
 }
 
+function xiheEffect(player,armNumber,callBack){
+	var _tempArmNumber=armNumber!=null?armNumber:1;
+	//检测场上是否有人装备望舒剑
+	var _extent=0;
+	var _targetPlayer=baseEffectCheckPlayerHasArm(string_handCardNameWangshu, false);
+	cc.log(_targetPlayer);
+	if(_targetPlayer!=null){
+		_extent=2;
+		var _string="_targetPlayer.player.arms"+_targetPlayer.armIndex+"Combat+=2";
+		cc.log(_string);
+		eval(_string);
+	}
+	baseEffectZhuangbeiArms(player, _tempArmNumber, 2, _extent, string_handCardNameXihe, callBack);
+}
+function wangshuEffect(player,armNumber,callBack){
+	var _tempArmNumber=armNumber!=null?armNumber:1;
+	//检测场上是否有人装备羲和剑
+	var _combat=0;
+	var _targetPlayer=baseEffectCheckPlayerHasArm(string_handCardNameXihe, false);
+	cc.log(_targetPlayer);
+	if(_targetPlayer!=null){
+		_combat=2;
+		var _string="_targetPlayer.player.arms"+_targetPlayer.armIndex+"Extent+=2";
+		cc.log(_string);
+		eval(_string);
+	}
+	baseEffectZhuangbeiArms(player, _tempArmNumber, _combat, 2, string_handCardNameWangshu, callBack);
+}
+
 // 装备区中魔剑典当效果
 function mojianDiandangEffectInEqumentZone(callBack){
 	if(player1.arms1==string_handCardNameMojian||

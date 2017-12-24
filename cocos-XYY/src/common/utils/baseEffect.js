@@ -238,7 +238,7 @@ function baseEffectCountequment(player) {
 	return count;
 }
 
-//计算王蓬絮【饰品】数量
+// 计算王蓬絮【饰品】数量
 function baseEffectCountOrnament(player){
 	if(player.skillNameList.containsObject(skillnameHechengshipin)){
 		return player.skillTempList.length;
@@ -547,6 +547,30 @@ function getLivePlayerRandom(player) {
 }
 
 
+/**
+ * 判断场上是否有角色装备指定武器
+ * 
+ * @param name
+ * @param allowXiejianxian
+ * @return {player:targetPlayer,armIndex:1 or 2}
+ */
+function baseEffectCheckPlayerHasArm(name,allowXiejianxian){
+	cc.log("name = "+name);
+	for(var i=0;i<nowPlayerTerm.length;i++){
+		if(nowPlayerTerm[i].hp<=0){
+			continue;
+		}
+		cc.log("i = "+i+" , arms1 = "+nowPlayerTerm[i].arms1);
+		cc.log("i = "+i+" , arms2 = "+nowPlayerTerm[i].arms2);
+		if(nowPlayerTerm[i].arms1==name||(allowXiejianxian&&name==nowPlayerTerm[i].arms1.replaceAll("\\(扣置\\)"))){
+			return {player:nowPlayerTerm[i],armIndex:1};
+		}else if(nowPlayerTerm[i].arms2==name||(allowXiejianxian&&name==nowPlayerTerm[i].arms2.replaceAll("\\(扣置\\)"))){
+			return {player:nowPlayerTerm[i],armIndex:2};
+		}
+	}
+	return null;
+}
+
 // 判断某角色手牌中特定种类的牌有多少张
 function baseEffectHaveHowManyCardOfType(player, cardType) {
 	var number = 0;
@@ -613,7 +637,6 @@ function getArmCardWithName(deadPlayer,armsNumber){
 	var	string="deadPlayer.arms"+armsNumber;
 	string=eval(string);
 	string=string.replaceAll("\\(扣置\\)");
-	cc.log(string);
 	switch(string){
 	case string_handCardNameMojian:
 		card= randomGetHandCard(47)
