@@ -184,7 +184,7 @@ function baseAIUseSKillCardHelper(used,nowPlayer,nowIndex){
 		}else{
 			textAreaAddMessage(nowPlayer._name+"的技牌阶段结束", myText, listView);
 			autoNextStep();
-			//buttonManager(order2Button, true, true);
+			// buttonManager(order2Button, true, true);
 		}
 	}else{
 		nowIndex++;
@@ -197,7 +197,7 @@ function baseAIUseSKillCardHelper(used,nowPlayer,nowIndex){
 			aiUseSkillAfterUsingSkillCard(function(){
 				textAreaAddMessage(nowPlayer._name+"的技牌阶段结束", myText, listView);
 				autoNextStep();
-				//buttonManager(order2Button, true, true);
+				// buttonManager(order2Button, true, true);
 			});
 		}
 	}
@@ -300,6 +300,8 @@ function baseAIUseSkillCard(nowIndex,handCardLength) {
 					}else{
 						baseAIUseSKillCardHelper(used,nowPlayer,nowIndex);
 					}
+				}else{
+					baseAIUseSKillCardHelper(used,nowPlayer,nowIndex);
 				}
 			} else if (type==CARDTYPE.ARMCARD
 					|| type==CARDTYPE.DEFENSECARD) {
@@ -353,6 +355,8 @@ function baseAIUseSkillCard(nowIndex,handCardLength) {
 					handCardTayunxue.effect(nowPlayer, nowPlayer, false, false,function(){
 						baseAIUseSKillCardHelper(used,nowPlayer,nowIndex);
 					});
+				}else{
+					baseAIUseSKillCardHelper(used,nowPlayer,nowIndex);
 				}
 			}
 		}else{

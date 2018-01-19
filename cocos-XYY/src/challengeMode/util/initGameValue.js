@@ -221,7 +221,7 @@ function initGameValue(){
 	 //addHandCard([player1],player1,player1,47,[1],false,false);//无尘剑
 	 //addHandCard([player1],player1,player1,52,[1],false,false);//天帝祭服
 	//addHandCard([player1],player1,player1,50,[1],false,false);//天蛇杖
-	//addHandCard([player1],player1,player1,58,[1],false,false);//永安当票
+	//addHandCard([player3],player3,player3,58,[1],false,false);//永安当票
 	//addHandCard([player1],player1,player1,47,[1],false,false);//魔剑
 	//addHandCard([player1],player1,player1,46,[1],false,true);//五气朝元
 	//addHandCard([player1],player1,player1,60,[1],false,true);//羲和
