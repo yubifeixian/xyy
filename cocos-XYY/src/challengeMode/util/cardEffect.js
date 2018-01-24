@@ -1107,10 +1107,11 @@ function wuqichaoyuanEffect(usePlayer,canDiandang,callBack){
 			addDialog(mainScene, new ChooseZoneLayer("是否发动“典当”效果？",function(result){
 				if(result){
 					textAreaAddMessage(usePlayer._name+"发动【五气朝元】典当效果，从牌堆中补1张牌", myText, listView);
-					skillCharacters_JingtianLaoban(usePlayer,45,null,function(){
+					skillCharacters_JingtianLaoban(usePlayer,45,function(){
 						game_DropHandCard.removeObject(45);
+					},function(){
+						addHandCard([usePlayer],usePlayer,usePlayer,null,[1],true,true,callBack);
 					});
-					addHandCard([usePlayer],usePlayer,usePlayer,null,[1],true,true,callBack);
 					
 				}else{
 					useBingxingjue(usePlayer, usePlayer, function(){
@@ -1234,8 +1235,9 @@ function mojianDiandangEffectInEqumentZone(callBack){
 		}
 		addDialog(mainScene, new ChooseZoneLayer("是否典当【魔剑】补2张牌？",function(result){
 			if(result){
-				skillCharacters_JingtianLaoban(usePlayer,47,function(){
-					remove_Card_Into_DropDeck(string_handCardNameMojian);
+				remove_Card_Into_DropDeck(string_handCardNameMojian);
+				skillCharacters_JingtianLaoban(player1,47,function(){
+					game_DropHandCard.removeObject(47);
 				});
 				if (player1.arms1==string_handCardNameMojian) {
 					player1.arms1 = "无";
@@ -1248,10 +1250,6 @@ function mojianDiandangEffectInEqumentZone(callBack){
 					player1.arms2Combat = 0;
 					player1.arms2Extent = 0;
 				}
-				/*
-				 * newHandCard(randHandCardNumber( game_HandCard_Start,
-				 * game_DropHandCard), nowPlayerTerm[nowPlayerNumber], 2, true);
-				 */
 				addHandCard([nowPlayerTerm[nowPlayerNumber]],nowPlayerTerm[nowPlayerNumber],nowPlayerTerm[nowPlayerNumber],
 						null,[2],true,true);
 				textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"从牌堆中补了2张牌", myText, listView);

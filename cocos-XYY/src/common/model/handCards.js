@@ -138,11 +138,13 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 		if(usePlayer._name==player1._name){
 			addDialog(mainScene, new ChooseZoneLayer(Text.askDiandang,function(result){
 				if(result){
+					remove_Card_Into_DropDeck(string_handCardNameMojian);
 					skillCharacters_JingtianLaoban(usePlayer,47,function(){
-						remove_Card_Into_DropDeck(string_handCardNameMojian);
+						game_DropHandCard.removeObject(47);
+					},function(){
 						textAreaAddMessage(Text.addHandCard.format(usePlayer._name,2), myText, listView);
 						addHandCard([usePlayer],usePlayer,usePlayer,null,[2],true,true,callBack);
-					},callBack);
+					});
 				}else{
 					_diandangEffect();
 				}
@@ -150,11 +152,13 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 		}else{
 			// AI处理典当或装备魔剑
 			if(usePlayer.arms1!=Text.nil||usePlayer.handCard.length==0){
-				skillCharacters_JingtianLaoban(usePlayer, 47, function(){
-					remove_Card_Into_DropDeck(string_handCardNameMojian);
+				remove_Card_Into_DropDeck(string_handCardNameMojian);
+				skillCharacters_JingtianLaoban(usePlayer, 47,function(){
+					game_DropHandCard.removeObject(47);
+				}, function(){
 					textAreaAddMessage(Text.diandangMojian.format(usePlayer._name), myText, listView);
 					addHandCard([usePlayer],usePlayer,usePlayer,null,[2],true,true,callBack);
-				}, callBack)
+				})
 			}else{
 				_diandangEffect();
 			}

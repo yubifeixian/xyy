@@ -8,9 +8,9 @@ function initHandCardDeck(array) {
 		array.push(i);
 		array.sort(function(){ return 0.5 - Math.random() }) ;
 	}
-	// 57,58,59 :永安当票
-	//TODO *羲和*/60 /*望舒*/61
-	for(var i=57;i<60;i++){
+	// 69,70,71 :永安当票
+	//TODO *羲和*/72 /*望舒*/73
+	for(var i=69;i<72;i++){
 		array.push(i);
 		array.sort(function(){ return 0.5 - Math.random() }) ;
 	}
@@ -251,22 +251,22 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 				if (player._name==player1._name) {
 					handCardZone.pushBackCustomItem(longhunzhankai);
 				}
-			}else if(cardNumber>=57&&cardNumber<=59){
+			}else if(cardNumber>=69&&cardNumber<=71){
 				var yongandangpiao=new createHandCardImageView(string_handCardNameYongandangpiao,
-						cardNumber,"res/drawable-hdpi/yongandangpiao.png",CARDTYPE.SKILLCARD, 
+						cardNumber,resPng.yongandangpiao_png,CARDTYPE.SKILLCARD, 
 						"【"+string_handCardNameYongandangpiao+"】我方全体各补1张手牌");
 				player.handCard.push(yongandangpiao);
 				if (player._name==player1._name) {
 					handCardZone.pushBackCustomItem(yongandangpiao);
 				}
-			}else if(cardNumber==60){
+			}else if(cardNumber==72){
 				var xihe=new createHandCardImageView(string_handCardNameXihe,cardNumber,"res/drawable-hdpi/xihejian.jpg",CARDTYPE.ARMCARD,
 						"【"+string_handCardNameXihe+"】战力+2，场上有望舒被装备时，羲和额外获得命中+2的数值");
 				player.handCard.push(xihe);
 				if(player._name==player1._name){
 					handCardZone.pushBackCustomItem(xihe);
 				}
-			}else if(cardNumber==61){
+			}else if(cardNumber==73){
 				var wangshu=new createHandCardImageView(string_handCardNameWangshu,cardNumber,"res/drawable-hdpi/wangshujian.jpg",CARDTYPE.ARMCARD,
 						"【"+string_handCardNameWangshu+"】命中+2，场上有羲和被装备时，望舒额外获得战力+2的数值");
 				player.handCard.push(wangshu);

@@ -244,47 +244,59 @@ function randomGetHandCard(number){
 	}else if(number==57){
 		handCard=new createHandCardImageView(string_handCardNameSoubaoshu,
 				number,resPng.soubaoshu_png,CARDTYPE.SKILLCARD, 
-				Text.soubaoshuDesc,true);
+				Text.soubaoshuDesc);
 	}else if(number==58){
 		handCard=new createHandCardImageView(string_handCardNameJimushui,
 				number,resPng.jimushui_png,CARDTYPE.SKILLCARD, 
-				Text.jimushuiDesc,true);
+				Text.jimushuiDesc);
 	}else if(number==59){
 		handCard=new createHandCardImageView(string_handCardNameTianjian,
 				number,resPng.tianjian_png,CARDTYPE.SKILLCARD, 
-				Text.tianjianDesc,true);
+				Text.tianjianDesc);
 	}else if(number>59&&number<62){
 		handCard=new createHandCardImageView(string_handCardNameJiushen,
 				number,resPng.jiushen_png,CARDTYPE.FIGHTCARD, 
-				Text.jiushenDesc,true);
+				Text.jiushenDesc);
 	}else if(number==62){
 		handCard=new createHandCardImageView(string_handCardNameXiukoujinxinzhou,
 				number,resPng.xiukoujinxinzhou_png,CARDTYPE.FIGHTCARD, 
-				Text.xiukoujinxinzhouDesc,true);
+				Text.xiukoujinxinzhouDesc);
 	}else if(number==63){
 		handCard=new createHandCardImageView(string_handCardNameKaoya,
 				number,resPng.kaoya_png,CARDTYPE.FIGHTCARD, 
-				Text.kaoyaDesc,true);
+				Text.kaoyaDesc);
 	}else if(number==64){
 		handCard=new createHandCardImageView(string_handCardNameWulingjingxie,
 				number,resPng.wulingjingxie_png,CARDTYPE.SPECIALCARD, 
-				Text.wulingjingxieDesc,true);
+				Text.wulingjingxieDesc);
 	}else if(number==65){
 		handCard=new createHandCardImageView(string_handCardNameTianxiangxuminglu,
 				number,resPng.tianxiangxuminglu_png,CARDTYPE.SPECIALCARD, 
-				Text.tianxiangxumingluDesc,true);
+				Text.tianxiangxumingluDesc);
 	}else if(number==66){
 		handCard=new createHandCardImageView(string_handCardNameHuanmeihuazhou,
 				number,resPng.huanmeihuazhou_png,CARDTYPE.SPECIALCARD, 
-				Text.huanmeihuazhouDesc,true);
+				Text.huanmeihuazhouDesc);
 	}else if(number==67){
 		handCard=new createHandCardImageView(string_handCardNameShiziyaoshuo,
 				number,resPng.shiziyaoshuo_png,CARDTYPE.ARMCARD, 
-				Text.shiziyaoshuoDesc,true);
+				Text.shiziyaoshuoDesc);
 	}else if(number==68){
 		handCard=new createHandCardImageView(string_handCardNameTiangangdouyi,
 				number,resPng.tiangangdouyi_png,CARDTYPE.DEFENSECARD, 
-				Text.tiangangdouyiDesc,true);
+				Text.tiangangdouyiDesc);
+	}else if(number>=69&&number<=71){
+		handCard=new createHandCardImageView(string_handCardNameYongandangpiao,
+				number,resPng.yongandangpiao_png,CARDTYPE.SKILLCARD, 
+				"【"+string_handCardNameYongandangpiao+"】我方全体各补1张手牌");
+	}else if(number==72){
+		handCard=new createHandCardImageView(string_handCardNameXihe,
+				number,resPng.xihejian_png,CARDTYPE.ARMCARD, 
+				"【"+string_handCardNameXihe+"】战力+2，场上有望舒被装备时，羲和额外获得命中+2的数值");
+	}else if(number==73){
+		handCard=new createHandCardImageView(string_handCardNameWangshu,
+				number,resPng.wangshujian_png,CARDTYPE.ARMCARD, 
+				"【"+string_handCardNameWangshu+"】命中+2，场上有羲和被装备时，望舒额外获得战力+2的数值");
 	}
 	return handCard;
 }

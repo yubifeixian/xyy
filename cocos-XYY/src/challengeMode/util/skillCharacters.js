@@ -4212,21 +4212,14 @@ function skillCharacters_JingtianLaoban(player,cardNumber,dropCardCallback,callb
 			break;
 		}
 	}
-	if(_jingtian==null){
-		dropCardCallback();
+	if(_jingtian==null||player1IsPlayer2Friend(_jingtian, player)){
 		if(callback!=null){
 			callback();
 		}
 		return;
 	}
-	if(player1IsPlayer2Friend(_jingtian, player)){
-		if(dropCardCallback!=null){
-			dropCardCallback();
-		}
-		if(callback!=null){
-			callback();
-		}
-		return;
+	if(dropCardCallback!=null){
+		dropCardCallback();
 	}
 	textAreaAddMessage("景天【老板】效果发动，获得敌方典当的牌",myText, listView);
 	addHandCard([_jingtian],_jingtian,_jingtian,cardNumber,[1],false,false,callback);
@@ -4300,7 +4293,7 @@ function datuanyuanHandle(playerArray,targetPlayer,deathPlayer,callback){
 					break;
 				}
 			}
-			//重新设定死亡角色的倾慕者
+			// 重新设定死亡角色的倾慕者
 			addDialog(mainScene, new selectLoverDialogLayer(4,function(loverList){
 				deathPlayer.lover1=Text.nil;
 				deathPlayer.lover2=Text.nil;
