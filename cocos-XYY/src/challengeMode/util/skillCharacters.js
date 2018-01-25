@@ -4079,7 +4079,7 @@ function skillCharacters_ZhaolingerspShengling(player) {
 
 // 徐长卿【掌门人】
 function skillCharacter_Zhangmenren(player){
-	if(!player.friendList[1].skillNameList.containsObject(skillnameZhangmenren)||!player.friendList[1].hp<=0){
+	if(!player.friendList[1].skillNameList.containsObject(skillnameZhangmenren)||player.friendList[1].hp<=0){
 		return;
 	}	
 	if(nextStep!=2){
