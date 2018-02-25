@@ -555,13 +555,10 @@ function getLivePlayerRandom(player) {
  * @return {player:targetPlayer,armIndex:1 or 2}
  */
 function baseEffectCheckPlayerHasArm(name,allowXiejianxian){
-	cc.log("name = "+name);
 	for(var i=0;i<nowPlayerTerm.length;i++){
 		if(nowPlayerTerm[i].hp<=0){
 			continue;
 		}
-		cc.log("i = "+i+" , arms1 = "+nowPlayerTerm[i].arms1);
-		cc.log("i = "+i+" , arms2 = "+nowPlayerTerm[i].arms2);
 		if(nowPlayerTerm[i].arms1==name||(allowXiejianxian&&name==nowPlayerTerm[i].arms1.replaceAll("\\(扣置\\)"))){
 			return {player:nowPlayerTerm[i],armIndex:1};
 		}else if(nowPlayerTerm[i].arms2==name||(allowXiejianxian&&name==nowPlayerTerm[i].arms2.replaceAll("\\(扣置\\)"))){

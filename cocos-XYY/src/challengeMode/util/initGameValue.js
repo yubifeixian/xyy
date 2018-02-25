@@ -61,6 +61,8 @@ var jiangshili_xisheng=false;// 姜世离是否发动“牺牲”
 var longkuiRongzhuCardName=null;// 龙葵熔铸的技牌名称
 var linyueruSpBiwuzhaoqinMaleList=null;// 林月如sp【比武招亲】男性角色列表
 var linyueruSpBiwuzhaoqinFemaleList=null;// 林月如sp【比武招亲】女性角色列表
+var xiheAndWanghsuEffect=false;//羲和剑和望舒剑是否已经同时存在场上
+
 
 var initCharaceterAchivement={
 		// 人物成就
@@ -177,6 +179,7 @@ function initGameValue(){
 	attack_3 = true;
 	game_Bingxingjue=false;
 	jiangshili_xisheng=false;
+	xiheAndWanghsuEffect=false;
 	// suoHunList=new Array();
 	longkuiRongzhuCardName=null;
 	jiujianxianZuiXianWangYueBu = 0;
@@ -184,14 +187,14 @@ function initGameValue(){
 	linyueruSpBiwuzhaoqinFemaleList=[];// 林月如sp【比武招亲】女性角色列表
 
 	// 洗手牌堆
-	game_HandCard_Start = new Array();
-	game_DropHandCard = new Array();
+	game_HandCard_Start = [];
+	game_DropHandCard = [];
 	game_HandCard_Start = initHandCardDeck(game_HandCard_Start);
 	// 洗怪物牌堆
-	game_MonsterDeck = new Array();
+	//game_MonsterDeck = [];
 	game_MonsterDeck = initMonsterDeck();
 	
-	//game_MonsterDeck[0]= 6;
+	//game_MonsterDeck[0]= 11;
 	 //game_MonsterDeck[0]= -1;
 
 	/*
@@ -224,8 +227,8 @@ function initGameValue(){
 	//addHandCard([player1],player1,player1,69,[1],false,false);//永安当票
 	//addHandCard([player1],player1,player1,47,[1],false,false);//魔剑
 	//addHandCard([player1],player1,player1,46,[1],false,true);//五气朝元
-	//addHandCard([player1],player1,player1,60,[1],false,true);//羲和
-	//addHandCard([player1],player1,player1,61,[1],false,true);//望舒
+	//addHandCard([player1],player1,player1,72,[1],false,true);//羲和
+	//addHandCard([player1],player1,player1,73,[1],false,true);//望舒
 
 	/*
 	 * for(var i=0;i<2;i++){ var leiling = new createHandCardImageView("雷灵");

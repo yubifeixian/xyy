@@ -926,7 +926,32 @@ var GameLayer=cc.Layer.extend({
 		}else{
 			player4Pet5Text.setString("土系宠物");
 		}
-
+		this.checkXiheWangshuEffect();
+	},
+	checkXiheWangshuEffect:function(){
+		//检测羲和望舒是否还同时存在场上
+		if(!xiheAndWanghsuEffect){
+			return;
+		}
+		var _hasXihe=baseEffectCheckPlayerHasArm(string_handCardNameXihe,false);
+		var _hasWangshu=baseEffectCheckPlayerHasArm(string_handCardNameWangshu, false);
+		if(_hasXihe!=null&&_hasWangshu!=null){
+			return;
+		}
+		if(_hasXihe!=null){
+			textAreaAddMessage("场上没有【望舒剑】，羲和剑命中-2", myText, listView);
+			// 羲和剑失去命中+2效果
+			var _string="_hasXihe.player.arms"+_hasXihe.armIndex+"Extent-=2";
+			eval(_string);
+		}else{
+			// 望舒剑失去战力+2效果
+			textAreaAddMessage("场上没有【羲和剑】，望舒剑战力-2", myText, listView);
+			var _string="_hasWangshu.player.arms"+_hasWangshu.armIndex+"Combat-=2";
+			eval(_string);
+		}
+		xiheAndWanghsuEffect=false;
+		
+		
 	},
 	mySchedule:function(callBack,interval){
 		var then=Date.now();

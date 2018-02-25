@@ -9,8 +9,8 @@ function initHandCardDeck(array) {
 		array.sort(function(){ return 0.5 - Math.random() }) ;
 	}
 	// 69,70,71 :永安当票
-	//TODO *羲和*/72 /*望舒*/73
-	for(var i=69;i<72;i++){
+	//*羲和*/72 /*望舒*/73
+	for(var i=69;i<74;i++){
 		array.push(i);
 		array.sort(function(){ return 0.5 - Math.random() }) ;
 	}

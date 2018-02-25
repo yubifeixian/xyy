@@ -1202,12 +1202,13 @@ function xiheEffect(player,armNumber,callBack){
 	//检测场上是否有人装备望舒剑
 	var _extent=0;
 	var _targetPlayer=baseEffectCheckPlayerHasArm(string_handCardNameWangshu, false);
-	cc.log(_targetPlayer);
 	if(_targetPlayer!=null){
 		_extent=2;
 		var _string="_targetPlayer.player.arms"+_targetPlayer.armIndex+"Combat+=2";
-		cc.log(_string);
 		eval(_string);
+		xiheAndWanghsuEffect=true;
+		textAreaAddMessage("场上存在【望舒剑】，羲和剑额外获得命中+2效果", myText, listView);
+		textAreaAddMessage("场上存在【羲和剑】，望舒剑额外获得战力+2效果", myText, listView);
 	}
 	baseEffectZhuangbeiArms(player, _tempArmNumber, 2, _extent, string_handCardNameXihe, callBack);
 }
@@ -1216,12 +1217,13 @@ function wangshuEffect(player,armNumber,callBack){
 	//检测场上是否有人装备羲和剑
 	var _combat=0;
 	var _targetPlayer=baseEffectCheckPlayerHasArm(string_handCardNameXihe, false);
-	cc.log(_targetPlayer);
 	if(_targetPlayer!=null){
 		_combat=2;
 		var _string="_targetPlayer.player.arms"+_targetPlayer.armIndex+"Extent+=2";
-		cc.log(_string);
 		eval(_string);
+		xiheAndWanghsuEffect=true;
+		textAreaAddMessage("场上存在【羲和剑】，望舒剑额外获得战力+2效果", myText, listView);
+		textAreaAddMessage("场上存在【望舒剑】，羲和剑额外获得命中+2效果", myText, listView);
 	}
 	baseEffectZhuangbeiArms(player, _tempArmNumber, _combat, 2, string_handCardNameWangshu, callBack);
 }
