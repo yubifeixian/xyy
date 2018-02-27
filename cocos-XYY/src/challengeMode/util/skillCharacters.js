@@ -1459,6 +1459,7 @@ function skillCharacters_NangonghuangShelingfazheng(pet_Shuxing, callBack) {
                 }));
             } else {
                 // AI决定是否触发【摄灵法阵】
+            	
                 if (callBack != null) {
                     callBack();
                 }
