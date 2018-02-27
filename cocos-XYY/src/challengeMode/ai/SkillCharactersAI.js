@@ -337,11 +337,12 @@ function aiSkillHanlingsha_Sounangtanbao(callBack) {
 //AI是否因队友徐长卿的【掌门人】而给他手牌
 function aiSkillXuchangqing_Zhangmenren(callback) {
 	var _friend = nowPlayerTerm[nowPlayerNumber].friendList[1];
-	if (_friend.isDeath || _friend.skillNameList.containsObject(skillnameZhangmenren) ||
+	if (_friend.isDeath || !_friend.skillNameList.containsObject(skillnameZhangmenren) ||
 			nowPlayerTerm[nowPlayerNumber].handCard == 0) {
 		if (callback != null) {
 			callback();
 		}
+		return;
 	}
 	if (nowPlayerTerm[nowPlayerNumber].handCard > 3 || parseInt(Math.random(), 100) < 40) {
 		var index = parseInt(Math.random() * nowPlayerTerm[nowPlayerNumber].handCard.length, 10);
