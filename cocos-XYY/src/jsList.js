@@ -96,6 +96,7 @@ var jsList=[
 "src/challengeMode/monster/tianguihuang.js",
 "src/challengeMode/monster/npc.js",
 "src/challengeMode/monster/huoqilin.js",
+"src/challengeMode/monster/jinchifenghuang.js",
 "src/challengeMode/util/baseEventEffect.js",
 "src/challengeMode/util/calculate.js",
 "src/challengeMode/util/cardEffect.js",

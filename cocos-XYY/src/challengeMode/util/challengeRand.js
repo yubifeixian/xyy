@@ -578,6 +578,8 @@ function topMonsterCard(number) {
 	var monster = null;
 	if(number == -1){
 		monster = new HuoqilinMonster();
+	}else if(number==-2){
+		monster=new JinchifenghuangMonster();
 	}else if (number == 0) {
 		monster = new YelingMonster();
 	} else if (number == 1) {

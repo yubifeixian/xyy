@@ -484,7 +484,8 @@ var resPng = {
     jingtian_datuanyuan_png:"res/drawable-hdpi/jingtian_datuanyuan.png",
     yongandangpiao_png:"res/drawable-hdpi/yongandangpiao.png",
     xihejian_png:"res/drawable-hdpi/xihejian.jpg",
-    wangshujian_png:"res/drawable-hdpi/wangshujian.jpg"
+    wangshujian_png:"res/drawable-hdpi/wangshujian.jpg",
+    monster_jinchifenghuang_png:"res/drawable-hdpi/monster_jinchifenghuang.png"
 
 }
 

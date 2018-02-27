@@ -14,9 +14,12 @@ function initMonsterDeck() {
 		}
 		_monsterDeck.sort(function(){ return 0.5 - Math.random() }) ;
 	}
-	// sp开关开启，加入【火麒麟】
+	// sp开关开启，
 	if(spSwitch=="true"){
+		//加入【火麒麟】
 		_monsterDeck.push(-1);
+		//加入【金翅凤凰】
+		_monsterDeck.push(-2);
 	}
 	_monsterDeck.sort(function(){ return 0.5 - Math.random() }) ;
 	return _monsterDeck;

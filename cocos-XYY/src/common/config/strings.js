@@ -251,6 +251,7 @@ var nameYeling="叶灵";
 var nameAnxiang="暗香";
 var nameGoumang="句芒";
 var nameDiejing="蝶精";
+var nameJinchifenghuang="金翅凤凰";
 var nameJiliangyinzhe="积粮隐者";
 var nameChiguiwang="赤鬼王";
 var nameDuniangzi="毒娘子";
