@@ -315,3 +315,4 @@ var nameMuhoudeyinmou="幕后的阴谋";
 var nameHuayaoshui="化妖水";
 var nameJushentiantu="巨神天屠";
 var nameHuoqilin="火麒麟";
+var nameZhima="纸马";
