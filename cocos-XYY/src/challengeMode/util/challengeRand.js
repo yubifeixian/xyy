@@ -580,6 +580,8 @@ function topMonsterCard(number) {
 		monster = new HuoqilinMonster();
 	}else if(number==-2){
 		monster=new JinchifenghuangMonster();
+	}else if(number==-3){
+		monster=new ZhimaMonster();
 	}else if (number == 0) {
 		monster = new YelingMonster();
 	} else if (number == 1) {

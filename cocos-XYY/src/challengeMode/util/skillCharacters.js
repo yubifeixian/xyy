@@ -1243,8 +1243,8 @@ function juedouHandle(juedouList, index) {
     textAreaAddMessage("重楼骰子点数为" + number1, myText, listView, function () {
         number2 = parseInt(Math.random() * 6, 10) + 1;
         textAreaAddMessage(juedouList[index]._name + "骰子点数为：" + number2, myText, listView, function () {
-            skillCharacters_WangxiaohuBuqubunao(juedouList[index], number2, function () {
-                if (number1 > number2) {
+        	skillCharacters_WangxiaohuBuqubunao(juedouList[index], number2, function (xiaohuNumber) {
+        		if (number1 > xiaohuNumber) {
                     heart = 3;
                     textAreaAddMessage("重楼获胜", myText, listView, function () {
                         AchivementProgress.addAchivementProgress(player1);
@@ -1267,7 +1267,7 @@ function juedouHandle(juedouList, index) {
                             });
                         });
                     });
-                } else if (number1 == number2) {
+        		} else if (number1 == xiaohuNumber) {
                     heart = 2;
                     textAreaAddMessage("平局，双方HP-2", myText, listView);
                     if (player1.hp == 2) {
@@ -1293,7 +1293,7 @@ function juedouHandle(juedouList, index) {
                             juedouHandle(juedouList, index + 1);
                         }
                     });
-                } else if (number1 < number2) {
+        		} else if (number1 < xiaohuNumber) {
                     heart = 3;
                     textAreaAddMessage(juedouList[index]._name + "获胜", myText, listView);
                     if (player1.hp >= 2)

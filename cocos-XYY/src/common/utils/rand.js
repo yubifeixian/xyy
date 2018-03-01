@@ -20,6 +20,8 @@ function initMonsterDeck() {
 		_monsterDeck.push(-1);
 		//加入【金翅凤凰】
 		_monsterDeck.push(-2);
+		//加入【纸马】
+		_monsterDeck.push(-3);
 	}
 	_monsterDeck.sort(function(){ return 0.5 - Math.random() }) ;
 	return _monsterDeck;

@@ -755,10 +755,28 @@ function handleBaofaEqumentsAndPets(player){
 		player.pet_Feng = Text.petFeng;
 		skillCharacters_ZhaolingerMengshe();
 	}
+	if(player.pet_LeiMonster!=null&&player.pet_LeiMonster.name.endsWith(Text.baofa)){
+		updata_PetsEffect(player.pet_LeiMonster,player);
+		player.pet_LeiMonster = null;
+		player.pet_Lei = Text.petLei;
+		skillCharacters_ZhaolingerMengshe();
+	}
+	if(player.pet_ShuiMonster!=null&&player.pet_ShuiMonster.name.endsWith(Text.baofa)){
+		updata_PetsEffect(player.pet_ShuiMonster,player);
+		player.pet_ShuiMonster = null;
+		player.pet_Shui = Text.petShui;
+		skillCharacters_ZhaolingerMengshe();
+	}
 	if(player.pet_HuoMonster!=null&&player.pet_HuoMonster.name.endsWith(Text.baofa)){
 		updata_PetsEffect(player.pet_HuoMonster,player);
 		player.pet_HuoMonster = null;
 		player.pet_Huo = Text.petHuo;
+		skillCharacters_ZhaolingerMengshe();
+	}
+	if(player.pet_TuMonster!=null&&player.pet_TuMonster.name.endsWith(Text.baofa)){
+		updata_PetsEffect(player.pet_TuMonster,player);
+		player.pet_TuMonster = null;
+		player.pet_Tu = Text.petTu;
 		skillCharacters_ZhaolingerMengshe();
 	}
 }

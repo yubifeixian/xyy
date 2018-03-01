@@ -561,48 +561,51 @@ function roundAttackEnd(){
 		skillCharacters_OuyanghuiLeiling(function(){
 			// 小蛮sp【嘟儿的礼物】效果
 			skillCharacters_XiaomanSpDuerdeliwu(function(){
-				attack_1 = false;
-				attack_2 = false;
-				attack_3=true;
-				ai_AttackMonster = false;
-				fight_Trigger=new Array(); // 战斗结束时，清空本回合触发方列表
-				fight_Monster=new Array(); // 战斗结束时，清空本回合怪物方列表
-				resetBattleCombat();
-				NPCEffect = false;
-				linyueruSpBiwuzhaoqinMaleList=[];
-				linyueruSpBiwuzhaoqinFemaleList=[];
-				for (var i=0;i<nowPlayerTerm.length;i++) {
-					// 清空本回合所有角色使用战牌的记录
-					nowPlayerTerm[i].usedAttackCard = false;
-					// 战斗结束时清空技能使用状况
-					nowPlayerTerm[i].everyRoundSkill_1 = false;
-					nowPlayerTerm[i].everyRoundSkill_2 = false;
-					nowPlayerTerm[i].everyRoundSkill_3 = false;
-					// 战斗结束时，所有角色参战状态改为false
-					nowPlayerTerm[i].joinAttack = false;
-					// 恢复战力
-					nowPlayerTerm[i].tempAddCombat = 0;
-					nowPlayerTerm[i].skillAddCombat = 0;
-					nowPlayerTerm[i].tempAddExtent = 0;
-					nowPlayerTerm[i].skillAddExtent = 0;
-					// 回收该角色所有爆发的装备和宠物
-					handleBaofaEqumentsAndPets(nowPlayerTerm[i]);
-				}
-				dropCarding = false;
-				// 云天河【后羿射日弓】效果判定
-				skillCharacters_YuntianheHouyisheriongEnd();
-				// 龙幽sp【妖枪】效果结束
-				skillCharacters_YaoqiangEnd();
-				// 姜世离【牺牲】死亡退场
-				skillCharacters_JiangshiliXishenHandle();
-				textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"的打怪阶段结束", myText, listView);
-				// 酒剑仙【醉仙望月步】触发
-				skillCharacters_JiujianxianZuixianwangyubu();
-				if(nowPlayerTerm[nowPlayerNumber].hp<=0){
-					nextStep=8;
-				}
-				// autoNextStep();
-				buttonManager(order2Button, true, true);
+				// 纸马宠物效果
+				zhimaPetEffect(function(){
+					attack_1 = false;
+					attack_2 = false;
+					attack_3=true;
+					ai_AttackMonster = false;
+					fight_Trigger=new Array(); // 战斗结束时，清空本回合触发方列表
+					fight_Monster=new Array(); // 战斗结束时，清空本回合怪物方列表
+					resetBattleCombat();
+					NPCEffect = false;
+					linyueruSpBiwuzhaoqinMaleList=[];
+					linyueruSpBiwuzhaoqinFemaleList=[];
+					for (var i=0;i<nowPlayerTerm.length;i++) {
+						// 清空本回合所有角色使用战牌的记录
+						nowPlayerTerm[i].usedAttackCard = false;
+						// 战斗结束时清空技能使用状况
+						nowPlayerTerm[i].everyRoundSkill_1 = false;
+						nowPlayerTerm[i].everyRoundSkill_2 = false;
+						nowPlayerTerm[i].everyRoundSkill_3 = false;
+						// 战斗结束时，所有角色参战状态改为false
+						nowPlayerTerm[i].joinAttack = false;
+						// 恢复战力
+						nowPlayerTerm[i].tempAddCombat = 0;
+						nowPlayerTerm[i].skillAddCombat = 0;
+						nowPlayerTerm[i].tempAddExtent = 0;
+						nowPlayerTerm[i].skillAddExtent = 0;
+						// 回收该角色所有爆发的装备和宠物
+						handleBaofaEqumentsAndPets(nowPlayerTerm[i]);
+					}
+					dropCarding = false;
+					// 云天河【后羿射日弓】效果判定
+					skillCharacters_YuntianheHouyisheriongEnd();
+					// 龙幽sp【妖枪】效果结束
+					skillCharacters_YaoqiangEnd();
+					// 姜世离【牺牲】死亡退场
+					skillCharacters_JiangshiliXishenHandle();
+					textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"的打怪阶段结束", myText, listView);
+					// 酒剑仙【醉仙望月步】触发
+					skillCharacters_JiujianxianZuixianwangyubu();
+					if(nowPlayerTerm[nowPlayerNumber].hp<=0){
+						nextStep=8;
+					}
+					// autoNextStep();
+					buttonManager(order2Button, true, true);
+				});
 			});
 		});
 }
@@ -633,7 +636,7 @@ function roundAddHandCard(){
 			addHandCard([nowPlayerTerm[nowPlayerNumber]],nowPlayerTerm[nowPlayerNumber],nowPlayerTerm[nowPlayerNumber],null,[addCardNumber],true,true,function(){
 				autoNextStep();
 			});
-			//buttonManager(order2Button, true, true);
+			// buttonManager(order2Button, true, true);
 		});
 	}
 }
