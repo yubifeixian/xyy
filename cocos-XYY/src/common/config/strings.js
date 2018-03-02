@@ -316,3 +316,4 @@ var nameHuayaoshui="化妖水";
 var nameJushentiantu="巨神天屠";
 var nameHuoqilin="火麒麟";
 var nameZhima="纸马";
+var nameHuayao="画妖";

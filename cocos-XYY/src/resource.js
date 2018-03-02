@@ -486,7 +486,8 @@ var resPng = {
     xihejian_png:"res/drawable-hdpi/xihejian.jpg",
     wangshujian_png:"res/drawable-hdpi/wangshujian.jpg",
     monster_jinchifenghuang_png:"res/drawable-hdpi/monster_jinchifenghuang.png",
-    monster_zhima_png:"res/drawable-hdpi/monster_zhima.png"
+    monster_zhima_png:"res/drawable-hdpi/monster_zhima.png",
+    monster_huayao_png:"res/drawable-hdpi/monster_huayao.png"
 }
 
 /**
