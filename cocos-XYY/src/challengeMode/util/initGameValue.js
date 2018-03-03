@@ -62,7 +62,7 @@ var longkuiRongzhuCardName=null;// 龙葵熔铸的技牌名称
 var linyueruSpBiwuzhaoqinMaleList=null;// 林月如sp【比武招亲】男性角色列表
 var linyueruSpBiwuzhaoqinFemaleList=null;// 林月如sp【比武招亲】女性角色列表
 var xiheAndWanghsuEffect=false;//羲和剑和望舒剑是否已经同时存在场上
-
+var usedHuayaoEffect=false;//本回合是否使用过画妖宠物效果
 
 var initCharaceterAchivement={
 		// 人物成就
@@ -180,6 +180,7 @@ function initGameValue(){
 	game_Bingxingjue=false;
 	jiangshili_xisheng=false;
 	xiheAndWanghsuEffect=false;
+	usedHuayaoEffect=false;
 	// suoHunList=new Array();
 	longkuiRongzhuCardName=null;
 	jiujianxianZuiXianWangYueBu = 0;
@@ -195,7 +196,7 @@ function initGameValue(){
 	game_MonsterDeck = initMonsterDeck();
 	
 	//game_MonsterDeck[0]= 11;
-	game_MonsterDeck[0]= -3;
+	//game_MonsterDeck[0]= -4;
 
 	/*
 	 * game_MonsterDeck.push(game_MonsterDeck[0]);
@@ -268,6 +269,7 @@ function initGameValue(){
 	 //calculate_Pets(player3, new XiejianxianMonster());
 	 //calculate_Pets(player3, new JinchanguimuMonster());
 	 //calculate_Pets(player3, new YelingMonster());
+	//calculate_Pets(player1, new HuayaoMonster());
 	// calculate_Pets(player4, pet_TuMonster);
 	// player1.pet_Tu=player1.pet_TuMonster.name;
 	// pet_Effect(player1.pet_TuMonster, player1);

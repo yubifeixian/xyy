@@ -22,6 +22,8 @@ function initMonsterDeck() {
 		_monsterDeck.push(-2);
 		//加入【纸马】
 		_monsterDeck.push(-3);
+		//加入【画妖】
+		_monsterDeck.push(-4);
 	}
 	_monsterDeck.sort(function(){ return 0.5 - Math.random() }) ;
 	return _monsterDeck;

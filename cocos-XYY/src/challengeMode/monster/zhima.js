@@ -106,7 +106,7 @@ function zhimaPetEffect(callBack) {
 	var _hasZhimaPlayer = null;
 	// 检测场上是否有玩家拥有纸马
 	for (var i = 0; i < nowPlayerTerm.length; i++) {
-		if (nowPlayerTerm[i].hp <= 0 || nowPlayerTerm[i].pet_LeiMonster.name != nameZhima) {
+		if (nowPlayerTerm[i].hp <= 0 || nowPlayerTerm[i].pet_LeiMonster==null||nowPlayerTerm[i].pet_LeiMonster.name != nameZhima) {
 			continue;
 		}
 		_hasZhimaPlayer = nowPlayerTerm[i];

@@ -1,5 +1,5 @@
-var HuayaoMonster=BaseMonster.extend({
-	ctor:function(){
+var HuayaoMonster = BaseMonster.extend({
+	ctor: function () {
 		this.name = nameHuayao;
 		this.ID = 0;
 		this.combat = 6;
@@ -17,14 +17,33 @@ var HuayaoMonster=BaseMonster.extend({
 		this.monsterPicSrc = resPng.monster_huayao_png;
 		this.level = "强";
 	},
-	winEffect:function(callBack){
+	winEffect: function (callBack) {
 		this._super();
-		//TODO:
-		callBack();
+		addHandCard([nowPlayerTerm[nowPlayerNumber]], nowPlayerTerm[nowPlayerNumber], nowPlayerTerm[nowPlayerNumber], null, [1], true, true, callBack);
 	},
-	loseEffect:function(callBack){
+	loseEffect: function (callBack) {
 		this._super();
-		//TODO:
-		callBack();
+		var _that = this;
+		if (!skillCharacters_XuanxiaoNingbingfenyan(nowPlayerTerm[nowPlayerNumber])) {
+			mainScene.addChild(new MagicLayer(nowPlayerTerm[nowPlayerNumber].hadImageView, new MagicNodeShui(), function () {
+				useYingu([nowPlayerTerm[nowPlayerNumber]], nowPlayerTerm[nowPlayerNumber], nowPlayerTerm[nowPlayerNumber], [2], true, baseEffectReduceHPEffect, function () {
+					// 唐雪见【追打】效果
+					skillCharactersTangxuejianZhuida(function () {
+						heartList = new Array();
+						_that.takeOverHandle(callBack);
+					});
+				});
+			}));
+		} else {
+			_that.takeOverHandle(callBack);
+		}
+	},
+	takeOverHandle: function (callBack) {
+		if (nowPlayerTerm[nowPlayerNumber].takeOver) {
+			textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name + "已经被横置，本次横置无效", myText, listView), callBack;
+		} else {
+			nowPlayerTerm[nowPlayerNumber].takeOver = true;
+			textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name + "被横置", myText, listView, callBack);
+		}
 	}
 })

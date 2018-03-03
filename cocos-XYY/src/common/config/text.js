@@ -8,6 +8,7 @@ var Text={
 		baofa:"(爆发)",
 		askBaofaGoumang:"是否爆发“句芒”？",
 		askBaofaFeifei:"是否爆发肥肥？",
+		askHuayao:"是否使用画妖宠物效果，从牌堆中交换1张手牌？",
 		askBaofaTayunxue:"是否爆发【踏云靴】免疫本次伤害？",
 		askDiandang:"是否发动“典当”效果？",
 		askJingtian_Yongandang:"是否发动“永安当”效果,将【永安当票】作为任意技牌/特殊牌使用？",

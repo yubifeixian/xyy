@@ -712,6 +712,7 @@ function roundEnding(){
 	ai_AttackMonster = false;
 	jincantuoqiao = false; // 回合结束时，恢复金蝉脱壳效果
 	dropCarding = false;
+	usedHuayaoEffect=false;// 恢复画妖宠物效果
 	chonglou_JueDou = 0; // 恢复重楼决斗次数
 	NPCEffect = false; // 恢复NPC效果时无法使用战牌限制
 	longkuiRongzhuCardName=null;	// 清空龙葵熔铸的牌
@@ -825,75 +826,85 @@ function autoNextStep(){
 }
 
 
+function getCardIdByName(cardName){
+	cardName=cardName.replaceAll("\\(爆发\\)");
+	if(cardName=="无"){
+		return null;
+	}
+	if (cardName==string_handCardNameTianxuanwuyin)
+		return 1;
+	else if (cardName==string_handCardNameJincanwang)
+		return 9;
+	else if (cardName==string_handCardNameDongmingbaojing)
+		return 14;
+	else if (cardName==string_handCardNameYingu)
+		return 18;
+	else if (cardName==string_handCardNameShuerguo)
+		return 22;
+	else if (cardName==string_handCardNameLinghuxiandan)
+		return 25;
+	else if (cardName==string_handCardNameBingxinjue)
+		return 28;
+	else if (cardName==string_handCardNameTongqianbiao)
+		return 31;
+	else if (cardName==string_handCardNameTianleipo)
+		return 34;
+	else if (cardName==string_handCardNameTiangangzhanqi)
+		return 37;
+	else if (cardName==string_handCardNameJinchantuoqiao)
+		return 39;
+	else if (cardName==string_handCardNameKuicetianji)
+		return 41;
+	else if (cardName==string_handCardNameToudao)
+		return 43;
+	else if (cardName==string_handCardNameWuqichaoyuan)
+		return 45;
+	else if (cardName==string_handCardNameMojian
+			|| cardName==string_handCardNameMojian+"(扣置)")
+		return 47;
+	else if (cardName==string_handCardNameCaihuan
+			|| cardName==string_handCardNameCaihuan+"(扣置)")
+		return 48;
+	else if (cardName==string_handCardNameModaotianzha
+			|| cardName==string_handCardNameModaotianzha+"(扣置)")
+		return 49;
+	else if (cardName==string_handCardNameTianshezhang
+			|| cardName==string_handCardNameTianshezhang+"(扣置)")
+		return 50;
+	else if (cardName==string_handCardNameWuchenjian
+			|| cardName==string_handCardNameWuchenjian+"(扣置)")
+		return 51;
+	else if (cardName==string_handCardNameTiandijifu)
+		return 52;
+	else if (cardName==string_handCardNameQiankundaopao)
+		return 53;
+	else if (cardName==string_handCardNameWucaixiayi)
+		return 54;
+	else if (cardName==string_handCardNameTayunxue)
+		return 55;
+	else if (cardName==string_handCardNameLonghunzhankai)
+		return 56;
+	else if(cardName==string_handCardNameYongandangpiao){
+		return 69;
+	}else if (cardName==string_handCardNameXihe||cardName==string_handCardNameXihe+"(扣置)"){
+		return 72;
+	}else if(cardName==string_handCardNameWangshu||
+			cardName==string_handCardNameWangshu+"(扣置)"){
+		return 73;
+	}else{
+		return null;
+	}
+}
+
 /**
  * 牌进入弃牌堆的方法
  * 
  * @param cardName
  */
 function remove_Card_Into_DropDeck(cardName) {
-	cardName=cardName.replaceAll("\\(爆发\\)");
-	if(cardName=="无"){
+	var _id=getCardIdByName(cardName);
+	if(_id==null){
 		return;
 	}
-	if (cardName==string_handCardNameTianxuanwuyin)
-			game_DropHandCard.push(1);
-	else if (cardName==string_handCardNameJincanwang)
-			game_DropHandCard.push(9);
-	else if (cardName==string_handCardNameDongmingbaojing)
-			game_DropHandCard.push(14);
-	else if (cardName==string_handCardNameYingu)
-			game_DropHandCard.push(18);
-	else if (cardName==string_handCardNameShuerguo)
-			game_DropHandCard.push(22);
-	else if (cardName==string_handCardNameLinghuxiandan)
-			game_DropHandCard.push(25);
-	else if (cardName==string_handCardNameBingxinjue)
-			game_DropHandCard.push(28);
-	else if (cardName==string_handCardNameTongqianbiao)
-			game_DropHandCard.push(31);
-	else if (cardName==string_handCardNameTianleipo)
-			game_DropHandCard.push(34);
-	else if (cardName==string_handCardNameTiangangzhanqi)
-			game_DropHandCard.push(37);
-	else if (cardName==string_handCardNameJinchantuoqiao)
-			game_DropHandCard.push(39);
-	else if (cardName==string_handCardNameKuicetianji)
-			game_DropHandCard.push(41);
-	else if (cardName==string_handCardNameToudao)
-			game_DropHandCard.push(43);
-	else if (cardName==string_handCardNameWuqichaoyuan)
-			game_DropHandCard.push(45);
-	else if (cardName==string_handCardNameMojian
-		|| cardName==string_handCardNameMojian+"(扣置)")
-			game_DropHandCard.push(47);
-	else if (cardName==string_handCardNameCaihuan
-			|| cardName==string_handCardNameCaihuan+"(扣置)")
-			game_DropHandCard.push(48);
-	else if (cardName==string_handCardNameModaotianzha
-			|| cardName==string_handCardNameModaotianzha+"(扣置)")
-			game_DropHandCard.push(49);
-	else if (cardName==string_handCardNameTianshezhang
-			|| cardName==string_handCardNameTianshezhang+"(扣置)")
-			game_DropHandCard.push(50);
-	else if (cardName==string_handCardNameWuchenjian
-			|| cardName==string_handCardNameWuchenjian+"(扣置)")
-			game_DropHandCard.push(51);
-	else if (cardName==string_handCardNameTiandijifu)
-			game_DropHandCard.push(52);
-	else if (cardName==string_handCardNameQiankundaopao)
-			game_DropHandCard.push(53);
-	else if (cardName==string_handCardNameWucaixiayi)
-			game_DropHandCard.push(54);
-	else if (cardName==string_handCardNameTayunxue)
-			game_DropHandCard.push(55);
-	else if (cardName==string_handCardNameLonghunzhankai)
-			game_DropHandCard.push(56);
-	else if(cardName==string_handCardNameYongandangpiao){
-		game_DropHandCard.push(69);
-	}else if (cardName==string_handCardNameXihe||cardName==string_handCardNameXihe+"(扣置)"){
-		game_DropHandCard.push(72);
-	}else if(cardName==string_handCardNameWangshu||
-			cardName==string_handCardNameWangshu+"(扣置)"){
-		game_DropHandCard.push(73);
-	}
+	game_DropHandCard.push(_id);
 }

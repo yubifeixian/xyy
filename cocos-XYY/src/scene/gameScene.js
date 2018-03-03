@@ -467,12 +467,35 @@ var GameLayer=cc.Layer.extend({
 			}
 		});
 		
-		// player1Pet2Text=ccui.helper.seekWidgetByName(mainScene,
-		// "player1Pet2Text");
-		// player1Pet3Text=ccui.helper.seekWidgetByName(mainScene,
-		// "player1Pet3Text");
-		// player1Pet4Text=ccui.helper.seekWidgetByName(mainScene,
-		// "player1Pet4Text");
+		player1Pet3Text.addClickEventListener(function(){
+			if(nextStep==2&&!usedHuayaoEffect&&((player1.pet_ShuiMonster != null
+					&& player1.pet_ShuiMonster.name==nameHuayao)||
+					(player2.pet_ShuiMonster != null
+							&& player2.pet_ShuiMonster.name==nameHuayao))){
+				addDialog(mainScene, new yesOrNoDialogLayer(Text.askHuayao,function(result){
+					if(result){
+						usedHuayaoEffect=true;
+						addDialog(mainScene, new selectCardDialogLayer("请选择1张手牌与牌堆交换",
+								player1.handCard,1,1,false,function(selectCard){
+								var _card=selectCard[0];
+								if(_card==null){
+									return;
+								}
+								remove_Card_Into_DropDeck(_card.name);
+								nowPlayerTerm[nowPlayerNumber].handCard.removeObject(_card);
+								_card.release();
+								_card.removeFromParent();
+								addHandCard([nowPlayerTerm[nowPlayerNumber]],nowPlayerTerm[nowPlayerNumber],nowPlayerTerm[nowPlayerNumber],null,[1],true,false,function(){
+									textAreaAddMessage(player1._name+"从牌堆中交换了1张手牌", myText, listView);
+								});
+						}));
+					}
+				}));
+			}
+			
+		});
+		
+		
 		player1Pet4Text.addClickEventListener(function(){
 			if(player1.pet_HuoMonster != null
 				&& player1.pet_HuoMonster.name==nameFeifei&&(nextStep==3||nextStep==4)){
@@ -929,7 +952,7 @@ var GameLayer=cc.Layer.extend({
 		this.checkXiheWangshuEffect();
 	},
 	checkXiheWangshuEffect:function(){
-		//检测羲和望舒是否还同时存在场上
+		// 检测羲和望舒是否还同时存在场上
 		if(!xiheAndWanghsuEffect){
 			return;
 		}
