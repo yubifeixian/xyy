@@ -317,3 +317,4 @@ var nameJushentiantu="巨神天屠";
 var nameHuoqilin="火麒麟";
 var nameZhima="纸马";
 var nameHuayao="画妖";
+var nameCaishenye="财神爷";

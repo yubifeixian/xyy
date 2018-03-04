@@ -23,7 +23,7 @@ var ChiguiwangMonster=BaseMonster.extend({
 			var isNotMiss = attactIsMiss(fight_Trigger[1],
 					fight_FirstMonster);
 			if (isNotMiss) {
-				triggerCombat += 2;
+				addTrigerCombat(2)
 			}
 			textAreaAddMessage("赤鬼王出场效果:"+this.openEffectText, myText, listView);
 		} else {
