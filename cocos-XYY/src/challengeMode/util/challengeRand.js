@@ -584,6 +584,8 @@ function topMonsterCard(number) {
 		monster=new ZhimaMonster();
 	}else if(number==-4){
 		monster=new HuayaoMonster();
+	}else if(number==-5){
+		monster=new CaishenyeMonster();
 	}else if (number == 0) {
 		monster = new YelingMonster();
 	} else if (number == 1) {

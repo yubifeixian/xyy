@@ -22,10 +22,9 @@ var ZhimaMonster = BaseMonster.extend({
 		var _addCombat = parseInt(Math.random() * 6, 10) + 1;
 		textAreaAddMessage("骰子点数为:" + _addCombat + "(4、5、6分别算作1、2、3)", myText, listView, function () {
 			skillCharacters_WangxiaohuBuqubunao(nowPlayerTerm[nowPlayerNumber], _addCombat, function (xiaohuNumber) {
-				cc.log("xiaohuNumber = "+xiaohuNumber);
 				_addCombat = xiaohuNumber > 3 ? xiaohuNumber - 3 : xiaohuNumber;
 				_that.combat += _addCombat;
-				monsterCombat+=_addCombat;
+				//addMonsterCombat(_addCombat);
 				textAreaAddMessage("纸马实际战力+" + _addCombat, myText, listView, callBack);
 			});
 		});

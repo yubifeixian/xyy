@@ -26,11 +26,7 @@ var XuanguiMonster=BaseMonster.extend({
 				if (fight_Trigger[1].hp > 0) {
 					tempHeartList.push(fight_Trigger[1]);
 					tempHeartNumberList.push(3);
-				}else if(callBack!=null){
-					callBack();
 				}
-			}else if(callBack!=null){
-				callBack();
 			}
 		}
 		for(var i=0;i<tempHeartList.length;i++){

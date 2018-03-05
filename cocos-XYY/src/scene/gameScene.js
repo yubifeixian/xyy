@@ -627,11 +627,14 @@ var GameLayer=cc.Layer.extend({
 					selectHandCard.release();
 					player1.handCard.removeObject(selectHandCard);
 					var tempPlayer = nowPlayerTerm[nowPlayerNumber];
-					var MAX = 3;
+					var _maxCards = 3;
 					if (tempPlayer.skillNameList.containsObject(skillnameJianxia)) {
-						MAX = 5;
+						_maxCards = 5;
 					}
-					if (tempPlayer.handCard.length<= MAX) {
+					if (tempPlayer.pet_Tu == nameCaishenye) {
+						_maxCards++;
+					}
+					if (tempPlayer.handCard.length== _maxCards) {
 						textAreaAddMessage("手牌弃置完毕", myText, listView);
 						buttonManager(order1Button, false, false);
 						// buttonManager(order2Button, true, true);

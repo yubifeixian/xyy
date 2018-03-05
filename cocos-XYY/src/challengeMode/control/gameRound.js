@@ -641,7 +641,52 @@ function roundAddHandCard(){
 	}
 }
 
-function roundDropCard(){
+function roundDropCard() {
+	if (nowPlayerTerm[nowPlayerNumber].hp > 0) {
+		buttonManager(order1Button, false, false);
+		textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name + "的弃牌阶段", myText, listView, function () {
+			useAnyTimeSkill(function () {                
+				var _maxCard = 3, _rightCards = 0;
+				if (nowPlayerTerm[nowPlayerNumber].skillNameList
+						.containsObject(skillnameJianxia)) {
+					mainScene.addChild(new NormalSkillAnimationLayer(skillnameJianxia, nowPlayerTerm[nowPlayerNumber].hadImageView));
+					_maxCard = 5;
+				}
+				if (nowPlayerTerm[nowPlayerNumber].pet_Tu == nameCaishenye) {
+					_maxCard++;
+					textAreaAddMessage("财神爷宠物效果，" + nowPlayerTerm[nowPlayerNumber]._name + "手牌上限+1", myText, listView);
+				}               
+				if (nowPlayerTerm[nowPlayerNumber].handCard.length > _maxCard) {
+					_rightCards = nowPlayerTerm[nowPlayerNumber].handCard.length - _maxCard;
+					textAreaAddMessage("需要弃置" + _rightCards + "张手牌", myText, listView);
+					if (nowPlayerTerm[nowPlayerNumber]._name == player1._name) {
+						dropCarding = true;
+					} else {
+						for (var i = 0; i < _rightCards; i++) {
+							var _num = nowPlayerTerm[nowPlayerNumber].handCard.length;
+							var _temp = parseInt(Math.random() * _num, 10);
+							remove_Card_Into_DropDeck(nowPlayerTerm[nowPlayerNumber].handCard[_temp].name);
+							textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name + "弃置了手牌:" + nowPlayerTerm[nowPlayerNumber].handCard[_temp].name, myText, listView);
+							var _tempCard = nowPlayerTerm[nowPlayerNumber].handCard[_temp];
+							nowPlayerTerm[nowPlayerNumber].handCard.removeObject(_tempCard);
+							_tempCard.release();
+						}
+						autoNextStep();
+					}
+				} else {
+					if (nowPlayerNumber == 0) {
+						buttonManager(order1Button, true, true);
+					}
+					textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name + "不用弃牌", myText, listView);
+					autoNextStep();
+				}
+			});
+		});
+
+	}
+}
+
+/*function roundDropCard(){
 	if(nowPlayerTerm[nowPlayerNumber].hp>0){
 		buttonManager(order1Button, false, false);
 		textAreaAddMessage(nowPlayerTerm[nowPlayerNumber]._name+"的弃牌阶段", myText, listView,function(){
@@ -692,7 +737,7 @@ function roundDropCard(){
 		});
 		
 	}
-}
+}*/
 
 // 回合结束阶段
 function roundEnding(){
