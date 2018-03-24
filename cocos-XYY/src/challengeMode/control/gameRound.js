@@ -936,6 +936,8 @@ function getCardIdByName(cardName){
 	}else if(cardName==string_handCardNameWangshu||
 			cardName==string_handCardNameWangshu+"(扣置)"){
 		return 73;
+	}else if(cardName==string_handCardNameSanmeizhenhuo){
+		return 74;
 	}else{
 		return null;
 	}

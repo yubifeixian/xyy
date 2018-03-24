@@ -304,6 +304,7 @@ var string_handCardNameHuanmeihuazhou="幻魅画轴";
 var string_handCardNameShiziyaoshuo="十字妖槊";
 var string_handCardNameTiangangdouyi="天罡斗衣";
 var string_handCardNameYongandangpiao="永安当票";
+var string_handCardNameSanmeizhenhuo="三昧真火";
 var string_handCardNameXihe="羲和";
 var string_handCardNameWangshu="望舒";
 var nameLingquan="灵泉";

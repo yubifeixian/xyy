@@ -25,7 +25,7 @@ function useDongmingbaojing(usePlayer,callBack){
 				if(result){
 					mainScene.addChild(new AttackTargetLayer(tempPlayer.hadImageView,cardAnimationLabel,function(){
 						textAreaAddMessage(tempPlayer._name+"打出了【洞冥宝镜】", myText, listView,function(){
-							playCardAnimation("res/drawable-hdpi/dongmingbaojing.png", function(){
+							playCardAnimation(resPng.dongmingbaojing_png, function(){
 								useBingxingjue(tempPlayer,askBingxingjuePlayer,function(){
 									dongmingbaojingEffect(tempPlayer,null,callBack);
 								});
@@ -47,7 +47,7 @@ function useDongmingbaojing(usePlayer,callBack){
 												player1.handCard.removeObject(cardDongmingbaojing);
 												cardDongmingbaojing.removeFromParent();
 												cardDongmingbaojing.release();
-												playCardAnimation("res/drawable-hdpi/dongmingbaojing.png", function(){
+												playCardAnimation(resPng.dongmingbaojing_png, function(){
 													useBingxingjue(tempPlayer,askBingxingjuePlayer,function(){
 														dongmingbaojingEffect(tempPlayer,null,callBack);
 													});
@@ -74,7 +74,7 @@ function useDongmingbaojing(usePlayer,callBack){
 												tempPlayer.handCard.removeObject(cardDongmingbaojing);
 												cardDongmingbaojing.release();
 												// 询问冰心,根据结果处理洞明的效果
-												playCardAnimation("res/drawable-hdpi/dongmingbaojing.png", function(){
+												playCardAnimation(resPng.dongmingbaojing_png, function(){
 													useBingxingjue(tempPlayer,askBingxingjuePlayer,function(aiUseDongmingbaojingResult){
 														dongmingbaojingEffect(tempPlayer,null,callBack);
 													});
@@ -182,7 +182,7 @@ function useBingxingjue(startPlayer,nextPlayer,callBack){
 		skillCharacters_JingtianYongandangAsk(function(result){
 			if(result){
 				mainScene.addChild(new AttackTargetLayer(nextPlayer.hadImageView,cardAnimationLabel,function(){
-					playCardAnimation("res/drawable-hdpi/bingxinjue.png", function(){
+					playCardAnimation(resPng.bingxinjue_png, function(){
 						bingxingjueHandle(callBack,startPlayer,nextPlayer,result);
 					});
 				}));
@@ -202,7 +202,7 @@ function useBingxingjue(startPlayer,nextPlayer,callBack){
 								nextPlayer.handCard.removeObject(cardBingxingjue);
 								cardBingxingjue.release();
 								mainScene.addChild(new AttackTargetLayer(nextPlayer.hadImageView,cardAnimationLabel,function(){
-									playCardAnimation("res/drawable-hdpi/bingxinjue.png", function(){
+									playCardAnimation(resPng.bingxinjue_png, function(){
 										bingxingjueHandle(callBack,startPlayer,nextPlayer,aiUseBingxingjueResult);
 									});
 								}));
@@ -223,13 +223,13 @@ function useBingxingjue(startPlayer,nextPlayer,callBack){
 							cardBingxingjue.removeFromParent();
 							cardBingxingjue.release();
 							mainScene.addChild(new AttackTargetLayer(player1.hadImageView,cardAnimationLabel,function(){
-								playCardAnimation("res/drawable-hdpi/bingxinjue.png", function(){
+								playCardAnimation(resPng.bingxinjue_png, function(){
 									bingxingjueHandle(callBack,startPlayer,nextPlayer,result);
 								});
 							}));
 						}else{
 							skillCharacters_SumeiJujue(nextPlayer,function(){
-								playCardAnimation("res/drawable-hdpi/bingxinjue.png", function(){
+								playCardAnimation(resPng.bingxinjue_png, function(){
 									bingxingjueHandle(callBack,startPlayer,nextPlayer,true);
 								});
 							},function(){
@@ -464,6 +464,41 @@ function yongandangpiaoEffect(usePlayer,callBack){
 		addHandCard(addCardPlayerList, addCardPlayerList[0], addCardPlayerList[0], null, addCardNumberList, true, true);
 	}else{
 		textAreaAddMessage("【永安当票】效果无效", myText, listView);
+		game_Bingxingjue=false;
+		if(callBack!=null){
+			callBack();
+		}
+	}
+}
+
+function sanmeizhenhuoEffect(usePlayer,callBack){
+	longkuiRongzhuCardName=string_handCardNameSanmeizhenhuo;
+	if(game_Bingxingjue==false){
+		// 敌方全体HP-1（火属性）
+		var tempHeartList=new Array();
+		var tempHeartNumberList=new Array();
+		for (var i=0;i<nowPlayerTerm.length;i++) {
+			if (nowPlayerTerm[i].hp > 0
+					&& !player1IsPlayer2Friend(nowPlayerTerm[i],
+							usePlayer)) {
+				if(!skillCharacters_XuanxiaoNingbingfenyan(nowPlayerTerm[i])){
+					tempHeartList.push(nowPlayerTerm[i]);
+					tempHeartNumberList.push(1);
+					mainScene.addChild(new MagicLayer(nowPlayerTerm[i].hadImageView,new MagicNodeHuo()));
+				}
+			}
+		}
+		useYingu(tempHeartList, tempHeartList[0], tempHeartList[0], tempHeartNumberList, true, baseEffectReduceHPEffect,function(){
+			// 唐雪见【追打】技能
+			skillCharactersTangxuejianZhuida(function(){
+				heartList=new Array();
+				if(callBack!=null){
+					callBack();
+				}
+			});
+		});
+	}else{
+		textAreaAddMessage("【三昧真火】效果无效", myText, listView);
 		game_Bingxingjue=false;
 		if(callBack!=null){
 			callBack();
@@ -1199,7 +1234,7 @@ function mojianEffect(player,armNumber,callBack){
 
 function xiheEffect(player,armNumber,callBack){
 	var _tempArmNumber=armNumber!=null?armNumber:1;
-	//检测场上是否有人装备望舒剑
+	// 检测场上是否有人装备望舒剑
 	var _extent=0;
 	var _targetPlayer=baseEffectCheckPlayerHasArm(string_handCardNameWangshu, false);
 	if(_targetPlayer!=null){
@@ -1214,7 +1249,7 @@ function xiheEffect(player,armNumber,callBack){
 }
 function wangshuEffect(player,armNumber,callBack){
 	var _tempArmNumber=armNumber!=null?armNumber:1;
-	//检测场上是否有人装备羲和剑
+	// 检测场上是否有人装备羲和剑
 	var _combat=0;
 	var _targetPlayer=baseEffectCheckPlayerHasArm(string_handCardNameXihe, false);
 	if(_targetPlayer!=null){
@@ -1329,7 +1364,7 @@ function useYingu(heartList,firstPlayer,usePlayer,heartNumberList,canUseLonghunz
 			if(result){
 				mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
 					textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,string_handCardNameYingu), myText, listView,function(){
-						playCardAnimation("res/drawable-hdpi/yingu.png",function(){
+						playCardAnimation(resPng.yingu_png,function(){
 							useBingxingjue(usePlayer, usePlayer,function(){
 								yinguHandle(heartList,firstPlayer,usePlayer, result,heartNumberList,canUseLonghunzhankai, callBack,callBack2);
 							},callBack2);
@@ -1380,7 +1415,7 @@ function useYingu(heartList,firstPlayer,usePlayer,heartNumberList,canUseLonghunz
 									cardYingu.removeFromParent();
 									mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
 										textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,string_handCardNameYingu), myText, listView,function(){
-											playCardAnimation("res/drawable-hdpi/yingu.png",function(){
+											playCardAnimation(resPng.yingu_png,function(){
 												useBingxingjue(usePlayer, usePlayer,function(){
 													yinguHandle(heartList,firstPlayer,usePlayer, result,heartNumberList,canUseLonghunzhankai, callBack,callBack2);
 												},callBack2);
@@ -1401,7 +1436,7 @@ function useYingu(heartList,firstPlayer,usePlayer,heartNumberList,canUseLonghunz
 								usePlayer.handCard.removeObject(cardYingu);
 								mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
 									textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,string_handCardNameYingu), myText, listView,function(){
-										playCardAnimation("res/drawable-hdpi/yingu.png",function(){
+										playCardAnimation(resPng.yingu_png,function(){
 											useBingxingjue(usePlayer, usePlayer, function(){
 												yinguHandle(heartList,firstPlayer,usePlayer, useYingu, heartNumberList,canUseLonghunzhankai,callBack,callBack2);
 											},callBack2);

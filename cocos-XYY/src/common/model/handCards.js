@@ -12,7 +12,7 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 		AchivementProgress.addAchivementProgress(initCardAchivement.achivementLinghuxiandan);
 		mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
 			textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,temp.name), myText, listView,function(){
-				playCardAnimation("res/drawable-hdpi/linghuxiandan.png",function(){
+				playCardAnimation(resPng.linghuxiandan_png,function(){
 					useBingxingjue(usePlayer, usePlayer, function(){
 						skillCharacters_TangyurouYongshengdiao(effectPlayer,linghuxiandanEffect,callBack);
 						// linghuxiandanEffect(effectPlayer,callBack)
@@ -25,7 +25,7 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 		AchivementProgress.addAchivementProgress(initCardAchivement.achivementTianleipo);
 		mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
 			textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,temp.name), myText, listView,function(){
-				playCardAnimation("res/drawable-hdpi/tianleipo.png", function(){
+				playCardAnimation(resPng.tianleipo_png, function(){
 					useBingxingjue(usePlayer, usePlayer, function(){
 						tianleipoEffect(usePlayer,callBack)
 					});
@@ -36,7 +36,7 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 		AchivementProgress.addAchivementProgress(initCardAchivement.achivementShuerguo);
 		mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
 			textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,temp.name), myText, listView,function(){
-				playCardAnimation("res/drawable-hdpi/shuerguo.png", function(){
+				playCardAnimation(resPng.shuerguo_png, function(){
 					useBingxingjue(usePlayer, usePlayer, function(){
 						shuerguoEffect(effectPlayer,callBack)
 					});
@@ -47,7 +47,7 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 		AchivementProgress.addAchivementProgress(initCardAchivement.achivementKuicetianji);
 		mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
 			textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,temp.name), myText, listView,function(){
-				playCardAnimation("res/drawable-hdpi/kuicetianji.png", function(){
+				playCardAnimation(resPng.kuicetianji_png, function(){
 					useBingxingjue(usePlayer, usePlayer, function(){
 						kuicetianjiEffect(usePlayer,callBack);
 					});
@@ -58,7 +58,7 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 		AchivementProgress.addAchivementProgress(initCardAchivement.achivementToudao);
 		mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
 			textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,temp.name), myText, listView,function(){
-				playCardAnimation("res/drawable-hdpi/toudao.png", function(){
+				playCardAnimation(resPng.toudao_png, function(){
 					useAnyTimeSkill(function(){
 						useBingxingjue(usePlayer, usePlayer, function(){
 							toudaoEffect(usePlayer,callBack);
@@ -71,7 +71,7 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 		AchivementProgress.addAchivementProgress(initCardAchivement.achivementTongqianbiao);
 		mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
 			textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,temp.name), myText, listView,function(){
-				playCardAnimation("res/drawable-hdpi/tongqianbiao.png", function(){
+				playCardAnimation(resPng.tongqianbiao_png, function(){
 					useAnyTimeSkill(function(){
 						useBingxingjue(usePlayer, usePlayer, function(){
 							tongqianbiaoEffect(usePlayer,callBack)
@@ -84,7 +84,7 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 		AchivementProgress.addAchivementProgress(initCardAchivement.achivementWuqichaoyuan);
 		mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
 			textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,temp.name), myText, listView,function(){
-				playCardAnimation("res/drawable-hdpi/wuqichaoyuan.png", function(){
+				playCardAnimation(resPng.wuqichaoyuan_png, function(){
 					wuqichaoyuanEffect(usePlayer,canDiandang,callBack);
 				});
 			});
@@ -92,7 +92,7 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 	}else if(this.name==string_handCardNameCaihuan){
 		mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
 			textAreaAddMessage(Text.playerEquipCard.format(usePlayer._name,temp.name), myText, listView,function(){
-				playCardAnimation("res/drawable-hdpi/caihuan.png", function(){
+				playCardAnimation(resPng.caihuan_png, function(){
 					skillCharacters_ZhaolingerShuangjian(usePlayer, caihuanEffect,callBack);
 				});
 			});
@@ -100,7 +100,7 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 	}else if(this.name==string_handCardNameTianshezhang){
 		mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
 			textAreaAddMessage(Text.playerEquipCard.format(usePlayer._name,temp.name), myText, listView,function(){
-				playCardAnimation("res/drawable-hdpi/tianshezhang.png", function(){
+				playCardAnimation(resPng.tianshezhang_png, function(){
 					skillCharacters_ZhaolingerShuangjian(usePlayer, tianshezhangEffect,callBack);
 				});
 			});
@@ -108,14 +108,14 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 	}else if(this.name==string_handCardNameWuchenjian){
 		mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
 			textAreaAddMessage(Text.playerEquipCard.format(usePlayer._name,temp.name), myText, listView,function(){
-				playCardAnimation("res/drawable-hdpi/wuchenjian.png", function(){
+				playCardAnimation(resPng.wuchenjian_png, function(){
 					skillCharacters_ZhaolingerShuangjian(usePlayer, wuchenjianEffect,callBack);
 				});
 			});
 		}));
 	}else if(this.name==string_handCardNameModaotianzha){
 		textAreaAddMessage(Text.playerEquipCard.format(usePlayer._name,temp.name), myText, listView,function(){
-			playCardAnimation("res/drawable-hdpi/tianzha.png", function(){
+			playCardAnimation(resPng.tianzha_png, function(){
 				skillCharacters_ZhaolingerShuangjian(usePlayer, modaotianzhaEffect,callBack);
 			});
 		});
@@ -123,7 +123,7 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 		function _diandangEffect(){
 			mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
 				textAreaAddMessage(Text.playerEquipCard.format(usePlayer._name,temp.name), myText, listView,function(){
-					playCardAnimation("res/drawable-hdpi/mojian.png", function(){
+					playCardAnimation(resPng.mojian_png, function(){
 						skillCharacters_ZhaolingerShuangjian(usePlayer, mojianEffect,callBack);
 					});
 				});
@@ -167,7 +167,7 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 	}else if(this.name==string_handCardNameQiankundaopao){
 		mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
 			textAreaAddMessage(Text.playerEquipCard.format(usePlayer._name,temp.name), myText, listView,function(){
-				playCardAnimation("res/drawable-hdpi/qiankundaopao.png", function(){
+				playCardAnimation(resPng.qiankundaopao_png, function(){
 					qiankundaopaoEffect(usePlayer,callBack);
 				});
 			});
@@ -175,7 +175,7 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 	}else if(this.name==string_handCardNameTayunxue){
 		mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
 			textAreaAddMessage(Text.playerEquipCard.format(usePlayer._name,temp.name), myText, listView,function(){
-				playCardAnimation("res/drawable-hdpi/tayunxue.png", function(){
+				playCardAnimation(resPng.tayunxue_png, function(){
 					tayunxueEffect(usePlayer,callBack);
 				});
 			});
@@ -183,7 +183,7 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 	}else if(this.name==string_handCardNameLonghunzhankai){
 		mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
 			textAreaAddMessage(Text.playerEquipCard.format(usePlayer._name,temp.name), myText, listView,function(){
-				playCardAnimation("res/drawable-hdpi/longhunzhankai.png", function(){
+				playCardAnimation(resPng.longhunzhankai_png, function(){
 					longhunzhankaiEffect(usePlayer,callBack);
 				});
 			});
@@ -191,7 +191,7 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 	}else if(this.name==string_handCardNameTiandijifu){
 		mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
 			textAreaAddMessage(Text.playerEquipCard.format(usePlayer._name,temp.name), myText, listView,function(){
-				playCardAnimation("res/drawable-hdpi/tiandijifu.png", function(){
+				playCardAnimation(resPng.tiandijifu_png, function(){
 					tiandijifuEffect(usePlayer,callBack);
 				});
 			});
@@ -199,7 +199,7 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 	}else if(this.name==string_handCardNameWucaixiayi){
 		mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
 			textAreaAddMessage(Text.playerEquipCard.format(usePlayer._name,temp.name), myText, listView,function(){
-				playCardAnimation("res/drawable-hdpi/wucaixiayi.png", function(){
+				playCardAnimation(resPng.wucaixiayi_png, function(){
 					wucaixiayiEffect(usePlayer,callBack);
 				});
 			});
@@ -210,7 +210,7 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 				if(!skillCharacters_JiangyunfanKuanglongxunyingzhan(usePlayer)){
 					usePlayer.usedAttackCard=true;
 				}
-				playCardAnimation("res/drawable-hdpi/tianxuanwuyin.png", function(){
+				playCardAnimation(resPng.tianxuanwuyin_png, function(){
 					useBingxingjue(usePlayer, usePlayer, function(){
 						tianxuanwuyinEffect(usePlayer,callBack);
 					});
@@ -223,7 +223,7 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 				if(!skillCharacters_JiangyunfanKuanglongxunyingzhan(usePlayer)){
 					usePlayer.usedAttackCard=true;
 				}
-				playCardAnimation("res/drawable-hdpi/jincanwang.png", function(){
+				playCardAnimation(resPng.jincanwang_png, function(){
 					useBingxingjue(usePlayer, usePlayer, function(){
 						skillCharacters_TangyurouYongshengdiao(usePlayer,jincanwangEffect,callBack);
 					});
@@ -236,7 +236,7 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 				if(!skillCharacters_JiangyunfanKuanglongxunyingzhan(usePlayer)){
 					usePlayer.usedAttackCard=true;
 				}
-				playCardAnimation("res/drawable-hdpi/tiangangzhanqi.png", function(){
+				playCardAnimation(resPng.tiangangzhanqi_png, function(){
 					useBingxingjue(usePlayer, usePlayer, function(){
 						skillCharacters_TangyurouYongshengdiao(usePlayer,tiangangzhanqiEffect,callBack);
 					});
@@ -249,7 +249,7 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 				if(!skillCharacters_JiangyunfanKuanglongxunyingzhan(usePlayer)){
 					usePlayer.usedAttackCard=true;
 				}
-				playCardAnimation("res/drawable-hdpi/jinchantuoqiao.png", function(){
+				playCardAnimation(resPng.jinchantuoqiao_png, function(){
 					useBingxingjue(usePlayer, usePlayer, function(){
 						jinchantuoqiaoEffect(usePlayer,callBack);
 					});
@@ -259,7 +259,7 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 	}else if(this.name==string_handCardNameYongandangpiao){
 		mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
 			textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,temp.name), myText, listView,function(){
-				playCardAnimation("res/drawable-hdpi/yongandangpiao.png", function(){
+				playCardAnimation(resPng.yongandangpiao_png, function(){
 					useBingxingjue(usePlayer, usePlayer, function(){
 						yongandangpiaoEffect(effectPlayer,callBack)
 					});
@@ -268,16 +268,26 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 		}));
 	}else if(this.name==string_handCardNameXihe){
 		textAreaAddMessage(Text.playerEquipCard.format(usePlayer._name,temp.name), myText, listView,function(){
-			playCardAnimation("res/drawable-hdpi/xihejian.jpg", function(){
+			playCardAnimation(resPng.xihejian_png, function(){
 				skillCharacters_ZhaolingerShuangjian(usePlayer, xiheEffect,callBack);
 			});
 		});
 	}else if(this.name==string_handCardNameWangshu){
 		textAreaAddMessage(Text.playerEquipCard.format(usePlayer._name,temp.name), myText, listView,function(){
-			playCardAnimation("res/drawable-hdpi/wangshujian.jpg", function(){
+			playCardAnimation(resPng.wangshujian_png, function(){
 				skillCharacters_ZhaolingerShuangjian(usePlayer, wangshuEffect,callBack);
 			});
 		});
+	}else if(this.name==string_handCardNameSanmeizhenhuo){
+		mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
+			textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,temp.name), myText, listView,function(){
+				playCardAnimation(resPng.sanmeizhenhuo_png, function(){
+					useBingxingjue(usePlayer, usePlayer, function(){
+						sanmeizhenhuoEffect(effectPlayer,callBack)
+					});
+				});
+			});
+		}));
 	}
 }
 
@@ -641,3 +651,4 @@ var handCardShiziyaoshuo=new Card(string_handCardNameShiziyaoshuo);
 var handCardYongandangpiao=new Card(string_handCardNameYongandangpiao);
 var handCardXihe=new Card(string_handCardNameXihe);
 var handCardWangshu=new Card(string_handCardNameWangshu);
+var handCardSanmeizhenhuo=new Card(string_handCardNameSanmeizhenhuo);

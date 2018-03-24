@@ -9,8 +9,9 @@ function initHandCardDeck(array) {
 		array.sort(function(){ return 0.5 - Math.random() }) ;
 	}
 	// 69,70,71 :永安当票
-	//*羲和*/72 /*望舒*/73
-	for(var i=69;i<74;i++){
+	// *羲和*/72 /*望舒*/73
+	// /*三昧真火*/74,75
+	for(var i=69;i<76;i++){
 		array.push(i);
 		array.sort(function(){ return 0.5 - Math.random() }) ;
 	}
@@ -39,7 +40,7 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 		if (player.hp > 0) {
 			if (cardNumber >= 1 && cardNumber <= 8) {
 				var tianxuanwuyin=new createHandCardImageView(string_handCardNameTianxuanwuyin,
-						cardNumber,"res/drawable-hdpi/tianxuanwuyin.png",CARDTYPE.FIGHTCARD, 
+						cardNumber,resPng.tianxuanwuyin_png,CARDTYPE.FIGHTCARD, 
 						"【"+string_handCardNameTianxuanwuyin+
 				"】您指定一方本场战斗中战力+2未参战亦可使用");
 				player.handCard.push(tianxuanwuyin);
@@ -48,7 +49,7 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 				}
 			} else if (cardNumber >= 9 && cardNumber <= 13) {
 				var jincanwang=new createHandCardImageView(string_handCardNameJincanwang,
-						cardNumber,"res/drawable-hdpi/jincanwang.png",CARDTYPE.FIGHTCARD, 
+						cardNumber,resPng.jincanwang_png,CARDTYPE.FIGHTCARD, 
 						"【"+string_handCardNameJincanwang+
 				"】本场战斗中您的战力+3参战并命中才会生效");
 				player.handCard.push(jincanwang);
@@ -57,7 +58,7 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 				}
 			} else if (cardNumber >= 14 && cardNumber <= 17) {
 				var dongmingbaojing=new createHandCardImageView(string_handCardNameDongmingbaojing,
-						cardNumber,"res/drawable-hdpi/dongmingbaojing.png",CARDTYPE.SPECIALCARD, 
+						cardNumber,resPng.dongmingbaojing_png,CARDTYPE.SPECIALCARD, 
 						"【"+string_handCardNameDongmingbaojing+
 				"】任意玩家决定是否翻取怪物牌前使用，指定一名玩家翻取怪物牌堆顶上的一张，检视后放回原处");
 				player.handCard.push(dongmingbaojing);
@@ -66,7 +67,7 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 				}
 			} else if (cardNumber >= 18 && cardNumber <= 21) {
 				var yingu=new createHandCardImageView(string_handCardNameYingu,
-						cardNumber,"res/drawable-hdpi/yingu.png",CARDTYPE.SPECIALCARD, 
+						cardNumber,resPng.yingu_png,CARDTYPE.SPECIALCARD, 
 						"【"+string_handCardNameYingu+
 				"】抵消一次您自己收到的HP伤害（倾慕除外）");
 				player.handCard.push(yingu);
@@ -75,7 +76,7 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 				}
 			} else if (cardNumber >= 22 && cardNumber <= 24) {
 				var shuerguo=new createHandCardImageView(string_handCardNameShuerguo,
-						cardNumber,"res/drawable-hdpi/shuerguo.png",CARDTYPE.SKILLCARD, 
+						cardNumber,resPng.shuerguo_png,CARDTYPE.SKILLCARD, 
 						"【"+string_handCardNameShuerguo+
 				"】您指定一人补2张手牌");
 				player.handCard.push(shuerguo);
@@ -84,7 +85,7 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 				}
 			} else if (cardNumber >= 25 && cardNumber <= 27) {
 				var linghuxiandan=new createHandCardImageView(string_handCardNameLinghuxiandan,
-						cardNumber,"res/drawable-hdpi/linghuxiandan.png",CARDTYPE.SPECIALCARD, 
+						cardNumber,resPng.linghuxiandan_png,CARDTYPE.SPECIALCARD, 
 						"【"+string_handCardNameLinghuxiandan+
 				"】您的技牌阶段使用，您自己的HP+2,当有玩家HP为0时，可令其复活并恢复2点HP");
 				player.handCard.push(linghuxiandan);
@@ -93,7 +94,7 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 				}
 			} else if (cardNumber >= 28 && cardNumber <= 30) {
 				var bingxinjue=new createHandCardImageView(string_handCardNameBingxinjue,
-						cardNumber,"res/drawable-hdpi/bingxinjue.png",CARDTYPE.SPECIALCARD, 
+						cardNumber,resPng.bingxinjue_png,CARDTYPE.SPECIALCARD, 
 						"【"+string_handCardNameBingxinjue+
 				"】任意玩家使用技牌、战牌、特殊牌时打出。可令当前打出的这张牌无效");
 				player.handCard.push(bingxinjue);
@@ -102,7 +103,7 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 				}
 			} else if (cardNumber >= 31 && cardNumber <= 33) {
 				var tongqianbiao=new createHandCardImageView(string_handCardNameTongqianbiao,
-						cardNumber,"res/drawable-hdpi/tongqianbiao.png",CARDTYPE.SKILLCARD, 
+						cardNumber,resPng.tongqianbiao_png,CARDTYPE.SKILLCARD, 
 						"【"+string_handCardNameTongqianbiao+
 				"】弃掉任意玩家的1张手牌或装备");
 				player.handCard.push(tongqianbiao);
@@ -111,7 +112,7 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 				}
 			} else if (cardNumber >= 34 && cardNumber <= 36) {
 				var tianleipo=new createHandCardImageView(string_handCardNameTianleipo,
-						cardNumber,"res/drawable-hdpi/tianleipo.png",CARDTYPE.SKILLCARD, 
+						cardNumber,resPng.tianleipo_png,CARDTYPE.SKILLCARD, 
 						"【"+string_handCardNameTianleipo+
 				"】您指定一名玩家HP-2（此伤害为雷属性）");
 				player.handCard.push(tianleipo);
@@ -120,7 +121,7 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 				}
 			} else if (cardNumber == 37 || cardNumber == 38) {
 				var tiangangzhanqi=new createHandCardImageView(string_handCardNameTiangangzhanqi,
-						cardNumber,"res/drawable-hdpi/tiangangzhanqi.png",CARDTYPE.FIGHTCARD, 
+						cardNumber,resPng.tiangangzhanqi_png,CARDTYPE.FIGHTCARD, 
 						"【"+string_handCardNameTiangangzhanqi+
 				"】本场战斗中您的战力（含装备、宠物）加倍。但对战牌、爆发等临时增加的战力无效参战并命中才会生效");
 				player.handCard.push(tiangangzhanqi);
@@ -129,7 +130,7 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 				}
 			} else if (cardNumber == 39 || cardNumber == 40) {
 				var jinchantuoqiao=new createHandCardImageView(string_handCardNameJinchantuoqiao,
-						cardNumber,"res/drawable-hdpi/jinchantuoqiao.png",CARDTYPE.FIGHTCARD, 
+						cardNumber,resPng.jinchantuoqiao_png,CARDTYPE.FIGHTCARD, 
 						"【"+string_handCardNameJinchantuoqiao+
 				"】强制结束本场战斗，胜利条件、失败条件皆无效参战者可使用，即使未命中");
 				player.handCard.push(jinchantuoqiao);
@@ -138,7 +139,7 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 				}
 			} else if (cardNumber == 41 || cardNumber == 42) {
 				var kuicetianji=new createHandCardImageView(string_handCardNameKuicetianji,
-						cardNumber,"res/drawable-hdpi/kuicetianji.png",CARDTYPE.SKILLCARD, 
+						cardNumber,resPng.kuicetianji_png,CARDTYPE.SKILLCARD, 
 						"【"+string_handCardNameKuicetianji+
 				"】您从怪物牌组顶端翻去两张怪牌，检视后放回原位允许改变二者之间的顺序");
 				player.handCard.push(kuicetianji);
@@ -147,7 +148,7 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 				}
 			} else if (cardNumber == 43 || cardNumber == 44) {
 				var toudao=new createHandCardImageView(string_handCardNameToudao,
-						cardNumber,"res/drawable-hdpi/toudao.png",CARDTYPE.SKILLCARD, 
+						cardNumber,resPng.toudao_png,CARDTYPE.SKILLCARD, 
 						"【"+string_handCardNameToudao+
 				"】您抽取任意玩家的1张手牌");
 				player.handCard.push(toudao);
@@ -156,7 +157,7 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 				}
 			} else if (cardNumber == 45 || cardNumber == 46) {
 				var wuqichaoyuan=new createHandCardImageView(string_handCardNameWuqichaoyuan,
-						cardNumber,"res/drawable-hdpi/wuqichaoyuan.png",CARDTYPE.SKILLCARD, 
+						cardNumber,resPng.wuqichaoyuan_png,CARDTYPE.SKILLCARD, 
 						"【"+string_handCardNameWuqichaoyuan+
 				"】我方全体HP+1;典当:您的技牌阶段，可以弃掉此牌，补1张牌");
 				player.handCard.push(wuqichaoyuan);
@@ -165,7 +166,7 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 				}
 			} else if (cardNumber == 47) {
 				var mojian=new createHandCardImageView(string_handCardNameMojian,
-						cardNumber,"res/drawable-hdpi/mojian.png",CARDTYPE.ARMCARD, 
+						cardNumber,resPng.mojian_png,CARDTYPE.ARMCARD, 
 						"【"+string_handCardNameMojian+
 						"】命中+1;典当：您的技牌阶段，可以放弃"+
 						string_handCardNameMojian+"（是否装备均可），之后您补2张牌");
@@ -175,7 +176,7 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 				}
 			} else if (cardNumber == 48) {
 				var caihuan=new createHandCardImageView(string_handCardNameCaihuan,
-						cardNumber,"res/drawable-hdpi/caihuan.png",CARDTYPE.ARMCARD, 
+						cardNumber,resPng.caihuan_png,CARDTYPE.ARMCARD, 
 						"【"+string_handCardNameCaihuan+	"】命中+2");
 				player.handCard.push(caihuan);
 				if (player._name==player1._name) {
@@ -183,7 +184,7 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 				}
 			} else if (cardNumber == 49) {
 				var tianzha=new createHandCardImageView(string_handCardNameModaotianzha,
-						cardNumber,"res/drawable-hdpi/tianzha.png",CARDTYPE.ARMCARD, 
+						cardNumber,resPng.tianzha_png,CARDTYPE.ARMCARD, 
 						"【"+string_handCardNameModaotianzha+"】战力+2");
 				player.handCard.push(tianzha);
 				if (player._name==player1._name) {
@@ -191,7 +192,7 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 				}
 			} else if (cardNumber == 50) {
 				var tianshezhang=new createHandCardImageView(string_handCardNameTianshezhang,
-						cardNumber,"res/drawable-hdpi/tianshezhang.png",CARDTYPE.ARMCARD, 
+						cardNumber,resPng.tianshezhang_png,CARDTYPE.ARMCARD, 
 						"【"+string_handCardNameTianshezhang+"】战力+1装备"+
 						string_handCardNameTianshezhang+"的角色，如果HP得到回复" +
 				"（倾慕除外），HP回复额外+1");
@@ -201,7 +202,7 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 				}
 			} else if (cardNumber == 51) {
 				var wuchenjian=new createHandCardImageView(string_handCardNameWuchenjian,
-						cardNumber,"res/drawable-hdpi/wuchenjian.png",CARDTYPE.ARMCARD, 
+						cardNumber,resPng.wuchenjian_png,CARDTYPE.ARMCARD, 
 						"【"+string_handCardNameWuchenjian+"】战力+1，命中+1");
 				player.handCard.push(wuchenjian);
 				if (player._name==player1._name) {
@@ -209,7 +210,7 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 				}
 			} else if (cardNumber == 52) {
 				var tiandijifu=new createHandCardImageView(string_handCardNameTiandijifu,
-						cardNumber,"res/drawable-hdpi/tiandijifu.png",CARDTYPE.DEFENSECARD, 
+						cardNumber,resPng.tiandijifu_png,CARDTYPE.DEFENSECARD, 
 						"【"+string_handCardNameTiandijifu+"】装备后，" +
 				"您可将任意手牌当作【隐蛊】使用");
 				player.handCard.push(tiandijifu);
@@ -218,7 +219,7 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 				}
 			} else if (cardNumber == 53) {
 				var qiankundaopao=new createHandCardImageView(string_handCardNameQiankundaopao,
-						cardNumber,"res/drawable-hdpi/qiankundaopao.png",CARDTYPE.DEFENSECARD, 
+						cardNumber,resPng.qiankundaopao_png,CARDTYPE.DEFENSECARD, 
 						"【"+string_handCardNameQiankundaopao+"】战力+1；装备后，" +
 				"您免疫技牌导致的HP伤害");
 				player.handCard.push(qiankundaopao);
@@ -227,7 +228,7 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 				}
 			} else if (cardNumber == 54) {
 				var wucaixiayi=new createHandCardImageView(string_handCardNameWucaixiayi,
-						cardNumber,"res/drawable-hdpi/wucaixiayi.png",CARDTYPE.DEFENSECARD, 
+						cardNumber,resPng.wucaixiayi_png,CARDTYPE.DEFENSECARD, 
 						"【"+string_handCardNameWucaixiayi+"】战力+1爆发：装备后，您HP为0时，可丢弃" +
 						string_handCardNameWucaixiayi+"复活并恢复2点HP");
 				player.handCard.push(wucaixiayi);
@@ -236,7 +237,7 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 				}
 			} else if (cardNumber == 55) {
 				var tayunxue=new createHandCardImageView(string_handCardNameTayunxue,
-						cardNumber,"res/drawable-hdpi/tayunxue.png",CARDTYPE.DEFENSECARD, 
+						cardNumber,resPng.tayunxue_png,CARDTYPE.DEFENSECARD, 
 						"【"+string_handCardNameTayunxue+"】命中+1爆发：装备后收到伤害时（倾慕除外）,您可丢弃" +
 						string_handCardNameTayunxue+"，免疫本次伤害，并令HP回复1点");
 				player.handCard.push(tayunxue);
@@ -245,7 +246,7 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 				}
 			} else if (cardNumber == 56) {
 				var longhunzhankai=new createHandCardImageView(string_handCardNameLonghunzhankai,
-						cardNumber,"res/drawable-hdpi/longhunzhankai.png",CARDTYPE.DEFENSECARD, 
+						cardNumber,resPng.longhunzhankai_png,CARDTYPE.DEFENSECARD, 
 						"【"+string_handCardNameLonghunzhankai+"】装备后，您受到任何伤害（倾慕除外），HP损失降低1点，最低可降至0");
 				player.handCard.push(longhunzhankai);
 				if (player._name==player1._name) {
@@ -260,18 +261,27 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 					handCardZone.pushBackCustomItem(yongandangpiao);
 				}
 			}else if(cardNumber==72){
-				var xihe=new createHandCardImageView(string_handCardNameXihe,cardNumber,"res/drawable-hdpi/xihejian.jpg",CARDTYPE.ARMCARD,
+				var xihe=new createHandCardImageView(string_handCardNameXihe,cardNumber,resPng.xihejian_png,CARDTYPE.ARMCARD,
 						"【"+string_handCardNameXihe+"】战力+2，场上有望舒被装备时，羲和额外获得命中+2的数值");
 				player.handCard.push(xihe);
 				if(player._name==player1._name){
 					handCardZone.pushBackCustomItem(xihe);
 				}
 			}else if(cardNumber==73){
-				var wangshu=new createHandCardImageView(string_handCardNameWangshu,cardNumber,"res/drawable-hdpi/wangshujian.jpg",CARDTYPE.ARMCARD,
+				var wangshu=new createHandCardImageView(string_handCardNameWangshu,cardNumber,
+						resPng.wangshujian_png,CARDTYPE.ARMCARD,
 						"【"+string_handCardNameWangshu+"】命中+2，场上有羲和被装备时，望舒额外获得战力+2的数值");
 				player.handCard.push(wangshu);
 				if(player._name==player1._name){
 					handCardZone.pushBackCustomItem(wangshu);
+				}
+			}else if(cardNumber>=74&&cardNumber<=75){
+				var sanmeizhenhuo=new createHandCardImageView(string_handCardNameSanmeizhenhuo,cardNumber,
+						resPng.sanmeizhenhuo_png,CARDTYPE.SKILLCARD,
+						"【"+string_handCardNameSanmeizhenhuo+"】敌方全体HP-1(火属性)");
+				player.handCard.push(sanmeizhenhuo);
+				if(player._name==player1._name){
+					handCardZone.pushBackCustomItem(sanmeizhenhuo);
 				}
 			}
 		}
@@ -456,7 +466,7 @@ function equmentNameMappingCardInfo(equmentName){
 	switch (equmentName) {
 	case string_handCardNameMojian:
 		_cardInfo.cardID=47;
-		_cardInfo.cardSrcID="res/drawable-hdpi/mojian.png";
+		_cardInfo.cardSrcID=resPng.mojian_png;
 		_cardInfo.cardType=CARDTYPE.ARMCARD; 
 		_cardInfo.cardMessage="【"+string_handCardNameMojian+
 		"】命中+1;典当：您的技牌阶段，可以放弃"+
@@ -464,19 +474,19 @@ function equmentNameMappingCardInfo(equmentName){
 		break;
 	case string_handCardNameCaihuan:
 		_cardInfo.cardID=48;
-		_cardInfo.cardSrcID="res/drawable-hdpi/caihuan.png";
+		_cardInfo.cardSrcID=resPng.caihuan_png;
 		_cardInfo.cardType=CARDTYPE.ARMCARD; 
 		_cardInfo.cardMessage="【"+string_handCardNameCaihuan+	"】命中+2";
 		break;
 	case string_handCardNameModaotianzha:
 		_cardInfo.cardID=49;
-		_cardInfo.cardSrcID="res/drawable-hdpi/tianzha.png";
+		_cardInfo.cardSrcID=resPng.tianzha_png;
 		_cardInfo.cardType=CARDTYPE.ARMCARD; 
 		_cardInfo.cardMessage="【"+string_handCardNameModaotianzha+"】战力+2";
 		break;
 	case string_handCardNameTianshezhang:
 		_cardInfo.cardID=50;
-		_cardInfo.cardSrcID="res/drawable-hdpi/tianshezhang.png";
+		_cardInfo.cardSrcID=resPng.tianshezhang_png;
 		_cardInfo.cardType=CARDTYPE.ARMCARD; 
 		_cardInfo.cardMessage="【"+string_handCardNameTianshezhang+"】战力+1装备"+
 		string_handCardNameTianshezhang+"的角色，如果HP得到回复" +
@@ -484,41 +494,41 @@ function equmentNameMappingCardInfo(equmentName){
 		break;
 	case string_handCardNameWuchenjian:
 		_cardInfo.cardID=51;
-		_cardInfo.cardSrcID="res/drawable-hdpi/wuchenjian.png";
+		_cardInfo.cardSrcID=resPng.wuchenjian_png;
 		_cardInfo.cardType=CARDTYPE.ARMCARD; 
 		_cardInfo.cardMessage="【"+string_handCardNameWuchenjian+"】战力+1，命中+1";
 		break;
 	case string_handCardNameTiandijifu:
 		_cardInfo.cardID=52;
-		_cardInfo.cardSrcID="res/drawable-hdpi/tiandijifu.png";
+		_cardInfo.cardSrcID=resPng.tiandijifu_png;
 		_cardInfo.cardType=CARDTYPE.DEFENSECARD; 
 		_cardInfo.cardMessage="【"+string_handCardNameTiandijifu+"】装备后，" +
 		"您可将任意手牌当作【隐蛊】使用";
 		break;
 	case string_handCardNameQiankundaopao:
 		_cardInfo.cardID=53;
-		_cardInfo.cardSrcID="res/drawable-hdpi/qiankundaopao.png";
+		_cardInfo.cardSrcID=resPng.qiankundaopao_png;
 		_cardInfo.cardType=CARDTYPE.DEFENSECARD; 
 		_cardInfo.cardMessage="【"+string_handCardNameQiankundaopao+"】战力+1；装备后，" +
 		"您免疫技牌导致的HP伤害";
 		break;
 	case string_handCardNameWucaixiayi:
 		_cardInfo.cardID=54;
-		_cardInfo.cardSrcID="res/drawable-hdpi/wucaixiayi.png";
+		_cardInfo.cardSrcID=resPng.wucaixiayi_png;
 		_cardInfo.cardType=CARDTYPE.DEFENSECARD; 
 		_cardInfo.cardMessage="【"+string_handCardNameWucaixiayi+"】战力+1爆发：装备后，您HP为0时，可丢弃" +
 		string_handCardNameWucaixiayi+"复活并恢复2点HP";
 		break;
 	case string_handCardNameTayunxue:
 		_cardInfo.cardID=55;
-		_cardInfo.cardSrcID="res/drawable-hdpi/tayunxue.png";
+		_cardInfo.cardSrcID=resPng.tayunxue_png;
 		_cardInfo.cardType=CARDTYPE.DEFENSECARD; 
 		_cardInfo.cardMessage="【"+string_handCardNameTayunxue+"】命中+1爆发：装备后收到伤害时（倾慕除外）,您可丢弃" +
 		string_handCardNameTayunxue+"，免疫本次伤害，并令HP回复1点";
 		break;
 	case string_handCardNameLonghunzhankai:
 		_cardInfo.cardID=56;
-		_cardInfo.cardSrcID="res/drawable-hdpi/longhunzhankai.png";
+		_cardInfo.cardSrcID=resPng.longhunzhankai_png;
 		_cardInfo.cardType=CARDTYPE.DEFENSECARD; 
 		_cardInfo.cardMessage="【"+string_handCardNameLonghunzhankai+"】装备后，您受到任何伤害（倾慕除外），HP损失降低1点，最低可降至0";
 		break;
@@ -528,49 +538,6 @@ function equmentNameMappingCardInfo(equmentName){
 
 // player2:装备的新主人
 function player1GetPlayer2Equment(nowPlayer,equmentName){
-	/*equmentName=equmentName.replaceAll("\\(扣置\\)");
-	if (equmentName==string_handCardNameMojian) {
-		// newHandCard(47,nowPlayer, 1, false);
-		addHandCard([nowPlayer],nowPlayer,nowPlayer,47,[1],false,false);
-	} else if (equmentName==string_handCardNameWuchenjian
-	 ||equmentName==string_handCardNameWuchenjian+"(扣置)" ) {
-		// newHandCard(51,nowPlayer, 1, false);
-		addHandCard([nowPlayer],nowPlayer,nowPlayer,51,[1],false,false);
-	} else if (equmentName==string_handCardNameTianshezhang
-	 ||equmentName==string_handCardNameTianshezhang+"(扣置)" ) {
-		// newHandCard(50,nowPlayer, 1, false);
-		addHandCard([nowPlayer],nowPlayer,nowPlayer,50,[1],false,false);
-	} else if (equmentName==string_handCardNameCaihuan
-	 ||equmentName==string_handCardNameCaihuan+"(扣置)" ) {
-		// newHandCard(48,nowPlayer, 1, false);
-		addHandCard([nowPlayer],nowPlayer,nowPlayer,48,[1],false,false);
-	} else if (equmentName==string_handCardNameModaotianzha
-	 ||equmentName==string_handCardNameModaotianzha+"(扣置)" ) {
-		// newHandCard(49,nowPlayer, 1, false);
-		addHandCard([nowPlayer],nowPlayer,nowPlayer,49,[1],false,false);
-	}else if (equmentName==string_handCardNameQiankundaopao
-	 ||equmentName==string_handCardNameQiankundaopao+"(扣置)" ) {
-		// newHandCard(53,nowPlayer, 1, false);
-		addHandCard([nowPlayer],nowPlayer,nowPlayer,53,[1],false,false);
-	} else if (equmentName==string_handCardNameTiandijifu
-	 ||equmentName==string_handCardNameTiandijifu+"(扣置)" ){
-		// newHandCard(52,nowPlayer, 1, false, true);
-		addHandCard([nowPlayer],nowPlayer,nowPlayer,52,[1],false,false);
-	}
-	else if (equmentName==string_handCardNameLonghunzhankai
-	 ||equmentName==string_handCardNameLonghunzhankai+"(扣置)" ){
-		// newHandCard(56,nowPlayer, 1, false, true);
-		addHandCard([nowPlayer],nowPlayer,nowPlayer,56,[1],false,false);
-	}
-	else if (equmentName==string_handCardNameWucaixiayi
-	 ||equmentName==string_handCardNameWucaixiayi+"(扣置)" ) {
-		// newHandCard(54,nowPlayer, 1, false, true);
-		addHandCard([nowPlayer],nowPlayer,nowPlayer,54,[1],false,false);
-	} else if (equmentName==string_handCardNameTayunxue
-	 ||equmentName==string_handCardNameTayunxue+"(扣置)" ) {
-		// newHandCard(55,nowPlayer, 1, false, true);
-		addHandCard([nowPlayer],nowPlayer,nowPlayer,55,[1],false,false);
-	}*/
 	addHandCard([nowPlayer],nowPlayer,nowPlayeequmentNameMappingCardInfoId(equmentName).cardID,[1],false,false);
 }
 

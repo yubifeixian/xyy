@@ -16,13 +16,13 @@ function initMonsterDeck() {
 	}
 	// sp开关开启，
 	if(spSwitch=="true"){
-		//加入【火麒麟】
+		// 加入【火麒麟】
 		_monsterDeck.push(-1);
-		//加入【金翅凤凰】
+		// 加入【金翅凤凰】
 		_monsterDeck.push(-2);
-		//加入【纸马】
+		// 加入【纸马】
 		_monsterDeck.push(-3);
-		//加入【画妖】
+		// 加入【画妖】
 		_monsterDeck.push(-4);
 	}
 	_monsterDeck.sort(function(){ return 0.5 - Math.random() }) ;
@@ -304,6 +304,10 @@ function randomGetHandCard(number){
 		handCard=new createHandCardImageView(string_handCardNameWangshu,
 				number,resPng.wangshujian_png,CARDTYPE.ARMCARD, 
 				"【"+string_handCardNameWangshu+"】命中+2，场上有羲和被装备时，望舒额外获得战力+2的数值");
+	}else if(number>=74&&number<=75){
+		handCard=new createHandCardImageView(string_handCardNameSanmeizhenhuo,
+				number,resPng.sanmeizhenhuo_png,CARDTYPE.SKILLCARD, 
+				"【"+string_handCardNameSanmeizhenhuo+"】敌方全体HP-1(火属性)");
 	}
 	return handCard;
 }
