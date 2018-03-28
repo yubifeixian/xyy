@@ -223,17 +223,25 @@ function baseAIUseSkillCard(nowIndex,handCardLength) {
 					baseAIUseSKillCardHelper(used,nowPlayer,nowIndex);
 				}
 			} else if (type==CARDTYPE.SKILLCARD) {
-				if (name==string_handCardNameWuqichaoyuan) {
+				switch(name){
+				case string_handCardNameWuqichaoyuan:
+				{
 					used = true;
-						handCardWuqichaoyuan.effect(nowPlayer, nowPlayer, true, true,function(){
-							baseAIUseSKillCardHelper(used,nowPlayer,nowIndex);
+					handCardWuqichaoyuan.effect(nowPlayer, nowPlayer, true, true,function(){
+						baseAIUseSKillCardHelper(used,nowPlayer,nowIndex);
 					});
-				} else if (name==string_handCardNameKuicetianji) {
+				}
+				break;
+				case string_handCardNameKuicetianji:
+				{
 					used = true;
-						handCardKuicetianji.effect(nowPlayer, nowPlayer, true, false,function(){
-							baseAIUseSKillCardHelper(used,nowPlayer,nowIndex);
+					handCardKuicetianji.effect(nowPlayer, nowPlayer, true, false,function(){
+						baseAIUseSKillCardHelper(used,nowPlayer,nowIndex);
 					});
-				} else if (name==string_handCardNameTongqianbiao) {
+				}
+				break;
+				case string_handCardNameTongqianbiao:
+				{
 					var mubiao1 = null, mubiao2 = null;
 					if (nowPlayer._name==player2._name) {
 						mubiao1 = player3;
@@ -246,13 +254,16 @@ function baseAIUseSkillCard(nowIndex,handCardLength) {
 					if ((mubiao1._name!=nameChonglouSp&&(mubiao1.handCard.length > 0 ||baseEffectCountequment(mubiao1)>0))
 							|| (mubiao2._name!=nameChonglouSp&&(mubiao2.handCard.length > 0 || baseEffectCountequment(mubiao2) > 0))) {
 						used = true;
-							handCardTongqianbiao.effect(nowPlayer, nowPlayer, true, false,function(){
-								baseAIUseSKillCardHelper(used,nowPlayer,nowIndex);
-							});
+						handCardTongqianbiao.effect(nowPlayer, nowPlayer, true, false,function(){
+							baseAIUseSKillCardHelper(used,nowPlayer,nowIndex);
+						});
 					}else{
 						baseAIUseSKillCardHelper(used,nowPlayer,nowIndex);
 					}
-				} else if (name==string_handCardNameToudao) {
+				}
+				break;
+				case string_handCardNameToudao:
+				{
 					var mubiao1 = null, mubiao2 = null;
 					if (nowPlayer._name==player2._name) {
 						mubiao1 = player3;
@@ -271,7 +282,10 @@ function baseAIUseSkillCard(nowIndex,handCardLength) {
 					}else{
 						baseAIUseSKillCardHelper(used,nowPlayer,nowIndex);
 					}
-				} else if (name==string_handCardNameTianleipo) {
+				}
+				break;
+				case string_handCardNameTianleipo:
+				{
 					used = true;
 					for(var i=0;i<nowPlayerTerm.length;i++){
 						if(nowPlayerTerm[i]>0&&nowPlayerTerm[i]._name==nameChonglouSp&&(!player1IsPlayer2Friend(nowPlayerTerm[nowPlayerNumber], nowPlayerTerm[i]))){
@@ -286,7 +300,10 @@ function baseAIUseSkillCard(nowIndex,handCardLength) {
 					}else{
 						baseAIUseSKillCardHelper(used,nowPlayer,nowIndex);
 					}
-				} else if (name==string_handCardNameShuerguo) {
+				}
+				break;
+				case string_handCardNameShuerguo:
+				{
 					if(nowPlayer._name!=nameChonglouSp){
 						used = true;
 						handCardShuerguo.effect(nowPlayer, nowPlayer, true, false,function(){
@@ -300,8 +317,21 @@ function baseAIUseSkillCard(nowIndex,handCardLength) {
 					}else{
 						baseAIUseSKillCardHelper(used,nowPlayer,nowIndex);
 					}
-				}else{
+				}
+				break;
+				case string_handCardNameSanmeizhenhuo:
+				{
+					used=true;
+					handCardSanmeizhenhuo.effect(nowPlayer, nowPlayer, true, false,function(){
+						baseAIUseSKillCardHelper(used,nowPlayer,nowIndex);
+					});
+				}
+				break;
+				default:
+				{
 					baseAIUseSKillCardHelper(used,nowPlayer,nowIndex);
+				}
+				break;
 				}
 			} else if (type==CARDTYPE.ARMCARD
 					|| type==CARDTYPE.DEFENSECARD) {
