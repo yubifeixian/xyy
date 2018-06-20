@@ -7,6 +7,7 @@ var AdvGameScene=cc.Scene.extend({
 	onEnter:function(){
 		this._super();
 		var model=parseInt(Math.random()*3, 10);
+		//model=0;
 		switch(model){
 		case 0:
 			nowGameModel=ADVGAMESCENEMODEL.LEFT;

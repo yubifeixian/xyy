@@ -12,6 +12,10 @@ var selectPlayerDialogLayer=BaseDialogLayer.extend({
 	playersList:null,
 	callBack:null,
 	isNPCJoin:null,
+	choosePlayer1:null,
+	choosePlayer2:null,
+	choosePlayer3:null,
+	choosePlayer4:null,
 	ctor:function(player1shown,player2shown, player3shown, player4shown,
 			message, isButtonCancleEnabled, canUseMengkuilei,callBack,isNPCJoin){
 		this._super();
@@ -19,6 +23,10 @@ var selectPlayerDialogLayer=BaseDialogLayer.extend({
 		this.player2shown=player2shown;
 		this.player3shown=player3shown;
 		this.player4shown=player4shown;
+		this.choosePlayer1=player1;
+		this.choosePlayer2=player2;
+		this.choosePlayer3=player3;
+		this.choosePlayer4=player4==null?boss:player4
 		this.message=message;
 		this.playerButtons=new Array();
 		this.isButtonCancleEnabled=false;
@@ -44,46 +52,46 @@ var selectPlayerDialogLayer=BaseDialogLayer.extend({
 		buttonManager(this.cancelButton, this.isButtonCancleEnabled, this.isButtonCancleEnabled);
 		if (this.canUseMengkuilei) {
 			if (this.player1shown
-					&& (player1._name==nameLiumengliMengkuilei|| player1.hp > 0)) {
-				this.playersList.push(player1);
+					&& (this.choosePlayer1._name==nameLiumengliMengkuilei|| this.choosePlayer1.hp > 0)) {
+				this.playersList.push(this.choosePlayer1);
 			}
 			if (this.player2shown
-					&& (player2._name==nameLiumengliMengkuilei || player2.hp > 0)) {
-				this.playersList.push(player2);
+					&& (this.choosePlayer2._name==nameLiumengliMengkuilei || this.choosePlayer2.hp > 0)) {
+				this.playersList.push(this.choosePlayer2);
 			}
 			if (this.player3shown
-					&& (player3._name==nameLiumengliMengkuilei || player3.hp > 0)) {
-				this.playersList.push(player3);
+					&& (this.choosePlayer3._name==nameLiumengliMengkuilei || this.choosePlayer3.hp > 0)) {
+				this.playersList.push(this.choosePlayer3);
 			}
 			if (this.player4shown
-					&& (player4._name==nameLiumengliMengkuilei || player4.hp > 0)) {
-				this.playersList.push(player4);
+					&& (this.choosePlayer4._name==nameLiumengliMengkuilei || this.choosePlayer4.hp > 0)) {
+				this.playersList.push(this.choosePlayer4);
 			}
 		}else if(this.isNPCJoin!=null){
 			if (this.player1shown) {
-				this.playersList.push(player1);
+				this.playersList.push(this.choosePlayer1);
 			}
 			if (this.player2shown) {
-				this.playersList.push(player2);
+				this.playersList.push(this.choosePlayer2);
 			}
 			if (this.player3shown) {
-				this.playersList.push(player3);
+				this.playersList.push(this.choosePlayer3);
 			}
 			if (this.player4shown) {
-				this.playersList.push(player4);
+				this.playersList.push(this.choosePlayer4);
 			}
 		}else{
-			if (this.player1shown && player1.hp > 0) {
-				this.playersList.push(player1);
+			if (this.player1shown && this.choosePlayer1.hp > 0) {
+				this.playersList.push(this.choosePlayer1);
 			}
-			if (this.player2shown && player2.hp > 0) {
-				this.playersList.push(player2);
+			if (this.player2shown && this.choosePlayer2.hp > 0) {
+				this.playersList.push(this.choosePlayer2);
 			}
-			if (this.player3shown && player3.hp > 0) {
-				this.playersList.push(player3);
+			if (this.player3shown && this.choosePlayer3.hp > 0) {
+				this.playersList.push(this.choosePlayer3);
 			}
-			if (this.player4shown && player4.hp > 0) {
-				this.playersList.push(player4);
+			if (this.player4shown && this.choosePlayer4.hp > 0) {
+				this.playersList.push(this.choosePlayer4);
 			}
 		}
 		var listView=ccui.helper.seekWidgetByName(dialog.node, "ListView");

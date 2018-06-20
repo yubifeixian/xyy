@@ -2,14 +2,11 @@ var game_MonsterDropDeck=null; // 怪物牌弃牌堆（用于发动【秀口锦�
 var myControlPlayer=null;	//玩家控制的角色
 var otherControlPlayer1=null;//其他玩家控制的角色1
 var otherControlPlayer2=null;//其他玩家控制的角色2
-var moyiYanshiqiongbingAddCombatMark=false;//标识魔主“魔翳·湮世穹兵”战力是否已经变成10
 var nowGameModel=0;
 var boss=null;
+var moyiYanshiqiongbingAddCombatMark=false;//标识魔主“魔翳·湮世穹兵”战力是否已经变成10
 var bossUseDongmingbaojing=false;	//魔主使用洞冥宝镜
-var player1=new Player();
-var player2=new Player();
-var player3=new Player();
-var guanyinmizhenList=new Array();//保存被“观音迷阵”效果影响的角色
+var guanyinmizhenList=null;//保存被“观音迷阵”效果影响的角色
 var muhoudeyinmouMark=false;//危机牌【幕后的阴谋】是否发挥效果
 var huayaoshuiMark=false;//危机牌【化妖水】是否发挥效果
 var jushentiantuMark=false;//危机牌【巨神天屠】是否发挥效果
@@ -94,6 +91,7 @@ function initAdvGameValue(){
 	huayaoshuiMark=false;
 	jushentiantuMark=false;//危机牌【巨神天屠】是否发挥效果
 	moyiYanshiqiongbingAddCombatMark=false;//标识魔主“魔翳·湮世穹兵”战力是否已经变成10
+	guanyinmizhenList=new Array();//保存被“观音迷阵”效果影响的角色
 	playerScore=0;
 	bossScore=0;
 

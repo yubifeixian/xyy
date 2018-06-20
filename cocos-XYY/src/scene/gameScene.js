@@ -1036,6 +1036,10 @@ var GameScene = cc.Scene.extend({
 			}
 		}
 		cc.textureCache.removeAllTextures();
+		player1=null;
+		player2=null;
+		player3=null;
+		player4=null;
 	},
 	onExitTransitionDidStart:function(){
 		this._super();
