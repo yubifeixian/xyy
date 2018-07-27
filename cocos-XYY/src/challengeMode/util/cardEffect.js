@@ -1577,7 +1577,7 @@ function jincanwangEffect(usePlayer,callBack){
 			textAreaAddMessage(usePlayer._name+"使用了【金蚕王】，自身战力+3", myText, listView);
 			if (shenfeng == 1) {
 				triggerCombat += 3;
-				addTrigerCombat(3);
+				//addTrigerCombat(3);
 			} else if (shenfeng == 2) {
 				monsterCombat += 3;
 			}
