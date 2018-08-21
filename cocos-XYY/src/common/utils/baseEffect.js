@@ -250,7 +250,6 @@ function baseEffectCountOrnament(player){
 function baseEffectCountPets(player) {
 	var count = 0;
 	if (player.hp != 0) {
-
 		if (player.pet_FengMonster != null)
 			count++;
 		if (player.pet_LeiMonster != null)

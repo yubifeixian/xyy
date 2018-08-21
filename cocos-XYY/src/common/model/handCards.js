@@ -288,6 +288,14 @@ Card.prototype.effect=function(usePlayer,effectPlayer,shouldDrop,canDiandang,cal
 				});
 			});
 		}));
+	}else if(this.name==string_handCardNameZijinhulu){
+		mainScene.addChild(new AttackTargetLayer(usePlayer.hadImageView,cardAnimationLabel,function(){
+			textAreaAddMessage(Text.playerUsedCard.format(usePlayer._name,temp.name), myText, listView,function(){
+				playCardAnimation(resPng.zijinhulu_png, function(){
+					zijinhuluEffect(usePlayer,canDiandang,callBack);
+				});
+			});
+		}));
 	}
 }
 
@@ -652,3 +660,4 @@ var handCardYongandangpiao=new Card(string_handCardNameYongandangpiao);
 var handCardXihe=new Card(string_handCardNameXihe);
 var handCardWangshu=new Card(string_handCardNameWangshu);
 var handCardSanmeizhenhuo=new Card(string_handCardNameSanmeizhenhuo);
+var handCardZijinhulu=new Card(string_handCardNameZijinhulu);

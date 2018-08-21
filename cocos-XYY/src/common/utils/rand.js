@@ -308,6 +308,12 @@ function randomGetHandCard(number){
 		handCard=new createHandCardImageView(string_handCardNameSanmeizhenhuo,
 				number,resPng.sanmeizhenhuo_png,CARDTYPE.SKILLCARD, 
 				"【"+string_handCardNameSanmeizhenhuo+"】敌方全体HP-1(火属性)");
+	}else if(number>=76&&number<=78){
+		handCard=new createHandCardImageView(string_handCardNameZijinhulu,
+				number,resPng.zijinhulu_png,CARDTYPE.SKILLCARD, 
+				"【"+string_handCardNameZijinhulu+"】翻取一张怪牌并投掷骰子,若大于等于N(N=5+我方宠物数-敌方宠物数),则直接收归为宠物" +
+						"如果要用冰心诀抵消此牌,需要在翻开怪牌前决定" +
+						"(典当:使用技牌阶段可弃掉此牌，补1张牌)");
 	}
 	return handCard;
 }

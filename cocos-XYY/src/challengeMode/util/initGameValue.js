@@ -213,8 +213,9 @@ function initGameValue(){
 	// game_EventCardDeck=[7];
 
 	// 发初始手牌
-	addHandCard(nowPlayerTerm,nowPlayerTerm[0],nowPlayerTerm[0],null,[3,3,3,3],true,false);
-//	addHandCard(nowPlayerTerm,nowPlayerTerm[0],nowPlayerTerm[0],null,[25,0,2,0],true,false);
+	//addHandCard(nowPlayerTerm,nowPlayerTerm[0],nowPlayerTerm[0],null,[3,3,3,3],true,false);
+	//addHandCard(nowPlayerTerm,nowPlayerTerm[0],nowPlayerTerm[0],null,[25,0,2,0],true,false);
+	addHandCard([player1],player1,player1,76,[2],false,false);//紫金葫芦
 	 //addHandCard([player1],player1,player1,34,[2],false,false);//天雷破
 	//addHandCard([player1],player1,player1,43,[1],false,false);//偷盗
 	// addHandCard([player1],player1,player1,22,[1],false,false);//鼠儿果

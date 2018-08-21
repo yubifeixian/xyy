@@ -1499,6 +1499,239 @@ function yinguHandle(heartList,firstPlayer,effectPlayer,isUsedYingu,heartNumberL
 	}
 }
 
+function zijinhuluEffect(usePlayer,canDiandang,callBack){
+	if(canDiandang){
+		canDiandang=skillCharacters_JingtianLaobanAsk(usePlayer);
+	}
+	if(canDiandang){
+		if(usePlayer._name==player1._name){
+			addDialog(mainScene, new ChooseZoneLayer("是否发动“典当”效果？",function(result){
+				if(result){
+					textAreaAddMessage(usePlayer._name+"发动【紫金葫芦】典当效果，从牌堆中补1张牌", myText, listView);
+					skillCharacters_JingtianLaoban(usePlayer,76,function(){
+						game_DropHandCard.removeObject(76);
+					},function(){
+						addHandCard([usePlayer],usePlayer,usePlayer,null,[1],true,true,callBack);
+					});
+
+				}else{
+					useBingxingjue(usePlayer, usePlayer, function(){
+						longkuiRongzhuCardName=string_handCardNameZijinhulu;
+						if(!game_Bingxingjue){
+							textAreaAddMessage(usePlayer._name+"发动【紫金葫芦】效果，翻取一张怪牌", myText, listView,
+								function(){
+									if(game_MonsterDeck.length==0){
+										judgeWinorLose();
+									}else{
+										useDongmingbaojing(null,function(){
+											fight_FirstMonster=topMonsterCard(game_MonsterDeck.shift());
+											turnMonsterCardLayer=new TurnMonsterCardLayer(fight_FirstMonster);
+											mainScene.addChild(turnMonsterCardLayer);
+											if(fight_FirstMonster.dodge==0){
+												textAreaAddMessage("翻取NPC:"+fight_FirstMonster.name+",【紫金葫芦】无效",myText,listView,function(){
+													game_Bingxingjue=false;
+													turnMonsterCardLayer.instead();
+													fight_FirstMonster=null;
+													if(callBack!=null){
+														callBack();		
+													}
+												});
+											}else{
+												var _nParam=5+baseEffectCountPets(player1)+baseEffectCountPets(player2)-baseEffectCountPets(player3)-baseEffectCountPets(player4);
+												var _randomNum=parseInt(Math.random() * 6, 10) + 1;
+												textAreaAddMessage("N="+_nParam+",骰子点数="+_randomNum, myText, listView,function(){
+													skillCharacters_WangxiaohuBuqubunao(usePlayer, _randomNum, function(xiaohuNum){
+														if(xiaohuNum>=_nParam){
+															textAreaAddMessage("骰子点数大于等于N,直接获得该宠物", myText, listView, function(){
+																calculate_Pets(usePlayer,fight_FirstMonster);
+																game_Bingxingjue=false;
+																fight_FirstMonster=null;
+																turnMonsterCardLayer.instead();
+																if(callBack!=null){
+																	callBack();		
+																}
+															});
+														}else{
+															textAreaAddMessage("骰子点数小于N,【紫金葫芦】无效", myText, listView, function(){
+																game_Bingxingjue=false;
+																fight_FirstMonster=null;
+																turnMonsterCardLayer.instead();
+																if(callBack!=null){
+																	callBack();		
+																}
+															});
+														}
+													});
+												});
+											}
+										});
+									}
+							});
+						}else{
+							textAreaAddMessage(usePlayer._name+"发动【紫金葫芦】无效", myText, listView);
+							game_Bingxingjue=false;
+						}
+						if(callBack!=null){
+							callBack();
+						}
+					});
+				}
+			}));
+		}else{
+			// AI决定是否发动“典当”效果
+			var is_DianDang = true; // AI判断是否发动【典当】(当自己和队友均满血时，发动【典当】)
+			for (var i=0;i<usePlayer.friendList.length;i++) {
+				if (usePlayer.friendList[i].hp>0&&usePlayer.friendList[i].hp != usePlayer.friendList[i].maxHP) {
+					is_DianDang = false;
+				}
+			}
+			if (is_DianDang) {
+				// 典当
+				textAreaAddMessage(usePlayer._name+"典当【紫金葫芦】，从牌堆中补1张牌", myText, listView);
+				skillCharacters_JingtianLaoban(usePlayer,76,null,function(){
+					game_DropHandCard.removeObject(76);
+				});
+				addHandCard([usePlayer],usePlayer,usePlayer,null,[1],true,true,callBack);
+			}else{
+				useBingxingjue(usePlayer, usePlayer, function(){
+					if(!game_Bingxingjue){
+						textAreaAddMessage(usePlayer._name+"发动【紫金葫芦】效果，翻取一张怪牌", myText, listView,
+								function(){
+							if(game_MonsterDeck.length==0){
+								judgeWinorLose();
+							}else{
+								useDongmingbaojing(null,function(){
+									fight_FirstMonster=topMonsterCard(game_MonsterDeck.shift());
+									if(turnMonsterCardLayer!=null){
+										turnMonsterCardLayer.instead();
+									}
+									turnMonsterCardLayer=new TurnMonsterCardLayer(fight_FirstMonster);
+									mainScene.addChild(turnMonsterCardLayer);
+									if(fight_FirstMonster.dodge==0){
+										textAreaAddMessage("翻取NPC:"+fight_FirstMonster.name+",【紫金葫芦】无效",myText,listView,function(){
+											game_Bingxingjue=false;
+											turnMonsterCardLayer.instead();
+											fight_FirstMonster=null;
+											if(callBack!=null){
+												callBack();		
+											}
+										});
+									}else{
+										var _nParam=5;
+										if(usePlayer._name==player2._name){
+											_nParam+=baseEffectCountPets(player1)+baseEffectCountPets(player2)-baseEffectCountPets(player3)-baseEffectCountPets(player4);
+										}else{
+											_nParam+=baseEffectCountPets(player3)+baseEffectCountPets(player4)-baseEffectCountPets(player1)-baseEffectCountPets(player2);
+										}
+										
+										var _randomNum=parseInt(Math.random() * 6, 10) + 1;
+										textAreaAddMessage("N="+_nParam+",骰子点数="+_randomNum, myText, listView,function(){
+											skillCharacters_WangxiaohuBuqubunao(usePlayer, _randomNum, function(xiaohuNum){
+												if(xiaohuNum>=_nParam){
+													textAreaAddMessage("骰子点数大于等于N,直接获得该宠物", myText, listView, function(){
+														calculate_Pets(usePlayer,fight_FirstMonster);
+														game_Bingxingjue=false;
+														fight_FirstMonster=null;
+														turnMonsterCardLayer.instead();
+														if(callBack!=null){
+															callBack();		
+														}
+													});
+												}else{
+													textAreaAddMessage("骰子点数小于N,【紫金葫芦】无效", myText, listView, function(){
+														game_Bingxingjue=false;
+														fight_FirstMonster=null;
+														turnMonsterCardLayer.instead();
+														if(callBack!=null){
+															callBack();		
+														}
+													});
+												}
+											});
+										});
+									}
+								});
+							}
+						});
+					}else{
+						textAreaAddMessage(usePlayer._name+"发动【紫金葫芦】无效", myText, listView);
+						game_Bingxingjue=false;
+					}
+					if(callBack!=null){
+						callBack();
+					}
+				});
+			}
+		}
+	}else{
+		useBingxingjue(usePlayer, usePlayer, function(){
+			if(!game_Bingxingjue){
+				textAreaAddMessage(usePlayer._name+"发动【紫金葫芦】效果，翻取一张怪牌", myText, listView,
+						function(){
+					if(game_MonsterDeck.length==0){
+						judgeWinorLose();
+					}else{
+						useDongmingbaojing(null,function(){
+							fight_FirstMonster=topMonsterCard(game_MonsterDeck.shift());
+							turnMonsterCardLayer=new TurnMonsterCardLayer(fight_FirstMonster);
+							mainScene.addChild(turnMonsterCardLayer);
+							if(fight_FirstMonster.dodge==0){
+								textAreaAddMessage("翻取NPC:"+fight_FirstMonster.name+",【紫金葫芦】无效",myText,listView,function(){
+									game_Bingxingjue=false;
+									turnMonsterCardLayer.instead();
+									fight_FirstMonster=null;
+									if(callBack!=null){
+										callBack();		
+									}
+								});
+							}else{
+								var _nParam=5;
+								if(usePlayer._name==player2._name){
+									_nParam+=baseEffectCountPets(player1)+baseEffectCountPets(player2)-baseEffectCountPets(player3)-baseEffectCountPets(player4);
+								}else{
+									_nParam+=baseEffectCountPets(player3)+baseEffectCountPets(player4)-baseEffectCountPets(player1)-baseEffectCountPets(player2);
+								}
+
+								var _randomNum=parseInt(Math.random() * 6, 10) + 1;
+								textAreaAddMessage("N="+_nParam+",骰子点数="+_randomNum, myText, listView,function(){
+									skillCharacters_WangxiaohuBuqubunao(usePlayer, _randomNum, function(xiaohuNum){
+										if(xiaohuNum>=_nParam){
+											textAreaAddMessage("骰子点数大于等于N,直接获得该宠物", myText, listView, function(){
+												calculate_Pets(usePlayer,fight_FirstMonster);
+												game_Bingxingjue=false;
+												fight_FirstMonster=null;
+												turnMonsterCardLayer.instead();
+												if(callBack!=null){
+													callBack();		
+												}
+											});
+										}else{
+											textAreaAddMessage("骰子点数小于N,【紫金葫芦】无效", myText, listView, function(){
+												game_Bingxingjue=false;
+												fight_FirstMonster=null;
+												turnMonsterCardLayer.instead();
+												if(callBack!=null){
+													callBack();		
+												}
+											});
+										}
+									});
+								});
+							}
+						});
+					}
+				});
+			}else{
+				textAreaAddMessage(usePlayer._name+"发动【紫金葫芦】无效", myText, listView);
+				game_Bingxingjue=false;
+			}
+			if(callBack!=null){
+				callBack();
+			}
+		});
+	}
+}
+
 function tianxuanwuyinHandle(result){
 	if(result==CAMP.CHUFAFANG){
 		textAreaAddMessage("触发方战力+2",myText,listView);

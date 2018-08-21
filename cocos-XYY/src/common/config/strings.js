@@ -307,6 +307,7 @@ var string_handCardNameYongandangpiao="永安当票";
 var string_handCardNameSanmeizhenhuo="三昧真火";
 var string_handCardNameXihe="羲和";
 var string_handCardNameWangshu="望舒";
+var string_handCardNameZijinhulu="紫金葫芦"
 var nameLingquan="灵泉";
 var nameGuanyinmizhen="观音迷阵";
 var nameTantadeqiongding="坍塌的穹顶";

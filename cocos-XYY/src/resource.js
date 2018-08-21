@@ -489,7 +489,8 @@ var resPng = {
     monster_zhima_png:"res/drawable-hdpi/monster_zhima.png",
     monster_huayao_png:"res/drawable-hdpi/monster_huayao.png",
     monster_caishenye_png:"res/drawable-hdpi/monster_caishenye.png",
-    sanmeizhenhuo_png:"res/drawable-hdpi/sanmeizhenhuo.png"
+    sanmeizhenhuo_png:"res/drawable-hdpi/sanmeizhenhuo.png",
+    zijinhulu_png:"res/drawable-hdpi/zijinhulu.png"
 }
 
 /**

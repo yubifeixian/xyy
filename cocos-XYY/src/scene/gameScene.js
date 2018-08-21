@@ -619,6 +619,8 @@ var GameLayer=cc.Layer.extend({
 						handCardWangshu.effect(player1, player1, false, false);
 					}else if(selectHandCard.name==string_handCardNameSanmeizhenhuo){
 						handCardSanmeizhenhuo.effect(player1,player1,true,false);
+					}else if(selectHandCard.name==string_handCardNameZijinhulu){
+						handCardZijinhulu.effect(player1,player1,true,true);
 					}
 					selectHandCard=null;
 				}else if(selectHandCard.clicked

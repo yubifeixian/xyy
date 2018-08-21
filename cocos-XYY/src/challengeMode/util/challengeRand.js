@@ -11,7 +11,8 @@ function initHandCardDeck(array) {
 	// 69,70,71 :永安当票
 	// *羲和*/72 /*望舒*/73
 	// /*三昧真火*/74,75
-	for(var i=69;i<76;i++){
+	//   紫金葫芦 76 77 78
+	for(var i=69;i<79;i++){
 		array.push(i);
 		array.sort(function(){ return 0.5 - Math.random() }) ;
 	}
@@ -282,6 +283,16 @@ function newHandCard(cardNumber, player, count,isRandom,canUseShanzei,callBack) 
 				player.handCard.push(sanmeizhenhuo);
 				if(player._name==player1._name){
 					handCardZone.pushBackCustomItem(sanmeizhenhuo);
+				}
+			}else if(cardNumber>=76&&cardNumber<=78){
+				var zijinhulu=new createHandCardImageView(string_handCardNameZijinhulu,cardNumber,
+						resPng.zijinhulu_png,CARDTYPE.SKILLCARD,
+						"【"+string_handCardNameZijinhulu+"】翻取一张怪牌并投掷骰子,若大于等于N(N=5+我方宠物数-敌方宠物数),则直接收归为宠物" +
+						"如果要用冰心诀抵消此牌,需要在翻开怪牌前决定" +
+				"(典当:使用技牌阶段可弃掉此牌，补1张牌)");
+				player.handCard.push(zijinhulu);
+				if(player._name==player1._name){
+					handCardZone.pushBackCustomItem(zijinhulu);
 				}
 			}
 		}

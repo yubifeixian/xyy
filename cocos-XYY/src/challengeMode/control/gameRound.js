@@ -938,6 +938,8 @@ function getCardIdByName(cardName){
 		return 73;
 	}else if(cardName==string_handCardNameSanmeizhenhuo){
 		return 74;
+	}else if(cardName==string_handCardNameZijinhulu){
+		return 76;
 	}else{
 		return null;
 	}

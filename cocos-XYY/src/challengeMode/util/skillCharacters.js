@@ -3206,6 +3206,11 @@ function skillCharacters_LongkuiRongzhu(longkui) {
                                 handCardKuicetianji.effect(longkui, longkui, false, false);
                             } else if(cardName == string_handCardNameYongandangpiao){
                             	handCardYongandangpiao.effect(longkui, longkui, false, false);
+                            }else if(cardName==string_handCardNameSanmeizhenhuo){
+                            	handCardSanmeizhenhuo.effect(longkui, longkui, false, false);
+                            }else if(cardName==string_handCardNameZijinhulu){
+                            	handCardZijinhulu.effect(longkui, longkui, false, false);
+                            	
                             }
                             AchivementProgress.addAchivementProgress(longkui);
                         }
