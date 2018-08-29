@@ -36,6 +36,7 @@ var TurnMonsterCardLayer=cc.Layer.extend({
 		var spwanFront=cc.spawn(cc.moveBy(0.2, this.cardFront.width, 0),cc.fadeOut(0.2));
 		this.cardFront.runAction(cc.sequence(spwanFront,cc.callFunc(function(){
 			this.removeFromParent();
+			//turnMonsterCardLayer=null;
 		},this)));
 	}
 })

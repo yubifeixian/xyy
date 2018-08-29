@@ -1525,12 +1525,12 @@ function zijinhuluEffect(usePlayer,canDiandang,callBack){
 									}else{
 										useDongmingbaojing(null,function(){
 											fight_FirstMonster=topMonsterCard(game_MonsterDeck.shift());
-											turnMonsterCardLayer=new TurnMonsterCardLayer(fight_FirstMonster);
-											mainScene.addChild(turnMonsterCardLayer);
+											var _turnMonsterCardLayer=new TurnMonsterCardLayer(fight_FirstMonster);
+											mainScene.addChild(_turnMonsterCardLayer);
 											if(fight_FirstMonster.dodge==0){
 												textAreaAddMessage("翻取NPC:"+fight_FirstMonster.name+",【紫金葫芦】无效",myText,listView,function(){
 													game_Bingxingjue=false;
-													turnMonsterCardLayer.instead();
+													_turnMonsterCardLayer.instead();
 													fight_FirstMonster=null;
 													if(callBack!=null){
 														callBack();		
@@ -1546,7 +1546,7 @@ function zijinhuluEffect(usePlayer,canDiandang,callBack){
 																calculate_Pets(usePlayer,fight_FirstMonster);
 																game_Bingxingjue=false;
 																fight_FirstMonster=null;
-																turnMonsterCardLayer.instead();
+																_turnMonsterCardLayer.instead();
 																if(callBack!=null){
 																	callBack();		
 																}
@@ -1555,7 +1555,7 @@ function zijinhuluEffect(usePlayer,canDiandang,callBack){
 															textAreaAddMessage("骰子点数小于N,【紫金葫芦】无效", myText, listView, function(){
 																game_Bingxingjue=false;
 																fight_FirstMonster=null;
-																turnMonsterCardLayer.instead();
+																_turnMonsterCardLayer.instead();
 																if(callBack!=null){
 																	callBack();		
 																}
@@ -1602,15 +1602,12 @@ function zijinhuluEffect(usePlayer,canDiandang,callBack){
 							}else{
 								useDongmingbaojing(null,function(){
 									fight_FirstMonster=topMonsterCard(game_MonsterDeck.shift());
-									if(turnMonsterCardLayer!=null){
-										turnMonsterCardLayer.instead();
-									}
-									turnMonsterCardLayer=new TurnMonsterCardLayer(fight_FirstMonster);
-									mainScene.addChild(turnMonsterCardLayer);
+									var _turnMonsterCardLayer=new TurnMonsterCardLayer(fight_FirstMonster);
+									mainScene.addChild(_turnMonsterCardLayer);
 									if(fight_FirstMonster.dodge==0){
 										textAreaAddMessage("翻取NPC:"+fight_FirstMonster.name+",【紫金葫芦】无效",myText,listView,function(){
 											game_Bingxingjue=false;
-											turnMonsterCardLayer.instead();
+											_turnMonsterCardLayer.instead();
 											fight_FirstMonster=null;
 											if(callBack!=null){
 												callBack();		
@@ -1632,7 +1629,7 @@ function zijinhuluEffect(usePlayer,canDiandang,callBack){
 														calculate_Pets(usePlayer,fight_FirstMonster);
 														game_Bingxingjue=false;
 														fight_FirstMonster=null;
-														turnMonsterCardLayer.instead();
+														_turnMonsterCardLayer.instead();
 														if(callBack!=null){
 															callBack();		
 														}
@@ -1641,7 +1638,7 @@ function zijinhuluEffect(usePlayer,canDiandang,callBack){
 													textAreaAddMessage("骰子点数小于N,【紫金葫芦】无效", myText, listView, function(){
 														game_Bingxingjue=false;
 														fight_FirstMonster=null;
-														turnMonsterCardLayer.instead();
+														_turnMonsterCardLayer.instead();
 														if(callBack!=null){
 															callBack();		
 														}
@@ -1673,12 +1670,12 @@ function zijinhuluEffect(usePlayer,canDiandang,callBack){
 					}else{
 						useDongmingbaojing(null,function(){
 							fight_FirstMonster=topMonsterCard(game_MonsterDeck.shift());
-							turnMonsterCardLayer=new TurnMonsterCardLayer(fight_FirstMonster);
-							mainScene.addChild(turnMonsterCardLayer);
+							var _turnMonsterCardLayer=new TurnMonsterCardLayer(fight_FirstMonster);
+							mainScene.addChild(_turnMonsterCardLayer);
 							if(fight_FirstMonster.dodge==0){
 								textAreaAddMessage("翻取NPC:"+fight_FirstMonster.name+",【紫金葫芦】无效",myText,listView,function(){
 									game_Bingxingjue=false;
-									turnMonsterCardLayer.instead();
+									_turnMonsterCardLayer.instead();
 									fight_FirstMonster=null;
 									if(callBack!=null){
 										callBack();		
@@ -1700,7 +1697,7 @@ function zijinhuluEffect(usePlayer,canDiandang,callBack){
 												calculate_Pets(usePlayer,fight_FirstMonster);
 												game_Bingxingjue=false;
 												fight_FirstMonster=null;
-												turnMonsterCardLayer.instead();
+												_turnMonsterCardLayer.instead();
 												if(callBack!=null){
 													callBack();		
 												}
@@ -1709,7 +1706,7 @@ function zijinhuluEffect(usePlayer,canDiandang,callBack){
 											textAreaAddMessage("骰子点数小于N,【紫金葫芦】无效", myText, listView, function(){
 												game_Bingxingjue=false;
 												fight_FirstMonster=null;
-												turnMonsterCardLayer.instead();
+												_turnMonsterCardLayer.instead();
 												if(callBack!=null){
 													callBack();		
 												}
