@@ -549,7 +549,7 @@ function equmentNameMappingCardInfo(equmentName){
 
 // player2:装备的新主人
 function player1GetPlayer2Equment(nowPlayer,equmentName){
-	addHandCard([nowPlayer],nowPlayer,nowPlayeequmentNameMappingCardInfoId(equmentName).cardID,[1],false,false);
+	addHandCard([nowPlayer],nowPlayer,nowPlayer,equmentNameMappingCardInfo(equmentName).cardID,[1],false,false);
 }
 
 function topMonsterCard(number) {
