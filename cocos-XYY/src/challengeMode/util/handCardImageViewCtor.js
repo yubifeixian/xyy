@@ -11,14 +11,14 @@ function createHandCardImageView(name,cardID,cardSrcID,
 		tempHandCardImageView.loadTexture(cardSrcID);
 	}
 	tempHandCardImageView.setOpacity(200);
-	var longClickFunction=function(){
-		mainScene.addChild(new messageDialogLayer(cardMessage));
-	};
 	tempHandCardImageView.addTouchEventListener(function(sender,type){
 		if(type==0){
-			this.scheduleOnce(longClickFunction,1);
+			this.scheduleOnce(function(){
+				mainScene.addChild(new messageDialogLayer(this.cardMessage));
+			},1);
 		}else if(type==2){
-			//this.unschedule(longClickFunction);
+		
+			//tempHandCardImageView.unschedule(longClickFunction);
 			this.unscheduleAllCallbacks();
 			if((nextStep==2&&nowPlayerTerm[nowPlayerNumber]._name==player1._name)||
 					nextStep==3||nextStep==4||(nextStep == 8 && dropCarding)){
@@ -119,8 +119,6 @@ function createHandCardImageView(name,cardID,cardSrcID,
 					tempHandCardImageView.y=90;
 				}
 			}
-		}else if(type==ccui.Widget.TOUCH_MOVED){
-			this.unscheduleAllCallbacks();
 		}
 	}, tempHandCardImageView);
 	tempHandCardImageView.retain();
