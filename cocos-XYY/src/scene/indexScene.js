@@ -2,7 +2,8 @@ musicSwitch=cc.sys.localStorage.getItem("musicSwitch")||"true";
 autoNextStepSwitch=cc.sys.localStorage.getItem("autoNextStepSwitch")||"false";
 showFirstDialog=true;
 isLongClick=false;
-spSwitch=cc.sys.localStorage.getItem("spSwtich");
+spSwitch=cc.sys.localStorage.getItem("spSwtich")||"fasle";
+exSwitch=cc.sys.localStorage.getItem("exSwitch")||"false";
 audioEngine=cc.AudioEngine.getInstance();
 
 baseCharacterData=null;
@@ -17,6 +18,7 @@ var IndexLayer=cc.Layer.extend({
 	adventureButton:null,
 	exitButton:null,
 	spButton:null,
+	exButton:null,
 	settingBtn:null,
 	ctor:function(){
 		this._super();
@@ -146,20 +148,43 @@ var IndexLayer=cc.Layer.extend({
 		
 		this.spButton=ccui.helper.seekWidgetByName(indexRoot.node, "spButton");
 		this.spButton.addClickEventListener(function(){
-			spSwitch=(spSwitch=="true")?"false":"true";
+			 spSwitch=(spSwitch=="true")?"false":"true";
 			cc.sys.localStorage.setItem("spSwtich",spSwitch);
 			this.spButtonManager();
 		}.bind(this));
+		this.spButtonManager();
+		this.settingBtn=ccui.helper.seekWidgetByName(indexRoot.node, "settingBtn");
+		this.settingBtn.addClickEventListener(function(){
+			temp.addChild(new SettingLayer());
+		}.bind(this));
+		
+		this.exButton=ccui.helper.seekWidgetByName(indexRoot.node, "exButton");
+		this.exButton.addClickEventListener(function(){
+			exSwitch=(exSwitch=="true")?"false":"true";
+			cc.sys.localStorage.setItem("exSwitch",exSwitch);
+			this.exButtonManager();
+		}.bind(this));
+		this.exButtonManager();
+
 		this.settingBtn=ccui.helper.seekWidgetByName(indexRoot.node, "settingBtn");
 		this.settingBtn.addClickEventListener(function(){
 			temp.addChild(new SettingLayer());
 		}.bind(this));
 	},
 	spButtonManager:function(){
+		cc.log("spSwitch = "+spSwitch);
 		if(spSwitch=="true"){
 			this.spButton.loadTexture("res/drawable-hdpi/spbutton_clicked.png");
 		}else{
 			this.spButton.loadTexture("res/drawable-hdpi/spbutton_unclicked.png");
+		}
+	},
+	exButtonManager:function(){
+		cc.log("exSwitch = "+exSwitch);
+		if(exSwitch=="true"){
+			this.exButton.loadTexture("res/drawable-hdpi/exbutton_clicked.png");
+		}else{
+			this.exButton.loadTexture("res/drawable-hdpi/exbutton_unclicked.png");
 		}
 	}
 });

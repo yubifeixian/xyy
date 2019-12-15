@@ -2428,6 +2428,21 @@ function skillCharacters_XiaomanWufawutian(callBack) {
                                             skillCharacters_XiaomanWufawutian(callBack);
                                         });
                                         break;
+                                    case string_handCardNameYongandangpiao:
+                                    	handCardYongandangpiao.effect(nowPlayerTerm[i], nowPlayerTerm[i], true, false, function(){
+                                    		skillCharacters_XiaomanWufawutian(callBack);
+                                    	});
+                                    	break;
+                                    case string_handCardNameSanmeizhenhuo:
+                                    	handCardSanmeizhenhuo.effect(nowPlayerTerm[i], nowPlayerTerm[i], true, false, function(){
+                                    		skillCharacters_XiaomanWufawutian(callBack);
+                                    	});
+                                    	break;
+                                    case string_handCardNameZijinhulu:
+                                    	handCardZijinhulu.effect(nowPlayerTerm[i], nowPlayerTerm[i], true, false, function(){
+                                    		skillCharacters_XiaomanWufawutian(callBack);
+                                    	});
+                                    	break;
                                 }
                             }));
                         } else {

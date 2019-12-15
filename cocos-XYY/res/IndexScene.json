@@ -366,16 +366,18 @@
               "Path": "Default/ImageFile.png",
               "Plist": ""
             },
-            "Scale9Width": 46,
-            "Scale9Height": 46,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 15,
+            "Scale9Width": 16,
+            "Scale9Height": 16,
             "TouchEnable": true,
             "AnchorPoint": {
               "ScaleX": 0.5,
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 75.84,
-              "Y": 65.664
+              "X": 74.1577,
+              "Y": 188.4725
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -384,8 +386,8 @@
             "CColor": {},
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.079,
-              "Y": 0.1026
+              "X": 0.0772,
+              "Y": 0.2945
             },
             "PercentWidthEnable": true,
             "PercentHeightEnable": true,
@@ -397,10 +399,10 @@
             },
             "HorizontalEdge": "BothEdge",
             "VerticalEdge": "BothEdge",
-            "LeftMargin": 27.84,
-            "RightMargin": 836.16,
-            "TopMargin": 526.336,
-            "BottomMargin": 17.664,
+            "LeftMargin": 26.1577,
+            "RightMargin": 837.8423,
+            "TopMargin": 403.5275,
+            "BottomMargin": 140.4725,
             "Tag": 292,
             "ActionTag": -835255688,
             "Size": {
@@ -506,8 +508,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 900.1918,
-              "Y": 582.3366
+              "X": 900.192,
+              "Y": 582.336
             },
             "Scale": {
               "ScaleX": 1.409,
@@ -529,10 +531,10 @@
               "X": 0.0969,
               "Y": 0.1438
             },
-            "LeftMargin": 853.6797,
-            "RightMargin": 13.2962,
-            "TopMargin": 11.6474,
-            "BottomMargin": 536.3206,
+            "LeftMargin": 853.6799,
+            "RightMargin": 13.296,
+            "TopMargin": 11.648,
+            "BottomMargin": 536.32,
             "Tag": 249,
             "ActionTag": -919953390,
             "Size": {
@@ -540,6 +542,58 @@
               "Y": 92.032
             },
             "Name": "settingBtn",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Default",
+              "Path": "Default/ImageFile.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 15,
+            "Scale9Width": 16,
+            "Scale9Height": 16,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 72.3814,
+              "Y": 62.3929
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0754,
+              "Y": 0.0975
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.1,
+              "Y": 0.15
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 24.3814,
+            "RightMargin": 839.6187,
+            "TopMargin": 529.6071,
+            "BottomMargin": 14.3929,
+            "Tag": 186,
+            "ActionTag": 1160290261,
+            "Size": {
+              "X": 96.0,
+              "Y": 96.0
+            },
+            "Name": "exButton",
             "ctype": "ImageViewObjectData"
           }
         ],

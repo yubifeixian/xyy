@@ -8,15 +8,18 @@ function initHandCardDeck(array) {
 		array.push(i);
 		array.sort(function(){ return 0.5 - Math.random() }) ;
 	}
-	// 69,70,71 :永安当票
-	// *羲和*/72 /*望舒*/73
-	// /*三昧真火*/74,75
-	//   紫金葫芦 76 77 78
-	for(var i=69;i<79;i++){
-		array.push(i);
-		array.sort(function(){ return 0.5 - Math.random() }) ;
-	}
 	
+	// sp开关开启，
+	if(exSwitch=="true"){
+		// 69,70,71 :永安当票
+		// *羲和*/72 /*望舒*/73
+		// /*三昧真火*/74,75
+		//   紫金葫芦 76 77 78
+		for(var i=69;i<79;i++){
+			array.push(i);
+			array.sort(function(){ return 0.5 - Math.random() }) ;
+		}
+	}
 	
 	return array;
 }

@@ -51,8 +51,8 @@ function getCharacterList() {
 		characterList.push(44);
 
 	}
-	//TODO:2扩开关
-	if(true){
+	//2扩开关
+	if(exSwitch=="true"){
 		//处理【徐长卿】
 		characterList.push(45);
 		//处理【景天】

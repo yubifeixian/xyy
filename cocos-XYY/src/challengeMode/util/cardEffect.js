@@ -1721,9 +1721,9 @@ function zijinhuluEffect(usePlayer,canDiandang,callBack){
 			}else{
 				textAreaAddMessage(usePlayer._name+"发动【紫金葫芦】无效", myText, listView);
 				game_Bingxingjue=false;
-			}
-			if(callBack!=null){
-				callBack();
+				if(callBack!=null){
+					callBack();
+				}
 			}
 		});
 	}
