@@ -13,9 +13,8 @@ var LOADINGBARPROALLNUM=0;
 // 异步加载
 GameFrameCache.setAllCache = function (obj,objcallback) {
 	// 加载特效plist
-	var _magicSrc=magicSrc;
-	for(var i=0;i<_magicSrc.length;i+=2 ){
-		this.setCache(_magicSrc[i],_magicSrc[i+1]);
+	for(var i=0;i<magicSrc.length;i+=2 ){
+		this.setCache(magicSrc[i],magicSrc[i+1]);
 	}
 	
 	// 异步加载所有游戏资源
