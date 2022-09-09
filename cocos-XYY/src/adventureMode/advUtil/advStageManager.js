@@ -21,6 +21,7 @@ function stageManager(stageId){
 		break;
 	case "2_2":
 		targetStage=getStage2_2Instance();
+		break;
 	case "2_3":
 		targetStage=getStage2_3Instance();
 		break;

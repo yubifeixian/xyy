@@ -92,7 +92,7 @@ function advRoundAttactk1Handle(result){
 		attakedMoster = false;// 打怪判断，若此处为false，补牌阶段补牌1张
 		textAreaAddMessage(Text.playerChooseNotFight.format(nowPlayerTerm[nowPlayerNumber]._name), myText, listView,function(){
 			if(game_MonsterDeck.length==0){
-				judgeWinorLose();
+				advJudgeWinorLose();
 			}else{
 				textAreaAddMessage(Text.takeOverAndDropMonster.format(fight_FirstMonster.name), myText, listView,function(){
 					tempMonster=advTopMonsterCard(game_MonsterDeck[0]);
@@ -456,12 +456,16 @@ function advRoundAttack3(){
 							game_MonsterDropDeck.push(fight_SecondMonster.uid);
 						}
 					}
-					if(boss._name==bossNameBaiyuejiaozhu&&boss.monsterList.length>=6){
+					if(boss._name==bossNameBaiyuejiaozhu){
 						textAreaAddMessage(Text.bossSkillBaiyuejiaozhu, myText, listView);
-						gameRunning = false;
-						nextStep=10;
-						buttonManager(order1Button, false, false);
-						buttonManager(order2Button, false, false);
+						if(boss.monsterList.length<=5){
+							baiyuejiaozhuAddCombatEffect();
+						}else{
+							gameRunning = false;
+							nextStep=10;
+							buttonManager(order1Button, false, false);
+							buttonManager(order2Button, false, false);
+						}
 						return;
 					}
 				}else{
@@ -735,7 +739,7 @@ function advRoundEnding(){
 		muhoudeyinmouMark=false;
 	}
 	// 回合结束，判断是否游戏结束
-	if (!judgeWinorLose()) {
+	if (!advJudgeWinorLose()) {
 		// nowPlayerTerm[nowPlayerNumber].hadImageView.setOpacity(150);
 		textAreaAddMessage(Text.stepRoundEnd.format(nowPlayerTerm[nowPlayerNumber]._name), myText, listView);
 		// 魔尊【崩坏】技能

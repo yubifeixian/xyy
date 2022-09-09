@@ -96,3 +96,12 @@ function moyiYanshiqiongbingSkillEffect(callBack){
 		callBack();
 	}
 }
+
+function baiyuejiaozhuAddCombatEffect(){
+	if(boss._name==bossNameBaiyuejiaozhu){
+		for(var i=0;i<2;i++){
+			boss.maxCombat++;			
+		}
+		textAreaAddMessage("玩家战斗失败，魔主战力永久+2", myText, listView);
+	}
+}

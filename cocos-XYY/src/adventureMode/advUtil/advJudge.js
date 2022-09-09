@@ -595,7 +595,12 @@ function advJudgeWinorLose() {
 				bossScore += advCountResult( boss);
 				textAreaAddMessage("我方分数为："+playerScore, myText, listView,function(){
 					textAreaAddMessage("魔主分数为："+bossScore, myText, listView,function(){
-						if (playerScore-bossScore>=30) {
+						/*if (playerScore-bossScore>=30) {
+							advWin();
+						}else{
+							textAreaAddMessage("玩家分数并未超过魔主分数30分或以上，挑战失败！", myText, listView);
+						}*/
+						if (playerScore-bossScore>=1) {
 							advWin();
 						}else{
 							textAreaAddMessage("玩家分数并未超过魔主分数30分或以上，挑战失败！", myText, listView);

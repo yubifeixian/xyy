@@ -364,6 +364,8 @@ var Text={
 		stage2_4Explain:"本关只有魔主死亡这一种胜利方式",
 		stage2_5:"2_5",
 		stage2_5Explain:"本关只有翻完怪物牌堆，并达成分数这一种胜利方式",
+		stage2_6:"2_6",
+		stage2_6Explain:"关卡开始时,魔主已拥有怪物【水魔兽】/n魔主得到第6个怪物时，玩家立刻失败",
 		
 		placeShuiyuegong:"水月宫",
 		placeYinlongku:"隐龙窟",
@@ -372,6 +374,7 @@ var Text={
 		placeMiaojiang:"苗疆",
 		placeShushan:"蜀山",
 		placeMojie:"魔界",
+		placeXiaoyaohuanjing:"逍遥幻境",
 		
 		setting_autoNextStep:"开启\"便捷操作\"后，在AI行动时可在部分时机自动进入下一阶段,而无须玩家手动点击(“冒险模式”下暂时无效)"
 		

@@ -120,6 +120,17 @@ function bossCardManager(boss,number){
 		boss.playerDeathPicSrc = resPng.mozhu_moyiyanshiqiongbingdeath_png;
 		boss.skill_1 = Text.bossSkillMoyiYanshiqiongbing;
 		boss.sex = 0; 
+	}else if(number==12){
+		boss._ID=12;
+		boss._name=bossNameBaiyuejiaozhu;
+		boss.npcName = boss._name;
+		boss.playerPicSrc =resPng.mozhu_baiyuejiaozhu_png;
+		boss.hp = 24;
+		boss.combat = 4;
+		boss.extent = 0;
+		boss.playerDeathPicSrc = resPng.mozhu_baiyuejiaozhudeath_png;
+		boss.skill_1 = Text.bossSkillBaiyuejiaozhu;
+		boss.sex = 0; 
 	}
 	boss.skillNameList=new Array();
 	if (boss.skill_1!=Text.nil) {

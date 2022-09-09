@@ -865,7 +865,7 @@ function saveXianbaoCardToStorage(xianbaoName){
 // 读取关卡信息
 function loadGameSave(){
 	stageIdSave=cc.sys.localStorage.getItem("stageId")||"1_1";
-	// stageIdSave="1_3";
+	//stageIdSave="2_5";
 	haveTiangangdouyi=cc.sys.localStorage.getItem("tiangangdouyi")||"false";
 	haveShiziyaoshuo=cc.sys.localStorage.getItem("shiziyaoshuo")||"false";
 	if(stageIdSave=="1_1"){
